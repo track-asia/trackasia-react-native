@@ -1,6 +1,6 @@
 import React from 'react';
 import {Animated, View, Text, StyleSheet, Image} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 import PropTypes from 'prop-types';
 
 import sheet from '../../styles/sheet';
@@ -30,7 +30,7 @@ class AnnotationWithRemoteImage extends React.Component {
   render() {
     const {id, coordinate, title} = this.props;
     return (
-      <MapLibreGL.PointAnnotation
+      <TrackasiaGL.PointAnnotation
         id={id}
         coordinate={coordinate}
         title={title}
@@ -52,8 +52,8 @@ class AnnotationWithRemoteImage extends React.Component {
             onLoad={() => this.annotationRef.refresh()}
           />
         </View>
-        <MapLibreGL.Callout title="This is a sample" />
-      </MapLibreGL.PointAnnotation>
+        <TrackasiaGL.Callout title="This is a sample" />
+      </TrackasiaGL.PointAnnotation>
     );
   }
 }
@@ -145,14 +145,14 @@ class ShowPointAnnotation extends React.Component {
         );
       } else {
         items.push(
-          <MapLibreGL.PointAnnotation
+          <TrackasiaGL.PointAnnotation
             key={id}
             id={id}
             coordinate={coordinate}
             title={title}>
             <View style={styles.annotationContainer} />
-            <MapLibreGL.Callout title="This is a sample with image" />
-          </MapLibreGL.PointAnnotation>,
+            <TrackasiaGL.Callout title="This is a sample with image" />
+          </TrackasiaGL.PointAnnotation>,
         );
       }
     }
@@ -163,18 +163,18 @@ class ShowPointAnnotation extends React.Component {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           onDidFinishLoadingMap={this.onDidFinishLoadingMap}
           style={sheet.matchParent}>
-          <MapLibreGL.Camera
+          <TrackasiaGL.Camera
             zoomLevel={16}
             centerCoordinate={this.state.coordinates[0]}
           />
 
           {this.renderAnnotations()}
-        </MapLibreGL.MapView>
+        </TrackasiaGL.MapView>
 
         <Bubble>
           <Text>Click to add a point annotation</Text>

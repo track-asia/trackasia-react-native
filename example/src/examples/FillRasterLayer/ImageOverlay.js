@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 import {Text} from 'react-native';
 
 import Bubble from '../common/Bubble';
@@ -81,23 +81,23 @@ class ImageOverlay extends React.Component {
       : 'Dynamic coordinates';
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={ref => (this.map = ref)}
           style={sheet.matchParent}
-          styleURL={MapLibreGL.StyleURL.Satellite}>
-          <MapLibreGL.Camera zoomLevel={4} centerCoordinate={[-79, 40]} />
+          styleURL={TrackasiaGL.StyleURL.Satellite}>
+          <TrackasiaGL.Camera zoomLevel={4} centerCoordinate={[-79, 40]} />
 
-          <MapLibreGL.Animated.ImageSource
+          <TrackasiaGL.Animated.ImageSource
             key="d"
             id="radarSource"
             coordinates={this.state.coords}
             url={frames[this.state.radarFrameIndex]}>
-            <MapLibreGL.RasterLayer
+            <TrackasiaGL.RasterLayer
               id="radarLayer"
               style={styles.rasterLayer}
             />
-          </MapLibreGL.Animated.ImageSource>
-        </MapLibreGL.MapView>
+          </TrackasiaGL.Animated.ImageSource>
+        </TrackasiaGL.MapView>
         <Bubble
           onPress={() => {
             this.setState({dynamic: !this.state.dynamic});

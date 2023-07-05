@@ -1,17 +1,17 @@
 import React, {FC, useState, useEffect} from 'react';
 import {Alert} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import {onSortOptions} from '../../utils';
 import TabBarPage from '../common/TabBarPage';
 
 const ShowMap: FC<any> = props => {
-  const _mapOptions = Object.keys(MapLibreGL.StyleURL)
+  const _mapOptions = Object.keys(TrackasiaGL.StyleURL)
     .map(key => {
       return {
         label: key,
-        data: (MapLibreGL.StyleURL as any)[key], // bad any, because enums
+        data: (TrackasiaGL.StyleURL as any)[key], // bad any, because enums
       };
     })
     .sort(onSortOptions);
@@ -19,16 +19,16 @@ const ShowMap: FC<any> = props => {
   const [styleURL, setStyleURL] = useState({styleURL: _mapOptions[0].data});
 
   useEffect(() => {
-    MapLibreGL.locationManager.start();
+    TrackasiaGL.locationManager.start();
 
     return (): void => {
-      MapLibreGL.locationManager.stop();
+      TrackasiaGL.locationManager.stop();
     };
   }, []);
 
   const onMapChange = (
     index: number,
-    newStyleURL: MapLibreGL.StyleURL,
+    newStyleURL: TrackasiaGL.StyleURL,
   ): void => {
     setStyleURL({styleURL: newStyleURL});
   };
@@ -43,13 +43,13 @@ const ShowMap: FC<any> = props => {
       scrollable
       options={_mapOptions}
       onOptionPress={onMapChange}>
-      <MapLibreGL.MapView
+      <TrackasiaGL.MapView
         styleURL={styleURL.styleURL}
         style={sheet.matchParent}>
-        <MapLibreGL.Camera followZoomLevel={6} followUserLocation />
+        <TrackasiaGL.Camera followZoomLevel={6} followUserLocation />
 
-        <MapLibreGL.UserLocation onPress={onUserMarkerPress} />
-      </MapLibreGL.MapView>
+        <TrackasiaGL.UserLocation onPress={onUserMarkerPress} />
+      </TrackasiaGL.MapView>
     </TabBarPage>
   );
 };

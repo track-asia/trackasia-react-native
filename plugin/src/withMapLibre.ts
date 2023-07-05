@@ -14,10 +14,10 @@ import {
 } from '@expo/config-plugins/build/utils/generateCode';
 
 let pkg: {name: string; version?: string} = {
-  name: '@maplibre/maplibre-react-native',
+  name: '@trackasia/trackasia-react-native',
 };
 try {
-  pkg = require('@maplibre/maplibre-react-native/package.json');
+  pkg = require('@trackasia/trackasia-react-native/package.json');
 } catch {
   // empty catch block
 }
@@ -28,7 +28,7 @@ type InstallerBlockName = 'pre' | 'post';
  * Dangerously adds the custom installer hooks to the Podfile.
  * In the future this should be removed in favor of some custom hooks provided by Expo autolinking.
  *
- * https://github.com/maplibre/maplibre-react-native/blob/main/ios/install.md
+ * https://github.com/track-asia/trackasia-react-native/blob/main/ios/install.md
  * @param config
  * @returns
  */
@@ -100,7 +100,7 @@ export function addMapLibreInstallerBlock(
   blockName: InstallerBlockName,
 ): string {
   return mergeContents({
-    tag: `@maplibre/maplibre-react-native-${blockName}_installer`,
+    tag: `@trackasia/trackasia-react-native-${blockName}_installer`,
     src,
     newSrc: `    $RNMBGL.${blockName}_install(installer)`,
     anchor: new RegExp(`${blockName}_install do \\|installer\\|`),

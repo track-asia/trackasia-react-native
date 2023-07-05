@@ -1,23 +1,23 @@
 ---
 
-[![MapLibre Logo](https://maplibre.org/img/maplibre-logo-big.svg)](https://maplibre.org)
+[![Trackasia Logo](https://docs.track-asia.com/assets/favicon/track_logo.png)](https://track-asia.com)
 
 
-# MapLibre GL SDK for React Native
+# Trackasia GL SDK for React Native
 
 _A React Native library for building maps with   
-the [MapLibre GL Native SDK for iOS & Android](https://github.com/maplibre/maplibre-gl-native)_.
+the [Trackasia GL Native SDK for iOS & Android](https://github.com/track-asia/trackasia-gl-native)_.
 
 This project originated as a fork of [rnmapbox](https://github.com/rnmapbox/maps), a community-maintained
 React Native Library for building maps with the Mapbox iOS and Android mobile SDKs. The original product
-supported both Mapbox and MapLibre for some time, but as the MapLibre and Mapbox SDKs have
+supported both Mapbox and Trackasia for some time, but as the Trackasia and Mapbox SDKs have
 diverged, it has become necessary to separate the projects into specific wrappers by underlying renderer.
 
 ---
 
-[![npm version](https://badge.fury.io/js/%40maplibre%2Fmaplibre-react-native.svg)](https://badge.fury.io/js/%40maplibre%2Fmaplibre-react-native)  
-[![Android Build](https://github.com/maplibre/maplibre-react-native/actions/workflows/android-actions.yml/badge.svg)](https://github.com/maplibre/maplibre-react-native/actions/workflows/android-actions.yml)  
-[![iOS Build](https://github.com/maplibre/maplibre-react-native/actions/workflows/ios-actions.yml/badge.svg)](https://github.com/maplibre/maplibre-react-native/actions/workflows/ios-actions.yml)  
+[![npm version](https://docs.track-asia.com/assets/favicon/track_logo.png)](https://badge.fury.io/js/%40maplibre%2Ftrackasia-react-native)  
+[![Android Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml)  
+[![iOS Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml)  
 
 ---
 
@@ -72,7 +72,7 @@ diverged, it has become necessary to separate the projects into specific wrapper
 
 ### Misc
 
-- [MapLibreGL](/docs/MapLibreGL.md)
+- [TrackasiaGL](/docs/TrackasiaGL.md)
 - [CustomHttpHeaders](/docs/CustomHttpHeaders.md)
 - [Logger](/docs/Logger.md)
 

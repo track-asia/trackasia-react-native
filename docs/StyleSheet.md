@@ -3,7 +3,7 @@
 
 ### Stylesheet is now a JS object, see [CHANGELOG.md](../CHANGELOG.md)  for more details
 
-See (MapLibre expression specs)[https://maplibre.org/maplibre-gl-js-docs/style-spec/expressions/] for reference on expressions.
+See (MapLibre expression specs)[https://track-asia.com/maplibre-gl-js-docs/style-spec/expressions/] for reference on expressions.
 
 ### Style functions
 
@@ -38,18 +38,18 @@ old:
 
 ```js
 // color would change based on zoom level keys.
-MapLibreGL.StyleSheet.camera({
+TrackasiaGL.StyleSheet.camera({
   0: 'blue',
   10: 'green',
   20: 'yellow',
-}, MapLibreGL.InterpolationMode.Exponential);
+}, TrackasiaGL.InterpolationMode.Exponential);
 
 // Example of use inside stylesheet
-MapLibreGL.StyleSheet.create({
-  fillColor: MapLibreGL.StyleSheet.camera({
+TrackasiaGL.StyleSheet.create({
+  fillColor: TrackasiaGL.StyleSheet.camera({
     15: 'blue',
     20: 'green',
-  }, MapLibreGL.InterpolationMode.Interval),
+  }, TrackasiaGL.InterpolationMode.Interval),
 });
 ```
 
@@ -89,23 +89,23 @@ old:
 
 ```js
 // would color the layer based the property rating=[1, 5]
-MapLibreGL.StyleSheet.source([
+TrackasiaGL.StyleSheet.source([
   [1, 'red'],
   [2, 'orange'],
   [3, 'yellow'],
   [4, 'yellowgreen'],
   [5, 'green'],
-], 'rating', MapLibreGL.InterpolationMode.Categorical);
+], 'rating', TrackasiaGL.InterpolationMode.Categorical);
 
 // Example of use inside stylesheet
-MapLibreGL.StyleSheet.create({
-  circleColor: MapLibreGL.StyleSheet.source([
+TrackasiaGL.StyleSheet.create({
+  circleColor: TrackasiaGL.StyleSheet.source([
     [1, 'red'],
     [2, 'orange'],
     [3, 'yellow'],
     [4, 'yellowgreen'],
     [5, 'green'],
-  ], 'rating', MapLibreGL.InterpolationMode.Categorical),
+  ], 'rating', TrackasiaGL.InterpolationMode.Categorical),
 });
 ```
 
@@ -158,20 +158,20 @@ old:
 ```js
 // would change based on the zoom level and rating value
 // {zoom_level}: [{value}, {style_value}]
-MapLibreGL.StyleSheet.composite({
+TrackasiaGL.StyleSheet.composite({
   0: [0, 0],
   0: [5, 5],
   20: [0, 0],
   20: [5, 20],
-}, 'rating', MapLibreGL.InterpolationMode.Interval);
+}, 'rating', TrackasiaGL.InterpolationMode.Interval);
 
-MapLibreGL.StyleSheet.create({
-  circleRadius: MapLibreGL.StyleSheet.composite({
+TrackasiaGL.StyleSheet.create({
+  circleRadius: TrackasiaGL.StyleSheet.composite({
     0: [0, 0],
     0: [5, 5],
     20: [0, 0],
     20: [5, 20],
-  }, 'rating', MapLibreGL.InterpolationMode.Interval),
+  }, 'rating', TrackasiaGL.InterpolationMode.Interval),
 });
 ```
 
@@ -191,8 +191,8 @@ new:
 old:
 
 ```js
-MapLibreGL.StyleSheet.create({
-  fillExtrusionHeight: MapLibreGL.StyleSheet.identity('height'),
+TrackasiaGL.StyleSheet.create({
+  fillExtrusionHeight: TrackasiaGL.StyleSheet.identity('height'),
 });
 ```
 
@@ -213,8 +213,8 @@ const styles = {
 
 ...
 
-<MapLibreGL.FillLayer ... style={styles.buildings} />
-<MapLibreGL.FillLayer ... style={styles.street} />
+<TrackasiaGL.FillLayer ... style={styles.buildings} />
+<TrackasiaGL.FillLayer ... style={styles.street} />
 ```
 
 ```js
@@ -262,24 +262,24 @@ const layerStyles = {
 
 ...
 
-<MapLibreGL.SymbolLayer
+<TrackasiaGL.SymbolLayer
   id='pointCount'
   style={layerStyles.clusterCount} />
 
-<MapLibreGL.CircleLayer
+<TrackasiaGL.CircleLayer
   id='clusteredPoints'
   belowLayerID='pointCount'
   filter={['has', 'point_count']}
   style={layerStyles.clusteredPoints} />
 
-<MapLibreGL.CircleLayer
+<TrackasiaGL.CircleLayer
   id='singlePoint'
   filter={['!has', 'point_count']}
   style={layerStyles.singlePoint} />
 ```
 
 ```javascript
-const layerStyles = MapLibreGL.StyleSheet.create({
+const layerStyles = TrackasiaGL.StyleSheet.create({
     building: {
       fillExtrusionOpacity: 1,
       fillExtrusionHeight: ['get', 'height'],
@@ -307,10 +307,10 @@ const layerStyles = MapLibreGL.StyleSheet.create({
   0.50,
     lineJoin
 :
-  MapLibreGL.LineJoin.Round,
+  TrackasiaGL.LineJoin.Round,
     lineCap
 :
-  MapLibreGL.LineCap.Round,
+  TrackasiaGL.LineCap.Round,
     lineDasharray
 :
   [2, 2],
@@ -321,12 +321,12 @@ const layerStyles = MapLibreGL.StyleSheet.create({
 
 ...
 
-<MapLibreGL.FillExtrusionLayer
+<TrackasiaGL.FillExtrusionLayer
   id='building3d'
   sourceLayerID='building'
   style={layerStyles.building}/>
 
-<MapLibreGL.LineLayer
+<TrackasiaGL.LineLayer
   id='streetLineColor'
   sourceLayerID='road'
   minZoomLevel={14}
@@ -337,7 +337,7 @@ const layerStyles = MapLibreGL.StyleSheet.create({
 #### old:
 
 ```js
-const styles = MapLibreGL.StyleSheet.create({
+const styles = TrackasiaGL.StyleSheet.create({
   buildings: {
     fillColor: 'blue',
   },
@@ -348,16 +348,16 @@ const styles = MapLibreGL.StyleSheet.create({
 
 ...
 
-<MapLibreGL.FillLayer ...
+<TrackasiaGL.FillLayer ...
 style = { styles.buildings }
 />
-<MapLibreGL.FillLayer ...
+<TrackasiaGL.FillLayer ...
 style = { styles.street }
 />
 ```
 
 ```js
-const layerStyles = MapLibreGL.StyleSheet.create({
+const layerStyles = TrackasiaGL.StyleSheet.create({
   singlePoint: {
     circleColor: 'green',
     circleOpacity: 0.84,
@@ -367,20 +367,20 @@ const layerStyles = MapLibreGL.StyleSheet.create({
   },
 
   clusteredPoints: {
-    circleColor: MapLibreGL.StyleSheet.source([
+    circleColor: TrackasiaGL.StyleSheet.source([
       [25, 'yellow'],
       [50, 'red'],
       [75, 'blue'],
       [100, 'orange'],
       [300, 'pink'],
       [750, 'white'],
-    ], 'point_count', MapLibreGL.InterpolationMode.Exponential),
+    ], 'point_count', TrackasiaGL.InterpolationMode.Exponential),
 
-    circleRadius: MapLibreGL.StyleSheet.source([
+    circleRadius: TrackasiaGL.StyleSheet.source([
       [0, 15],
       [100, 20],
       [750, 30],
-    ], 'point_count', MapLibreGL.InterpolationMode.Exponential),
+    ], 'point_count', TrackasiaGL.InterpolationMode.Exponential),
 
     circleOpacity: 0.84,
     circleStrokeWidth: 2,
@@ -395,53 +395,53 @@ const layerStyles = MapLibreGL.StyleSheet.create({
 
 ...
 
-<MapLibreGL.SymbolLayer
+<TrackasiaGL.SymbolLayer
   id='pointCount'
   style={layerStyles.clusterCount}/>
 
-<MapLibreGL.CircleLayer
+<TrackasiaGL.CircleLayer
   id='clusteredPoints'
   belowLayerID='pointCount'
   filter={['has', 'point_count']}
   style={layerStyles.clusteredPoints}/>
 
-<MapLibreGL.CircleLayer
+<TrackasiaGL.CircleLayer
   id='singlePoint'
   filter={['!has', 'point_count']}
   style={layerStyles.singlePoint}/>
 ```
 
 ```javascript
-const layerStyles = MapLibreGL.StyleSheet.create({
+const layerStyles = TrackasiaGL.StyleSheet.create({
   building: {
     fillExtrusionOpacity: 1,
-    fillExtrusionHeight: MapLibreGL.StyleSheet.identity('height'),
-    fillExtrusionBase: MapLibreGL.StyleSheet.identity('min_height'),
-    fillExtrusionColor: MapLibreGL.StyleSheet.source([
+    fillExtrusionHeight: TrackasiaGL.StyleSheet.identity('height'),
+    fillExtrusionBase: TrackasiaGL.StyleSheet.identity('min_height'),
+    fillExtrusionColor: TrackasiaGL.StyleSheet.source([
       [0, 'white'],
       [50, 'blue'],
       [100, 'red'],
-    ], 'height', MapLibreGL.InterpolationMode.Exponential),
+    ], 'height', TrackasiaGL.InterpolationMode.Exponential),
     fillExtrusionColorTransition: { duration: 2000, delay: 0 },
   },
   streets: {
     lineColor: 'blue',
     lineWidth: 2,
     lineOpacity: 0.50,
-    lineJoin: MapLibreGL.LineJoin.Round,
-    lineCap: MapLibreGL.LineCap.Round,
+    lineJoin: TrackasiaGL.LineJoin.Round,
+    lineCap: TrackasiaGL.LineCap.Round,
     lineDasharray: [2, 2],
   },
 });
 
 ...
 
-<MapLibreGL.FillExtrusionLayer
+<TrackasiaGL.FillExtrusionLayer
   id='building3d'
   sourceLayerID='building'
   style={layerStyles.building} />
 
-<MapLibreGL.LineLayer
+<TrackasiaGL.LineLayer
   id='streetLineColor'
   sourceLayerID='road'
   minZoomLevel={14}

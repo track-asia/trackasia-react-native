@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Downloading MapLibre Style Spec"
+echo "Downloading Trackasia Style Spec"
 cd style-spec/
 
 FILENAME=v8.json
@@ -11,5 +11,5 @@ if [ -e "./${FILENAME}" ]; then
 fi
 
 echo "Fetching new style spec ${FILENAME}"
-curl -sS https://raw.githubusercontent.com/maplibre/maplibre-gl-js/master/src/style-spec/reference/${FILENAME} -o ${FILENAME}
+curl -sS https://raw.githubusercontent.com/track-asia/maplibre-gl-js/master/src/style-spec/reference/${FILENAME} -o ${FILENAME}
 cd ..

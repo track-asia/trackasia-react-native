@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 import bboxPolygon from '@turf/bbox-polygon';
 
 import sheet from '../../styles/sheet';
@@ -20,18 +20,18 @@ const polygon = bboxPolygon([sw[0], sw[1], ne[0], ne[1]]);
 
 const RestrictMapBounds = props => (
   <Page {...props}>
-    <MapLibreGL.MapView
+    <TrackasiaGL.MapView
       style={sheet.matchParent}
-      styleURL={MapLibreGL.StyleURL.SatelliteStreet}>
-      <MapLibreGL.Camera
+      styleURL={TrackasiaGL.StyleURL.SatelliteStreet}>
+      <TrackasiaGL.Camera
         maxBounds={bounds}
         zoomLevel={7}
         centerCoordinate={[-4.744276, 50.361239]}
       />
-      <MapLibreGL.ShapeSource id="bounds" shape={polygon}>
-        <MapLibreGL.FillLayer id="boundsFill" style={boundsStyle} />
-      </MapLibreGL.ShapeSource>
-    </MapLibreGL.MapView>
+      <TrackasiaGL.ShapeSource id="bounds" shape={polygon}>
+        <TrackasiaGL.FillLayer id="boundsFill" style={boundsStyle} />
+      </TrackasiaGL.ShapeSource>
+    </TrackasiaGL.MapView>
   </Page>
 );
 

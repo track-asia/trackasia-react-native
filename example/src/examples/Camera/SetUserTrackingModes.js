@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import {onSortOptions} from '../../utils';
@@ -22,11 +22,11 @@ class SetUserTrackingModes extends React.Component {
   constructor(props) {
     super(props);
 
-    this._trackingOptions = Object.keys(MapLibreGL.UserTrackingModes)
+    this._trackingOptions = Object.keys(TrackasiaGL.UserTrackingModes)
       .map(key => {
         return {
           label: key,
-          data: MapLibreGL.UserTrackingModes[key],
+          data: TrackasiaGL.UserTrackingModes[key],
         };
       })
       .concat([
@@ -74,11 +74,11 @@ class SetUserTrackingModes extends React.Component {
 
   get userTrackingModeText() {
     switch (this.state.currentTrackingMode) {
-      case MapLibreGL.UserTrackingModes.Follow:
+      case TrackasiaGL.UserTrackingModes.Follow:
         return 'Follow';
-      case MapLibreGL.UserTrackingModes.FollowWithCourse:
+      case TrackasiaGL.UserTrackingModes.FollowWithCourse:
         return 'FollowWithCourse';
-      case MapLibreGL.UserTrackingModes.FollowWithHeading:
+      case TrackasiaGL.UserTrackingModes.FollowWithHeading:
         return 'FollowWithHeading';
       default:
         return 'None';
@@ -93,13 +93,13 @@ class SetUserTrackingModes extends React.Component {
         initialIndex={3}
         options={this._trackingOptions}
         onOptionPress={this.onTrackingChange}>
-        <MapLibreGL.MapView style={sheet.matchParent}>
-          <MapLibreGL.UserLocation
+        <TrackasiaGL.MapView style={sheet.matchParent}>
+          <TrackasiaGL.UserLocation
             visible={this.state.showUserLocation}
             showsUserHeadingIndicator={this.state.showsUserHeadingIndicator}
           />
 
-          <MapLibreGL.Camera
+          <TrackasiaGL.Camera
             defaultSettings={{
               centerCoordinate: [-111.8678, 40.2866],
               zoomLevel: 0,
@@ -114,7 +114,7 @@ class SetUserTrackingModes extends React.Component {
             }
             onUserTrackingModeChange={this.onUserTrackingModeChange}
           />
-        </MapLibreGL.MapView>
+        </TrackasiaGL.MapView>
 
         <Bubble style={styles.bubbleOne}>
           <Text>User Tracking Mode: {this.userTrackingModeText}</Text>

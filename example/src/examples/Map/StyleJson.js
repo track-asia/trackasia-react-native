@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import StyleJsonExample from '../../assets/style-json-example.json';
 import StyleJsonExample2 from '../../assets/style-json-example2.json';
@@ -38,16 +38,16 @@ class StyleJson extends React.Component {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
-          styleURL={MapLibreGL.StyleURL.Light}
+        <TrackasiaGL.MapView
+          styleURL={TrackasiaGL.StyleURL.Light}
           style={styles.map}>
-          <MapLibreGL.Camera defaultSettings={defaultCamera} />
-          <MapLibreGL.Style
+          <TrackasiaGL.Camera defaultSettings={defaultCamera} />
+          <TrackasiaGL.Style
             json={
               this.state.showAltStyle ? StyleJsonExample2 : StyleJsonExample
             }
           />
-        </MapLibreGL.MapView>
+        </TrackasiaGL.MapView>
         <Bubble onPress={this.onPress}>
           <Text>{this.state.showAltStyle ? 'Style 2' : 'Style 1'}</Text>
         </Bubble>

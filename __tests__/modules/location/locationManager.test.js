@@ -4,8 +4,8 @@ import LocationManager, {
 
 import {NativeModules} from 'react-native';
 
-const MapLibreGL = NativeModules.MGLModule;
-const MapLibreGLLocationManager = NativeModules.MGLLocationModule;
+const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGLLocationManager = NativeModules.MGLLocationModule;
 
 const location = {
   coords: {
@@ -37,7 +37,7 @@ describe('LocationManager', () => {
     describe('#getLastKnownLocation', () => {
       test('gets last known location from native locationManager if non available', async () => {
         jest
-          .spyOn(MapLibreGLLocationManager, 'getLastKnownLocation')
+          .spyOn(TrackasiaGLLocationManager, 'getLastKnownLocation')
           .mockImplementation(() => location);
 
         const lastKnownLocation = await locationManager.getLastKnownLocation();
@@ -45,7 +45,7 @@ describe('LocationManager', () => {
         expect(lastKnownLocation).toStrictEqual(location);
         expect(locationManager._lastKnownLocation).toStrictEqual(location);
         expect(
-          MapLibreGLLocationManager.getLastKnownLocation,
+          TrackasiaGLLocationManager.getLastKnownLocation,
         ).toHaveBeenCalledTimes(1);
 
         locationManager._lastKnownLocation = null;
@@ -59,7 +59,7 @@ describe('LocationManager', () => {
         expect(locationManager._lastKnownLocation).toStrictEqual(location);
 
         expect(
-          MapLibreGLLocationManager.getLastKnownLocation,
+          TrackasiaGLLocationManager.getLastKnownLocation,
         ).not.toHaveBeenCalled();
 
         // reset
@@ -69,7 +69,7 @@ describe('LocationManager', () => {
 
     describe('#addListener', () => {
       const myListener = jest.fn();
-      MapLibreGL.LocationCallbackName = {Update: 'MapboxUserLocationUpdate'};
+      TrackasiaGL.LocationCallbackName = {Update: 'MapboxUserLocationUpdate'};
 
       afterEach(() => {
         locationManager._listeners = [];
@@ -100,7 +100,7 @@ describe('LocationManager', () => {
     });
 
     describe('#removeListener', () => {
-      MapLibreGLLocationManager.stop = jest.fn();
+      TrackasiaGLLocationManager.stop = jest.fn();
 
       test('removes selected listener', () => {
         // just two different functions
@@ -109,22 +109,22 @@ describe('LocationManager', () => {
 
         locationManager.addListener(listenerA);
         expect(locationManager._listeners).toStrictEqual([listenerA]);
-        expect(MapLibreGLLocationManager.stop).not.toHaveBeenCalled();
+        expect(TrackasiaGLLocationManager.stop).not.toHaveBeenCalled();
 
         locationManager.addListener(listenerB);
         expect(locationManager._listeners).toStrictEqual([
           listenerA,
           listenerB,
         ]);
-        expect(MapLibreGLLocationManager.stop).not.toHaveBeenCalled();
+        expect(TrackasiaGLLocationManager.stop).not.toHaveBeenCalled();
 
         locationManager.removeListener(listenerB);
         expect(locationManager._listeners).toStrictEqual([listenerA]);
-        expect(MapLibreGLLocationManager.stop).not.toHaveBeenCalled();
+        expect(TrackasiaGLLocationManager.stop).not.toHaveBeenCalled();
 
         locationManager.removeListener(listenerA);
         expect(locationManager._listeners).toStrictEqual([]);
-        expect(MapLibreGLLocationManager.stop).toHaveBeenCalledTimes(1);
+        expect(TrackasiaGLLocationManager.stop).toHaveBeenCalledTimes(1);
       });
     });
 
@@ -148,7 +148,7 @@ describe('LocationManager', () => {
     });
 
     describe('#start', () => {
-      jest.spyOn(MapLibreGLLocationManager, 'start');
+      jest.spyOn(TrackasiaGLLocationManager, 'start');
       jest.spyOn(LocationModuleEventEmitter, 'addListener');
 
       afterEach(() => {
@@ -156,15 +156,15 @@ describe('LocationManager', () => {
       });
 
       test('starts native location manager and adds event emitter listener', () => {
-        MapLibreGL.LocationCallbackName = {Update: 'MapboxUserLocationUpdate'};
+        TrackasiaGL.LocationCallbackName = {Update: 'MapboxUserLocationUpdate'};
 
         expect(locationManager._isListening).toStrictEqual(false);
 
         locationManager.start();
 
-        expect(MapLibreGLLocationManager.start).toHaveBeenCalledTimes(1);
+        expect(TrackasiaGLLocationManager.start).toHaveBeenCalledTimes(1);
         expect(LocationModuleEventEmitter.addListener).toHaveBeenCalledWith(
-          MapLibreGL.LocationCallbackName.Update,
+          TrackasiaGL.LocationCallbackName.Update,
           locationManager.onUpdate,
         );
 
@@ -174,8 +174,8 @@ describe('LocationManager', () => {
       test('passes "displacement"', () => {
         locationManager.start(5); // displacement 5meters
 
-        expect(MapLibreGLLocationManager.start).toHaveBeenCalledTimes(1);
-        expect(MapLibreGLLocationManager.start).toHaveBeenCalledWith(5);
+        expect(TrackasiaGLLocationManager.start).toHaveBeenCalledTimes(1);
+        expect(TrackasiaGLLocationManager.start).toHaveBeenCalledWith(5);
       });
 
       test('does not start when already listening', () => {
@@ -186,7 +186,7 @@ describe('LocationManager', () => {
 
         locationManager.start();
 
-        expect(MapLibreGLLocationManager.start).not.toHaveBeenCalled();
+        expect(TrackasiaGLLocationManager.start).not.toHaveBeenCalled();
         expect(LocationModuleEventEmitter.addListener).not.toHaveBeenCalled();
       });
     });
@@ -197,14 +197,14 @@ describe('LocationManager', () => {
         locationManager._isListening = true;
 
         // native location manager has no #stop exposed in tests?
-        MapLibreGLLocationManager.stop = jest.fn();
-        MapLibreGL.LocationCallbackName = {Update: 'MapboxUserLocationUpdate'};
+        TrackasiaGLLocationManager.stop = jest.fn();
+        TrackasiaGL.LocationCallbackName = {Update: 'MapboxUserLocationUpdate'};
 
         expect(locationManager._isListening).toStrictEqual(true);
 
         locationManager.stop();
 
-        expect(MapLibreGLLocationManager.stop).toHaveBeenCalledTimes(1);
+        expect(TrackasiaGLLocationManager.stop).toHaveBeenCalledTimes(1);
         expect(locationManager.subscription.remove).toHaveBeenCalled();
 
         expect(locationManager._isListening).toStrictEqual(false);
@@ -215,24 +215,24 @@ describe('LocationManager', () => {
         locationManager._isListening = false;
 
         // native location manager has no #stop exposed in tests?
-        MapLibreGLLocationManager.stop = jest.fn();
-        MapLibreGL.LocationCallbackName = {Update: 'MapboxUserLocationUpdate'};
+        TrackasiaGLLocationManager.stop = jest.fn();
+        TrackasiaGL.LocationCallbackName = {Update: 'MapboxUserLocationUpdate'};
 
         expect(locationManager._isListening).toStrictEqual(false);
 
         locationManager.stop();
 
-        expect(MapLibreGLLocationManager.stop).toHaveBeenCalledTimes(1);
+        expect(TrackasiaGLLocationManager.stop).toHaveBeenCalledTimes(1);
         expect(locationManager.subscription.remove).not.toHaveBeenCalled();
       });
     });
 
     describe('#setMinDisplacement', () => {
       test('calls native "setMinDisplacement"', () => {
-        MapLibreGLLocationManager.setMinDisplacement = jest.fn();
+        TrackasiaGLLocationManager.setMinDisplacement = jest.fn();
         locationManager.setMinDisplacement(5);
         expect(
-          MapLibreGLLocationManager.setMinDisplacement,
+          TrackasiaGLLocationManager.setMinDisplacement,
         ).toHaveBeenCalledWith(5);
       });
     });

@@ -1,4 +1,4 @@
-import MapLibreGL from '../../../javascript';
+import TrackasiaGL from '../../../javascript';
 import {OfflineModuleEventEmitter} from '../../../javascript/modules/offline/offlineManager';
 
 import {NativeModules, Platform} from 'react-native';
@@ -19,7 +19,7 @@ describe('offlineManager', () => {
     type: 'offlinestatus',
     payload: {
       name: packOptions.name,
-      state: MapLibreGL.OfflinePackDownloadState.Active,
+      state: TrackasiaGL.OfflinePackDownloadState.Active,
       progress: 50.0,
     },
   };
@@ -28,7 +28,7 @@ describe('offlineManager', () => {
     type: 'offlinestatus',
     payload: {
       name: packOptions.name,
-      state: MapLibreGL.OfflinePackDownloadState.Complete,
+      state: TrackasiaGL.OfflinePackDownloadState.Complete,
       progress: 100.0,
     },
   };
@@ -42,37 +42,37 @@ describe('offlineManager', () => {
   };
 
   afterEach(async () => {
-    const packs = await MapLibreGL.offlineManager.getPacks();
+    const packs = await TrackasiaGL.offlineManager.getPacks();
     for (const pack of packs) {
-      await MapLibreGL.offlineManager.deletePack(pack.name);
+      await TrackasiaGL.offlineManager.deletePack(pack.name);
     }
 
     jest.clearAllMocks();
   });
 
   it('should create pack', async () => {
-    let offlinePack = await MapLibreGL.offlineManager.getPack(packOptions.name);
+    let offlinePack = await TrackasiaGL.offlineManager.getPack(packOptions.name);
     expect(offlinePack).toBeFalsy();
 
-    await MapLibreGL.offlineManager.createPack(packOptions);
-    offlinePack = await MapLibreGL.offlineManager.getPack(packOptions.name);
+    await TrackasiaGL.offlineManager.createPack(packOptions);
+    offlinePack = await TrackasiaGL.offlineManager.getPack(packOptions.name);
     expect(offlinePack).toBeTruthy();
   });
 
   it('should delete pack', async () => {
-    await MapLibreGL.offlineManager.createPack(packOptions);
-    let offlinePack = await MapLibreGL.offlineManager.getPack(packOptions.name);
+    await TrackasiaGL.offlineManager.createPack(packOptions);
+    let offlinePack = await TrackasiaGL.offlineManager.getPack(packOptions.name);
     expect(offlinePack).toBeTruthy();
 
-    await MapLibreGL.offlineManager.deletePack(packOptions.name);
-    offlinePack = await MapLibreGL.offlineManager.getPack(packOptions.name);
+    await TrackasiaGL.offlineManager.deletePack(packOptions.name);
+    offlinePack = await TrackasiaGL.offlineManager.getPack(packOptions.name);
     expect(offlinePack).toBeFalsy();
   });
 
   it('should set max tile count limit', () => {
     const expectedLimit = 2000;
     const spy = jest.spyOn(NativeModules.MGLOfflineModule, 'setTileCountLimit');
-    MapLibreGL.offlineManager.setTileCountLimit(expectedLimit);
+    TrackasiaGL.offlineManager.setTileCountLimit(expectedLimit);
     expect(spy).toHaveBeenCalledWith(expectedLimit);
     spy.mockRestore();
   });
@@ -83,7 +83,7 @@ describe('offlineManager', () => {
       NativeModules.MGLOfflineModule,
       'setProgressEventThrottle',
     );
-    MapLibreGL.offlineManager.setProgressEventThrottle(expectedThrottleValue);
+    TrackasiaGL.offlineManager.setProgressEventThrottle(expectedThrottleValue);
     expect(spy).toHaveBeenCalledWith(expectedThrottleValue);
     spy.mockRestore();
   });
@@ -92,18 +92,18 @@ describe('offlineManager', () => {
     it('should subscribe to native events', async () => {
       const spy = jest.spyOn(OfflineModuleEventEmitter, 'addListener');
       const noop = () => {};
-      await MapLibreGL.offlineManager.createPack(packOptions, noop, noop);
+      await TrackasiaGL.offlineManager.createPack(packOptions, noop, noop);
       expect(spy).toHaveBeenCalledTimes(2);
       spy.mockClear();
     });
 
     it('should call progress listener', async () => {
       const listener = jest.fn();
-      await MapLibreGL.offlineManager.createPack(packOptions, listener);
-      const expectedOfflinePack = await MapLibreGL.offlineManager.getPack(
+      await TrackasiaGL.offlineManager.createPack(packOptions, listener);
+      const expectedOfflinePack = await TrackasiaGL.offlineManager.getPack(
         packOptions.name,
       );
-      MapLibreGL.offlineManager._onProgress(mockOnProgressEvent);
+      TrackasiaGL.offlineManager._onProgress(mockOnProgressEvent);
       expect(listener).toHaveBeenCalledWith(
         expectedOfflinePack,
         mockOnProgressEvent.payload,
@@ -112,11 +112,11 @@ describe('offlineManager', () => {
 
     it('should call error listener', async () => {
       const listener = jest.fn();
-      await MapLibreGL.offlineManager.createPack(packOptions, null, listener);
-      const expectedOfflinePack = await MapLibreGL.offlineManager.getPack(
+      await TrackasiaGL.offlineManager.createPack(packOptions, null, listener);
+      const expectedOfflinePack = await TrackasiaGL.offlineManager.getPack(
         packOptions.name,
       );
-      MapLibreGL.offlineManager._onError(mockErrorEvent);
+      TrackasiaGL.offlineManager._onError(mockErrorEvent);
       expect(listener).toHaveBeenCalledWith(
         expectedOfflinePack,
         mockErrorEvent.payload,
@@ -125,66 +125,66 @@ describe('offlineManager', () => {
 
     it('should not call listeners after unsubscribe', async () => {
       const listener = jest.fn();
-      await MapLibreGL.offlineManager.createPack(
+      await TrackasiaGL.offlineManager.createPack(
         packOptions,
         listener,
         listener,
       );
-      MapLibreGL.offlineManager.unsubscribe(packOptions.name);
-      MapLibreGL.offlineManager._onProgress(mockOnProgressEvent);
-      MapLibreGL.offlineManager._onError(mockErrorEvent);
+      TrackasiaGL.offlineManager.unsubscribe(packOptions.name);
+      TrackasiaGL.offlineManager._onProgress(mockOnProgressEvent);
+      TrackasiaGL.offlineManager._onError(mockErrorEvent);
       expect(listener).not.toHaveBeenCalled();
     });
 
     it('should unsubscribe from native events', async () => {
       const noop = () => {};
 
-      await MapLibreGL.offlineManager.createPack(packOptions, noop, noop);
-      MapLibreGL.offlineManager.unsubscribe(packOptions.name);
+      await TrackasiaGL.offlineManager.createPack(packOptions, noop, noop);
+      TrackasiaGL.offlineManager.unsubscribe(packOptions.name);
 
       expect(
-        MapLibreGL.offlineManager.subscriptionProgress.remove,
+        TrackasiaGL.offlineManager.subscriptionProgress.remove,
       ).toHaveBeenCalledTimes(1);
       expect(
-        MapLibreGL.offlineManager.subscriptionError.remove,
+        TrackasiaGL.offlineManager.subscriptionError.remove,
       ).toHaveBeenCalledTimes(1);
     });
 
     it('should unsubscribe event listeners once a pack download has completed', async () => {
       const listener = jest.fn();
-      await MapLibreGL.offlineManager.createPack(
+      await TrackasiaGL.offlineManager.createPack(
         packOptions,
         listener,
         listener,
       );
 
       expect(
-        MapLibreGL.offlineManager._hasListeners(
+        TrackasiaGL.offlineManager._hasListeners(
           packOptions.name,
-          MapLibreGL.offlineManager._progressListeners,
+          TrackasiaGL.offlineManager._progressListeners,
         ),
       ).toBeTruthy();
 
       expect(
-        MapLibreGL.offlineManager._hasListeners(
+        TrackasiaGL.offlineManager._hasListeners(
           packOptions.name,
-          MapLibreGL.offlineManager._errorListeners,
+          TrackasiaGL.offlineManager._errorListeners,
         ),
       ).toBeTruthy();
 
-      MapLibreGL.offlineManager._onProgress(mockOnProgressCompleteEvent);
+      TrackasiaGL.offlineManager._onProgress(mockOnProgressCompleteEvent);
 
       expect(
-        MapLibreGL.offlineManager._hasListeners(
+        TrackasiaGL.offlineManager._hasListeners(
           packOptions.name,
-          MapLibreGL.offlineManager._progressListeners,
+          TrackasiaGL.offlineManager._progressListeners,
         ),
       ).toBeFalsy();
 
       expect(
-        MapLibreGL.offlineManager._hasListeners(
+        TrackasiaGL.offlineManager._hasListeners(
           packOptions.name,
-          MapLibreGL.offlineManager._errorListeners,
+          TrackasiaGL.offlineManager._errorListeners,
         ),
       ).toBeFalsy();
     });
@@ -199,8 +199,8 @@ describe('offlineManager', () => {
       const name = `test-${Date.now()}`;
       const noop = () => {};
       const options = {...packOptions, name};
-      await MapLibreGL.offlineManager.createPack(options);
-      await MapLibreGL.offlineManager.subscribe(name, noop, noop);
+      await TrackasiaGL.offlineManager.createPack(options);
+      await TrackasiaGL.offlineManager.subscribe(name, noop, noop);
 
       expect(spy).toHaveBeenCalled();
       spy.mockRestore();
@@ -212,7 +212,7 @@ describe('offlineManager', () => {
       const name = `test-${Date.now()}`;
       const noop = () => {};
       const options = {...packOptions, name};
-      await MapLibreGL.offlineManager.createPack(options, noop, noop);
+      await TrackasiaGL.offlineManager.createPack(options, noop, noop);
 
       expect(spy).not.toHaveBeenCalled();
       spy.mockRestore();
@@ -228,8 +228,8 @@ describe('offlineManager', () => {
       const name = `test-${Date.now()}`;
       const noop = () => {};
       const options = {...packOptions, name};
-      await MapLibreGL.offlineManager.createPack(options);
-      await MapLibreGL.offlineManager.subscribe(name, noop, noop);
+      await TrackasiaGL.offlineManager.createPack(options);
+      await TrackasiaGL.offlineManager.subscribe(name, noop, noop);
 
       expect(spy).not.toHaveBeenCalled();
       spy.mockRestore();

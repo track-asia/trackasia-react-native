@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
@@ -30,7 +30,7 @@ class SetHeading extends React.Component {
   }
 
   componentDidMount() {
-    MapLibreGL.locationManager.start();
+    TrackasiaGL.locationManager.start();
   }
 
   componentDidUpdate() {
@@ -40,7 +40,7 @@ class SetHeading extends React.Component {
   }
 
   componentWillUnmount() {
-    MapLibreGL.locationManager.stop();
+    TrackasiaGL.locationManager.stop();
   }
 
   onHeadingChange(index, heading) {
@@ -53,12 +53,12 @@ class SetHeading extends React.Component {
         {...this.props}
         options={this._bearingOptions}
         onOptionPress={this.onHeadingChange}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={ref => (this.map = ref)}
           style={sheet.matchParent}>
-          <MapLibreGL.Camera {...this.state} />
-          <MapLibreGL.UserLocation />
-        </MapLibreGL.MapView>
+          <TrackasiaGL.Camera {...this.state} />
+          <TrackasiaGL.UserLocation />
+        </TrackasiaGL.MapView>
       </TabBarPage>
     );
   }

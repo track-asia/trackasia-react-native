@@ -1,5 +1,5 @@
 {
-  "name": "RNMaplibreExample",
+  "name": "RNTrackasiaExample",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -58,8 +58,8 @@
     "apps": {
       "ios": {
         "type": "ios.app",
-        "build": "xcodebuild -quiet -workspace ios/RNMaplibreExample.xcworkspace -configuration Release -scheme RNMaplibreExample -sdk iphonesimulator -derivedDataPath ios/build -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation)'",
-        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/RNMaplibreExample.app"
+        "build": "xcodebuild -quiet -workspace ios/RNTrackasiaExample.xcworkspace -configuration Release -scheme RNTrackasiaExample -sdk iphonesimulator -derivedDataPath ios/build -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation)'",
+        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/RNTrackasiaExample.app"
       }
     },
     "devices": {

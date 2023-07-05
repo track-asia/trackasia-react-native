@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
@@ -16,11 +16,11 @@ class SetDisplacement extends React.Component {
   state = {minDisplacement: DISPLACEMENT[0]};
 
   componentDidMount() {
-    MapLibreGL.locationManager.start();
+    TrackasiaGL.locationManager.start();
   }
 
   componentWillUnmount() {
-    MapLibreGL.locationManager.stop();
+    TrackasiaGL.locationManager.stop();
   }
 
   onDisplacementChange = index => {
@@ -33,17 +33,17 @@ class SetDisplacement extends React.Component {
         {...this.props}
         options={OPTIONS}
         onOptionPress={this.onDisplacementChange}>
-        <MapLibreGL.MapView style={sheet.matchParent}>
-          <MapLibreGL.Camera
+        <TrackasiaGL.MapView style={sheet.matchParent}>
+          <TrackasiaGL.Camera
             followZoomLevel={16}
             followUserMode="compass"
             followUserLocation
           />
 
-          <MapLibreGL.UserLocation
+          <TrackasiaGL.UserLocation
             minDisplacement={this.state.minDisplacement}
           />
-        </MapLibreGL.MapView>
+        </TrackasiaGL.MapView>
       </TabBarPage>
     );
   }

@@ -1,0 +1,4 @@
+build/
+.history/
+.dart_tool/
+node_modules/

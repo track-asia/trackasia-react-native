@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 import {featureCollection, feature} from '@turf/helpers';
 
 import sheet from '../../styles/sheet';
@@ -56,27 +56,27 @@ class CustomIcon extends React.Component {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           style={sheet.matchParent}>
-          <MapLibreGL.Camera
+          <TrackasiaGL.Camera
             zoomLevel={9}
             centerCoordinate={[-73.970895, 40.723279]}
           />
 
-          <MapLibreGL.ShapeSource
+          <TrackasiaGL.ShapeSource
             id="symbolLocationSource"
             hitbox={{width: 20, height: 20}}
             onPress={this.onSourceLayerPress}
             shape={this.state.featureCollection}>
-            <MapLibreGL.SymbolLayer
+            <TrackasiaGL.SymbolLayer
               id="symbolLocationSymbols"
               minZoomLevel={1}
               style={styles.icon}
             />
-          </MapLibreGL.ShapeSource>
-        </MapLibreGL.MapView>
+          </TrackasiaGL.ShapeSource>
+        </TrackasiaGL.MapView>
 
         <Bubble>
           <Text>Tap to add an icon</Text>

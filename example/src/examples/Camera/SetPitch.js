@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
@@ -29,11 +29,11 @@ class SetPitch extends React.Component {
   }
 
   componentDidMount() {
-    MapLibreGL.locationManager.start();
+    TrackasiaGL.locationManager.start();
   }
 
   componentWillUnmount() {
-    MapLibreGL.locationManager.stop();
+    TrackasiaGL.locationManager.stop();
   }
 
   onUpdatePitch(index, pitch) {
@@ -46,10 +46,10 @@ class SetPitch extends React.Component {
         {...this.props}
         options={this._pitchOptions}
         onOptionPress={this.onUpdatePitch}>
-        <MapLibreGL.MapView style={sheet.matchParent}>
-          <MapLibreGL.Camera {...this.state} followUserLocation />
-          <MapLibreGL.UserLocation />
-        </MapLibreGL.MapView>
+        <TrackasiaGL.MapView style={sheet.matchParent}>
+          <TrackasiaGL.Camera {...this.state} followUserLocation />
+          <TrackasiaGL.UserLocation />
+        </TrackasiaGL.MapView>
       </TabBarPage>
     );
   }

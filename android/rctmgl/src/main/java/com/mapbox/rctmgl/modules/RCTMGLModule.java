@@ -58,7 +58,7 @@ public class RCTMGLModule extends ReactContextBaseJavaModule {
     public Map<String, Object> getConstants() {
         // map style urls
         Map<String, String> styleURLS = new HashMap<>();
-        styleURLS.put("Default", "https://demotiles.maplibre.org/style.json");
+        styleURLS.put("Default", "https://demotiles.track-asia.com/style.json");
 
         // events
         Map<String, String> eventTypes = new HashMap<>();

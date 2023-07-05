@@ -30,8 +30,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
                BuildableName = "RNMaplibreExample.app"
-               BlueprintName = "RNMaplibreExample"
-               ReferencedContainer = "container:RNMaplibreExample.xcodeproj">
+               BlueprintName = "RNTrackasiaExample"
+               ReferencedContainer = "container:RNTrackasiaExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
                BuildableName = "RNMaplibreExampleTests.xctest"
                BlueprintName = "RNMaplibreExampleTests"
-               ReferencedContainer = "container:RNMaplibreExample.xcodeproj">
+               ReferencedContainer = "container:RNTrackasiaExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -60,8 +60,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "RNMaplibreExample.app"
-            BlueprintName = "RNMaplibreExample"
-            ReferencedContainer = "container:RNMaplibreExample.xcodeproj">
+            BlueprintName = "RNTrackasiaExample"
+            ReferencedContainer = "container:RNTrackasiaExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -83,8 +83,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "RNMaplibreExample.app"
-            BlueprintName = "RNMaplibreExample"
-            ReferencedContainer = "container:RNMaplibreExample.xcodeproj">
+            BlueprintName = "RNTrackasiaExample"
+            ReferencedContainer = "container:RNTrackasiaExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -100,8 +100,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "RNMaplibreExample.app"
-            BlueprintName = "RNMaplibreExample"
-            ReferencedContainer = "container:RNMaplibreExample.xcodeproj">
+            BlueprintName = "RNTrackasiaExample"
+            ReferencedContainer = "container:RNTrackasiaExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

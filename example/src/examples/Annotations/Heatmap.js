@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import {SF_OFFICE_COORDINATE} from '../../utils';
@@ -14,16 +14,16 @@ class Heatmap extends React.Component {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView style={sheet.matchParent}>
-          <MapLibreGL.Camera
+        <TrackasiaGL.MapView style={sheet.matchParent}>
+          <TrackasiaGL.Camera
             zoomLevel={10}
             centerCoordinate={SF_OFFICE_COORDINATE}
           />
 
-          <MapLibreGL.ShapeSource
+          <TrackasiaGL.ShapeSource
             id="earthquakes"
             url="https://www.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson">
-            <MapLibreGL.HeatmapLayer
+            <TrackasiaGL.HeatmapLayer
               id="earthquakes"
               sourceID="earthquakes"
               style={{
@@ -46,8 +46,8 @@ class Heatmap extends React.Component {
                 ],
               }}
             />
-          </MapLibreGL.ShapeSource>
-        </MapLibreGL.MapView>
+          </TrackasiaGL.ShapeSource>
+        </TrackasiaGL.MapView>
       </Page>
     );
   }

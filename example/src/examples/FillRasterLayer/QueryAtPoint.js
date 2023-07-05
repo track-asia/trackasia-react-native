@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import nycJSON from '../../assets/nyc_geojson.json';
@@ -60,31 +60,31 @@ class QueryAtPoint extends React.Component {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           style={sheet.matchParent}
-          styleURL={MapLibreGL.StyleURL.Light}>
-          <MapLibreGL.Camera
+          styleURL={TrackasiaGL.StyleURL.Light}>
+          <TrackasiaGL.Camera
             zoomLevel={9}
             centerCoordinate={[-73.970895, 40.723279]}
           />
 
-          <MapLibreGL.ShapeSource id="nyc" shape={nycJSON}>
-            <MapLibreGL.FillLayer id="nycFill" style={styles.neighborhoods} />
-          </MapLibreGL.ShapeSource>
+          <TrackasiaGL.ShapeSource id="nyc" shape={nycJSON}>
+            <TrackasiaGL.FillLayer id="nycFill" style={styles.neighborhoods} />
+          </TrackasiaGL.ShapeSource>
 
           {this.state.selectedGeoJSON ? (
-            <MapLibreGL.ShapeSource
+            <TrackasiaGL.ShapeSource
               id="selectedNYC"
               shape={this.state.selectedGeoJSON}>
-              <MapLibreGL.FillLayer
+              <TrackasiaGL.FillLayer
                 id="selectedNYCFill"
                 style={styles.selectedNeighborhood}
               />
-            </MapLibreGL.ShapeSource>
+            </TrackasiaGL.ShapeSource>
           ) : null}
-        </MapLibreGL.MapView>
+        </TrackasiaGL.MapView>
 
         <Bubble>
           <Text>Press on a feature to highlight it.</Text>

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const MapLibreGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MGLModule;
 
 export const NATIVE_MODULE_NAME = 'RCTMGLFillLayer';
 
@@ -75,7 +75,7 @@ class FillLayer extends AbstractLayer {
   };
 
   static defaultProps = {
-    sourceID: MapLibreGL.StyleSource.DefaultSourceID,
+    sourceID: TrackasiaGL.StyleSource.DefaultSourceID,
   };
 
   render() {

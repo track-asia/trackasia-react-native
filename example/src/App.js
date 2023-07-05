@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 import {StyleSheet, Text, View, LogBox, SafeAreaView} from 'react-native';
 import {createStackNavigator, TransitionPresets} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
 });
 
-MapLibreGL.setAccessToken(null);
+TrackasiaGL.setAccessToken(null);
 Icon.loadFont();
 
 const AppStackNavigator = createStackNavigator(
@@ -58,7 +58,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     if (IS_ANDROID) {
-      const isGranted = await MapLibreGL.requestAndroidLocationPermissions();
+      const isGranted = await TrackasiaGL.requestAndroidLocationPermissions();
       this.setState({
         isAndroidPermissionGranted: isGranted,
         isFetchingAndroidPermission: false,

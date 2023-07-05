@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import smileyFaceGeoJSON from '../../assets/smiley_face.json';
@@ -26,25 +26,25 @@ class TwoByTwo extends React.Component {
 
   renderMap(styleURL, layerStyle) {
     return (
-      <MapLibreGL.MapView
+      <TrackasiaGL.MapView
         zoomLevel={2}
         centerCoordinate={[-35.15165038, 40.6235728]}
         onSetCameraComplete={this.onUpdateZoomLevel}
         ref={ref => (this.map = ref)}
         style={sheet.matchParent}
         styleURL={styleURL}>
-        <MapLibreGL.ShapeSource id="smileyFaceSource" shape={smileyFaceGeoJSON}>
-          <MapLibreGL.FillLayer id="smileyFaceFill" style={layerStyle} />
-        </MapLibreGL.ShapeSource>
-      </MapLibreGL.MapView>
+        <TrackasiaGL.ShapeSource id="smileyFaceSource" shape={smileyFaceGeoJSON}>
+          <TrackasiaGL.FillLayer id="smileyFaceFill" style={layerStyle} />
+        </TrackasiaGL.ShapeSource>
+      </TrackasiaGL.MapView>
     );
   }
 
   render() {
     return (
       <Page {...this.props}>
-        {this.renderMap(MapLibreGL.StyleURL.Light, layerStyles.smileyFaceDark)}
-        {this.renderMap(MapLibreGL.StyleURL.Dark, layerStyles.smileyFaceLight)}
+        {this.renderMap(TrackasiaGL.StyleURL.Light, layerStyles.smileyFaceDark)}
+        {this.renderMap(TrackasiaGL.StyleURL.Dark, layerStyles.smileyFaceLight)}
       </Page>
     );
   }

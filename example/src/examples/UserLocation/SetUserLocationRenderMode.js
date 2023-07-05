@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 import {Button, View} from 'react-native';
 import {ButtonGroup} from 'react-native-elements';
 import PropTypes from 'prop-types';
@@ -130,19 +130,19 @@ class SetUserLocationRenderMode extends React.Component {
           settings={this.state}
           onUpdateSettings={settings => this.setState(settings)}
         />
-        <MapLibreGL.MapView style={sheet.matchParent} tintColor={'red'}>
-          <MapLibreGL.Camera
+        <TrackasiaGL.MapView style={sheet.matchParent} tintColor={'red'}>
+          <TrackasiaGL.Camera
             followUserLocation={followUserLocation}
             followUserMode={followUserMode}
           />
           {this.state.renderMode !== 'hidden' && (
-            <MapLibreGL.UserLocation
+            <TrackasiaGL.UserLocation
               renderMode={this.state.renderMode}
               showsUserHeadingIndicator={showsUserHeadingIndicator}
               androidRenderMode={androidRenderMode}
             />
           )}
-        </MapLibreGL.MapView>
+        </TrackasiaGL.MapView>
       </TabBarPage>
     );
   }

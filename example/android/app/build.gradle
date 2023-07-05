@@ -136,7 +136,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.rnmaplibreexample"
+        applicationId "com.RNTrackasiaExample"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

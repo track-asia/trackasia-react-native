@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
@@ -41,25 +41,25 @@ class DataDrivenCircleColors extends React.PureComponent {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
-          styleURL={MapLibreGL.StyleURL.Light}
+        <TrackasiaGL.MapView
+          styleURL={TrackasiaGL.StyleURL.Light}
           style={sheet.matchParent}>
-          <MapLibreGL.Camera
+          <TrackasiaGL.Camera
             zoomLevel={10}
             pitch={45}
             centerCoordinate={[-122.400021, 37.789085]}
           />
 
-          <MapLibreGL.VectorSource
+          <TrackasiaGL.VectorSource
             id="population"
             url={'mapbox://examples.8fgz4egr'}>
-            <MapLibreGL.CircleLayer
+            <TrackasiaGL.CircleLayer
               id="sf2010CircleFill"
               sourceLayerID="sf2010"
               style={styles.circles}
             />
-          </MapLibreGL.VectorSource>
-        </MapLibreGL.MapView>
+          </TrackasiaGL.VectorSource>
+        </TrackasiaGL.MapView>
       </Page>
     );
   }

@@ -18,7 +18,7 @@ function readIosVersion() {
   const podspecPath = path.join(
     __dirname,
     '..',
-    'maplibre-react-native.podspec',
+    'trackasia-react-native.podspec',
   );
   const lines = fs.readFileSync(podspecPath, 'utf8').split('\n');
   const maplibreLineRegex = /^\s+version:\s*"(\d+\.\d+\.\d+)"$/;
@@ -58,8 +58,8 @@ const OUTPUT_EXAMPLE_PREFIX = [
   '..',
   'example',
   'node_modules',
-  '@maplibre',
-  'maplibre-react-native',
+  '@trackasia',
+  'trackasia-react-native',
 ];
 const OUTPUT_PREFIX = outputToExample ? OUTPUT_EXAMPLE_PREFIX : ['..'];
 

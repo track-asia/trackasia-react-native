@@ -21,8 +21,8 @@ import {
 } from 'react-native';
 import {debounce} from 'debounce';
 
-const MapLibreGL = NativeModules.MGLModule;
-if (MapLibreGL == null) {
+const TrackasiaGL = NativeModules.MGLModule;
+if (TrackasiaGL == null) {
   console.error(
     'Native part of Mapbox React Native libraries were not registered properly, double check our native installation guides.',
   );
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   matchParent: {flex: 1},
 });
 
-const defaultStyleURL = MapLibreGL.StyleURL.Street;
+const defaultStyleURL = TrackasiaGL.StyleURL.Street;
 
 /**
  * MapView backed by MapLibre GL Native
@@ -59,7 +59,7 @@ class MapView extends NativeBridgeComponent(React.Component) {
     style: PropTypes.any,
 
     /**
-     * Style URL for map - notice, if non is set it _will_ default to `MapLibreGL.StyleURL.Street`
+     * Style URL for map - notice, if non is set it _will_ default to `TrackasiaGL.StyleURL.Street`
      */
     styleURL: PropTypes.string,
 
@@ -323,46 +323,46 @@ class MapView extends NativeBridgeComponent(React.Component) {
       const events = [];
 
       if (props.onRegionWillChange) {
-        events.push(MapLibreGL.EventTypes.RegionWillChange);
+        events.push(TrackasiaGL.EventTypes.RegionWillChange);
       }
       if (props.onRegionIsChanging) {
-        events.push(MapLibreGL.EventTypes.RegionIsChanging);
+        events.push(TrackasiaGL.EventTypes.RegionIsChanging);
       }
       if (props.onRegionDidChange) {
-        events.push(MapLibreGL.EventTypes.RegionDidChange);
+        events.push(TrackasiaGL.EventTypes.RegionDidChange);
       }
       if (props.onUserLocationUpdate) {
-        events.push(MapLibreGL.EventTypes.UserLocationUpdated);
+        events.push(TrackasiaGL.EventTypes.UserLocationUpdated);
       }
       if (props.onWillStartLoadingMap) {
-        events.push(MapLibreGL.EventTypes.WillStartLoadingMap);
+        events.push(TrackasiaGL.EventTypes.WillStartLoadingMap);
       }
       if (props.onDidFinishLoadingMap) {
-        events.push(MapLibreGL.EventTypes.DidFinishLoadingMap);
+        events.push(TrackasiaGL.EventTypes.DidFinishLoadingMap);
       }
       if (props.onDidFailLoadingMap) {
-        events.push(MapLibreGL.EventTypes.DidFailLoadingMap);
+        events.push(TrackasiaGL.EventTypes.DidFailLoadingMap);
       }
       if (props.onWillStartRenderingFrame) {
-        events.push(MapLibreGL.EventTypes.WillStartRenderingFrame);
+        events.push(TrackasiaGL.EventTypes.WillStartRenderingFrame);
       }
       if (props.onDidFinishRenderingFrame) {
-        events.push(MapLibreGL.EventTypes.DidFinishRenderingFrame);
+        events.push(TrackasiaGL.EventTypes.DidFinishRenderingFrame);
       }
       if (props.onDidFinishRenderingFrameFully) {
-        events.push(MapLibreGL.EventTypes.DidFinishRenderingFrameFully);
+        events.push(TrackasiaGL.EventTypes.DidFinishRenderingFrameFully);
       }
       if (props.onWillStartRenderingMap) {
-        events.push(MapLibreGL.EventTypes.WillStartRenderingMap);
+        events.push(TrackasiaGL.EventTypes.WillStartRenderingMap);
       }
       if (props.onDidFinishRenderingMap) {
-        events.push(MapLibreGL.EventTypes.DidFinishRenderingMap);
+        events.push(TrackasiaGL.EventTypes.DidFinishRenderingMap);
       }
       if (props.onDidFinishRenderingMapFully) {
-        events.push(MapLibreGL.EventTypes.DidFinishRenderingMapFully);
+        events.push(TrackasiaGL.EventTypes.DidFinishRenderingMapFully);
       }
       if (props.onDidFinishLoadingStyle) {
-        events.push(MapLibreGL.EventTypes.DidFinishLoadingStyle);
+        events.push(TrackasiaGL.EventTypes.DidFinishLoadingStyle);
       }
 
       this._runNativeCommand(
@@ -561,7 +561,7 @@ class MapView extends NativeBridgeComponent(React.Component) {
 
   _createStopConfig(config = {}) {
     const stopConfig = {
-      mode: isNumber(config.mode) ? config.mode : MapLibreGL.CameraModes.Ease,
+      mode: isNumber(config.mode) ? config.mode : TrackasiaGL.CameraModes.Ease,
       pitch: config.pitch,
       heading: config.heading,
       duration: config.duration || 2000,
@@ -620,54 +620,54 @@ class MapView extends NativeBridgeComponent(React.Component) {
     let propName = '';
 
     switch (type) {
-      case MapLibreGL.EventTypes.RegionWillChange:
+      case TrackasiaGL.EventTypes.RegionWillChange:
         if (regionWillChangeDebounceTime > 0) {
           this._onDebouncedRegionWillChange(payload);
         } else {
           propName = 'onRegionWillChange';
         }
         break;
-      case MapLibreGL.EventTypes.RegionIsChanging:
+      case TrackasiaGL.EventTypes.RegionIsChanging:
         propName = 'onRegionIsChanging';
         break;
-      case MapLibreGL.EventTypes.RegionDidChange:
+      case TrackasiaGL.EventTypes.RegionDidChange:
         if (regionDidChangeDebounceTime > 0) {
           this._onDebouncedRegionDidChange(payload);
         } else {
           propName = 'onRegionDidChange';
         }
         break;
-      case MapLibreGL.EventTypes.UserLocationUpdated:
+      case TrackasiaGL.EventTypes.UserLocationUpdated:
         propName = 'onUserLocationUpdate';
         break;
-      case MapLibreGL.EventTypes.WillStartLoadingMap:
+      case TrackasiaGL.EventTypes.WillStartLoadingMap:
         propName = 'onWillStartLoadingMap';
         break;
-      case MapLibreGL.EventTypes.DidFinishLoadingMap:
+      case TrackasiaGL.EventTypes.DidFinishLoadingMap:
         propName = 'onDidFinishLoadingMap';
         break;
-      case MapLibreGL.EventTypes.DidFailLoadingMap:
+      case TrackasiaGL.EventTypes.DidFailLoadingMap:
         propName = 'onDidFailLoadingMap';
         break;
-      case MapLibreGL.EventTypes.WillStartRenderingFrame:
+      case TrackasiaGL.EventTypes.WillStartRenderingFrame:
         propName = 'onWillStartRenderingFrame';
         break;
-      case MapLibreGL.EventTypes.DidFinishRenderingFrame:
+      case TrackasiaGL.EventTypes.DidFinishRenderingFrame:
         propName = 'onDidFinishRenderingFrame';
         break;
-      case MapLibreGL.EventTypes.DidFinishRenderingFrameFully:
+      case TrackasiaGL.EventTypes.DidFinishRenderingFrameFully:
         propName = 'onDidFinishRenderingFrameFully';
         break;
-      case MapLibreGL.EventTypes.WillStartRenderingMap:
+      case TrackasiaGL.EventTypes.WillStartRenderingMap:
         propName = 'onWillStartRenderingMap';
         break;
-      case MapLibreGL.EventTypes.DidFinishRenderingMap:
+      case TrackasiaGL.EventTypes.DidFinishRenderingMap:
         propName = 'onDidFinishRenderingMap';
         break;
-      case MapLibreGL.EventTypes.DidFinishRenderingMapFully:
+      case TrackasiaGL.EventTypes.DidFinishRenderingMapFully:
         propName = 'onDidFinishRenderingMapFully';
         break;
-      case MapLibreGL.EventTypes.DidFinishLoadingStyle:
+      case TrackasiaGL.EventTypes.DidFinishLoadingStyle:
         propName = 'onDidFinishLoadingStyle';
         break;
       default:

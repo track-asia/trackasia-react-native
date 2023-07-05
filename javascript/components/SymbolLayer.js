@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {View, NativeModules, requireNativeComponent} from 'react-native';
 
-const MapLibreGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MGLModule;
 
 export const NATIVE_MODULE_NAME = 'RCTMGLSymbolLayer';
 
@@ -75,7 +75,7 @@ class SymbolLayer extends AbstractLayer {
   };
 
   static defaultProps = {
-    sourceID: MapLibreGL.StyleSource.DefaultSourceID,
+    sourceID: TrackasiaGL.StyleSource.DefaultSourceID,
   };
 
   _shouldSnapshot() {

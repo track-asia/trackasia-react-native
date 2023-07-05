@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {NativeModules, requireNativeComponent} from 'react-native';
 import React from 'react';
 
-const MapLibreGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MGLModule;
 
 export const NATIVE_MODULE_NAME = 'RCTMGLRasterSource';
 
@@ -72,7 +72,7 @@ class RasterSource extends AbstractSource {
   };
 
   static defaultProps = {
-    id: MapLibreGL.StyleSource.DefaultSourceID,
+    id: TrackasiaGL.StyleSource.DefaultSourceID,
   };
 
   constructor(props) {

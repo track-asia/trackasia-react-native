@@ -1,4 +1,4 @@
-rootProject.name = 'RNMaplibreExample'
+rootProject.name = 'RNTrackasiaExample'
 
 include ':rctmgl'
 project(':rctmgl').projectDir = new File(rootProject.projectDir, '../../android/rctmgl')

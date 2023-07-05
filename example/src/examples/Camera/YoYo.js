@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import {SF_OFFICE_COORDINATE} from '../../utils';
@@ -42,15 +42,15 @@ class YoYo extends React.Component {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={ref => (this.map = ref)}
           style={sheet.matchParent}
-          styleURL={MapLibreGL.StyleURL.Dark}>
-          <MapLibreGL.Camera
+          styleURL={TrackasiaGL.StyleURL.Dark}>
+          <TrackasiaGL.Camera
             zoomLevel={this.state.zoomLevel}
             centerCoordinate={SF_OFFICE_COORDINATE}
           />
-        </MapLibreGL.MapView>
+        </TrackasiaGL.MapView>
       </Page>
     );
   }

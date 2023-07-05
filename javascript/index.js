@@ -34,10 +34,10 @@ import Logger from './utils/Logger';
 
 import {NativeModules, PermissionsAndroid} from 'react-native';
 
-const MapLibreGL = {...NativeModules.MGLModule};
+const TrackasiaGL = {...NativeModules.MGLModule};
 
 // static methods
-MapLibreGL.requestAndroidLocationPermissions = async function () {
+TrackasiaGL.requestAndroidLocationPermissions = async function () {
   if (isAndroid()) {
     const res = await PermissionsAndroid.requestMultiple([
       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
@@ -61,56 +61,56 @@ MapLibreGL.requestAndroidLocationPermissions = async function () {
   throw new Error('You should only call this method on Android!');
 };
 
-MapLibreGL.UserTrackingModes = Camera.UserTrackingModes;
+TrackasiaGL.UserTrackingModes = Camera.UserTrackingModes;
 
 // components
-MapLibreGL.MapView = MapView;
-MapLibreGL.Light = Light;
-MapLibreGL.PointAnnotation = PointAnnotation;
-MapLibreGL.Callout = Callout;
-MapLibreGL.UserLocation = UserLocation;
-MapLibreGL.Camera = Camera;
-MapLibreGL.Style = Style;
+TrackasiaGL.MapView = MapView;
+TrackasiaGL.Light = Light;
+TrackasiaGL.PointAnnotation = PointAnnotation;
+TrackasiaGL.Callout = Callout;
+TrackasiaGL.UserLocation = UserLocation;
+TrackasiaGL.Camera = Camera;
+TrackasiaGL.Style = Style;
 
 // annotations
-MapLibreGL.Annotation = Annotation;
-MapLibreGL.MarkerView = MarkerView;
+TrackasiaGL.Annotation = Annotation;
+TrackasiaGL.MarkerView = MarkerView;
 
 // sources
-MapLibreGL.VectorSource = VectorSource;
-MapLibreGL.ShapeSource = ShapeSource;
-MapLibreGL.RasterSource = RasterSource;
-MapLibreGL.ImageSource = ImageSource;
-MapLibreGL.Images = Images;
+TrackasiaGL.VectorSource = VectorSource;
+TrackasiaGL.ShapeSource = ShapeSource;
+TrackasiaGL.RasterSource = RasterSource;
+TrackasiaGL.ImageSource = ImageSource;
+TrackasiaGL.Images = Images;
 
 // layers
-MapLibreGL.FillLayer = FillLayer;
-MapLibreGL.FillExtrusionLayer = FillExtrusionLayer;
-MapLibreGL.HeatmapLayer = HeatmapLayer;
-MapLibreGL.LineLayer = LineLayer;
-MapLibreGL.CircleLayer = CircleLayer;
-MapLibreGL.SymbolLayer = SymbolLayer;
-MapLibreGL.RasterLayer = RasterLayer;
-MapLibreGL.BackgroundLayer = BackgroundLayer;
+TrackasiaGL.FillLayer = FillLayer;
+TrackasiaGL.FillExtrusionLayer = FillExtrusionLayer;
+TrackasiaGL.HeatmapLayer = HeatmapLayer;
+TrackasiaGL.LineLayer = LineLayer;
+TrackasiaGL.CircleLayer = CircleLayer;
+TrackasiaGL.SymbolLayer = SymbolLayer;
+TrackasiaGL.RasterLayer = RasterLayer;
+TrackasiaGL.BackgroundLayer = BackgroundLayer;
 
 // modules
-MapLibreGL.locationManager = locationManager;
-MapLibreGL.offlineManager = offlineManager;
-MapLibreGL.snapshotManager = snapshotManager;
+TrackasiaGL.locationManager = locationManager;
+TrackasiaGL.offlineManager = offlineManager;
+TrackasiaGL.snapshotManager = snapshotManager;
 
 // animated
-MapLibreGL.Animated = Animated;
+TrackasiaGL.Animated = Animated;
 
 // utils
-MapLibreGL.AnimatedPoint = AnimatedMapPoint;
-MapLibreGL.AnimatedCoordinatesArray = AnimatedCoordinatesArray;
-MapLibreGL.AnimatedExtractCoordinateFromArray =
+TrackasiaGL.AnimatedPoint = AnimatedMapPoint;
+TrackasiaGL.AnimatedCoordinatesArray = AnimatedCoordinatesArray;
+TrackasiaGL.AnimatedExtractCoordinateFromArray =
   AnimatedExtractCoordinateFromArray;
-MapLibreGL.AnimatedRouteCoordinatesArray = AnimatedRouteCoordinatesArray;
-MapLibreGL.AnimatedShape = AnimatedShape;
-MapLibreGL.Logger = Logger;
+TrackasiaGL.AnimatedRouteCoordinatesArray = AnimatedRouteCoordinatesArray;
+TrackasiaGL.AnimatedShape = AnimatedShape;
+TrackasiaGL.Logger = Logger;
 
-const {LineJoin} = MapLibreGL;
+const {LineJoin} = TrackasiaGL;
 
 export {
   MapView,
@@ -146,4 +146,4 @@ export {
   Style,
 };
 
-export default MapLibreGL;
+export default TrackasiaGL;

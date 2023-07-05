@@ -1,7 +1,7 @@
 # iOS Installation
 
 The following assumes, that you're using autolinking and installed
-`@maplibre/maplibre-react-native` via `npm` or `yarn`.
+`@trackasia/trackasia-react-native` via `npm` or `yarn`.
 
 Add the following to your `ios/Podfile`:
 
@@ -40,7 +40,7 @@ your `Podfile`:
 
 ```ruby
 $RNMBGL_Use_SPM = {
-  url: "https://github.com/maplibre/maplibre-gl-native-distribution",
+  url: "https://github.com/track-asia/trackasia-gl-native-distribution",
   requirement: {
     kind: "upToNextMajorVersion",
     minimumVersion: "5.13.0"

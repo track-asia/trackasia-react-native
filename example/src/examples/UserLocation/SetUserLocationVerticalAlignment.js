@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
@@ -47,12 +47,12 @@ class SetUserLocationVerticalAlignment extends React.Component {
         {...this.props}
         options={this._alignmentOptions}
         onOptionPress={this.onAlignmentChange}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           contentInset={this.state.currentAlignmentMode}
           style={sheet.matchParent}>
-          <MapLibreGL.Camera followUserLocation />
-          <MapLibreGL.UserLocation />
-        </MapLibreGL.MapView>
+          <TrackasiaGL.Camera followUserLocation />
+          <TrackasiaGL.UserLocation />
+        </TrackasiaGL.MapView>
       </TabBarPage>
     );
   }

@@ -25,7 +25,7 @@ end
 
 def $RNMBGL.post_install(installer)
   spm_spec = {
-    url: "https://github.com/maplibre/maplibre-gl-native-distribution",
+    url: "https://github.com/track-asia/trackasia-gl-native-distribution",
     requirement: {
       kind: "exactVersion",
       version: "5.13.0"
@@ -39,7 +39,7 @@ def $RNMBGL.post_install(installer)
   project = installer.pods_project
   self._add_spm_to_target(
     project,
-    project.targets.find { |t| t.name == "maplibre-react-native"},
+    project.targets.find { |t| t.name == "trackasia-react-native"},
     spm_spec[:url],
     spm_spec[:requirement],
     spm_spec[:product_name]
@@ -61,12 +61,12 @@ def $RNMBGL.post_install(installer)
 end
 
 Pod::Spec.new do |s|
-  s.name		= "maplibre-react-native"
-  s.summary		= "React Native Component for Maplibre Native"
+  s.name		= "trackasia-react-native"
+  s.summary		= "React Native Component for Trackasia Native"
   s.version		= package['version']
-  s.authors		= { "Ian Wagner" => "ian.wagner@stadiamaps.com" }  # TODO: MapLibre email?
-  s.homepage    	= "https://github.com/maplibre/maplibre-react-native"
-  s.source      	= { :git => "https://github.com/maplibre/maplibre-react-native.git" }
+  s.authors		= { "Ian Wagner" => "ian.wagner@stadiamaps.com" }  # TODO: Trackasia email?
+  s.homepage    	= "https://github.com/track-asia/trackasia-react-native"
+  s.source      	= { :git => "https://github.com/track-asia/trackasia-react-native.git" }
   s.license     	= "MIT"
   s.platform    	= :ios, "8.0"
 

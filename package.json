@@ -1,24 +1,24 @@
 {
-  "name": "@maplibre/maplibre-react-native",
-  "description": "A MapLibre GL Native plugin for creating maps in React Native",
+  "name": "@trackasia/trackasia-react-native",
+  "description": "A Trackasia GL Native plugin for creating maps in React Native",
   "version": "9.0.1",
   "publishConfig": {
     "access": "public"
   },
-  "author": "MapLibre",
+  "author": "Trackasia",
   "main": "./javascript/index.js",
   "keywords": [
     "maps",
     "ios",
     "android",
-    "maplibre",
+    "trackasia",
     "react-native",
     "mapbox"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maplibre/maplibre-react-native"
+    "url": "https://github.com/track-asia/trackasia-react-native"
   },
   "scripts": {
     "fetch:style:spec": "./scripts/download-style-spec.sh",

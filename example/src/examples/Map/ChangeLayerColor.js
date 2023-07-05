@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
 import Page from '../common/Page';
@@ -33,18 +33,18 @@ class ChangeLayerColor extends React.Component {
     const {backgroundColor} = this.state;
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           style={styles.mapView}>
-          <MapLibreGL.Camera defaultSettings={defaultCamera} />
+          <TrackasiaGL.Camera defaultSettings={defaultCamera} />
           {!!backgroundColor && (
-            <MapLibreGL.BackgroundLayer
+            <TrackasiaGL.BackgroundLayer
               id="background"
               style={{backgroundColor}}
             />
           )}
-        </MapLibreGL.MapView>
+        </TrackasiaGL.MapView>
         <Bubble onPress={this.onPress}>
           <Text>Paint Water</Text>
         </Bubble>

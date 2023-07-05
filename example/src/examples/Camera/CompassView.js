@@ -1,5 +1,5 @@
 import React from 'react';
-import {MapView, Camera} from '@maplibre/maplibre-react-native';
+import {MapView, Camera} from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import BaseExamplePropTypes from '../common/BaseExamplePropTypes';

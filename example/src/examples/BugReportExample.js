@@ -6,7 +6,7 @@ import {
   SymbolLayer,
   CircleLayer,
   Camera,
-} from '@maplibre/maplibre-react-native';
+} from '@trackasia/trackasia-react-native';
 
 const styles = {
   mapView: {flex: 1},

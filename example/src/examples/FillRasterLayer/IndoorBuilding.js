@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 import {Slider} from 'react-native-elements';
 
 import sheet from '../../styles/sheet';
@@ -51,29 +51,29 @@ class IndoorBuilding extends React.Component {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={ref => (this.map = ref)}
           style={sheet.matchParent}>
-          <MapLibreGL.Camera
+          <TrackasiaGL.Camera
             zoomLevel={16}
             pitch={40}
             heading={20}
             centerCoordinate={[-87.61694, 41.86625]}
           />
 
-          <MapLibreGL.Light
+          <TrackasiaGL.Light
             style={{position: [5, 90, this.state.sliderValue]}}
           />
 
-          <MapLibreGL.ShapeSource
+          <TrackasiaGL.ShapeSource
             id="indoorBuildingSource"
             shape={indoorMapGeoJSON}>
-            <MapLibreGL.FillExtrusionLayer
+            <TrackasiaGL.FillExtrusionLayer
               id="building3d"
               style={layerStyles.building}
             />
-          </MapLibreGL.ShapeSource>
-        </MapLibreGL.MapView>
+          </TrackasiaGL.ShapeSource>
+        </TrackasiaGL.MapView>
 
         <View style={styles.slider}>
           <Slider

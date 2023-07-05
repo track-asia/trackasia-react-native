@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 import {Slider} from 'react-native-elements';
 
 import sheet from '../../styles/sheet';
@@ -49,20 +49,20 @@ class WatercolorRasterTiles extends React.Component {
 
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView style={sheet.matchParent}>
-          <MapLibreGL.Camera
+        <TrackasiaGL.MapView style={sheet.matchParent}>
+          <TrackasiaGL.Camera
             zoomLevel={16}
             centerCoordinate={SF_OFFICE_COORDINATE}
           />
 
-          <MapLibreGL.RasterSource {...rasterSourceProps}>
-            <MapLibreGL.RasterLayer
+          <TrackasiaGL.RasterSource {...rasterSourceProps}>
+            <TrackasiaGL.RasterLayer
               id="stamenWatercolorLayer"
               sourceID="stamenWatercolorSource"
               style={{rasterOpacity: this.state.opacity}}
             />
-          </MapLibreGL.RasterSource>
-        </MapLibreGL.MapView>
+          </TrackasiaGL.RasterSource>
+        </TrackasiaGL.MapView>
 
         <View style={styles.slider}>
           <Slider

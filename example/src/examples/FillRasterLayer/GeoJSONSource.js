@@ -1,5 +1,5 @@
 import React from 'react';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import gridPattern from '../../assets/grid_pattern.png';
@@ -26,31 +26,31 @@ class GeoJSONSource extends React.Component {
   render() {
     return (
       <Page {...this.props}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           ref={ref => (this.map = ref)}
           style={sheet.matchParent}
-          styleURL={MapLibreGL.StyleURL.Dark}>
-          <MapLibreGL.Camera
+          styleURL={TrackasiaGL.StyleURL.Dark}>
+          <TrackasiaGL.Camera
             zoomLevel={2}
             centerCoordinate={[-35.15165038, 40.6235728]}
           />
 
-          <MapLibreGL.VectorSource>
-            <MapLibreGL.BackgroundLayer
+          <TrackasiaGL.VectorSource>
+            <TrackasiaGL.BackgroundLayer
               id="background"
               style={layerStyles.background}
             />
-          </MapLibreGL.VectorSource>
+          </TrackasiaGL.VectorSource>
 
-          <MapLibreGL.ShapeSource
+          <TrackasiaGL.ShapeSource
             id="smileyFaceSource"
             shape={smileyFaceGeoJSON}>
-            <MapLibreGL.FillLayer
+            <TrackasiaGL.FillLayer
               id="smileyFaceFill"
               style={layerStyles.smileyFace}
             />
-          </MapLibreGL.ShapeSource>
-        </MapLibreGL.MapView>
+          </TrackasiaGL.ShapeSource>
+        </TrackasiaGL.MapView>
       </Page>
     );
   }

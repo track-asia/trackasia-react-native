@@ -54,13 +54,13 @@ You can add and remove headers at runtime.
 #### To add a header
 
 ```javascript
-    MapLibreGL.addCustomHeader('Authorization', '{auth header}');
+    TrackasiaGL.addCustomHeader('Authorization', '{auth header}');
 ```
 
 #### To remove a header
 
 ```javascript
-    MapLibreGL.removeCustomHeader('Authorization');
+    TrackasiaGL.removeCustomHeader('Authorization');
 ```
 
 #### Working example
@@ -68,15 +68,15 @@ You can add and remove headers at runtime.
 ```javascript
 export default class HelloWorldApp extends Component {
   componentDidMount () {
-    MapLibreGL.addCustomHeader('Authorization', '{auth header}');
+    TrackasiaGL.addCustomHeader('Authorization', '{auth header}');
   }
 
   render () {
-    MapLibreGL.addCustomHeader('X-Some-Header', 'my-value');
+    TrackasiaGL.addCustomHeader('X-Some-Header', 'my-value');
     return (
       <View style={styles.page}>
         <View style={styles.container}>
-          <MapLibreGL.MapView
+          <TrackasiaGL.MapView
             style={styles.map}
             styleURL={STYLE_URL}/>
         </View>

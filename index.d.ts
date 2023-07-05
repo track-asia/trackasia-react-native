@@ -1,4 +1,4 @@
-declare module 'maplibre__maplibre-react-native';
+declare module 'trackasia__trackasia-react-native';
 
 import {
   Component,
@@ -88,7 +88,7 @@ type NamedStyles<T> = {
   | BackgroundLayerStyle;
 };
 
-export type MapLibreGLEvent<
+export type TrackasiaGLEvent<
   T extends string,
   P = GeoJSON.Feature,
   V = Element
@@ -106,7 +106,7 @@ export type OnPressEvent = {
   }
 };
 
-declare namespace MapLibreGL {
+declare namespace TrackasiaGL {
   function removeCustomHeader(headerName: string): void;
   function addCustomHeader(headerName: string, headerValue: string): void;
   function setAccessToken(accessToken: string | null): void;
@@ -226,7 +226,7 @@ declare namespace MapLibreGL {
      * The heading (measured in degrees) relative to true north.
      * Heading is used to describe the direction the device is pointing to (the value of the compass).
      * Note that on Android this is incorrectly reporting the course value as mentioned in issue https://github.com/rnmapbox/maps/issues/1213.
-     * This is more likely to get fixed in MapLibre upstream if someone makes them aware of the issue.
+     * This is more likely to get fixed in Trackasia upstream if someone makes them aware of the issue.
      */
     heading?: number;
 
@@ -452,7 +452,7 @@ export interface RegionPayload {
 
 export interface MapViewProps extends ViewProps {
   animated?: boolean;
-  userTrackingMode?: MapLibreGL.UserTrackingModes;
+  userTrackingMode?: TrackasiaGL.UserTrackingModes;
   userLocationVerticalAlignment?: number;
   contentInset?: Array<number>;
   style?: StyleProp<ViewStyle>;
@@ -487,7 +487,7 @@ export interface MapViewProps extends ViewProps {
   onRegionDidChange?: (
     feature: GeoJSON.Feature<GeoJSON.Point, RegionPayload>,
   ) => void;
-  onUserLocationUpdate?: (feature: MapLibreGL.Location) => void;
+  onUserLocationUpdate?: (feature: TrackasiaGL.Location) => void;
   onWillStartLoadingMap?: () => void;
   onDidFinishLoadingMap?: () => void;
   onDidFailLoadingMap?: () => void;
@@ -517,7 +517,7 @@ export interface CameraProps extends CameraSettings, ViewProps {
   triggerKey?: any;
   alignment?: number[];
   onUserTrackingModeChange?: (
-    event: MapLibreGLEvent<
+    event: TrackasiaGLEvent<
       'usertrackingmodechange',
       {
         followUserLocation: boolean;
@@ -555,7 +555,7 @@ export interface UserLocationProps {
   children?: ReactNode;
   minDisplacement?: number;
   onPress?: () => void;
-  onUpdate?: (location: MapLibreGL.Location) => void;
+  onUpdate?: (location: TrackasiaGL.Location) => void;
   renderMode?: 'normal' | 'native';
   showsUserHeadingIndicator?: boolean,
   visible?: boolean;
@@ -951,4 +951,4 @@ export class Logger {
   public static setLogLevel: (level: LogLevel) => void;
 }
 
-export default MapLibreGL;
+export default TrackasiaGL;

@@ -5,10 +5,10 @@ import OfflinePack from './OfflinePack';
 
 import {NativeModules, NativeEventEmitter} from 'react-native';
 
-const MapLibreGL = NativeModules.MGLModule;
-const MapLibreGLOfflineManager = NativeModules.MGLOfflineModule;
+const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGLOfflineManager = NativeModules.MGLOfflineModule;
 export const OfflineModuleEventEmitter = new NativeEventEmitter(
-  MapLibreGLOfflineManager,
+  TrackasiaGLOfflineManager,
 );
 
 /**
@@ -39,7 +39,7 @@ class OfflineManager {
    * const progressListener = (offlineRegion, status) => console.log(offlineRegion, status);
    * const errorListener = (offlineRegion, err) => console.log(offlineRegion, err);
    *
-   * await MapLibreGL.offlineManager.createPack({
+   * await TrackasiaGL.offlineManager.createPack({
    *   name: 'offlinePack',
    *   styleURL: 'mapbox://...',
    *   minZoom: 14,
@@ -64,7 +64,7 @@ class OfflineManager {
     }
 
     this.subscribe(packOptions.name, progressListener, errorListener);
-    const nativeOfflinePack = await MapLibreGLOfflineManager.createPack(
+    const nativeOfflinePack = await TrackasiaGLOfflineManager.createPack(
       packOptions,
     );
     this._offlinePacks[packOptions.name] = new OfflinePack(nativeOfflinePack);
@@ -76,7 +76,7 @@ class OfflineManager {
    * This is more efficient than deleting the offline pack and downloading it again. If the data stored locally matches that on the server, new data will not be downloaded.
    *
    * @example
-   * await MapLibreGL.offlineManager.invalidatePack('packName')
+   * await TrackasiaGL.offlineManager.invalidatePack('packName')
    *
    * @param  {String}  name  Name of the offline pack.
    * @return {void}
@@ -90,7 +90,7 @@ class OfflineManager {
 
     const offlinePack = this._offlinePacks[name];
     if (offlinePack) {
-      await MapLibreGLOfflineManager.invalidatePack(name);
+      await TrackasiaGLOfflineManager.invalidatePack(name);
     }
   }
 
@@ -98,7 +98,7 @@ class OfflineManager {
    * Unregisters the given offline pack and allows resources that are no longer required by any remaining packs to be potentially freed.
    *
    * @example
-   * await MapLibreGL.offlineManager.deletePack('packName')
+   * await TrackasiaGL.offlineManager.deletePack('packName')
    *
    * @param  {String}  name  Name of the offline pack.
    * @return {void}
@@ -112,7 +112,7 @@ class OfflineManager {
 
     const offlinePack = this._offlinePacks[name];
     if (offlinePack) {
-      await MapLibreGLOfflineManager.deletePack(name);
+      await TrackasiaGLOfflineManager.deletePack(name);
       delete this._offlinePacks[name];
     }
   }
@@ -124,13 +124,13 @@ class OfflineManager {
    * It does not erase resources from the ambient cache or delete the database, which can be computationally expensive operations that may carry unintended side effects.
    *
    * @example
-   * await MapLibreGL.offlineManager.invalidateAmbientCache();
+   * await TrackasiaGL.offlineManager.invalidateAmbientCache();
    *
    * @return {void}
    */
   async invalidateAmbientCache() {
     await this._initialize();
-    await MapLibreGLOfflineManager.invalidateAmbientCache();
+    await TrackasiaGLOfflineManager.invalidateAmbientCache();
   }
 
   /**
@@ -138,13 +138,13 @@ class OfflineManager {
    * This method clears the cache and decreases the amount of space that map resources take up on the device.
    *
    * @example
-   * await MapLibreGL.offlineManager.clearAmbientCache();
+   * await TrackasiaGL.offlineManager.clearAmbientCache();
    *
    * @return {void}
    */
   async clearAmbientCache() {
     await this._initialize();
-    await MapLibreGLOfflineManager.clearAmbientCache();
+    await TrackasiaGLOfflineManager.clearAmbientCache();
   }
 
   /**
@@ -152,34 +152,34 @@ class OfflineManager {
    * This method may be computationally expensive because it will erase resources from the ambient cache if its size is decreased.
    *
    * @example
-   * await MapLibreGL.offlineManager.setMaximumAmbientCacheSize(5000000);
+   * await TrackasiaGL.offlineManager.setMaximumAmbientCacheSize(5000000);
    *
    * @param  {Number}  size  Size of ambient cache.
    * @return {void}
    */
   async setMaximumAmbientCacheSize(size) {
     await this._initialize();
-    await MapLibreGLOfflineManager.setMaximumAmbientCacheSize(size);
+    await TrackasiaGLOfflineManager.setMaximumAmbientCacheSize(size);
   }
 
   /**
    * Deletes the existing database, which includes both the ambient cache and offline packs, then reinitializes it.
    *
    * @example
-   * await MapLibreGL.offlineManager.resetDatabase();
+   * await TrackasiaGL.offlineManager.resetDatabase();
    *
    * @return {void}
    */
   async resetDatabase() {
     await this._initialize();
-    await MapLibreGLOfflineManager.resetDatabase();
+    await TrackasiaGLOfflineManager.resetDatabase();
   }
 
   /**
    * Retrieves all the current offline packs that are stored in the database.
    *
    * @example
-   * const offlinePacks = await MapLibreGL.offlineManager.getPacks();
+   * const offlinePacks = await TrackasiaGL.offlineManager.getPacks();
    *
    * @return {Array<OfflinePack>}
    */
@@ -194,7 +194,7 @@ class OfflineManager {
    * Retrieves an offline pack that is stored in the database by name.
    *
    * @example
-   * const offlinePack = await MapLibreGL.offlineManager.getPack();
+   * const offlinePack = await TrackasiaGL.offlineManager.getPack();
    *
    * @param  {String}  name  Name of the offline pack.
    * @return {OfflinePack}
@@ -208,14 +208,14 @@ class OfflineManager {
    * Sideloads offline db
    *
    * @example
-   * await MapLibreGL.offlineManager.mergeOfflineRegions(path);
+   * await TrackasiaGL.offlineManager.mergeOfflineRegions(path);
    *
    * @param {String} path Path to offline tile db on file system.
    * @return {void}
    */
   async mergeOfflineRegions(path) {
     await this._initialize();
-    return MapLibreGLOfflineManager.mergeOfflineRegions(path);
+    return TrackasiaGLOfflineManager.mergeOfflineRegions(path);
   }
 
   /**
@@ -223,13 +223,13 @@ class OfflineManager {
    * Consult the Terms of Service for your map tile host before changing this value.
    *
    * @example
-   * MapLibreGL.offlineManager.setTileCountLimit(1000);
+   * TrackasiaGL.offlineManager.setTileCountLimit(1000);
    *
    * @param {Number} limit Map tile limit count.
    * @return {void}
    */
   setTileCountLimit(limit) {
-    MapLibreGLOfflineManager.setTileCountLimit(limit);
+    TrackasiaGLOfflineManager.setTileCountLimit(limit);
   }
 
   /**
@@ -237,13 +237,13 @@ class OfflineManager {
    * The default is 500ms.
    *
    * @example
-   * MapLibreGL.offlineManager.setProgressEventThrottle(500);
+   * TrackasiaGL.offlineManager.setProgressEventThrottle(500);
    *
    * @param {Number} throttleValue event throttle value in ms.
    * @return {void}
    */
   setProgressEventThrottle(throttleValue) {
-    MapLibreGLOfflineManager.setProgressEventThrottle(throttleValue);
+    TrackasiaGLOfflineManager.setProgressEventThrottle(throttleValue);
   }
 
   /**
@@ -253,7 +253,7 @@ class OfflineManager {
    * @example
    * const progressListener = (offlinePack, status) => console.log(offlinePack, status)
    * const errorListener = (offlinePack, err) => console.log(offlinePack, err)
-   * MapLibreGL.offlineManager.subscribe('packName', progressListener, errorListener)
+   * TrackasiaGL.offlineManager.subscribe('packName', progressListener, errorListener)
    *
    * @param  {String} packName           Name of the offline pack.
    * @param  {Callback} progressListener Callback that listens for status events while downloading the offline resource.
@@ -265,7 +265,7 @@ class OfflineManager {
     if (isFunction(progressListener)) {
       if (totalProgressListeners === 0) {
         this.subscriptionProgress = OfflineModuleEventEmitter.addListener(
-          MapLibreGL.OfflineCallbackName.Progress,
+          TrackasiaGL.OfflineCallbackName.Progress,
           this._onProgress,
         );
       }
@@ -276,7 +276,7 @@ class OfflineManager {
     if (isFunction(errorListener)) {
       if (totalErrorListeners === 0) {
         this.subscriptionError = OfflineModuleEventEmitter.addListener(
-          MapLibreGL.OfflineCallbackName.Error,
+          TrackasiaGL.OfflineCallbackName.Error,
           this._onError,
         );
       }
@@ -288,7 +288,7 @@ class OfflineManager {
     if (isAndroid() && this._offlinePacks[packName]) {
       try {
         // manually set a listener, since listeners are only set on create flow
-        await MapLibreGLOfflineManager.setPackObserver(packName);
+        await TrackasiaGLOfflineManager.setPackObserver(packName);
       } catch (e) {
         console.log('Unable to set pack observer', e);
       }
@@ -300,7 +300,7 @@ class OfflineManager {
    * It's a good idea to call this on componentWillUnmount.
    *
    * @example
-   * MapLibreGL.offlineManager.unsubscribe('packName')
+   * TrackasiaGL.offlineManager.unsubscribe('packName')
    *
    * @param  {String} packName Name of the offline pack.
    * @return {void}
@@ -329,7 +329,7 @@ class OfflineManager {
       return true;
     }
 
-    const nativeOfflinePacks = await MapLibreGLOfflineManager.getPacks();
+    const nativeOfflinePacks = await TrackasiaGLOfflineManager.getPacks();
 
     for (const nativeOfflinePack of nativeOfflinePacks) {
       const offlinePack = new OfflinePack(nativeOfflinePack);
@@ -351,7 +351,7 @@ class OfflineManager {
     this._progressListeners[name](pack, e.payload);
 
     // cleanup listeners now that they are no longer needed
-    if (state === MapLibreGL.OfflinePackDownloadState.Complete) {
+    if (state === TrackasiaGL.OfflinePackDownloadState.Complete) {
       this.unsubscribe(name);
     }
   }

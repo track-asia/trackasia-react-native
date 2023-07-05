@@ -7,14 +7,14 @@ PR Title ([#123](link to my pr))
 
 ## 9.0.1
 
-Fix build issue on iOS ([#29](https://github.com/maplibre/maplibre-react-native/issues/29))
+Fix build issue on iOS ([#29](https://github.com/track-asia/trackasia-react-native/issues/29))
 
 ## 9.0.0
 
 Completed fork from RNMapbox, removed support for the proprietary Mapbox SDK, and updated to the latest
-MapLibre GL Native SDKs for iOS and Android.
+trackasia GL Native SDKs for iOS and Android.
 
-Breaking changes: Mapbox-specific names have been renamed to MapLibre.
+Breaking changes: Mapbox-specific names have been renamed to trackasia.
 
 ## 8.6.0-beta.0
 
@@ -34,32 +34,32 @@ feat(Camera) add an optional `allowUpdates` boolean prop ([#1619](https://github
 refactor(example): remove unused modules and scripts ([#1618](https://github.com/rnmapbox/maps/pull/1618))  
 fix(react-native): update api to get rid of EventEmitter warnings ([#1615](https://github.com/rnmapbox/maps/pull/1615))  
 fix(Camera) persist zoom when changing from `bounds` to `centerCoordinate`, fix zero padding not causing map to update, create unified example showcasing bounds/centerCoordinate/zoom/padding ([#1614](https://github.com/rnmapbox/maps/pull/1614))  
-Update MapLibre to 5.12.1 on iOS ([#1596](https://github.com/rnmapbox/maps/pull/1596))  
+Update trackasia to 5.12.1 on iOS ([#1596](https://github.com/rnmapbox/maps/pull/1596))  
 Update ShapeSource methods to make it usable with any cluster ( Use cluster itself instead of cluster_id as first argument for getClusterExpansionZoom/getClusterLeaves/getClusterChildren methods. Version < 9 methods still supports passing cluster_id as a first argument but a deprecation warning will be shown. ) ([#1499](https://github.com/rnmapbox/maps/pull/1499))
 
 ---
 
 ## 8.4.0
 
-fix(iOS): pin mapLibre back to `5.12.0` ([#1589](https://github.com/rnmapbox/maps/pull/1589))  
+fix(iOS): pin trackasia back to `5.12.0` ([#1589](https://github.com/rnmapbox/maps/pull/1589))  
 chore: improve GH workflows ([#1588](https://github.com/rnmapbox/maps/pull/1588))  
 build(deps): bump @expo/config-plugins from 3.1.0 to 4.0.3 ([#1585](https://github.com/rnmapbox/maps/pull/1585))  
 chore(pre-commit): run lint on TS files, change PR template ([#1584](https://github.com/rnmapbox/maps/pull/1584))  
 feat(example): update vertical alignment example ([#1579](https://github.com/rnmapbox/maps/pull/1579))  
 fix incorrect anchor calculation for PointAnnotation on iOS ([#1576](https://github.com/rnmapbox/maps/pull/1576))  
 style(eslint): align root and example with the same configuration ([#1575](https://github.com/rnmapbox/maps/pull/1575))  
-fix(mapLibre): support version `5.12.0` upwards ([#1571](https://github.com/rnmapbox/maps/pull/1571))  
+fix(trackasia): support version `5.12.0` upwards ([#1571](https://github.com/rnmapbox/maps/pull/1571))  
 build: upgrade to RN `0.66` ([#1570](https://github.com/rnmapbox/maps/pull/1570))  
 build(android): add telemetry dependency to default build setup ([#1550](https://github.com/rnmapbox/maps/pull/1550))  
 feat(camera): Enable `padding` as a root-level prop on the camera, with `bounds.padding*` as fallbacks ([#1538](https://github.com/rnmapbox/maps/pull/1538/files))  
-fix: revert pinned mapLibre version to `5.11.0` ([8a2b00e67ba6398f3f6e6f52e98b0f0cea437e4d](https://github.com/rnmapbox/maps/commit/8a2b00e67ba6398f3f6e6f52e98b0f0cea437e4d))
+fix: revert pinned trackasia version to `5.11.0` ([8a2b00e67ba6398f3f6e6f52e98b0f0cea437e4d](https://github.com/rnmapbox/maps/commit/8a2b00e67ba6398f3f6e6f52e98b0f0cea437e4d))
 
 ---
 
 ## 8.3.0
 
 Fix TypeScript type for Callout's textStyle prop ([#1450](https://github.com/rnmapbox/maps/pull/1450))  
-Build(ios): pin maplibre version to 5.12.0 ([#1454](https://github.com/rnmapbox/maps/pull/1454))  
+Build(ios): pin trackasia version to 5.12.0 ([#1454](https://github.com/rnmapbox/maps/pull/1454))  
 Update geoUtils helpers types to correspond with `turf/helpers` ([#1455](https://github.com/rnmapbox/maps/pull/1455))  
 Fix crash with missing okhttp dependency ([#1452](https://github.com/rnmapbox/maps/pull/1452))  
 Move from react-native-testing-library => @testing-library/react-native ([#1453](https://github.com/rnmapbox/maps/pull/1453))  
@@ -95,7 +95,7 @@ Fix error while updating coordinates of RCTMGLImageSource ([#1310](https://githu
 
 Add types for `Logger` class ([#1316](https://github.com/rnmapbox/maps/pull/1316))  
 Enable linear easing on map camera ([#1281](https://github.com/rnmapbox/maps/pull/1281))  
-Allow MapLibre as an option ([#1311](https://github.com/rnmapbox/maps/pull/1311))  
+Allow trackasia as an option ([#1311](https://github.com/rnmapbox/maps/pull/1311))  
 Fix native UserLocation on Android ([#1284](https://github.com/rnmapbox/maps/pull/1284))  
 Add getClusterExpansionZoom to ShapeSource ([#1279](https://github.com/rnmapbox/maps/pull/1279))  
 Add type definition for AnimatedPoint ([#1280](https://github.com/rnmapbox/maps/pull/1280))

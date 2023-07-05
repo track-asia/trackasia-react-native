@@ -1,10 +1,10 @@
 import {NativeModules, NativeEventEmitter} from 'react-native';
 
-const MapLibreGL = NativeModules.MGLModule;
-const MapLibreGLLocationManager = NativeModules.MGLLocationModule;
+const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGLLocationManager = NativeModules.MGLLocationModule;
 
 export const LocationModuleEventEmitter = new NativeEventEmitter(
-  MapLibreGLLocationManager,
+  TrackasiaGLLocationManager,
 );
 
 class LocationManager {
@@ -26,7 +26,7 @@ class LocationManager {
       // instead of throwing an exception
       try {
         lastKnownLocation =
-          await MapLibreGLLocationManager.getLastKnownLocation();
+          await TrackasiaGLLocationManager.getLastKnownLocation();
       } catch (error) {
         console.log('locationManager Error: ', error);
       }
@@ -66,10 +66,10 @@ class LocationManager {
 
   start(displacement = 0) {
     if (!this._isListening) {
-      MapLibreGLLocationManager.start(displacement);
+      TrackasiaGLLocationManager.start(displacement);
 
       this.subscription = LocationModuleEventEmitter.addListener(
-        MapLibreGL.LocationCallbackName.Update,
+        TrackasiaGL.LocationCallbackName.Update,
         this.onUpdate,
       );
 
@@ -78,7 +78,7 @@ class LocationManager {
   }
 
   stop() {
-    MapLibreGLLocationManager.stop();
+    TrackasiaGLLocationManager.stop();
 
     if (this._isListening) {
       this.subscription.remove();
@@ -88,7 +88,7 @@ class LocationManager {
   }
 
   setMinDisplacement(minDisplacement) {
-    MapLibreGLLocationManager.setMinDisplacement(minDisplacement);
+    TrackasiaGLLocationManager.setMinDisplacement(minDisplacement);
   }
 
   onUpdate(location) {

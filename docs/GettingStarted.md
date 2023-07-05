@@ -1,6 +1,6 @@
 # Getting Started
 
-Congratulations, you successfully installed maplibre-react-native! 🎉
+Congratulations, you successfully installed trackasia-react-native! 🎉
 This quickstart guide provides a zero-to-map intro, and from there you can check out the
 [examples](/example) folder if you want to jump in the deep end.
 
@@ -32,13 +32,13 @@ either `yarn` or `npm` (pick one).
 
 ```shell
 # install with Yarn
-yarn add @maplibre/maplibre-react-native
+yarn add @trackasia/trackasia-react-native
 
 ```
 
 ```shell
 # install with NPM
-npm install @maplibre/maplibre-react-native --save
+npm install @trackasia/trackasia-react-native --save
 ```
 
 ### Review platform specific info
@@ -57,11 +57,11 @@ Here is an example minimal App.js
 ```js
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import MapLibreGL from '@maplibre/maplibre-react-native';
+import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 // Will be null for most users (only Mapbox authenticates this way).
 // Required on Android. See Android installation notes.
-MapLibreGL.setAccessToken(null);
+TrackasiaGL.setAccessToken(null);
 
 const styles = StyleSheet.create({
   page: {
@@ -80,10 +80,10 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.page}>
-        <MapLibreGL.MapView
+        <TrackasiaGL.MapView
           style={styles.map}
           logoEnabled={false}
-          styleURL="https://demotiles.maplibre.org/style.json"
+          styleURL="https://demotiles.track-asia.com/style.json"
         />
       </View>
     );
