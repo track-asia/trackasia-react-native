@@ -7,10 +7,11 @@ $RNMBGL_SPM_Spec = {
   url: "https://github.com/track-asia/trackasia-gl-native-distribution",
   requirement: {
     kind: "upToNextMajorVersion",
-    minimumVersion: "5.11.0"
+    minimumVersion: "5.12.2"
   },
   product_name: "Mapbox"
 }
+
 
 # We ingore warning except for RNMBGL
 INHIBIT_WARNING_BY_DEFAULT = true

@@ -28,7 +28,7 @@ def $RNMBGL.post_install(installer)
     url: "https://github.com/track-asia/trackasia-gl-native-distribution",
     requirement: {
       kind: "exactVersion",
-      version: "5.13.0"
+      version: "5.12.2"
     },
     product_name: "Mapbox"
   }

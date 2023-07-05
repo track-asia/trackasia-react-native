@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,42 +11,58 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		51C0260825301F99008C5283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C0260725301F99008C5283 /* LaunchScreen.storyboard */; };
+		9959DB332A554D9400082D36 /* Mapbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B5AD102A552F1400CDEC03 /* Mapbox.swift */; };
+		99EB1AE62A55128A00B76C4C /* Mapbox in Frameworks */ = {isa = PBXBuildFile; productRef = 55BD80B63C0D23D1A7D5EBE2 /* Mapbox */; };
 		AD8CDE4F410D2E699BE7E99D /* libPods-RNTrackasiaExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A98F897FA1ECD18EB0F1C4DC /* libPods-RNTrackasiaExample.a */; };
 		E9DD059E29705D4C0010A116 /* Mapbox in Frameworks */ = {isa = PBXBuildFile; productRef = 80AC8CF095DA4835C83255C8 /* Mapbox */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		99B5AD0C2A552F1400CDEC03 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* RNMaplibreExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNMaplibreExampleTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* RNTrackasiaExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTrackasiaExampleTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNTrackasiaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTrackasiaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNMaplibreExample/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RNMaplibreExample/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RNMaplibreExample/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNMaplibreExample/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNMaplibreExample/main.m; sourceTree = "<group>"; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNTrackasiaExample/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RNTrackasiaExample/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RNTrackasiaExample/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNTrackasiaExample/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNTrackasiaExample/main.m; sourceTree = "<group>"; };
 		1DDF0404A5884CA6A9492067 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		307368D9D36BA4F44073E949 /* Pods-RNTrackasiaExample-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RNMaplibreExample-tvOS/Pods-RNTrackasiaExample-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		307368D9D36BA4F44073E949 /* Pods-RNTrackasiaExample-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RNTrackasiaExample-tvOS/Pods-RNTrackasiaExample-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		364D3AF88B4E4C1AA568F0FA /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		3734D1612BE792B8299729E1 /* Pods-RNTrackasiaExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-RNMaplibreExampleTests/Pods-RNTrackasiaExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3734D1612BE792B8299729E1 /* Pods-RNTrackasiaExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-RNTrackasiaExampleTests/Pods-RNTrackasiaExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		425D02CB50EE42159354FD53 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
-		51C0260725301F99008C5283 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNMaplibreExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		51C0260725301F99008C5283 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNTrackasiaExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		534B49DAC74D44ECB3980682 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		5B5EC0CFE257E5F2D7A2020B /* Pods-RNTrackasiaExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExampleTests.release.xcconfig"; path = "Target Support Files/Pods-RNMaplibreExampleTests/Pods-RNTrackasiaExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B5EC0CFE257E5F2D7A2020B /* Pods-RNTrackasiaExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExampleTests.release.xcconfig"; path = "Target Support Files/Pods-RNTrackasiaExampleTests/Pods-RNTrackasiaExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		644BCBB2CD7C4ABEBD187990 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		6E29023E8B5A6DA540E4474B /* Pods-RNTrackasiaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample.release.xcconfig"; path = "Target Support Files/Pods-RNTrackasiaExample/Pods-RNTrackasiaExample.release.xcconfig"; sourceTree = "<group>"; };
 		6FB4F6BA6DC54135A417A04D /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		7AEE0617675F472CBDA34326 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		887ED0EFC3674C8D8CE33CCC /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		952CC82CA637483F9B2B90CF /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
-		9C1D64476C1CA1BE3A3FD524 /* Pods-RNTrackasiaExample-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RNMaplibreExample-tvOSTests/Pods-RNTrackasiaExample-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		99B5AD0E2A552F1400CDEC03 /* libMapbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMapbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B5AD102A552F1400CDEC03 /* Mapbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapbox.swift; sourceTree = "<group>"; };
+		9C1D64476C1CA1BE3A3FD524 /* Pods-RNTrackasiaExample-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RNTrackasiaExample-tvOSTests/Pods-RNTrackasiaExample-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A32049E2AE532B3366AA9311 /* Pods-RNTrackasiaExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample.debug.xcconfig"; path = "Target Support Files/Pods-RNTrackasiaExample/Pods-RNTrackasiaExample.debug.xcconfig"; sourceTree = "<group>"; };
-		A388EB87A8261F3D1674F825 /* Pods-RNTrackasiaExample-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNMaplibreExample-tvOSTests/Pods-RNTrackasiaExample-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A388EB87A8261F3D1674F825 /* Pods-RNTrackasiaExample-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNTrackasiaExample-tvOSTests/Pods-RNTrackasiaExample-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8710EEDC913062333D22662 /* libPods-RNTrackasiaExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTrackasiaExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98F897FA1ECD18EB0F1C4DC /* libPods-RNTrackasiaExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTrackasiaExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43791892EEA40C9938DB0F7 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		B895CA6319C04392AB717662 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
-		C65B11B3DF018E09B71139E5 /* Pods-RNTrackasiaExample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RNMaplibreExample-tvOS/Pods-RNTrackasiaExample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C65B11B3DF018E09B71139E5 /* Pods-RNTrackasiaExample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTrackasiaExample-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RNTrackasiaExample-tvOS/Pods-RNTrackasiaExample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		CB1F3BED505C4EDE92AC1770 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		CC44ECBD0B2A438C84D89432 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		D5B72910482F547500EC4E1D /* libPods-RNTrackasiaExample-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTrackasiaExample-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,8 +79,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99EB1AE62A55128A00B76C4C /* Mapbox in Frameworks */,
 				E9DD059E29705D4C0010A116 /* Mapbox in Frameworks */,
 				AD8CDE4F410D2E699BE7E99D /* libPods-RNTrackasiaExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B5AD0B2A552F1400CDEC03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +98,7 @@
 		00E356EF1AD99517003FC87E /* RNTrackasiaExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* RNMaplibreExampleTests.m */,
+				00E356F21AD99517003FC87E /* RNTrackasiaExampleTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
 			path = RNTrackasiaExampleTests;
@@ -151,6 +175,7 @@
 				13B07FAE1A68108700A75B9A /* RNTrackasiaExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNTrackasiaExampleTests */,
+				99B5AD0F2A552F1400CDEC03 /* Mapbox */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				EE5EDD88BB42C11717A56BB9 /* Pods */,
@@ -165,8 +190,17 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* RNTrackasiaExample.app */,
+				99B5AD0E2A552F1400CDEC03 /* libMapbox.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		99B5AD0F2A552F1400CDEC03 /* Mapbox */ = {
+			isa = PBXGroup;
+			children = (
+				99B5AD102A552F1400CDEC03 /* Mapbox.swift */,
+			);
+			path = Mapbox;
 			sourceTree = "<group>";
 		};
 		EE5EDD88BB42C11717A56BB9 /* Pods */ = {
@@ -209,9 +243,26 @@
 				80AC8CF095DA4835C83255C8 /* Mapbox */,
 				55BD80B63C0D23D1A7D5EBE2 /* Mapbox */,
 			);
-			productName = RNMaplibreExample;
+			productName = RNTrackasiaExample;
 			productReference = 13B07F961A680F5B00A75B9A /* RNTrackasiaExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		99B5AD0D2A552F1400CDEC03 /* Mapbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99B5AD122A552F1400CDEC03 /* Build configuration list for PBXNativeTarget "Mapbox" */;
+			buildPhases = (
+				99B5AD0A2A552F1400CDEC03 /* Sources */,
+				99B5AD0B2A552F1400CDEC03 /* Frameworks */,
+				99B5AD0C2A552F1400CDEC03 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mapbox;
+			productName = Mapbox;
+			productReference = 99B5AD0E2A552F1400CDEC03 /* libMapbox.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -219,8 +270,15 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 940;
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					99B5AD0D2A552F1400CDEC03 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RNTrackasiaExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -233,7 +291,7 @@
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			packageReferences = (
-				DB11E3B9346BB8DFEB4101D5 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+				DB11E3B9346BB8DFEB4101D5 /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */,
 				BEDEC839FE468642DF96F945 /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */,
 			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -241,6 +299,7 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* RNTrackasiaExample */,
+				99B5AD0D2A552F1400CDEC03 /* Mapbox */,
 			);
 		};
 /* End PBXProject section */
@@ -397,6 +456,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		99B5AD0A2A552F1400CDEC03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9959DB332A554D9400082D36 /* Mapbox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -413,8 +480,8 @@
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = RNMaplibreExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = RNTrackasiaExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,8 +506,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3KK33PAP58;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				INFOPLIST_FILE = RNMaplibreExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = RNTrackasiaExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,6 +546,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -504,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -543,6 +611,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -561,7 +630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -574,6 +643,56 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99B5AD132A552F1400CDEC03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99B5AD142A552F1400CDEC03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -598,6 +717,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		99B5AD122A552F1400CDEC03 /* Build configuration list for PBXNativeTarget "Mapbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B5AD132A552F1400CDEC03 /* Debug */,
+				99B5AD142A552F1400CDEC03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -609,9 +737,9 @@
 				minimumVersion = 5.11.0;
 			};
 		};
-		DB11E3B9346BB8DFEB4101D5 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
+		DB11E3B9346BB8DFEB4101D5 /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
+			repositoryURL = "https://github.com/track-asia/trackasia-gl-native-distribution";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.11.0;
@@ -627,7 +755,7 @@
 		};
 		80AC8CF095DA4835C83255C8 /* Mapbox */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DB11E3B9346BB8DFEB4101D5 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
+			package = DB11E3B9346BB8DFEB4101D5 /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */;
 			productName = Mapbox;
 		};
 /* End XCSwiftPackageProductDependency section */
