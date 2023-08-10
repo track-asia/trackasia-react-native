@@ -45,7 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/length", "npm:6.5.0"],\
             ["@turf/nearest-point-on-line", "npm:6.5.0"],\
             ["@types/geojson", "npm:7946.0.10"],\
-            ["@types/node", "npm:18.17.4"],\
+            ["@types/node", "npm:20.4.9"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:5.62.0"],\
             ["babel-jest", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:29.6.2"],\
@@ -5375,7 +5375,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/length", "npm:6.5.0"],\
             ["@turf/nearest-point-on-line", "npm:6.5.0"],\
             ["@types/geojson", "npm:7946.0.10"],\
-            ["@types/node", "npm:18.17.4"],\
+            ["@types/node", "npm:20.4.9"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:5.62.0"],\
             ["babel-jest", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:29.6.2"],\
@@ -5763,13 +5763,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:18.17.4", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.17.4-7b6cd3731e-d4c458202d.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:18.17.4"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:20.4.9", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-20.4.9-c55842c502-504e3da962.zip/node_modules/@types/node/",\
           "packageDependencies": [\
