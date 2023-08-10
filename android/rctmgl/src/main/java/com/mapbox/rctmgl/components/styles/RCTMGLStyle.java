@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.trackasia.android.maps.TrackasiaMap;
 import com.mapbox.rctmgl.utils.DownloadMapImageTask;
 import com.mapbox.rctmgl.utils.ImageEntry;
 
@@ -21,9 +21,9 @@ import java.util.Map;
 public class RCTMGLStyle {
     private Context mContext;
     private ReadableMap mReactStyle;
-    private MapboxMap mMap;
+    private TrackasiaMap mMap;
 
-    public RCTMGLStyle(@NonNull Context context, @NonNull ReadableMap reactStyle, @NonNull MapboxMap map) {
+    public RCTMGLStyle(@NonNull Context context, @NonNull ReadableMap reactStyle, @NonNull TrackasiaMap map) {
         mContext = context;
         mReactStyle = reactStyle;
         mMap = map;

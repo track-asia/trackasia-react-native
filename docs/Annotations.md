@@ -1,4 +1,4 @@
-Comparsion of various annotations available in MapLibre React Native:
+Comparsion of various annotations available in Trackasia React Native:
 
 |*Feature*              | *SymbolLayer*      |*PointAnnotation*                     |*MarkerView*             |*CircleLayer*        |
 |-----------------------|--------------------|--------------------------------------|-------------------------|---------------------|
@@ -9,4 +9,4 @@ Comparsion of various annotations available in MapLibre React Native:
 |Clustering             | &check;            |                                      |                         | &check;             |
 |Style with expressions | &check;            |                                      |                         | &check;             |
 |iOS implementation     | [MGLSymbolStyleLayer](https://track-asia.com/trackasia-gl-native/ios/api/Classes/MGLSymbolStyleLayer.html)     |[MGLAnnotationView](https://track-asia.com/trackasia-gl-native/ios/api/Classes/MGLAnnotationView.html)                     |[MGLAnnotationView](https://track-asia.com/trackasia-gl-native/ios/api/Classes/MGLAnnotationView.html)       |[MGLCircleStyleLayer](https://track-asia.com/trackasia-gl-native/ios/api/Classes/MGLCircleStyleLayer.html)       |
-|android implementation | [SymbolLayer](https://track-asia.com/trackasia-gl-native/android/api/com/mapbox/mapboxsdk/style/layers/SymbolLayer.html)|[annotation.Symbol](https://docs.mapbox.com/android/api/plugins/annotation/0.8.0/com/mapbox/mapboxsdk/plugins/annotation/Symbol.html)|[annotation.Marker](https://docs.mapbox.com/android/api/plugins/markerview/0.4.0/com/mapbox/mapboxsdk/plugins/markerview/MarkerView.html) |[CircleLayer](https://track-asia.com/trackasia-gl-native/android/api/com/mapbox/mapboxsdk/style/layers/CircleLayer.html)|
+|android implementation | [SymbolLayer](https://track-asia.com/trackasia-gl-native/android/api/com.trackasia.android/style/layers/SymbolLayer.html)|[annotation.Symbol](https://docs.mapbox.com/android/api/plugins/annotation/0.8.0/com.trackasia.android/plugins/annotation/Symbol.html)|[annotation.Marker](https://docs.mapbox.com/android/api/plugins/markerview/0.4.0/com.trackasia.android/plugins/markerview/MarkerView.html) |[CircleLayer](https://track-asia.com/trackasia-gl-native/android/api/com.trackasia.android/style/layers/CircleLayer.html)|

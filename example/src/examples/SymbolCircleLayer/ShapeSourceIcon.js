@@ -4,7 +4,6 @@ import TrackasiaGL from '@trackasia/trackasia-react-native';
 import sheet from '../../styles/sheet';
 import exampleIcon from '../../assets/example.png';
 import pinIcon from '../../assets/pin.png';
-import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
 import Page from '../common/Page';
 
 const styles = {
@@ -74,10 +73,6 @@ const featureCollection = {
 };
 
 class ShapeSourceIcon extends React.Component {
-  static propTypes = {
-    ...BaseExamplePropTypes,
-  };
-
   state = {
     images: {
       example: exampleIcon,
@@ -88,7 +83,7 @@ class ShapeSourceIcon extends React.Component {
     const {images} = this.state;
 
     return (
-      <Page {...this.props}>
+      <Page>
         <TrackasiaGL.MapView style={sheet.matchParent}>
           <TrackasiaGL.Camera
             zoomLevel={17}

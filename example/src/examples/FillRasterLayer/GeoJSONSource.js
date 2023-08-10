@@ -4,7 +4,6 @@ import TrackasiaGL from '@trackasia/trackasia-react-native';
 import sheet from '../../styles/sheet';
 import gridPattern from '../../assets/grid_pattern.png';
 import smileyFaceGeoJSON from '../../assets/smiley_face.json';
-import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
 import Page from '../common/Page';
 
 const layerStyles = {
@@ -18,42 +17,34 @@ const layerStyles = {
   },
 };
 
-class GeoJSONSource extends React.Component {
-  static propTypes = {
-    ...BaseExamplePropTypes,
-  };
+function GeoJSONSource() {
+  return (
+    <Page>
+      <TrackasiaGL.MapView
+        ref={ref => (this.map = ref)}
+        style={sheet.matchParent}
+        styleURL={TrackasiaGL.StyleURL.Dark}>
+        <TrackasiaGL.Camera
+          zoomLevel={2}
+          centerCoordinate={[-35.15165038, 40.6235728]}
+        />
 
-  render() {
-    return (
-      <Page {...this.props}>
-        <TrackasiaGL.MapView
-          ref={ref => (this.map = ref)}
-          style={sheet.matchParent}
-          styleURL={TrackasiaGL.StyleURL.Dark}>
-          <TrackasiaGL.Camera
-            zoomLevel={2}
-            centerCoordinate={[-35.15165038, 40.6235728]}
+        <TrackasiaGL.VectorSource>
+          <TrackasiaGL.BackgroundLayer
+            id="background"
+            style={layerStyles.background}
           />
+        </TrackasiaGL.VectorSource>
 
-          <TrackasiaGL.VectorSource>
-            <TrackasiaGL.BackgroundLayer
-              id="background"
-              style={layerStyles.background}
-            />
-          </TrackasiaGL.VectorSource>
-
-          <TrackasiaGL.ShapeSource
-            id="smileyFaceSource"
-            shape={smileyFaceGeoJSON}>
-            <TrackasiaGL.FillLayer
-              id="smileyFaceFill"
-              style={layerStyles.smileyFace}
-            />
-          </TrackasiaGL.ShapeSource>
-        </TrackasiaGL.MapView>
-      </Page>
-    );
-  }
+        <TrackasiaGL.ShapeSource id="smileyFaceSource" shape={smileyFaceGeoJSON}>
+          <TrackasiaGL.FillLayer
+            id="smileyFaceFill"
+            style={layerStyles.smileyFace}
+          />
+        </TrackasiaGL.ShapeSource>
+      </TrackasiaGL.MapView>
+    </Page>
+  );
 }
 
 export default GeoJSONSource;

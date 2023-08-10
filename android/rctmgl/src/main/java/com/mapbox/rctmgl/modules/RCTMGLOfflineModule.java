@@ -16,21 +16,21 @@ import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.modules.core.RCTNativeAppEventEmitter;
 import com.mapbox.geojson.FeatureCollection;
-// import com.mapbox.mapboxsdk.constants.Style;
-import com.mapbox.mapboxsdk.geometry.LatLngBounds;
-import com.mapbox.mapboxsdk.offline.OfflineManager;
-import com.mapbox.mapboxsdk.offline.OfflineRegion;
-import com.mapbox.mapboxsdk.offline.OfflineRegionDefinition;
-import com.mapbox.mapboxsdk.offline.OfflineRegionError;
-import com.mapbox.mapboxsdk.offline.OfflineRegionStatus;
-import com.mapbox.mapboxsdk.offline.OfflineTilePyramidRegionDefinition;
-import com.mapbox.mapboxsdk.storage.FileSource;
+// import com.trackasia.android.constants.Style;
+import com.trackasia.android.geometry.LatLngBounds;
+import com.trackasia.android.offline.OfflineManager;
+import com.trackasia.android.offline.OfflineRegion;
+import com.trackasia.android.offline.OfflineRegionDefinition;
+import com.trackasia.android.offline.OfflineRegionError;
+import com.trackasia.android.offline.OfflineRegionStatus;
+import com.trackasia.android.offline.OfflineTilePyramidRegionDefinition;
+import com.trackasia.android.storage.FileSource;
 import com.mapbox.rctmgl.events.IEvent;
 import com.mapbox.rctmgl.events.OfflineEvent;
 import com.mapbox.rctmgl.events.constants.EventTypes;
 import com.mapbox.rctmgl.utils.ConvertUtils;
 import com.mapbox.rctmgl.utils.GeoJSONUtils;
-import com.mapbox.mapboxsdk.maps.Style;
+import com.trackasia.android.maps.Style;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -54,7 +54,7 @@ public class RCTMGLOfflineModule extends ReactContextBaseJavaModule {
     public static final String OFFLINE_ERROR = "MapboxOfflineRegionError";
     public static final String OFFLINE_PROGRESS = "MapboxOfflineRegionProgress";
 
-    public static final String DEFAULT_STYLE_URL = "https://demotiles.track-asia.com/style.json";
+    public static final String DEFAULT_STYLE_URL = "https://tiles.track-asia.com/tiles/v3/style-streets.json?key=public";
     public static final Double DEFAULT_MIN_ZOOM_LEVEL = 10.0;
     public static final Double DEFAULT_MAX_ZOOM_LEVEL = 20.0;
 

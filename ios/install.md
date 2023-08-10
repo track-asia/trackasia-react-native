@@ -12,7 +12,7 @@ Add the following to your `ios/Podfile`:
   end
 ```
 
-Running `pod install` will add version `5.13.0` of the MapLibre SDK.
+Running `pod install` will add version `5.13.0` of the Trackasia SDK.
 
 ```sh
 # Go to the ios directory
@@ -26,7 +26,7 @@ You are good to go!
 
 ## Note on iOS Simulator issues
 
-MapLibre GL Native has some issues on iOS Simulators in many
+Trackasia GL Native has some issues on iOS Simulators in many
 environments. The map either does not render at all or appears garbled when panning and zooming.
 It is best to test on a real device if at all possible at this time
 until this is fixed upstream. iOS devs can open the workspace in Xcode and run from there.
@@ -34,7 +34,7 @@ until this is fixed upstream. iOS devs can open the workspace in Xcode and run f
 
 ## Installing a specific version
 
-The current default MapLibre version is `5.13.0`.
+The current default Trackasia version is `5.13.0`.
 If you want to install a different version, you can override as follows in
 your `Podfile`:
 

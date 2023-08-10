@@ -3,14 +3,14 @@ package com.mapbox.rctmgl.components.location;
 import android.annotation.SuppressLint;
 import android.content.Context;
 
-import com.mapbox.mapboxsdk.location.LocationComponent;
-import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions;
-import com.mapbox.mapboxsdk.location.LocationComponentOptions;
-import com.mapbox.mapboxsdk.location.OnCameraTrackingChangedListener;
-import com.mapbox.mapboxsdk.location.modes.CameraMode;
-import com.mapbox.mapboxsdk.location.modes.RenderMode;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.Style;
+import com.trackasia.android.location.LocationComponent;
+import com.trackasia.android.location.LocationComponentActivationOptions;
+import com.trackasia.android.location.LocationComponentOptions;
+import com.trackasia.android.location.OnCameraTrackingChangedListener;
+import com.trackasia.android.location.modes.CameraMode;
+import com.trackasia.android.location.modes.RenderMode;
+import com.trackasia.android.maps.TrackasiaMap;
+import com.trackasia.android.maps.Style;
 import com.mapbox.rctmgl.R;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.location.LocationManager;
@@ -24,7 +24,7 @@ import androidx.annotation.NonNull;
  */
 public class LocationComponentManager {
     private RCTMGLMapView mMapView = null;
-    private MapboxMap mMap = null;
+    private TrackasiaMap mMap = null;
 
     private LocationManager mLocationManager = null;
     private LocationComponent mLocationComponent = null;

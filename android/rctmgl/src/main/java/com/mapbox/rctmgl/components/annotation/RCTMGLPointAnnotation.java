@@ -7,12 +7,12 @@ import android.view.View;
 import androidx.annotation.NonNull;
 
 import com.mapbox.geojson.Point;
-import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.maps.Style;
-import com.mapbox.mapboxsdk.plugins.annotation.Symbol;
-import com.mapbox.mapboxsdk.plugins.annotation.SymbolManager;
-import com.mapbox.mapboxsdk.plugins.annotation.SymbolOptions;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.trackasia.android.geometry.LatLng;
+import com.trackasia.android.maps.Style;
+import com.trackasia.android.plugins.annotation.Symbol;
+import com.trackasia.android.plugins.annotation.SymbolManager;
+import com.trackasia.android.plugins.annotation.SymbolOptions;
+import com.trackasia.android.maps.TrackasiaMap;
 import com.mapbox.rctmgl.components.AbstractMapFeature;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.events.PointAnnotationClickEvent;
@@ -25,7 +25,7 @@ public class RCTMGLPointAnnotation extends AbstractMapFeature implements View.On
     private Context mContext;
     private RCTMGLPointAnnotationManager mManager;
     private Symbol mAnnotation;
-    private MapboxMap mMap;
+    private TrackasiaMap mMap;
     private RCTMGLMapView mMapView;
 
     private boolean mHasChildren;

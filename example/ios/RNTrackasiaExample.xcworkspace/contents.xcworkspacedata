@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Volumes/DATA/ADVN-GIT/TRACK-ASIA/trackasia-react-native/example/ios/RNTrackasiaExample.xcodeproj">
+      location = "group:RNTrackasiaExample.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:RNTrackasiaExample.xcodeproj">
    </FileRef>
 </Workspace>

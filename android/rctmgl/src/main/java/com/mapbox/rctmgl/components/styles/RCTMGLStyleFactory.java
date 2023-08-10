@@ -3,20 +3,20 @@
 
 package com.mapbox.rctmgl.components.styles;
 
-import com.mapbox.mapboxsdk.style.layers.BackgroundLayer;
-import com.mapbox.mapboxsdk.style.layers.CircleLayer;
-import com.mapbox.mapboxsdk.style.layers.FillExtrusionLayer;
-import com.mapbox.mapboxsdk.style.layers.FillLayer;
-import com.mapbox.mapboxsdk.style.layers.LineLayer;
-import com.mapbox.mapboxsdk.style.layers.PropertyFactory;
-import com.mapbox.mapboxsdk.style.layers.PropertyValue;
-import com.mapbox.mapboxsdk.style.layers.RasterLayer;
-import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
-import com.mapbox.mapboxsdk.style.layers.HeatmapLayer;
-import com.mapbox.mapboxsdk.style.layers.HillshadeLayer;
-import com.mapbox.mapboxsdk.style.layers.TransitionOptions;
-import com.mapbox.mapboxsdk.style.light.Light;
-import com.mapbox.mapboxsdk.style.light.Position;
+import com.trackasia.android.style.layers.BackgroundLayer;
+import com.trackasia.android.style.layers.CircleLayer;
+import com.trackasia.android.style.layers.FillExtrusionLayer;
+import com.trackasia.android.style.layers.FillLayer;
+import com.trackasia.android.style.layers.LineLayer;
+import com.trackasia.android.style.layers.PropertyFactory;
+import com.trackasia.android.style.layers.PropertyValue;
+import com.trackasia.android.style.layers.RasterLayer;
+import com.trackasia.android.style.layers.SymbolLayer;
+import com.trackasia.android.style.layers.HeatmapLayer;
+import com.trackasia.android.style.layers.HillshadeLayer;
+import com.trackasia.android.style.layers.TransitionOptions;
+import com.trackasia.android.style.light.Light;
+import com.trackasia.android.style.light.Position;
 import com.mapbox.rctmgl.utils.DownloadMapImageTask;
 
 import java.util.List;

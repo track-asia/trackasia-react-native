@@ -1,7 +1,7 @@
 package com.mapbox.rctmgl.components.mapview;
 
 import android.content.Context;
-import com.mapbox.mapboxsdk.maps.MapboxMapOptions;
+import com.trackasia.android.maps.TrackasiaMapOptions;
 /**
  * Created by hernanmateo on 12/11/18.
  */
@@ -10,7 +10,7 @@ import com.mapbox.mapboxsdk.maps.MapboxMapOptions;
 public class RCTMGLAndroidTextureMapView extends RCTMGLMapView {
 	public static final String LOG_TAG = "RCTMGLAndroidTextureMapView";
 	
-    public RCTMGLAndroidTextureMapView(Context context, RCTMGLAndroidTextureMapViewManager manager, MapboxMapOptions options) {
+    public RCTMGLAndroidTextureMapView(Context context, RCTMGLAndroidTextureMapViewManager manager, TrackasiaMapOptions options) {
         super(context, manager, options);
     }
 }

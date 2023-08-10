@@ -2,7 +2,6 @@ import React from 'react';
 import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
-import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
 import Page from '../common/Page';
 
 const styles = {
@@ -63,46 +62,40 @@ const styles = {
   },
 };
 
-class ChoroplethLayerByZoomLevel extends React.PureComponent {
-  static propTypes = {
-    ...BaseExamplePropTypes,
-  };
+function ChoroplethLayerByZoomLevel() {
+  return (
+    <Page>
+      <TrackasiaGL.MapView
+        styleURL={TrackasiaGL.StyleURL.Light}
+        style={sheet.matchParent}>
+        <TrackasiaGL.Camera
+          centerCoordinate={[-98, 38.88]}
+          zoomLevel={3}
+          minZoomLevel={3}
+        />
 
-  render() {
-    return (
-      <Page {...this.props}>
-        <TrackasiaGL.MapView
-          styleURL={TrackasiaGL.StyleURL.Light}
-          style={sheet.matchParent}>
-          <TrackasiaGL.Camera
-            centerCoordinate={[-98, 38.88]}
-            zoomLevel={3}
-            minZoomLevel={3}
+        <TrackasiaGL.VectorSource
+          id="population"
+          url={'mapbox://mapbox.660ui7x6'}>
+          <TrackasiaGL.FillLayer
+            id="state-population"
+            sourceLayerID="state_county_population_2014_cen"
+            maxZoomLevel={4}
+            filter={['==', 'isState', true]}
+            style={styles.statePopulation}
           />
 
-          <TrackasiaGL.VectorSource
-            id="population"
-            url={'mapbox://mapbox.660ui7x6'}>
-            <TrackasiaGL.FillLayer
-              id="state-population"
-              sourceLayerID="state_county_population_2014_cen"
-              maxZoomLevel={4}
-              filter={['==', 'isState', true]}
-              style={styles.statePopulation}
-            />
-
-            <TrackasiaGL.FillLayer
-              id="county-population"
-              sourceLayerID="state_county_population_2014_cen"
-              minZoomLevel={4}
-              filter={['==', 'isCounty', true]}
-              style={styles.countyPopulation}
-            />
-          </TrackasiaGL.VectorSource>
-        </TrackasiaGL.MapView>
-      </Page>
-    );
-  }
+          <TrackasiaGL.FillLayer
+            id="county-population"
+            sourceLayerID="state_county_population_2014_cen"
+            minZoomLevel={4}
+            filter={['==', 'isCounty', true]}
+            style={styles.countyPopulation}
+          />
+        </TrackasiaGL.VectorSource>
+      </TrackasiaGL.MapView>
+    </Page>
+  );
 }
 
-export default ChoroplethLayerByZoomLevel;
+export default React.memo(ChoroplethLayerByZoomLevel);

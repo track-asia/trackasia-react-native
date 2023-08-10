@@ -12,12 +12,12 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.FeatureCollection;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.Style;
-import com.mapbox.mapboxsdk.style.expressions.Expression;
-import com.mapbox.mapboxsdk.style.sources.GeoJsonOptions;
-import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
-import com.mapbox.mapboxsdk.utils.BitmapUtils;
+import com.trackasia.android.maps.TrackasiaMap;
+import com.trackasia.android.maps.Style;
+import com.trackasia.android.style.expressions.Expression;
+import com.trackasia.android.style.sources.GeoJsonOptions;
+import com.trackasia.android.style.sources.GeoJsonSource;
+import com.trackasia.android.utils.BitmapUtils;
 import com.mapbox.rctmgl.R;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.events.AndroidCallbackEvent;
@@ -65,7 +65,7 @@ public class RCTMGLShapeSource extends RCTSource<GeoJsonSource> {
         mapView.getMapboxMap().getStyle(new Style.OnStyleLoaded() {
             @Override
             public void onStyleLoaded(@NonNull Style style) {
-                MapboxMap map = mapView.getMapboxMap();
+                TrackasiaMap map = mapView.getMapboxMap();
                 RCTMGLShapeSource.super.addToMap(mapView);
             }
         });

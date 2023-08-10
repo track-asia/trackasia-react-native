@@ -1,6 +1,6 @@
 ---
 
-[![Trackasia Logo](https://docs.track-asia.com/assets/favicon/track_logo.png)](https://track-asia.com)
+[![Trackasia Logo](https://track-asia.com/img/trackasia-logo-big.svg)](https://track-asia.com)
 
 
 # Trackasia GL SDK for React Native
@@ -15,7 +15,7 @@ diverged, it has become necessary to separate the projects into specific wrapper
 
 ---
 
-[![npm version](https://docs.track-asia.com/assets/favicon/track_logo.png)](https://badge.fury.io/js/%40maplibre%2Ftrackasia-react-native)  
+[![npm version](https://badge.fury.io/js/%40trackasia%2Ftrackasia-react-native.svg)](https://badge.fury.io/js/%40trackasia%2Ftrackasia-react-native)  
 [![Android Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml)  
 [![iOS Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml)  
 
@@ -83,4 +83,4 @@ set up your local dev environment.
 
 ## Community
 
-Join the #maplibre-native Slack channel at OSMUS: get an invite at https://slack.openstreetmap.us/
+Join the #trackasia-native Slack channel at OSMUS: get an invite at https://slack.openstreetmap.us/

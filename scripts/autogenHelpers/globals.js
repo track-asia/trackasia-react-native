@@ -134,7 +134,7 @@ global.iosPropName = function (name) {
   return name;
 };
 
-global.iosMapLibrePropName = function (name) {
+global.iosTrackasiaPropName = function (name) {
   let result = iosPropName(name);
   if (result === 'fillExtrusionVerticalGradient') {
     return 'fillExtrusionHasVerticalGradient';

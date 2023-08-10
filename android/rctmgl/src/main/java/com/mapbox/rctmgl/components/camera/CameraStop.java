@@ -7,12 +7,12 @@ import android.util.DisplayMetrics;
 import com.facebook.react.bridge.ReadableMap;
 import com.mapbox.geojson.FeatureCollection;
 import com.mapbox.geojson.Point;
-import com.mapbox.mapboxsdk.camera.CameraPosition;
-import com.mapbox.mapboxsdk.camera.CameraUpdate;
-import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
-import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.geometry.LatLngBounds;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.trackasia.android.camera.CameraPosition;
+import com.trackasia.android.camera.CameraUpdate;
+import com.trackasia.android.camera.CameraUpdateFactory;
+import com.trackasia.android.geometry.LatLng;
+import com.trackasia.android.geometry.LatLngBounds;
+import com.trackasia.android.maps.TrackasiaMap;
 import com.mapbox.rctmgl.components.camera.constants.CameraMode;
 import com.mapbox.rctmgl.utils.GeoJSONUtils;
 
@@ -36,7 +36,7 @@ public class CameraStop {
 
     private int mMode = CameraMode.EASE;
     private int mDuration = 2000;
-    private MapboxMap.CancelableCallback mCallback;
+    private TrackasiaMap.CancelableCallback mCallback;
 
     public CameraStop() {
     }
@@ -61,7 +61,7 @@ public class CameraStop {
         mDuration = duration;
     }
 
-    public void setCallback(MapboxMap.CancelableCallback callback) {
+    public void setCallback(TrackasiaMap.CancelableCallback callback) {
         mCallback = callback;
     }
 
@@ -81,7 +81,7 @@ public class CameraStop {
     }
 
     public CameraUpdateItem toCameraUpdate(RCTMGLMapView mapView) {
-        MapboxMap map = mapView.getMapboxMap();
+        TrackasiaMap map = mapView.getMapboxMap();
         CameraPosition currentCamera = map.getCameraPosition();
         CameraPosition.Builder builder = new CameraPosition.Builder(currentCamera);
 
@@ -144,7 +144,7 @@ public class CameraStop {
         return new CameraUpdateItem(map, CameraUpdateFactory.newCameraPosition(builder.build()), mDuration, mCallback, mMode);
     }
 
-    public static CameraStop fromReadableMap(Context context, @NonNull ReadableMap readableMap, MapboxMap.CancelableCallback callback) {
+    public static CameraStop fromReadableMap(Context context, @NonNull ReadableMap readableMap, TrackasiaMap.CancelableCallback callback) {
         CameraStop stop = new CameraStop();
 
         if (readableMap.hasKey("pitch")) {

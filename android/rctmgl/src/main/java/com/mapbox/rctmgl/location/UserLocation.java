@@ -2,7 +2,7 @@ package com.mapbox.rctmgl.location;
 
 import android.location.Location;
 
-import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.trackasia.android.geometry.LatLng;
 
 /**
  * Created by nickitaliano on 12/13/17.

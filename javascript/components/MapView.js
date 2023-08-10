@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 const defaultStyleURL = TrackasiaGL.StyleURL.Street;
 
 /**
- * MapView backed by MapLibre GL Native
+ * MapView backed by Trackasia GL Native
  */
 class MapView extends NativeBridgeComponent(React.Component) {
   static propTypes = {

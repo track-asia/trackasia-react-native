@@ -129,7 +129,7 @@ ___
 `symbolAvoidEdges`
 
 #### Description
-If true, the symbols will not cross tile edges to avoid mutual collisions. Recommended in layers that don't have enough padding in the vector tile to prevent collisions, or if it is a point symbol layer placed after a line symbol layer. When using a client that supports global collision detection, like MapLibre GL JS version 0.42.0 or greater, enabling this property is not needed to prevent clipped labels at tile boundaries.
+If true, the symbols will not cross tile edges to avoid mutual collisions. Recommended in layers that don't have enough padding in the vector tile to prevent collisions, or if it is a point symbol layer placed after a line symbol layer. When using a client that supports global collision detection, like Trackasia GL JS version 0.42.0 or greater, enabling this property is not needed to prevent clipped labels at tile boundaries.
 
 #### Type
 `boolean`

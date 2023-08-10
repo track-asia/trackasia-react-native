@@ -2,17 +2,12 @@ import React from 'react';
 import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
-import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
 import TabBarPage from '../common/TabBarPage';
 
 const COLOR = ['red', 'yellow', 'green'];
 const OPTIONS = [{label: 'red'}, {label: 'yellow'}, {label: 'green'}];
 
 class SetTintColor extends React.Component {
-  static propTypes = {
-    ...BaseExamplePropTypes,
-  };
-
   state = {tintColor: COLOR[0]};
 
   onTintColorChange = index => {

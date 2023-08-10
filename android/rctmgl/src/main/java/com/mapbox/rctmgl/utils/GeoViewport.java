@@ -2,9 +2,9 @@ package com.mapbox.rctmgl.utils;
 
 import android.graphics.PointF;
 
-import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.geometry.LatLngBounds;
-import com.mapbox.mapboxsdk.geometry.VisibleRegion;
+import com.trackasia.android.geometry.LatLng;
+import com.trackasia.android.geometry.LatLngBounds;
+import com.trackasia.android.geometry.VisibleRegion;
 
 /**
  * Created by nickitaliano on 1/5/18.

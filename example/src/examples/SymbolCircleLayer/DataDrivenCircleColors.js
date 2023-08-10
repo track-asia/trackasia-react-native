@@ -2,7 +2,6 @@ import React from 'react';
 import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
-import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
 import Page from '../common/Page';
 
 const styles = {
@@ -33,36 +32,30 @@ const styles = {
   },
 };
 
-class DataDrivenCircleColors extends React.PureComponent {
-  static propTypes = {
-    ...BaseExamplePropTypes,
-  };
+function DataDrivenCircleColors() {
+  return (
+    <Page {...this.props}>
+      <TrackasiaGL.MapView
+        styleURL={TrackasiaGL.StyleURL.Light}
+        style={sheet.matchParent}>
+        <TrackasiaGL.Camera
+          zoomLevel={10}
+          pitch={45}
+          centerCoordinate={[-122.400021, 37.789085]}
+        />
 
-  render() {
-    return (
-      <Page {...this.props}>
-        <TrackasiaGL.MapView
-          styleURL={TrackasiaGL.StyleURL.Light}
-          style={sheet.matchParent}>
-          <TrackasiaGL.Camera
-            zoomLevel={10}
-            pitch={45}
-            centerCoordinate={[-122.400021, 37.789085]}
+        <TrackasiaGL.VectorSource
+          id="population"
+          url={'mapbox://examples.8fgz4egr'}>
+          <TrackasiaGL.CircleLayer
+            id="sf2010CircleFill"
+            sourceLayerID="sf2010"
+            style={styles.circles}
           />
-
-          <TrackasiaGL.VectorSource
-            id="population"
-            url={'mapbox://examples.8fgz4egr'}>
-            <TrackasiaGL.CircleLayer
-              id="sf2010CircleFill"
-              sourceLayerID="sf2010"
-              style={styles.circles}
-            />
-          </TrackasiaGL.VectorSource>
-        </TrackasiaGL.MapView>
-      </Page>
-    );
-  }
+        </TrackasiaGL.VectorSource>
+      </TrackasiaGL.MapView>
+    </Page>
+  );
 }
 
-export default DataDrivenCircleColors;
+export default React.memo(DataDrivenCircleColors);

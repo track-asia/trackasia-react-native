@@ -20,8 +20,8 @@ import com.facebook.imagepipeline.image.CloseableStaticBitmap;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.facebook.react.views.imagehelper.ImageSource;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.Style;
+import com.trackasia.android.maps.TrackasiaMap;
+import com.trackasia.android.maps.Style;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
@@ -41,12 +41,12 @@ public class DownloadMapImageTask extends AsyncTask<Map.Entry<String, ImageEntry
     public static final String LOG_TAG = "DownloadMapImageTask";
 
     private WeakReference<Context> mContext;
-    private WeakReference<MapboxMap> mMap;
+    private WeakReference<TrackasiaMap> mMap;
     @Nullable
     private OnAllImagesLoaded mCallback;
     private final Object mCallerContext;
 
-    public DownloadMapImageTask(Context context, MapboxMap map, @Nullable OnAllImagesLoaded callback) {
+    public DownloadMapImageTask(Context context, TrackasiaMap map, @Nullable OnAllImagesLoaded callback) {
         mContext = new WeakReference<>(context.getApplicationContext());
         mMap = new WeakReference<>(map);
         mCallback = callback;
@@ -130,7 +130,7 @@ public class DownloadMapImageTask extends AsyncTask<Map.Entry<String, ImageEntry
 
     @Override
     protected void onPostExecute(List<Map.Entry<String, Bitmap>> images) {
-        MapboxMap map = mMap.get();
+        TrackasiaMap map = mMap.get();
         if (map != null && images != null && images.size() > 0) {
             Style style = map.getStyle();
             if (style != null) {

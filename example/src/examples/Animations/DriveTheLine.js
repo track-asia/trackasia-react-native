@@ -8,7 +8,6 @@ import {point} from '@turf/helpers';
 import RouteSimulator from '../../utils/RouteSimulator';
 import sheet from '../../styles/sheet';
 import {SF_OFFICE_COORDINATE} from '../../utils';
-import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
 import Page from '../common/Page';
 import PulseCircleLayer from '../common/PulseCircleLayer';
 
@@ -52,10 +51,6 @@ const layerStyles = {
 };
 
 class DriveTheLine extends React.Component {
-  static propTypes = {
-    ...BaseExamplePropTypes,
-  };
-
   constructor(props) {
     super(props);
 
@@ -76,7 +71,7 @@ class DriveTheLine extends React.Component {
   }
 
   async componentDidMount() {
-    // MapLibre should be vendor-agnostic.
+    // Trackasia should be vendor-agnostic.
     // This example should be reworked with a hard-coded route.
     // See
     // const reqOptions = {
@@ -191,7 +186,7 @@ class DriveTheLine extends React.Component {
 
   render() {
     return (
-      <Page {...this.props}>
+      <Page>
         <TrackasiaGL.MapView
           ref={c => (this._map = c)}
           style={sheet.matchParent}

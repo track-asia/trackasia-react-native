@@ -83,7 +83,7 @@ export default class App extends Component {
         <TrackasiaGL.MapView
           style={styles.map}
           logoEnabled={false}
-          styleURL="https://demotiles.track-asia.com/style.json"
+          styleURL="https://tiles.track-asia.com/tiles/v3/style-streets.json?key=public"
         />
       </View>
     );

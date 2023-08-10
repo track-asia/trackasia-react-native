@@ -3,7 +3,7 @@ package com.mapbox.rctmgl.components.location;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.mapbox.mapboxsdk.location.modes.RenderMode;
+import com.trackasia.android.location.modes.RenderMode;
 
 import javax.annotation.Nonnull;
 

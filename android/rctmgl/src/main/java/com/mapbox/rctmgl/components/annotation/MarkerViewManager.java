@@ -2,8 +2,8 @@ package com.mapbox.rctmgl.components.annotation;
 
 import androidx.annotation.NonNull;
 
-import com.mapbox.mapboxsdk.maps.MapView;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.trackasia.android.maps.MapView;
+import com.trackasia.android.maps.TrackasiaMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * Subclass of MarkerViewManager implementing removeViews and restoreViews
  */
-public class MarkerViewManager extends com.mapbox.mapboxsdk.plugins.markerview.MarkerViewManager {
+public class MarkerViewManager extends com.trackasia.android.plugins.markerview.MarkerViewManager {
     private final List<MarkerView> markers = new ArrayList<>();
     private MapView mapView;
     private java.lang.reflect.Method markerUpdate;
 
-    public MarkerViewManager(MapView mapView, MapboxMap mapboxMap) {
+    public MarkerViewManager(MapView mapView, TrackasiaMap mapboxMap) {
         super(mapView, mapboxMap);
         this.mapView = mapView;
         // this.mapboxMap = mapboxMap;

@@ -19,10 +19,10 @@ import com.facebook.react.module.annotations.ReactModule;
 import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.FeatureCollection;
 import com.mapbox.geojson.Point;
-import com.mapbox.mapboxsdk.camera.CameraPosition;
-import com.mapbox.mapboxsdk.snapshotter.MapSnapshot;
-import com.mapbox.mapboxsdk.snapshotter.MapSnapshotter;
-import com.mapbox.mapboxsdk.storage.FileSource;
+import com.trackasia.android.camera.CameraPosition;
+import com.trackasia.android.snapshotter.MapSnapshot;
+import com.trackasia.android.snapshotter.MapSnapshotter;
+import com.trackasia.android.storage.FileSource;
 import com.mapbox.rctmgl.utils.BitmapUtils;
 import com.mapbox.rctmgl.utils.GeoJSONUtils;
 

@@ -2,7 +2,7 @@ package com.mapbox.rctmgl.components.styles.layers;
 
 import android.content.Context;
 
-import com.mapbox.mapboxsdk.style.layers.RasterLayer;
+import com.trackasia.android.style.layers.RasterLayer;
 import com.mapbox.rctmgl.components.styles.RCTMGLStyle;
 import com.mapbox.rctmgl.components.styles.RCTMGLStyleFactory;
 

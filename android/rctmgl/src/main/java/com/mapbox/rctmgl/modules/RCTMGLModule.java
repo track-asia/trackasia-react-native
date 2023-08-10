@@ -9,9 +9,9 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.common.MapBuilder;
 import com.facebook.react.module.annotations.ReactModule;
-import com.mapbox.mapboxsdk.Mapbox;
-import com.mapbox.mapboxsdk.WellKnownTileServer;
-import com.mapbox.mapboxsdk.style.layers.Property;
+import com.trackasia.android.Trackasia;
+import com.trackasia.android.WellKnownTileServer;
+import com.trackasia.android.style.layers.Property;
 import com.mapbox.rctmgl.components.camera.constants.CameraMode;
 import com.mapbox.rctmgl.components.styles.RCTMGLStyleValue;
 import com.mapbox.rctmgl.components.styles.sources.RCTSource;
@@ -23,7 +23,7 @@ import com.mapbox.rctmgl.location.UserTrackingMode;
 import okhttp3.Dispatcher;
 import okhttp3.OkHttpClient;
 
-import com.mapbox.mapboxsdk.module.http.HttpRequestUtil;
+import com.trackasia.android.module.http.HttpRequestUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -58,7 +58,7 @@ public class RCTMGLModule extends ReactContextBaseJavaModule {
     public Map<String, Object> getConstants() {
         // map style urls
         Map<String, String> styleURLS = new HashMap<>();
-        styleURLS.put("Default", "https://demotiles.track-asia.com/style.json");
+        styleURLS.put("Default", "https://tiles.track-asia.com/tiles/v3/style-streets.json?key=public");
 
         // events
         Map<String, String> eventTypes = new HashMap<>();
@@ -281,9 +281,9 @@ public class RCTMGLModule extends ReactContextBaseJavaModule {
             @Override
             public void run() {
                 if (accessToken == null) {
-                    Mapbox.getInstance(getReactApplicationContext());
+                    Trackasia.getInstance(getReactApplicationContext());
                 } else {
-                    Mapbox.getInstance(getReactApplicationContext(), accessToken, WellKnownTileServer.Mapbox);
+                    Trackasia.getInstance(getReactApplicationContext(), accessToken, WellKnownTileServer.Trackasia);
                 }
             }
         });
@@ -320,7 +320,7 @@ public class RCTMGLModule extends ReactContextBaseJavaModule {
     // TODO: How to handle this? Underlying API has changed significantly on Android
     @ReactMethod
     public void getAccessToken(Promise promise) {
-        String token = Mapbox.getApiKey();
+        String token = Trackasia.getApiKey();
         if(token == null) {
             promise.reject("missing_access_token", "No access token has been set");
         } else {
@@ -333,7 +333,7 @@ public class RCTMGLModule extends ReactContextBaseJavaModule {
         mReactContext.runOnUiQueueThread(new Runnable() {
             @Override
             public void run() {
-                Mapbox.setConnected(connected);
+                Trackasia.setConnected(connected);
             }
         });
     }

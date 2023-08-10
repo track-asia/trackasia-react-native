@@ -1,14 +1,14 @@
 package com.mapbox.rctmgl.components.mapview;
 
-import com.mapbox.mapboxsdk.style.layers.CircleLayer;
-import com.mapbox.mapboxsdk.style.layers.FillExtrusionLayer;
-import com.mapbox.mapboxsdk.style.layers.FillLayer;
-import com.mapbox.mapboxsdk.style.layers.HeatmapLayer;
-import com.mapbox.mapboxsdk.style.layers.HillshadeLayer;
-import com.mapbox.mapboxsdk.style.layers.Layer;
-import com.mapbox.mapboxsdk.style.layers.LineLayer;
-import com.mapbox.mapboxsdk.style.layers.RasterLayer;
-import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
+import com.trackasia.android.style.layers.CircleLayer;
+import com.trackasia.android.style.layers.FillExtrusionLayer;
+import com.trackasia.android.style.layers.FillLayer;
+import com.trackasia.android.style.layers.HeatmapLayer;
+import com.trackasia.android.style.layers.HillshadeLayer;
+import com.trackasia.android.style.layers.Layer;
+import com.trackasia.android.style.layers.LineLayer;
+import com.trackasia.android.style.layers.RasterLayer;
+import com.trackasia.android.style.layers.SymbolLayer;
 
 import javax.annotation.Nullable;
 

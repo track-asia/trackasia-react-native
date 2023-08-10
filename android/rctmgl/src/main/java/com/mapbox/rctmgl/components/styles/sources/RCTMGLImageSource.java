@@ -6,8 +6,8 @@ import android.util.Log;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper;
 import com.mapbox.geojson.Feature;
-import com.mapbox.mapboxsdk.geometry.LatLngQuad;
-import com.mapbox.mapboxsdk.style.sources.ImageSource;
+import com.trackasia.android.geometry.LatLngQuad;
+import com.trackasia.android.style.sources.ImageSource;
 
 import java.net.MalformedURLException;
 import java.net.URL;

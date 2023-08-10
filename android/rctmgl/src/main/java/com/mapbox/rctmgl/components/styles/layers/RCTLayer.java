@@ -5,13 +5,13 @@ import android.content.Context;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.common.logging.FLog;
-import com.mapbox.mapboxsdk.location.LocationComponentConstants;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.Style;
-import com.mapbox.mapboxsdk.style.expressions.Expression;
-import com.mapbox.mapboxsdk.style.layers.Layer;
-import com.mapbox.mapboxsdk.style.layers.Property;
-import com.mapbox.mapboxsdk.style.layers.PropertyFactory;
+import com.trackasia.android.location.LocationComponentConstants;
+import com.trackasia.android.maps.TrackasiaMap;
+import com.trackasia.android.maps.Style;
+import com.trackasia.android.style.expressions.Expression;
+import com.trackasia.android.style.layers.Layer;
+import com.trackasia.android.style.layers.Property;
+import com.trackasia.android.style.layers.PropertyFactory;
 import com.mapbox.rctmgl.components.AbstractMapFeature;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.utils.ExpressionParser;
@@ -39,7 +39,7 @@ public abstract class RCTLayer<T extends Layer> extends AbstractMapFeature {
     protected ReadableMap mReactStyle;
     protected Expression mFilter;
 
-    protected MapboxMap mMap;
+    protected TrackasiaMap mMap;
     protected T mLayer;
 
     protected Context mContext;

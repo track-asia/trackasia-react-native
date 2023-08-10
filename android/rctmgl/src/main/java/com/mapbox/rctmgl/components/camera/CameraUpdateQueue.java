@@ -1,6 +1,6 @@
 package com.mapbox.rctmgl.components.camera;
 
-import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.trackasia.android.maps.TrackasiaMap;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 
 import java.util.ArrayList;

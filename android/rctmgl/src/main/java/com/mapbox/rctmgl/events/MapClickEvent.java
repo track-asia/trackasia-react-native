@@ -6,7 +6,7 @@ import android.view.View;
 
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
-import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.trackasia.android.geometry.LatLng;
 
 import com.mapbox.rctmgl.events.constants.EventKeys;
 import com.mapbox.rctmgl.events.constants.EventTypes;

@@ -3,11 +3,11 @@ package com.mapbox.rctmgl.components.styles.light;
 import android.content.Context;
 
 import com.facebook.react.bridge.ReadableMap;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.Style;
-import com.mapbox.mapboxsdk.style.layers.TransitionOptions;
-import com.mapbox.mapboxsdk.style.light.Light;
-import com.mapbox.mapboxsdk.style.light.Position;
+import com.trackasia.android.maps.TrackasiaMap;
+import com.trackasia.android.maps.Style;
+import com.trackasia.android.style.layers.TransitionOptions;
+import com.trackasia.android.style.light.Light;
+import com.trackasia.android.style.light.Position;
 import com.mapbox.rctmgl.components.AbstractMapFeature;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.components.styles.RCTMGLStyle;
@@ -21,7 +21,7 @@ import java.util.Map;
  */
 
 public class RCTMGLLight extends AbstractMapFeature {
-    private MapboxMap mMap;
+    private TrackasiaMap mMap;
     private ReadableMap mReactStyle;
 
     public RCTMGLLight(Context context) {

@@ -2,8 +2,8 @@ package com.mapbox.rctmgl.components.styles.sources;
 
 import android.content.Context;
 
-import com.mapbox.mapboxsdk.style.sources.Source;
-import com.mapbox.mapboxsdk.style.sources.TileSet;
+import com.trackasia.android.style.sources.Source;
+import com.trackasia.android.style.sources.TileSet;
 
 import java.util.Collection;
 

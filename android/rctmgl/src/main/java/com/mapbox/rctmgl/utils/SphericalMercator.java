@@ -3,7 +3,7 @@ package com.mapbox.rctmgl.utils;
 import android.graphics.Point;
 import android.graphics.PointF;
 
-import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.trackasia.android.geometry.LatLng;
 
 import java.util.ArrayList;
 import java.util.HashMap;

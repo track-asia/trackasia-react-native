@@ -9,11 +9,11 @@ import android.view.View;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.common.MapBuilder;
 import com.mapbox.geojson.Feature;
-import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.log.Logger;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.Style;
-import com.mapbox.mapboxsdk.style.sources.Source;
+import com.trackasia.android.geometry.LatLng;
+import com.trackasia.android.log.Logger;
+import com.trackasia.android.maps.TrackasiaMap;
+import com.trackasia.android.maps.Style;
+import com.trackasia.android.style.sources.Source;
 import com.mapbox.rctmgl.components.AbstractMapFeature;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.components.styles.layers.RCTLayer;
@@ -35,7 +35,7 @@ public abstract class RCTSource<T extends Source> extends AbstractMapFeature {
     public static final double DEFAULT_HITBOX_HEIGHT = 44.0;
 
     protected RCTMGLMapView mMapView;
-    protected MapboxMap mMap;
+    protected TrackasiaMap mMap;
 
     protected String mID;
     protected T mSource;

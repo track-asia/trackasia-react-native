@@ -70,7 +70,7 @@
       "type": "sources",
       "doc": "Data source specifications.",
       "example": {
-        "maplibre-demotiles": {
+        "trackasia-demotiles": {
           "type": "vector",
           "url": "https://demotiles.track-asia.com/tiles/tiles.json"
         }

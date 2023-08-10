@@ -17,7 +17,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import com.mapbox.mapboxsdk.log.Logger;
+import com.trackasia.android.log.Logger;
 
 import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.ReactContext;
@@ -30,25 +30,25 @@ import com.facebook.react.bridge.WritableNativeMap;
 import com.mapbox.android.gestures.MoveGestureDetector;
 import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.FeatureCollection;
-import com.mapbox.mapboxsdk.camera.CameraPosition;
-import com.mapbox.mapboxsdk.camera.CameraUpdate;
-import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.geometry.VisibleRegion;
-import com.mapbox.mapboxsdk.maps.AttributionDialogManager;
-import com.mapbox.mapboxsdk.maps.MapView;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.MapboxMapOptions;
-import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
-import com.mapbox.mapboxsdk.maps.Style;
-import com.mapbox.mapboxsdk.maps.UiSettings;
-import com.mapbox.mapboxsdk.plugins.localization.LocalizationPlugin;
-import com.mapbox.mapboxsdk.plugins.annotation.OnSymbolClickListener;
-import com.mapbox.mapboxsdk.plugins.annotation.OnSymbolDragListener;
-import com.mapbox.mapboxsdk.plugins.annotation.Symbol;
-import com.mapbox.mapboxsdk.plugins.annotation.SymbolManager;
-import com.mapbox.mapboxsdk.style.expressions.Expression;
-import com.mapbox.mapboxsdk.style.layers.Layer;
-import com.mapbox.mapboxsdk.style.layers.Property;
+import com.trackasia.android.camera.CameraPosition;
+import com.trackasia.android.camera.CameraUpdate;
+import com.trackasia.android.geometry.LatLng;
+import com.trackasia.android.geometry.VisibleRegion;
+import com.trackasia.android.maps.AttributionDialogManager;
+import com.trackasia.android.maps.MapView;
+import com.trackasia.android.maps.TrackasiaMap;
+import com.trackasia.android.maps.TrackasiaMapOptions;
+import com.trackasia.android.maps.OnMapReadyCallback;
+import com.trackasia.android.maps.Style;
+import com.trackasia.android.maps.UiSettings;
+import com.trackasia.android.plugins.localization.LocalizationPlugin;
+import com.trackasia.android.plugins.annotation.OnSymbolClickListener;
+import com.trackasia.android.plugins.annotation.OnSymbolDragListener;
+import com.trackasia.android.plugins.annotation.Symbol;
+import com.trackasia.android.plugins.annotation.SymbolManager;
+import com.trackasia.android.style.expressions.Expression;
+import com.trackasia.android.style.layers.Layer;
+import com.trackasia.android.style.layers.Property;
 import com.mapbox.rctmgl.R;
 import com.mapbox.rctmgl.components.AbstractMapFeature;
 import com.mapbox.rctmgl.components.annotation.RCTMGLPointAnnotation;
@@ -84,7 +84,7 @@ import org.json.*;
 
 import javax.annotation.Nullable;
 
-import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.visibility;
+import static com.trackasia.android.style.layers.PropertyFactory.visibility;
 import static com.mapbox.rctmgl.modules.RCTMGLOfflineModule.DEFAULT_STYLE_URL;
 
 /**
@@ -92,8 +92,8 @@ import static com.mapbox.rctmgl.modules.RCTMGLOfflineModule.DEFAULT_STYLE_URL;
  */
 
 @SuppressWarnings({ "MissingPermission" })
-public class RCTMGLMapView extends MapView implements OnMapReadyCallback, MapboxMap.OnMapClickListener,
-        MapboxMap.OnMapLongClickListener, MapView.OnCameraIsChangingListener, MapView.OnCameraDidChangeListener,
+public class RCTMGLMapView extends MapView implements OnMapReadyCallback, TrackasiaMap.OnMapClickListener,
+        TrackasiaMap.OnMapLongClickListener, MapView.OnCameraIsChangingListener, MapView.OnCameraDidChangeListener,
         MapView.OnDidFailLoadingMapListener, MapView.OnDidFinishLoadingMapListener,
         MapView.OnWillStartRenderingFrameListener, MapView.OnDidFinishRenderingFrameListener,
         MapView.OnWillStartRenderingMapListener, MapView.OnDidFinishRenderingMapListener,
@@ -117,7 +117,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
     private CameraChangeTracker mCameraChangeTracker = new CameraChangeTracker();
     private List<Pair<Integer, ReadableArray>> mPreRenderMethods = new ArrayList<>();
 
-    private MapboxMap mMap;
+    private TrackasiaMap mMap;
 
     private LocalizationPlugin mLocalizationPlugin;
 
@@ -156,7 +156,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
 
     private @Nullable Integer mTintColor = null;
 
-    public RCTMGLMapView(Context context, RCTMGLMapViewManager manager, MapboxMapOptions options) {
+    public RCTMGLMapView(Context context, RCTMGLMapViewManager manager, TrackasiaMapOptions options) {
         super(context, options);
 
         mContext = context;
@@ -338,11 +338,11 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
         return mMap.getCameraPosition();
     }
 
-    public void animateCamera(CameraUpdate cameraUpdate, MapboxMap.CancelableCallback callback) {
+    public void animateCamera(CameraUpdate cameraUpdate, TrackasiaMap.CancelableCallback callback) {
         mMap.animateCamera(cameraUpdate, callback);
     }
 
-    public void moveCamera(CameraUpdate cameraUpdate, MapboxMap.CancelableCallback callback) {
+    public void moveCamera(CameraUpdate cameraUpdate, TrackasiaMap.CancelableCallback callback) {
         mMap.moveCamera(cameraUpdate, callback);
     }
 
@@ -350,7 +350,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
         mMap.moveCamera(cameraUpdate);
     }
 
-    public void easeCamera(CameraUpdate cameraUpdate, int duration, boolean easingInterpolator, MapboxMap.CancelableCallback callback) {
+    public void easeCamera(CameraUpdate cameraUpdate, int duration, boolean easingInterpolator, TrackasiaMap.CancelableCallback callback) {
         mMap.easeCamera(cameraUpdate, duration, easingInterpolator, callback);
     }
 
@@ -386,7 +386,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
         return null;
     }
 
-    public MapboxMap getMapboxMap() {
+    public TrackasiaMap getMapboxMap() {
         return mMap;
     }
 
@@ -437,7 +437,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
 
 
     @Override
-    public void onMapReady(final MapboxMap mapboxMap) {
+    public void onMapReady(final TrackasiaMap mapboxMap) {
         mMap = mapboxMap;
 
         if (isJSONValid(mStyleURL)) {
@@ -463,14 +463,14 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
         updateInsets();
         updateUISettings();
 
-        mMap.addOnCameraIdleListener(new MapboxMap.OnCameraIdleListener() {
+        mMap.addOnCameraIdleListener(new TrackasiaMap.OnCameraIdleListener() {
             @Override
             public void onCameraIdle() {
                 sendRegionDidChangeEvent();
             }
         });
 
-        mMap.addOnCameraMoveStartedListener(new MapboxMap.OnCameraMoveStartedListener() {
+        mMap.addOnCameraMoveStartedListener(new TrackasiaMap.OnCameraMoveStartedListener() {
             @Override
             public void onCameraMoveStarted(int reason) {
                 mCameraChangeTracker.setReason(reason);
@@ -478,7 +478,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
             }
         });
 
-        mMap.addOnCameraMoveListener(new MapboxMap.OnCameraMoveListener() {
+        mMap.addOnCameraMoveListener(new TrackasiaMap.OnCameraMoveListener() {
             @Override
             public void onCameraMove() {
                 if (markerViewManager != null) {
@@ -487,7 +487,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
             }
         });
 
-        mMap.addOnMoveListener(new MapboxMap.OnMoveListener() {
+        mMap.addOnMoveListener(new TrackasiaMap.OnMoveListener() {
             @Override
             public void onMoveBegin(MoveGestureDetector detector) {
                 mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
@@ -848,7 +848,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
         if (position == null) {
             // reset from explicit to default
             if (mLogoGravity != null) {
-                MapboxMapOptions defaultOptions = MapboxMapOptions.createFromAttributes(mContext);
+                TrackasiaMapOptions defaultOptions = TrackasiaMapOptions.createFromAttributes(mContext);
                 mLogoGravity = defaultOptions.getLogoGravity();
                 mLogoMargins = Arrays.copyOf(defaultOptions.getLogoMargins(), 4);
                 updateUISettings();
@@ -903,7 +903,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
         if (position == null) {
             // reset from explicit to default
             if (mAttributionGravity != null) {
-                MapboxMapOptions defaultOptions = MapboxMapOptions.createFromAttributes(mContext);
+                TrackasiaMapOptions defaultOptions = TrackasiaMapOptions.createFromAttributes(mContext);
                 mAttributionGravity = defaultOptions.getAttributionGravity();
                 mAttributionMargin = Arrays.copyOf(defaultOptions.getAttributionMargins(), 4);
                 updateUISettings();
@@ -1016,7 +1016,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
             throw new Error("takeSnap should only be called after the map has rendered");
         }
 
-        mMap.snapshot(new MapboxMap.SnapshotReadyCallback() {
+        mMap.snapshot(new TrackasiaMap.SnapshotReadyCallback() {
             @Override
             public void onSnapshotReady(Bitmap snapshot) {
                 WritableMap payload = new WritableNativeMap();
@@ -1496,7 +1496,7 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Mapbox
         return mOffscreenAnnotationViewContainer;
     }
 
-    public MarkerViewManager getMarkerViewManager(MapboxMap map) {
+    public MarkerViewManager getMarkerViewManager(TrackasiaMap map) {
         if (markerViewManager == null) {
             if (map == null) {
                 throw new Error("makerViewManager should be called one the map has loaded");

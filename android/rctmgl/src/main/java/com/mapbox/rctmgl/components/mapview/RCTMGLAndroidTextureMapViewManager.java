@@ -1,7 +1,7 @@
 package com.mapbox.rctmgl.components.mapview;
 
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.mapbox.mapboxsdk.maps.MapboxMapOptions;
+import com.trackasia.android.maps.TrackasiaMapOptions;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
@@ -24,7 +24,7 @@ public class RCTMGLAndroidTextureMapViewManager extends RCTMGLMapViewManager {
 
     @Override
     protected RCTMGLAndroidTextureMapView createViewInstance(ThemedReactContext themedReactContext) {
-        MapboxMapOptions options = new MapboxMapOptions();
+        TrackasiaMapOptions options = new TrackasiaMapOptions();
         options.textureMode(true);
         return new RCTMGLAndroidTextureMapView(themedReactContext, this, options);
     }

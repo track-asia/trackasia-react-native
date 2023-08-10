@@ -11,9 +11,9 @@ import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.LayoutShadowNode;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.mapbox.mapboxsdk.geometry.LatLngBounds;
-import com.mapbox.mapboxsdk.log.Logger;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.trackasia.android.geometry.LatLngBounds;
+import com.trackasia.android.log.Logger;
+import com.trackasia.android.maps.TrackasiaMap;
 import com.mapbox.rctmgl.components.AbstractEventEmitter;
 import com.mapbox.rctmgl.events.constants.EventKeys;
 import com.mapbox.rctmgl.utils.ConvertUtils;
@@ -247,7 +247,7 @@ public class RCTMGLMapViewManager extends AbstractEventEmitter<RCTMGLMapView> {
     @Override
     public void receiveCommand(RCTMGLMapView mapView, int commandID, @Nullable ReadableArray args) {
         // allows method calls to work with componentDidMount
-        MapboxMap mapboxMap = mapView.getMapboxMap();
+        TrackasiaMap mapboxMap = mapView.getMapboxMap();
         if (mapboxMap == null) {
             mapView.enqueuePreRenderMapMethod(commandID, args);
             return;

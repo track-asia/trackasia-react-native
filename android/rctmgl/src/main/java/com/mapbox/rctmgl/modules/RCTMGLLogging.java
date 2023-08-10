@@ -7,8 +7,8 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
-import com.mapbox.mapboxsdk.log.Logger;
-import com.mapbox.mapboxsdk.log.LoggerDefinition;
+import com.trackasia.android.log.Logger;
+import com.trackasia.android.log.LoggerDefinition;
 import android.util.Log;
 
 @ReactModule(name = RCTMGLLogging.REACT_CLASS)

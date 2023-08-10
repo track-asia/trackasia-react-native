@@ -7,8 +7,8 @@ import android.view.View;
 import androidx.annotation.NonNull;
 
 import com.mapbox.geojson.Point;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
+import com.trackasia.android.maps.TrackasiaMap;
+import com.trackasia.android.maps.OnMapReadyCallback;
 import com.mapbox.rctmgl.components.AbstractMapFeature;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.utils.GeoJSONUtils;
@@ -65,7 +65,7 @@ public class RCTMGLMarkerView extends AbstractMapFeature implements MarkerView.O
         mMapView.getMapAsync(
             new OnMapReadyCallback() {
                 @Override
-                public void onMapReady(@NonNull MapboxMap mapboxMap) {
+                public void onMapReady(@NonNull TrackasiaMap mapboxMap) {
                     mMarkerViewManager = mMapView.getMarkerViewManager(mapboxMap);
 
                     if (mChildView != null) {

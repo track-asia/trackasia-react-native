@@ -21,9 +21,9 @@ function readIosVersion() {
     'trackasia-react-native.podspec',
   );
   const lines = fs.readFileSync(podspecPath, 'utf8').split('\n');
-  const maplibreLineRegex = /^\s+version:\s*"(\d+\.\d+\.\d+)"$/;
-  const maplibreLine = lines.filter(i => maplibreLineRegex.exec(i))[0];
-  return `${maplibreLineRegex.exec(maplibreLine)[1]}.0`;
+  const trackasiaLineRegex = /^\s+version:\s*"(\d+\.\d+\.\d+)"$/;
+  const trackasiaLine = lines.filter(i => trackasiaLineRegex.exec(i))[0];
+  return `${trackasiaLineRegex.exec(trackasiaLine)[1]}.0`;
 }
 
 function readAndroidVersion() {
@@ -35,9 +35,9 @@ function readAndroidVersion() {
     'build.gradle',
   );
   const lines = fs.readFileSync(buildGradlePath, 'utf8').split('\n');
-  const maplibreLineRegex = /^\s+implementation\s+"org.maplibre.gl:android-sdk:(\d+\.\d+\.\d+)"$/;
-  const maplibreLine = lines.filter(i => maplibreLineRegex.exec(i))[0];
-  return maplibreLineRegex.exec(maplibreLine)[1];
+  const trackasiaLineRegex = /^\s+implementation\s+"org.trackasia.gl:android-sdk:(\d+\.\d+\.\d+)"$/;
+  const trackasiaLine = lines.filter(i => trackasiaLineRegex.exec(i))[0];
+  return trackasiaLineRegex.exec(trackasiaLine)[1];
 }
 
 if (!styleSpecJSON) {

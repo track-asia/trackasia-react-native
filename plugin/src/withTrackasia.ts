@@ -57,8 +57,8 @@ export function applyCocoaPodsModifications(contents: string): string {
   // Ensure installer blocks exist
   // let src = addInstallerBlock(contents, 'pre');
   let src = addInstallerBlock(contents, 'post');
-  // src = addMapLibreInstallerBlock(src, 'pre');
-  src = addMapLibreInstallerBlock(src, 'post');
+  // src = addTrackasiaInstallerBlock(src, 'pre');
+  src = addTrackasiaInstallerBlock(src, 'post');
   return src;
 }
 
@@ -95,7 +95,7 @@ export function addInstallerBlock(
   }).contents;
 }
 
-export function addMapLibreInstallerBlock(
+export function addTrackasiaInstallerBlock(
   src: string,
   blockName: InstallerBlockName,
 ): string {
@@ -135,9 +135,9 @@ const withExcludedSimulatorArchitectures: ConfigPlugin = c => {
   });
 };
 
-const withMapLibre: ConfigPlugin = config => {
+const withTrackasia: ConfigPlugin = config => {
   config = withExcludedSimulatorArchitectures(config);
   return withCocoaPodsInstallerBlocks(config);
 };
 
-export default createRunOncePlugin(withMapLibre, pkg.name, pkg.version);
+export default createRunOncePlugin(withTrackasia, pkg.name, pkg.version);

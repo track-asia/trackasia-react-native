@@ -5,14 +5,16 @@ Please add unreleased changes in the following style:
 PR Title ([#123](link to my pr))
 ```
 
-## 9.0.1
+## 9.1.0
 
+Update react to 18.2.0 and react-native to 0.72.1. ([#48](https://github.com/track-asia/trackasia-react-native/pull/48))
+fix(markerview): make PointAnnotationProps component extend ViewProps ([#41](https://github.com/track-asia/trackasia-react-native/issues/41))
 Fix build issue on iOS ([#29](https://github.com/track-asia/trackasia-react-native/issues/29))
 
 ## 9.0.0
 
 Completed fork from RNMapbox, removed support for the proprietary Mapbox SDK, and updated to the latest
-trackasia GL Native SDKs for iOS and Android.
+Trackasia GL Native SDKs for iOS and Android.
 
 Breaking changes: Mapbox-specific names have been renamed to trackasia.
 
@@ -95,7 +97,7 @@ Fix error while updating coordinates of RCTMGLImageSource ([#1310](https://githu
 
 Add types for `Logger` class ([#1316](https://github.com/rnmapbox/maps/pull/1316))  
 Enable linear easing on map camera ([#1281](https://github.com/rnmapbox/maps/pull/1281))  
-Allow trackasia as an option ([#1311](https://github.com/rnmapbox/maps/pull/1311))  
+Allow Trackasia as an option ([#1311](https://github.com/rnmapbox/maps/pull/1311))  
 Fix native UserLocation on Android ([#1284](https://github.com/rnmapbox/maps/pull/1284))  
 Add getClusterExpansionZoom to ShapeSource ([#1279](https://github.com/rnmapbox/maps/pull/1279))  
 Add type definition for AnimatedPoint ([#1280](https://github.com/rnmapbox/maps/pull/1280))

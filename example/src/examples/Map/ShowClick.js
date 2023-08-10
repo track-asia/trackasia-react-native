@@ -4,15 +4,10 @@ import TrackasiaGL from '@trackasia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import {DEFAULT_CENTER_COORDINATE} from '../../utils';
-import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
 import Page from '../common/Page';
 import Bubble from '../common/Bubble';
 
 class ShowClick extends React.Component {
-  static propTypes = {
-    ...BaseExamplePropTypes,
-  };
-
   constructor(props) {
     super(props);
 
@@ -65,7 +60,7 @@ class ShowClick extends React.Component {
 
   render() {
     return (
-      <Page {...this.props}>
+      <Page>
         <TrackasiaGL.MapView style={sheet.matchParent} onPress={this.onPress}>
           <TrackasiaGL.Camera centerCoordinate={DEFAULT_CENTER_COORDINATE} />
         </TrackasiaGL.MapView>

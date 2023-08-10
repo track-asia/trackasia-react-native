@@ -1,4 +1,4 @@
-import {applyCocoaPodsModifications} from '../withMapLibre';
+import {applyCocoaPodsModifications} from '../withTrackasia';
 
 import * as fixtures from './fixtures/cocoapodFiles';
 
