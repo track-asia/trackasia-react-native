@@ -61,7 +61,7 @@
     "@react-native/metro-config": "^0.72.7",
     "@sinonjs/fake-timers": "^8.0.1",
     "@testing-library/react-native": "^8.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^5.8.0",
     "babel-jest": "^29.6.0",
     "documentation": "^14.0.0",
