@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-native-community/eslint-plugin", "npm:1.3.0"],\
             ["@react-native/metro-config", "npm:0.72.9"],\
             ["@sinonjs/fake-timers", "npm:8.1.0"],\
-            ["@testing-library/react-native", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:8.0.0"],\
+            ["@testing-library/react-native", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:12.2.0"],\
             ["@turf/along", "npm:6.5.0"],\
             ["@turf/distance", "npm:6.5.0"],\
             ["@turf/helpers", "npm:6.5.0"],\
@@ -5314,29 +5314,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@testing-library/react-native", [\
-        ["npm:8.0.0", {\
-          "packageLocation": "./.yarn/cache/@testing-library-react-native-npm-8.0.0-c53d89e22a-15cb8deea5.zip/node_modules/@testing-library/react-native/",\
+        ["npm:12.2.0", {\
+          "packageLocation": "./.yarn/cache/@testing-library-react-native-npm-12.2.0-c8c4946156-24f8d60256.zip/node_modules/@testing-library/react-native/",\
           "packageDependencies": [\
-            ["@testing-library/react-native", "npm:8.0.0"]\
+            ["@testing-library/react-native", "npm:12.2.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:8.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/@testing-library-react-native-virtual-f75ffc5c25/0/cache/@testing-library-react-native-npm-8.0.0-c53d89e22a-15cb8deea5.zip/node_modules/@testing-library/react-native/",\
+        ["virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:12.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/@testing-library-react-native-virtual-b88955b77a/0/cache/@testing-library-react-native-npm-12.2.0-c8c4946156-24f8d60256.zip/node_modules/@testing-library/react-native/",\
           "packageDependencies": [\
-            ["@testing-library/react-native", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:8.0.0"],\
+            ["@testing-library/react-native", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:12.2.0"],\
+            ["@types/jest", null],\
             ["@types/react", null],\
             ["@types/react-native", null],\
             ["@types/react-test-renderer", null],\
-            ["pretty-format", "npm:27.5.1"],\
+            ["jest", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:29.6.2"],\
+            ["pretty-format", "npm:29.6.2"],\
             ["react", "npm:18.2.0"],\
             ["react-native", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:0.72.1"],\
             ["react-test-renderer", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:18.2.0"]\
           ],\
           "packagePeers": [\
+            "@types/jest",\
             "@types/react-native",\
             "@types/react-test-renderer",\
             "@types/react",\
+            "jest",\
             "react-native",\
             "react-test-renderer",\
             "react"\
@@ -5368,7 +5372,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-native-community/eslint-plugin", "npm:1.3.0"],\
             ["@react-native/metro-config", "npm:0.72.9"],\
             ["@sinonjs/fake-timers", "npm:8.1.0"],\
-            ["@testing-library/react-native", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:8.0.0"],\
+            ["@testing-library/react-native", "virtual:9660548fc3dbf30fb04efdc785182edb049ab40b4c4f8e3ea57dad99c80b53cfb2fc62c47734da28e14b5751a398d9e48dcb9e6b5c0a59488d596e265b8e7cfd#npm:12.2.0"],\
             ["@turf/along", "npm:6.5.0"],\
             ["@turf/distance", "npm:6.5.0"],\
             ["@turf/helpers", "npm:6.5.0"],\
@@ -15473,16 +15477,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/types", "npm:26.6.2"],\
             ["ansi-regex", "npm:5.0.1"],\
             ["ansi-styles", "npm:4.3.0"],\
-            ["react-is", "npm:17.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:27.5.1", {\
-          "packageLocation": "./.yarn/cache/pretty-format-npm-27.5.1-cd7d49696f-cf610cffcb.zip/node_modules/pretty-format/",\
-          "packageDependencies": [\
-            ["pretty-format", "npm:27.5.1"],\
-            ["ansi-regex", "npm:5.0.1"],\
-            ["ansi-styles", "npm:5.2.0"],\
             ["react-is", "npm:17.0.2"]\
           ],\
           "linkType": "HARD"\
