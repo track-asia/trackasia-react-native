@@ -63,7 +63,7 @@ const OUTPUT_EXAMPLE_PREFIX = [
 ];
 const OUTPUT_PREFIX = outputToExample ? OUTPUT_EXAMPLE_PREFIX : ['..'];
 
-const IOS_OUTPUT_PATH = path.join(__dirname, ...OUTPUT_PREFIX, 'ios', 'RCTMGL');
+const IOS_OUTPUT_PATH = path.join(__dirname, ...OUTPUT_PREFIX, 'ios', 'RCTMLN');
 const ANDROID_OUTPUT_PATH = path.join(
   __dirname,
   ...OUTPUT_PREFIX,
@@ -318,20 +318,20 @@ function getAllowedFunctionTypes(paintAttr) {
 async function generate() {
   const templateMappings = [
     {
-      input: path.join(TMPL_PATH, 'RCTMGLStyle.h.ejs'),
-      output: path.join(IOS_OUTPUT_PATH, 'RCTMGLStyle.h'),
+      input: path.join(TMPL_PATH, 'RCTMLNStyle.h.ejs'),
+      output: path.join(IOS_OUTPUT_PATH, 'RCTMLNStyle.h'),
     },
     {
       input: path.join(TMPL_PATH, 'index.d.ts.ejs'),
       output: path.join(IOS_OUTPUT_PATH, 'index.d.ts'),
     },
     {
-      input: path.join(TMPL_PATH, 'RCTMGLStyle.m.ejs'),
-      output: path.join(IOS_OUTPUT_PATH, 'RCTMGLStyle.m'),
+      input: path.join(TMPL_PATH, 'RCTMLNStyle.m.ejs'),
+      output: path.join(IOS_OUTPUT_PATH, 'RCTMLNStyle.m'),
     },
     {
-      input: path.join(TMPL_PATH, 'RCTMGLStyleFactory.java.ejs'),
-      output: path.join(ANDROID_OUTPUT_PATH, 'RCTMGLStyleFactory.java'),
+      input: path.join(TMPL_PATH, 'RCTMLNStyleFactory.java.ejs'),
+      output: path.join(ANDROID_OUTPUT_PATH, 'RCTMLNStyleFactory.java'),
     },
     {
       input: path.join(TMPL_PATH, 'styleMap.js.ejs'),

@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import {NativeModules, requireNativeComponent} from 'react-native';
 import React from 'react';
 
-const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MLNModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMGLCamera';
+export const NATIVE_MODULE_NAME = 'RCTMLNCamera';
 
 const SettingsPropTypes = {
   /**
@@ -631,7 +631,7 @@ class Camera extends React.Component {
     };
 
     return (
-      <RCTMGLCamera
+      <RCTMLNCamera
         testID="Camera"
         ref="camera"
         followUserLocation={this.props.followUserLocation}
@@ -650,7 +650,7 @@ class Camera extends React.Component {
   }
 }
 
-const RCTMGLCamera = requireNativeComponent(NATIVE_MODULE_NAME, Camera, {
+const RCTMLNCamera = requireNativeComponent(NATIVE_MODULE_NAME, Camera, {
   nativeOnly: {
     stop: true,
   },

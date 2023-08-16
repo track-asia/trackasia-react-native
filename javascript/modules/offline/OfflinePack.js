@@ -1,6 +1,6 @@
 import {NativeModules} from 'react-native';
 
-const TrackasiaGLOfflineManager = NativeModules.MGLOfflineModule;
+const TrackasiaGLOfflineManager = NativeModules.MLNOfflineModule;
 
 class OfflinePack {
   constructor(pack) {

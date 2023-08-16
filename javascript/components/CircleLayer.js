@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MLNModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMGLCircleLayer';
+export const NATIVE_MODULE_NAME = 'RCTMLNCircleLayer';
 
 /**
  * CircleLayer is a style layer that renders one or more filled circles on the map.
@@ -81,7 +81,7 @@ class CircleLayer extends AbstractLayer {
 
   render() {
     return (
-      <RCTMGLCircleLayer
+      <RCTMLNCircleLayer
         testID="rctmglCircleLayer"
         ref="nativeLayer"
         {...this.baseProps}
@@ -90,7 +90,7 @@ class CircleLayer extends AbstractLayer {
   }
 }
 
-const RCTMGLCircleLayer = requireNativeComponent(
+const RCTMLNCircleLayer = requireNativeComponent(
   NATIVE_MODULE_NAME,
   CircleLayer,
   {

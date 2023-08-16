@@ -3,7 +3,7 @@ import {makePoint, makeFeatureCollection} from '../../utils/geoUtils';
 
 import {NativeModules} from 'react-native';
 
-const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MLNModule;
 
 class SnapshotOptions {
   constructor(options = {}) {

@@ -91,7 +91,7 @@ Add Expo config plugin ([#1388](https://github.com/rnmapbox/maps/pull/1388))
 Android: Bump `okhttp` to `4.9.0` ([#1390](https://github.com/rnmapbox/maps/pull/1390))  
 Support dynamically changing local JSON in styleURL ([#1399](https://github.com/rnmapbox/maps/pull/1399))  
 Add missing types to `SymbolLayerStyle` & `ImagesProps` ([#1360](https://github.com/rnmapbox/maps/pull/1360))  
-Fix error while updating coordinates of RCTMGLImageSource ([#1310](https://github.com/rnmapbox/maps/pull/1310))
+Fix error while updating coordinates of RCTMLNImageSource ([#1310](https://github.com/rnmapbox/maps/pull/1310))
 
 ## 8.2.0-beta2
 

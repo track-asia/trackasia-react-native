@@ -1,7 +1,7 @@
 import {NativeModules, NativeEventEmitter} from 'react-native';
 
-const TrackasiaGL = NativeModules.MGLModule;
-const TrackasiaGLLocationManager = NativeModules.MGLLocationModule;
+const TrackasiaGL = NativeModules.MLNModule;
+const TrackasiaGLLocationManager = NativeModules.MLNLocationModule;
 
 export const LocationModuleEventEmitter = new NativeEventEmitter(
   TrackasiaGLLocationManager,

@@ -3,7 +3,7 @@ import BackgroundLayer from '../../javascript/components/BackgroundLayer';
 import React from 'react';
 import {render} from '@testing-library/react-native';
 
-export const NATIVE_MODULE_NAME = 'RCTMGLBackgroundLayer';
+export const NATIVE_MODULE_NAME = 'RCTMLNBackgroundLayer';
 
 describe('BackgroundLayer', () => {
   test('renders correctly with default props', () => {

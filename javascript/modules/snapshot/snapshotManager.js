@@ -2,7 +2,7 @@ import SnapshotOptions from './SnapshotOptions';
 
 import {NativeModules} from 'react-native';
 
-const TrackasiaGLSnapshotManger = NativeModules.MGLSnapshotModule;
+const TrackasiaGLSnapshotManger = NativeModules.MLNSnapshotModule;
 
 /**
  * The snapshotManager generates static raster images of the map.

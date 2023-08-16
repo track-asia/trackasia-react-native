@@ -7,7 +7,7 @@ import React from 'react';
 import {requireNativeComponent} from 'react-native';
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 
-export const NATIVE_MODULE_NAME = 'RCTMGLImages';
+export const NATIVE_MODULE_NAME = 'RCTMLNImages';
 
 function _isUrlOrPath(value) {
   return (
@@ -105,11 +105,11 @@ class Images extends React.Component {
       ...this._getImages(),
     };
 
-    return <RCTMGLImages {...props}>{this.props.children}</RCTMGLImages>;
+    return <RCTMLNImages {...props}>{this.props.children}</RCTMLNImages>;
   }
 }
 
-const RCTMGLImages = requireNativeComponent(NATIVE_MODULE_NAME, Images, {
+const RCTMLNImages = requireNativeComponent(NATIVE_MODULE_NAME, Images, {
   nativeOnly: {
     nativeImages: true,
     onImageMissing: true,

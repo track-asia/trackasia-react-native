@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {requireNativeComponent, StyleSheet, Platform} from 'react-native';
 
-export const NATIVE_MODULE_NAME = 'RCTMGLPointAnnotation';
+export const NATIVE_MODULE_NAME = 'RCTMLNPointAnnotation';
 
 const styles = StyleSheet.create({
   container: {
@@ -192,14 +192,14 @@ class PointAnnotation extends NativeBridgeComponent(React.PureComponent) {
       coordinate: this._getCoordinate(),
     };
     return (
-      <RCTMGLPointAnnotation {...props}>
+      <RCTMLNPointAnnotation {...props}>
         {this.props.children}
-      </RCTMGLPointAnnotation>
+      </RCTMLNPointAnnotation>
     );
   }
 }
 
-const RCTMGLPointAnnotation = requireNativeComponent(
+const RCTMLNPointAnnotation = requireNativeComponent(
   NATIVE_MODULE_NAME,
   PointAnnotation,
   {

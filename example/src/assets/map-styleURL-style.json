@@ -5,7 +5,7 @@
   "sources": {
     "demotiles": {
       "type": "vector",
-      "url": "https://demotiles.track-asia.com/tiles/tiles.json"
+      "url": "https://tiles.track-asia.com/tiles/v1/style-streets.json?key=public"
     }
   },
   "sprite": "",

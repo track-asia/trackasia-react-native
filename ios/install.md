@@ -12,7 +12,7 @@ Add the following to your `ios/Podfile`:
   end
 ```
 
-Running `pod install` will add version `5.13.0` of the Trackasia SDK.
+Running `pod install` will add version `2.0.0` of the Trackasia SDK.
 
 ```sh
 # Go to the ios directory
@@ -34,7 +34,7 @@ until this is fixed upstream. iOS devs can open the workspace in Xcode and run f
 
 ## Installing a specific version
 
-The current default Trackasia version is `5.13.0`.
+The current default Trackasia version is `2.0.0`.
 If you want to install a different version, you can override as follows in
 your `Podfile`:
 
@@ -43,7 +43,7 @@ $RNMBGL_Use_SPM = {
   url: "https://github.com/track-asia/trackasia-gl-native-distribution",
   requirement: {
     kind: "upToNextMajorVersion",
-    minimumVersion: "5.13.0"
+    minimumVersion: "2.0.0"
   },
   product_name: "Mapbox"
 }

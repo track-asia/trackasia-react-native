@@ -6,7 +6,7 @@ import AbstractLayer from './AbstractLayer';
 import React from 'react';
 import {requireNativeComponent} from 'react-native';
 
-export const NATIVE_MODULE_NAME = 'RCTMGLLight';
+export const NATIVE_MODULE_NAME = 'RCTMLNLight';
 
 /**
  * Light represents the light source for extruded geometries
@@ -29,7 +29,7 @@ class Light extends AbstractLayer {
 
   render() {
     return (
-      <RCTMGLLight
+      <RCTMLNLight
         ref="nativeLight"
         testID="rctmglLight"
         {...this.props}
@@ -40,7 +40,7 @@ class Light extends AbstractLayer {
   }
 }
 
-const RCTMGLLight = requireNativeComponent(NATIVE_MODULE_NAME, Light, {
+const RCTMLNLight = requireNativeComponent(NATIVE_MODULE_NAME, Light, {
   nativeOnly: {reactStyle: true},
 });
 

@@ -21,16 +21,16 @@ import {
 } from 'react-native';
 import {debounce} from 'debounce';
 
-const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MLNModule;
 if (TrackasiaGL == null) {
   console.error(
     'Native part of Mapbox React Native libraries were not registered properly, double check our native installation guides.',
   );
 }
 
-export const NATIVE_MODULE_NAME = 'RCTMGLMapView';
+export const NATIVE_MODULE_NAME = 'RCTMLNMapView';
 
-export const ANDROID_TEXTURE_NATIVE_MODULE_NAME = 'RCTMGLAndroidTextureMapView';
+export const ANDROID_TEXTURE_NATIVE_MODULE_NAME = 'RCTMLNAndroidTextureMapView';
 
 const styles = StyleSheet.create({
   matchParent: {flex: 1},
@@ -70,7 +70,7 @@ class MapView extends NativeBridgeComponent(React.Component) {
 
     /**
      * iOS: The preferred frame rate at which the map view is rendered.
-     * The default value for this property is MGLMapViewPreferredFramesPerSecondDefault,
+     * The default value for this property is MLNMapViewPreferredFramesPerSecondDefault,
      * which will adaptively set the preferred frame rate based on the capability of
      * the user’s device to maintain a smooth experience. This property can be set to arbitrary integer values.
      *
@@ -773,15 +773,15 @@ class MapView extends NativeBridgeComponent(React.Component) {
     let mapView = null;
     if (isAndroid() && !this.props.surfaceView && this.state.isReady) {
       mapView = (
-        <RCTMGLAndroidTextureMapView {...props} {...callbacks}>
+        <RCTMLNAndroidTextureMapView {...props} {...callbacks}>
           {this.props.children}
-        </RCTMGLAndroidTextureMapView>
+        </RCTMLNAndroidTextureMapView>
       );
     } else if (this.state.isReady) {
       mapView = (
-        <RCTMGLMapView {...props} {...callbacks}>
+        <RCTMLNMapView {...props} {...callbacks}>
           {this.props.children}
-        </RCTMGLMapView>
+        </RCTMLNMapView>
       );
     }
 
@@ -796,13 +796,13 @@ class MapView extends NativeBridgeComponent(React.Component) {
   }
 }
 
-const RCTMGLMapView = requireNativeComponent(NATIVE_MODULE_NAME, MapView, {
+const RCTMLNMapView = requireNativeComponent(NATIVE_MODULE_NAME, MapView, {
   nativeOnly: {onMapChange: true, onAndroidCallback: true},
 });
 
-let RCTMGLAndroidTextureMapView;
+let RCTMLNAndroidTextureMapView;
 if (isAndroid()) {
-  RCTMGLAndroidTextureMapView = requireNativeComponent(
+  RCTMLNAndroidTextureMapView = requireNativeComponent(
     ANDROID_TEXTURE_NATIVE_MODULE_NAME,
     MapView,
     {

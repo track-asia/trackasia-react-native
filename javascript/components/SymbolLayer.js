@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {View, NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MLNModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMGLSymbolLayer';
+export const NATIVE_MODULE_NAME = 'RCTMLNSymbolLayer';
 
 /**
  * SymbolLayer is a style layer that renders icon and text labels at points or along lines on the map.
@@ -102,14 +102,14 @@ class SymbolLayer extends AbstractLayer {
     };
 
     return (
-      <RCTMGLSymbolLayer ref="nativeLayer" {...props}>
+      <RCTMLNSymbolLayer ref="nativeLayer" {...props}>
         {this.props.children}
-      </RCTMGLSymbolLayer>
+      </RCTMLNSymbolLayer>
     );
   }
 }
 
-const RCTMGLSymbolLayer = requireNativeComponent(
+const RCTMLNSymbolLayer = requireNativeComponent(
   NATIVE_MODULE_NAME,
   SymbolLayer,
   {

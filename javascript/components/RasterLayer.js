@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MGLModule;
+const TrackasiaGL = NativeModules.MLNModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMGLRasterLayer';
+export const NATIVE_MODULE_NAME = 'RCTMLNRasterLayer';
 
 class RasterLayer extends AbstractLayer {
   static propTypes = {
@@ -80,11 +80,11 @@ class RasterLayer extends AbstractLayer {
       ...this.baseProps,
       sourceLayerID: this.props.sourceLayerID,
     };
-    return <RCTMGLRasterLayer ref="nativeLayer" {...props} />;
+    return <RCTMLNRasterLayer ref="nativeLayer" {...props} />;
   }
 }
 
-const RCTMGLRasterLayer = requireNativeComponent(
+const RCTMLNRasterLayer = requireNativeComponent(
   NATIVE_MODULE_NAME,
   RasterLayer,
   {

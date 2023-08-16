@@ -5,8 +5,8 @@ import OfflinePack from './OfflinePack';
 
 import {NativeModules, NativeEventEmitter} from 'react-native';
 
-const TrackasiaGL = NativeModules.MGLModule;
-const TrackasiaGLOfflineManager = NativeModules.MGLOfflineModule;
+const TrackasiaGL = NativeModules.MLNModule;
+const TrackasiaGLOfflineManager = NativeModules.MLNOfflineModule;
 export const OfflineModuleEventEmitter = new NativeEventEmitter(
   TrackasiaGLOfflineManager,
 );

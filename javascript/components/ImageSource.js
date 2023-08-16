@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import {requireNativeComponent} from 'react-native';
 import React from 'react';
 
-export const NATIVE_MODULE_NAME = 'RCTMGLImageSource';
+export const NATIVE_MODULE_NAME = 'RCTMLNImageSource';
 
 /**
  * ImageSource is a content source that is used for a georeferenced raster image to be shown on the map.
@@ -65,16 +65,16 @@ class ImageSource extends AbstractSource {
     };
 
     return (
-      <RCTMGLImageSource ref="nativeSource" {...props}>
+      <RCTMLNImageSource ref="nativeSource" {...props}>
         {cloneReactChildrenWithProps(this.props.children, {
           sourceID: this.props.id,
         })}
-      </RCTMGLImageSource>
+      </RCTMLNImageSource>
     );
   }
 }
 
-const RCTMGLImageSource = requireNativeComponent(
+const RCTMLNImageSource = requireNativeComponent(
   NATIVE_MODULE_NAME,
   ImageSource,
 );

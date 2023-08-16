@@ -15,7 +15,7 @@ import com.trackasia.android.maps.TrackasiaMap;
 import com.trackasia.android.maps.Style;
 import com.trackasia.android.style.sources.Source;
 import com.mapbox.rctmgl.components.AbstractMapFeature;
-import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
+import com.mapbox.rctmgl.components.mapview.RCTMLNMapView;
 import com.mapbox.rctmgl.components.styles.layers.RCTLayer;
 
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public abstract class RCTSource<T extends Source> extends AbstractMapFeature {
     public static final double DEFAULT_HITBOX_WIDTH = 44.0;
     public static final double DEFAULT_HITBOX_HEIGHT = 44.0;
 
-    protected RCTMGLMapView mMapView;
+    protected RCTMLNMapView mMapView;
     protected TrackasiaMap mMap;
 
     protected String mID;
@@ -116,7 +116,7 @@ public abstract class RCTSource<T extends Source> extends AbstractMapFeature {
     }
 
     @Override
-    public void addToMap(RCTMGLMapView mapView) {
+    public void addToMap(RCTMLNMapView mapView) {
         mMapView = mapView;
         mMap = mapView.getMapboxMap();
         mMap.getStyle(new Style.OnStyleLoaded() {
@@ -146,7 +146,7 @@ public abstract class RCTSource<T extends Source> extends AbstractMapFeature {
     }
 
     @Override
-    public void removeFromMap(RCTMGLMapView mapView) {
+    public void removeFromMap(RCTMLNMapView mapView) {
         if (mLayers.size() > 0) {
             for (int i = 0; i < mLayers.size(); i++) {
                 RCTLayer layer = mLayers.get(i);

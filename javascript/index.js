@@ -34,7 +34,7 @@ import Logger from './utils/Logger';
 
 import {NativeModules, PermissionsAndroid} from 'react-native';
 
-const TrackasiaGL = {...NativeModules.MGLModule};
+const TrackasiaGL = {...NativeModules.MLNModule};
 
 // static methods
 TrackasiaGL.requestAndroidLocationPermissions = async function () {

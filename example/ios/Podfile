@@ -13,7 +13,7 @@ $RNMBGL_SPM_Spec = {
   url: "https://github.com/track-asia/trackasia-gl-native-distribution",
   requirement: {
     kind: "upToNextMajorVersion",
-    minimumVersion: "5.11.0"
+    minimumVersion: "2.0.0"
   },
   product_name: "Mapbox"
 }

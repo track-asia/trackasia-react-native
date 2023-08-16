@@ -418,6 +418,7 @@ declare namespace TrackasiaGL {
 
   // TODO: Figure out if these are even supported anymore
   enum StyleURL {
+    TRACKASIA = 'https://tiles.track-asia.com/tiles/v1/style-streets.json?key=public',
     Street = 'mapbox://styles/mapbox/streets-v11',
     Dark = 'mapbox://styles/mapbox/dark-v10',
     Light = 'mapbox://styles/mapbox/light-v10',
@@ -426,6 +427,7 @@ declare namespace TrackasiaGL {
     SatelliteStreet = 'mapbox://styles/mapbox/satellite-streets-v11',
     TrafficDay = 'mapbox://styles/mapbox/navigation-preview-day-v4',
     TrafficNight = 'mapbox://styles/mapbox/navigation-preview-night-v4',
+    
   }
 }
 
