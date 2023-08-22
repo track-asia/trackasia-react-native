@@ -72,7 +72,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.5.0"],\
             ["metro-react-native-babel-preset", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:0.76.7"],\
             ["node-dir", "npm:0.1.17"],\
-            ["prettier", "npm:2.8.1"],\
+            ["prettier", "npm:3.0.2"],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.2.0"],\
             ["react-docgen", "https://github.com/rnmapbox/react-docgen.git#commit=4fd030846ff6b5b84ee39ff1ac07c537ba2e434f"],\
@@ -6321,7 +6321,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:5b7ba45e0932e9bd72504397f208af8e00976f045190d4f541416593ef5a4b1e39300cd4e95073fe5d967580c6806f1fd7db9042012663fb7d741e03ab19d89a#npm:7.31.11"],\
             ["eslint-plugin-react-hooks", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:4.6.0"],\
             ["eslint-plugin-react-native", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:4.0.0"],\
-            ["prettier", "npm:2.8.1"]\
+            ["prettier", "npm:3.0.2"]\
           ],\
           "packagePeers": [\
             "@types/eslint",\
@@ -6647,7 +6647,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.5.0"],\
             ["metro-react-native-babel-preset", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:0.76.7"],\
             ["node-dir", "npm:0.1.17"],\
-            ["prettier", "npm:2.8.1"],\
+            ["prettier", "npm:3.0.2"],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.2.0"],\
             ["react-docgen", "https://github.com/rnmapbox/react-docgen.git#commit=4fd030846ff6b5b84ee39ff1ac07c537ba2e434f"],\
@@ -11009,7 +11009,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prettier", null],\
             ["eslint", "npm:8.30.0"],\
             ["eslint-config-prettier", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:8.5.0"],\
-            ["prettier", "npm:2.8.1"],\
+            ["prettier", "npm:3.0.2"],\
             ["prettier-linter-helpers", "npm:1.0.0"]\
           ],\
           "packagePeers": [\
@@ -16825,10 +16825,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.8.1", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.8.1-be60b51821-4f21a0f126.zip/node_modules/prettier/",\
+        ["npm:3.0.2", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-3.0.2-2cbecb9037-118b59ddb6.zip/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.8.1"]\
+            ["prettier", "npm:3.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
