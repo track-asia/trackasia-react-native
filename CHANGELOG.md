@@ -5,7 +5,7 @@ Please add unreleased changes in the following style:
 PR Title ([#123](link to my pr))
 ```
 
-## 1.0.1
+## 9.1.0
 
 Update react to 18.2.0 and react-native to 0.72.1. ([#48](https://github.com/track-asia/trackasia-react-native/pull/48))
 fix(markerview): make PointAnnotationProps component extend ViewProps ([#41](https://github.com/track-asia/trackasia-react-native/issues/41))
@@ -43,25 +43,25 @@ Update ShapeSource methods to make it usable with any cluster ( Use cluster itse
 
 ## 8.4.0
 
-fix(iOS): pin mapLibre back to `5.12.0` ([#1589](https://github.com/rnmapbox/maps/pull/1589))  
+fix(iOS): pin  back to `1.0.1` ([#1589](https://github.com/rnmapbox/maps/pull/1589))  
 chore: improve GH workflows ([#1588](https://github.com/rnmapbox/maps/pull/1588))  
 build(deps): bump @expo/config-plugins from 3.1.0 to 4.0.3 ([#1585](https://github.com/rnmapbox/maps/pull/1585))  
 chore(pre-commit): run lint on TS files, change PR template ([#1584](https://github.com/rnmapbox/maps/pull/1584))  
 feat(example): update vertical alignment example ([#1579](https://github.com/rnmapbox/maps/pull/1579))  
 fix incorrect anchor calculation for PointAnnotation on iOS ([#1576](https://github.com/rnmapbox/maps/pull/1576))  
 style(eslint): align root and example with the same configuration ([#1575](https://github.com/rnmapbox/maps/pull/1575))  
-fix(mapLibre): support version `5.12.0` upwards ([#1571](https://github.com/rnmapbox/maps/pull/1571))  
+fix(): support version `1.0.1` upwards ([#1571](https://github.com/rnmapbox/maps/pull/1571))  
 build: upgrade to RN `0.66` ([#1570](https://github.com/rnmapbox/maps/pull/1570))  
 build(android): add telemetry dependency to default build setup ([#1550](https://github.com/rnmapbox/maps/pull/1550))  
 feat(camera): Enable `padding` as a root-level prop on the camera, with `bounds.padding*` as fallbacks ([#1538](https://github.com/rnmapbox/maps/pull/1538/files))  
-fix: revert pinned mapLibre version to `5.11.0` ([8a2b00e67ba6398f3f6e6f52e98b0f0cea437e4d](https://github.com/rnmapbox/maps/commit/8a2b00e67ba6398f3f6e6f52e98b0f0cea437e4d))
+fix: revert pinned  version to `5.11.0` ([8a2b00e67ba6398f3f6e6f52e98b0f0cea437e4d](https://github.com/rnmapbox/maps/commit/8a2b00e67ba6398f3f6e6f52e98b0f0cea437e4d))
 
 ---
 
 ## 8.3.0
 
 Fix TypeScript type for Callout's textStyle prop ([#1450](https://github.com/rnmapbox/maps/pull/1450))  
-Build(ios): pin maplibre version to 5.12.0 ([#1454](https://github.com/rnmapbox/maps/pull/1454))  
+Build(ios): pin trackasia version to 1.0.1 ([#1454](https://github.com/rnmapbox/maps/pull/1454))  
 Update geoUtils helpers types to correspond with `turf/helpers` ([#1455](https://github.com/rnmapbox/maps/pull/1455))  
 Fix crash with missing okhttp dependency ([#1452](https://github.com/rnmapbox/maps/pull/1452))  
 Move from react-native-testing-library => @testing-library/react-native ([#1453](https://github.com/rnmapbox/maps/pull/1453))  

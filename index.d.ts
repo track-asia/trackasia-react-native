@@ -1,4 +1,4 @@
-declare module 'maplibre__trackasia-react-native';
+declare module 'trackasia__trackasia-react-native';
 
 import {
   Component,

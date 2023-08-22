@@ -1,6 +1,6 @@
 ---
 
-[![TrackAsia Logo](https://maplibre.org/img/trackasia-logo-big.svg)](https://maplibre.org)
+[![TrackAsia Logo](https://trackasia.org/img/trackasia-logo-big.svg)](https://trackasia.org)
 
 
 # TrackAsia GL SDK for React Native
@@ -15,7 +15,7 @@ diverged, it has become necessary to separate the projects into specific wrapper
 
 ---
 
-[![npm version](https://badge.fury.io/js/%40maplibre%2Ftrackasia-react-native.svg)](https://badge.fury.io/js/%40maplibre%2Ftrackasia-react-native)  
+[![npm version](https://badge.fury.io/js/%40trackasia%2Ftrackasia-react-native.svg)](https://badge.fury.io/js/%40trackasia%2Ftrackasia-react-native)  
 [![Android Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml)  
 [![iOS Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml)  
 

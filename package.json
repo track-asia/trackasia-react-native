@@ -1,7 +1,7 @@
 {
   "name": "@track-asia/trackasia-react-native",
   "description": "A TrackAsia GL Native plugin for creating maps in React Native",
-  "version": "1.0.2",
+  "version": "9.1.0",
   "publishConfig": {
     "access": "public"
   },
@@ -11,7 +11,7 @@
     "maps",
     "ios",
     "android",
-    "maplibre",
+    "trackasia",
     "react-native",
     "mapbox"
   ],

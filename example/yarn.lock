@@ -227,7 +227,7 @@ __metadata:
     semver: ^6.1.2
   peerDependencies:
     "@babel/core": ^7.4.0-0
-  checksum: 8e3fe71.0.12e34f6d92bd67b53890e8545e6c5bca8fe757b9979f09d68d7e259f6daea90dc9e01e332c4f8781bda31c5fe551c82a277f9bc0bec007aed497c
+  checksum: 8e3fe75513302e34f6d92bd67b53890e8545e6c5bca8fe757b9979f09d68d7e259f6daea90dc9e01e332c4f8781bda31c5fe551c82a277f9bc0bec007aed497c
   languageName: node
   linkType: hard
 
@@ -2150,7 +2150,7 @@ __metadata:
 "@react-native/normalize-colors@npm:^0.72.0":
   version: 0.72.0
   resolution: "@react-native/normalize-colors@npm:0.72.0"
-  checksum: c8ec577663394a3390eb34c3cd1.0.1521172bcfad7de309ab111e5f9e3d27c966d4a4387f00972302107be3d8cad584c5794ccfa30939aecc56162e4ddbe25
+  checksum: c8ec577663394a3390eb34c3cd531350521172bcfad7de309ab111e5f9e3d27c966d4a4387f00972302107be3d8cad584c5794ccfa30939aecc56162e4ddbe25
   languageName: node
   linkType: hard
 

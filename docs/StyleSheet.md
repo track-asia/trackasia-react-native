@@ -3,7 +3,7 @@
 
 ### Stylesheet is now a JS object, see [CHANGELOG.md](../CHANGELOG.md)  for more details
 
-See (TrackAsia expression specs)[https://maplibre.org/trackasia-gl-js-docs/style-spec/expressions/] for reference on expressions.
+See (TrackAsia expression specs)[https://trackasia.org/trackasia-gl-js-docs/style-spec/expressions/] for reference on expressions.
 
 ### Style functions
 

@@ -8928,7 +8928,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minipass-pipeline", "npm:1.2.4"],\
             ["mkdirp", "npm:1.0.4"],\
             ["p-map", "npm:4.0.0"],\
-            ["promise-inflight", "virtual:4e2088ed0df52533102f445d7e7aeba6560b7effa0cabbc7cc20dd1e36a86dd838cc541de4414688f4ce3ec77b0ad5298cea6de1.0.1d934ceb35c3e0fe3462#npm:1.0.1"],\
+            ["promise-inflight", "virtual:4e2088ed0df52533102f445d7e7aeba6560b7effa0cabbc7cc20dd1e36a86dd838cc541de4414688f4ce3ec77b0ad5298cea6de581350d934ceb35c3e0fe3462#npm:1.0.1"],\
             ["rimraf", "npm:3.0.2"],\
             ["ssri", "npm:9.0.1"],\
             ["tar", "npm:6.1.13"],\
@@ -16903,10 +16903,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:4e2088ed0df52533102f445d7e7aeba6560b7effa0cabbc7cc20dd1e36a86dd838cc541de4414688f4ce3ec77b0ad5298cea6de1.0.1d934ceb35c3e0fe3462#npm:1.0.1", {\
+        ["virtual:4e2088ed0df52533102f445d7e7aeba6560b7effa0cabbc7cc20dd1e36a86dd838cc541de4414688f4ce3ec77b0ad5298cea6de581350d934ceb35c3e0fe3462#npm:1.0.1", {\
           "packageLocation": "./.yarn/__virtual__/promise-inflight-virtual-faec2dbb37/0/cache/promise-inflight-npm-1.0.1-5bb925afac-2274948309.zip/node_modules/promise-inflight/",\
           "packageDependencies": [\
-            ["promise-inflight", "virtual:4e2088ed0df52533102f445d7e7aeba6560b7effa0cabbc7cc20dd1e36a86dd838cc541de4414688f4ce3ec77b0ad5298cea6de1.0.1d934ceb35c3e0fe3462#npm:1.0.1"],\
+            ["promise-inflight", "virtual:4e2088ed0df52533102f445d7e7aeba6560b7effa0cabbc7cc20dd1e36a86dd838cc541de4414688f4ce3ec77b0ad5298cea6de581350d934ceb35c3e0fe3462#npm:1.0.1"],\
             ["@types/bluebird", null],\
             ["bluebird", null]\
           ],\

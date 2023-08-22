@@ -72,7 +72,7 @@
       "example": {
         "trackasia-demotiles": {
           "type": "vector",
-          "url": "https://demotiles.maplibre.org/tiles/tiles.json"
+          "url": "https://tiles.track-asia.com/tiles/v3/style-streets.json?key=public"
         }
       }
     },
@@ -84,7 +84,7 @@
     "glyphs": {
       "type": "string",
       "doc": "A URL template for loading signed-distance-field glyph sets in PBF format. The URL must include `{fontstack}` and `{range}` tokens. This property is required if any layer uses the `text-field` layout property. The URL must be absolute, containing the [scheme, authority and path components](https://en.wikipedia.org/wiki/URL#Syntax).",
-      "example": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf"
+      "example": "https://demotiles.trackasia.org/font/{fontstack}/{range}.pbf"
     },
     "transition": {
       "type": "transition",

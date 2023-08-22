@@ -4045,7 +4045,7 @@
     "name": "ShapeSource"
   },
   "Style": {
-    "description": "Style is a component that automatically adds sources / layers to the map using TrackAsia Style Spec.\nOnly [`sources`](https://maplibre.org/trackasia-gl-js-docs/style-spec/sources/) & [`layers`](https://maplibre.org/trackasia-gl-js-docs/style-spec/layers/) are supported.\nOther fields such as `sprites`, `glyphs` etc. will be ignored. Not all layer / source attributes from the style spec are supported, in general the supported attributes will be mentioned under https://github.com/track-asia/trackasia-react-native/tree/main/docs.\n\nTODO: Maintainer forking this project does not understand the above comment regarding what is supported.",
+    "description": "Style is a component that automatically adds sources / layers to the map using TrackAsia Style Spec.\nOnly [`sources`](https://trackasia.org/trackasia-gl-js-docs/style-spec/sources/) & [`layers`](https://trackasia.org/trackasia-gl-js-docs/style-spec/layers/) are supported.\nOther fields such as `sprites`, `glyphs` etc. will be ignored. Not all layer / source attributes from the style spec are supported, in general the supported attributes will be mentioned under https://github.com/track-asia/trackasia-react-native/tree/main/docs.\n\nTODO: Maintainer forking this project does not understand the above comment regarding what is supported.",
     "displayName": "Style",
     "methods": [],
     "props": [

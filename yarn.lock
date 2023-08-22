@@ -274,7 +274,7 @@ __metadata:
     semver: ^6.1.2
   peerDependencies:
     "@babel/core": ^7.4.0-0
-  checksum: 8e3fe71.0.12e34f6d92bd67b53890e8545e6c5bca8fe757b9979f09d68d7e259f6daea90dc9e01e332c4f8781bda31c5fe551c82a277f9bc0bec007aed497c
+  checksum: 8e3fe75513302e34f6d92bd67b53890e8545e6c5bca8fe757b9979f09d68d7e259f6daea90dc9e01e332c4f8781bda31c5fe551c82a277f9bc0bec007aed497c
   languageName: node
   linkType: hard
 
@@ -2957,7 +2957,7 @@ __metadata:
 "@react-native/normalize-colors@npm:^0.72.0":
   version: 0.72.0
   resolution: "@react-native/normalize-colors@npm:0.72.0"
-  checksum: c8ec577663394a3390eb34c3cd1.0.1521172bcfad7de309ab111e5f9e3d27c966d4a4387f00972302107be3d8cad584c5794ccfa30939aecc56162e4ddbe25
+  checksum: c8ec577663394a3390eb34c3cd531350521172bcfad7de309ab111e5f9e3d27c966d4a4387f00972302107be3d8cad584c5794ccfa30939aecc56162e4ddbe25
   languageName: node
   linkType: hard
 
@@ -4125,7 +4125,7 @@ __metadata:
     define-properties: ^1.1.4
     es-abstract: ^1.20.4
     es-shim-unscopables: ^1.0.0
-  checksum: 5a8415949df79bf6e01afd7e8839bbde5a31.0.1e8ad5d8449dea52639e9e59b26a467665622783697917b43bf39940a6e621877c7dd9b3d1c1f97484b9b88b
+  checksum: 5a8415949df79bf6e01afd7e8839bbde5a3581300e8ad5d8449dea52639e9e59b26a467665622783697917b43bf39940a6e621877c7dd9b3d1c1f97484b9b88b
   languageName: node
   linkType: hard
 
@@ -12289,7 +12289,7 @@ __metadata:
 "semver-compare@npm:^1.0.0":
   version: 1.0.0
   resolution: "semver-compare@npm:1.0.0"
-  checksum: dd1d7e2909744cf2cf71864ac718efc990297f9de2913b68e41a214319e70174b1d1793ac16e31183b128c2b98121.0.1cb324db8168e6cf6b570703b171c68
+  checksum: dd1d7e2909744cf2cf71864ac718efc990297f9de2913b68e41a214319e70174b1d1793ac16e31183b128c2b9812541300cb324db8168e6cf6b570703b171c68
   languageName: node
   linkType: hard
 
