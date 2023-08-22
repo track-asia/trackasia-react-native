@@ -3102,7 +3102,7 @@ __metadata:
     "@turf/length": 6.5.0
     "@turf/nearest-point-on-line": 6.5.0
     "@types/geojson": ^7946.0.7
-    "@types/node": ^18.11.18
+    "@types/node": ^20.5.2
     "@typescript-eslint/eslint-plugin": ^5.2.0
     "@typescript-eslint/parser": ^5.8.0
     babel-jest: ^29.6.0
@@ -3463,10 +3463,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.11.18":
-  version: 18.11.18
-  resolution: "@types/node@npm:18.11.18"
-  checksum: 03f17f9480f8d775c8a72da5ea7e9383db5f6d85aa5fefde90dd953a1449bd5e4ffde376f139da4f3744b4c83942166d2a7603969a6f8ea826edfb16e6e3b49d
+"@types/node@npm:^20.5.2":
+  version: 20.5.2
+  resolution: "@types/node@npm:20.5.2"
+  checksum: 46d032bb9a1db687693f6351702572d2f1e12face32caf8182323413918de27d4ac16cc2b15ff6b891651313e602da18edbdd095d16d2b5a26588c2edffca892
   languageName: node
   linkType: hard
 
