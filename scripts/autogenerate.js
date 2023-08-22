@@ -21,9 +21,9 @@ function readIosVersion() {
     'trackasia-react-native.podspec',
   );
   const lines = fs.readFileSync(podspecPath, 'utf8').split('\n');
-  const trackasiaLineRegex = /^\s+version:\s*"(\d+\.\d+\.\d+)"$/;
-  const trackasiaLine = lines.filter(i => trackasiaLineRegex.exec(i))[0];
-  return `${trackasiaLineRegex.exec(trackasiaLine)[1]}.0`;
+  const maplibreLineRegex = /^\s+version:\s*"(\d+\.\d+\.\d+)"$/;
+  const maplibreLine = lines.filter(i => maplibreLineRegex.exec(i))[0];
+  return `${maplibreLineRegex.exec(maplibreLine)[1]}.0`;
 }
 
 function readAndroidVersion() {
@@ -35,9 +35,9 @@ function readAndroidVersion() {
     'build.gradle',
   );
   const lines = fs.readFileSync(buildGradlePath, 'utf8').split('\n');
-  const trackasiaLineRegex = /^\s+implementation\s+"org.trackasia.gl:android-sdk:(\d+\.\d+\.\d+)"$/;
-  const trackasiaLine = lines.filter(i => trackasiaLineRegex.exec(i))[0];
-  return trackasiaLineRegex.exec(trackasiaLine)[1];
+  const maplibreLineRegex = /^\s+implementation\s+"io.github.track-asia:android-sdk:(\d+\.\d+\.\d+)"$/;
+  const maplibreLine = lines.filter(i => maplibreLineRegex.exec(i))[0];
+  return maplibreLineRegex.exec(maplibreLine)[1];
 }
 
 if (!styleSpecJSON) {
@@ -58,12 +58,12 @@ const OUTPUT_EXAMPLE_PREFIX = [
   '..',
   'example',
   'node_modules',
-  '@trackasia',
+  '@track-asia',
   'trackasia-react-native',
 ];
 const OUTPUT_PREFIX = outputToExample ? OUTPUT_EXAMPLE_PREFIX : ['..'];
 
-const IOS_OUTPUT_PATH = path.join(__dirname, ...OUTPUT_PREFIX, 'ios', 'RCTMLN');
+const IOS_OUTPUT_PATH = path.join(__dirname, ...OUTPUT_PREFIX, 'ios', 'RCTMGL');
 const ANDROID_OUTPUT_PATH = path.join(
   __dirname,
   ...OUTPUT_PREFIX,
@@ -318,20 +318,20 @@ function getAllowedFunctionTypes(paintAttr) {
 async function generate() {
   const templateMappings = [
     {
-      input: path.join(TMPL_PATH, 'RCTMLNStyle.h.ejs'),
-      output: path.join(IOS_OUTPUT_PATH, 'RCTMLNStyle.h'),
+      input: path.join(TMPL_PATH, 'RCTMGLStyle.h.ejs'),
+      output: path.join(IOS_OUTPUT_PATH, 'RCTMGLStyle.h'),
     },
     {
       input: path.join(TMPL_PATH, 'index.d.ts.ejs'),
       output: path.join(IOS_OUTPUT_PATH, 'index.d.ts'),
     },
     {
-      input: path.join(TMPL_PATH, 'RCTMLNStyle.m.ejs'),
-      output: path.join(IOS_OUTPUT_PATH, 'RCTMLNStyle.m'),
+      input: path.join(TMPL_PATH, 'RCTMGLStyle.m.ejs'),
+      output: path.join(IOS_OUTPUT_PATH, 'RCTMGLStyle.m'),
     },
     {
-      input: path.join(TMPL_PATH, 'RCTMLNStyleFactory.java.ejs'),
-      output: path.join(ANDROID_OUTPUT_PATH, 'RCTMLNStyleFactory.java'),
+      input: path.join(TMPL_PATH, 'RCTMGLStyleFactory.java.ejs'),
+      output: path.join(ANDROID_OUTPUT_PATH, 'RCTMGLStyleFactory.java'),
     },
     {
       input: path.join(TMPL_PATH, 'styleMap.js.ejs'),

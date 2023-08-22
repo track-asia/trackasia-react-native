@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import Page from '../common/Page';
 import Bubble from '../common/Bubble';
@@ -28,18 +28,18 @@ class ChangeLayerColor extends React.Component {
     const {backgroundColor} = this.state;
     return (
       <Page>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           style={styles.mapView}>
-          <TrackasiaGL.Camera defaultSettings={defaultCamera} />
+          <TrackAsiaGL.Camera defaultSettings={defaultCamera} />
           {!!backgroundColor && (
-            <TrackasiaGL.BackgroundLayer
+            <TrackAsiaGL.BackgroundLayer
               id="background"
               style={{backgroundColor}}
             />
           )}
-        </TrackasiaGL.MapView>
+        </TrackAsiaGL.MapView>
         <Bubble onPress={this.onPress}>
           <Text>Paint Water</Text>
         </Bubble>

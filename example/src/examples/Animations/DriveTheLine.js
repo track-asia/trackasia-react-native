@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 import {View, StyleSheet} from 'react-native';
 import {Button} from 'react-native-elements';
 import {lineString as makeLineString} from '@turf/helpers';
@@ -40,7 +40,7 @@ const layerStyles = {
   },
   route: {
     lineColor: 'white',
-    lineCap: TrackasiaGL.LineJoin.Round,
+    lineCap: TrackAsiaGL.LineJoin.Round,
     lineWidth: 3,
     lineOpacity: 0.84,
   },
@@ -71,7 +71,7 @@ class DriveTheLine extends React.Component {
   }
 
   async componentDidMount() {
-    // Trackasia should be vendor-agnostic.
+    // TrackAsia should be vendor-agnostic.
     // This example should be reworked with a hard-coded route.
     // See
     // const reqOptions = {
@@ -102,13 +102,13 @@ class DriveTheLine extends React.Component {
     }
 
     return (
-      <TrackasiaGL.ShapeSource id="routeSource" shape={this.state.route}>
-        <TrackasiaGL.LineLayer
+      <TrackAsiaGL.ShapeSource id="routeSource" shape={this.state.route}>
+        <TrackAsiaGL.LineLayer
           id="routeFill"
           style={layerStyles.route}
           belowLayerID="originInnerCircle"
         />
-      </TrackasiaGL.ShapeSource>
+      </TrackAsiaGL.ShapeSource>
     );
   }
 
@@ -141,13 +141,13 @@ class DriveTheLine extends React.Component {
 
     const lineString = makeLineString(coords);
     return (
-      <TrackasiaGL.Animated.ShapeSource id="progressSource" shape={lineString}>
-        <TrackasiaGL.Animated.LineLayer
+      <TrackAsiaGL.Animated.ShapeSource id="progressSource" shape={lineString}>
+        <TrackAsiaGL.Animated.LineLayer
           id="progressFill"
           style={layerStyles.progress}
           aboveLayerID="routeFill"
         />
-      </TrackasiaGL.Animated.ShapeSource>
+      </TrackAsiaGL.Animated.ShapeSource>
     );
   }
 
@@ -161,9 +161,9 @@ class DriveTheLine extends React.Component {
     const style = [layerStyles.origin, {circleColor: backgroundColor}];
 
     return (
-      <TrackasiaGL.ShapeSource id="origin" shape={point(SF_OFFICE_COORDINATE)}>
-        <TrackasiaGL.Animated.CircleLayer id="originInnerCircle" style={style} />
-      </TrackasiaGL.ShapeSource>
+      <TrackAsiaGL.ShapeSource id="origin" shape={point(SF_OFFICE_COORDINATE)}>
+        <TrackAsiaGL.Animated.CircleLayer id="originInnerCircle" style={style} />
+      </TrackAsiaGL.ShapeSource>
     );
   }
 
@@ -187,11 +187,11 @@ class DriveTheLine extends React.Component {
   render() {
     return (
       <Page>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this._map = c)}
           style={sheet.matchParent}
-          styleURL={TrackasiaGL.StyleURL.Dark}>
-          <TrackasiaGL.Camera
+          styleURL={TrackAsiaGL.StyleURL.Dark}>
+          <TrackAsiaGL.Camera
             zoomLevel={11}
             centerCoordinate={[-122.452652, 37.762963]}
           />
@@ -202,15 +202,15 @@ class DriveTheLine extends React.Component {
           {this.renderCurrentPoint()}
           {this.renderProgressLine()}
 
-          <TrackasiaGL.ShapeSource
+          <TrackAsiaGL.ShapeSource
             id="destination"
             shape={point(SF_ZOO_COORDINATE)}>
-            <TrackasiaGL.CircleLayer
+            <TrackAsiaGL.CircleLayer
               id="destinationInnerCircle"
               style={layerStyles.destination}
             />
-          </TrackasiaGL.ShapeSource>
-        </TrackasiaGL.MapView>
+          </TrackAsiaGL.ShapeSource>
+        </TrackAsiaGL.MapView>
 
         {this.renderActions()}
       </Page>

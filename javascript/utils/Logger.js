@@ -1,5 +1,5 @@
 import {NativeEventEmitter, NativeModules} from 'react-native';
-const {MLNLogging} = NativeModules;
+const {MGLLogging} = NativeModules;
 
 class Logger {
   static instance = null;
@@ -12,7 +12,7 @@ class Logger {
   }
 
   constructor() {
-    this.loggerEmitter = new NativeEventEmitter(MLNLogging);
+    this.loggerEmitter = new NativeEventEmitter(MGLLogging);
     this.startedCount = 0;
     this.logCallback = null;
   }
@@ -49,7 +49,7 @@ class Logger {
    * @param {LogLevel} level
    */
   static setLogLevel(level) {
-    MLNLogging.setLogLevel(level);
+    MGLLogging.setLogLevel(level);
   }
 
   /**

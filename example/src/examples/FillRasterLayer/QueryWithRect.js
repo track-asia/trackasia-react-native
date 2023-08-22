@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import nycJSON from '../../assets/nyc_geojson.json';
@@ -76,31 +76,31 @@ class QueryWithRect extends React.Component {
   render() {
     return (
       <Page>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           style={sheet.matchParent}
-          styleURL={TrackasiaGL.StyleURL.Light}>
-          <TrackasiaGL.Camera
+          styleURL={TrackAsiaGL.StyleURL.Light}>
+          <TrackAsiaGL.Camera
             zoomLevel={9}
             centerCoordinate={[-73.970895, 40.723279]}
           />
 
-          <TrackasiaGL.ShapeSource id="nyc" shape={nycJSON}>
-            <TrackasiaGL.FillLayer id="nycFill" style={styles.neighborhoods} />
-          </TrackasiaGL.ShapeSource>
+          <TrackAsiaGL.ShapeSource id="nyc" shape={nycJSON}>
+            <TrackAsiaGL.FillLayer id="nycFill" style={styles.neighborhoods} />
+          </TrackAsiaGL.ShapeSource>
 
           {this.state.selectedGeoJSON ? (
-            <TrackasiaGL.ShapeSource
+            <TrackAsiaGL.ShapeSource
               id="selectedNYC"
               shape={this.state.selectedGeoJSON}>
-              <TrackasiaGL.FillLayer
+              <TrackAsiaGL.FillLayer
                 id="selectedNYCFill"
                 style={styles.selectedNeighborhood}
               />
-            </TrackasiaGL.ShapeSource>
+            </TrackAsiaGL.ShapeSource>
           ) : null}
-        </TrackasiaGL.MapView>
+        </TrackAsiaGL.MapView>
 
         <Bubble>
           <Text style={styles.bubbleText}>{this.message}</Text>

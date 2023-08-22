@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 import PropTypes from 'prop-types';
 
 import sheet from '../../styles/sheet';
@@ -51,26 +51,26 @@ class ShowMarkerView extends React.Component {
   render() {
     return (
       <Page>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           onDidFinishLoadingMap={this.onDidFinishLoadingMap}
           style={sheet.matchParent}>
-          <TrackasiaGL.Camera
+          <TrackAsiaGL.Camera
             zoomLevel={16}
             centerCoordinate={this.state.coordinates[0]}
           />
 
-          <TrackasiaGL.PointAnnotation
+          <TrackAsiaGL.PointAnnotation
             coordinate={this.state.coordinates[1]}
             id="pt-ann">
             <AnnotationContent title={'this is a point annotation'} />
-          </TrackasiaGL.PointAnnotation>
+          </TrackAsiaGL.PointAnnotation>
 
-          <TrackasiaGL.MarkerView coordinate={this.state.coordinates[0]}>
+          <TrackAsiaGL.MarkerView coordinate={this.state.coordinates[0]}>
             <AnnotationContent title={'this is a marker view'} />
-          </TrackasiaGL.MarkerView>
-        </TrackasiaGL.MapView>
+          </TrackAsiaGL.MarkerView>
+        </TrackAsiaGL.MapView>
 
         <Bubble>
           <Text>Click to add a point annotation</Text>

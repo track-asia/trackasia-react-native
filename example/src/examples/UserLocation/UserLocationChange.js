@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import Page from '../common/Page';
@@ -55,17 +55,17 @@ class UserLocationChange extends React.Component {
   render() {
     return (
       <Page>
-        <TrackasiaGL.MapView style={sheet.matchParent}>
-          <TrackasiaGL.UserLocation
+        <TrackAsiaGL.MapView style={sheet.matchParent}>
+          <TrackAsiaGL.UserLocation
             visible={true}
             onUpdate={this.onUserLocationUpdate}
           />
-          <TrackasiaGL.Camera
+          <TrackAsiaGL.Camera
             zoomLevel={16}
             followUserMode={'normal'}
             followUserLocation
           />
-        </TrackasiaGL.MapView>
+        </TrackAsiaGL.MapView>
         {this.renderLocationInfo()}
       </Page>
     );

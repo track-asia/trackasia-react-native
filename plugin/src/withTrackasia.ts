@@ -14,10 +14,10 @@ import {
 } from '@expo/config-plugins/build/utils/generateCode';
 
 let pkg: {name: string; version?: string} = {
-  name: '@trackasia/trackasia-react-native',
+  name: '@track-asia/trackasia-react-native',
 };
 try {
-  pkg = require('@trackasia/trackasia-react-native/package.json');
+  pkg = require('@track-asia/trackasia-react-native/package.json');
 } catch {
   // empty catch block
 }
@@ -57,8 +57,8 @@ export function applyCocoaPodsModifications(contents: string): string {
   // Ensure installer blocks exist
   // let src = addInstallerBlock(contents, 'pre');
   let src = addInstallerBlock(contents, 'post');
-  // src = addTrackasiaInstallerBlock(src, 'pre');
-  src = addTrackasiaInstallerBlock(src, 'post');
+  // src = addTrackAsiaInstallerBlock(src, 'pre');
+  src = addTrackAsiaInstallerBlock(src, 'post');
   return src;
 }
 
@@ -95,12 +95,12 @@ export function addInstallerBlock(
   }).contents;
 }
 
-export function addTrackasiaInstallerBlock(
+export function addTrackAsiaInstallerBlock(
   src: string,
   blockName: InstallerBlockName,
 ): string {
   return mergeContents({
-    tag: `@trackasia/trackasia-react-native-${blockName}_installer`,
+    tag: `@track-asia/trackasia-react-native-${blockName}_installer`,
     src,
     newSrc: `    $RNMBGL.${blockName}_install(installer)`,
     anchor: new RegExp(`${blockName}_install do \\|installer\\|`),
@@ -135,9 +135,9 @@ const withExcludedSimulatorArchitectures: ConfigPlugin = c => {
   });
 };
 
-const withTrackasia: ConfigPlugin = config => {
+const withTrackAsia: ConfigPlugin = config => {
   config = withExcludedSimulatorArchitectures(config);
   return withCocoaPodsInstallerBlocks(config);
 };
 
-export default createRunOncePlugin(withTrackasia, pkg.name, pkg.version);
+export default createRunOncePlugin(withTrackAsia, pkg.name, pkg.version);

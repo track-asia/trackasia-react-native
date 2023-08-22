@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {requireNativeComponent} from 'react-native';
 
-const NATIVE_MODULE_NAME = 'RCTMLNNativeUserLocation';
+const NATIVE_MODULE_NAME = 'RCTMGLNativeUserLocation';
 
 class NativeUserLocation extends React.Component {
   static propTypes = {
@@ -26,11 +26,11 @@ class NativeUserLocation extends React.Component {
   };
 
   render() {
-    return <RCTMLNNativeUserLocation {...this.props} />;
+    return <RCTMGLNativeUserLocation {...this.props} />;
   }
 }
 
-const RCTMLNNativeUserLocation = requireNativeComponent(
+const RCTMGLNativeUserLocation = requireNativeComponent(
   NATIVE_MODULE_NAME,
   NativeUserLocation,
   {

@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNHeatmapLayer';
+export const NATIVE_MODULE_NAME = 'RCTMGLHeatmapLayer';
 
 /**
  * HeatmapLayer is a style layer that renders one or more filled circles on the map.
@@ -76,7 +76,7 @@ class HeatmapLayer extends AbstractLayer {
   };
 
   static defaultProps = {
-    sourceID: TrackasiaGL.StyleSource.DefaultSourceID,
+    sourceID: TrackAsiaGL.StyleSource.DefaultSourceID,
   };
 
   render() {
@@ -84,11 +84,11 @@ class HeatmapLayer extends AbstractLayer {
       ...this.baseProps,
       sourceLayerID: this.props.sourceLayerID,
     };
-    return <RCTMLNHeatmapLayer ref="nativeLayer" {...props} />;
+    return <RCTMGLHeatmapLayer ref="nativeLayer" {...props} />;
   }
 }
 
-const RCTMLNHeatmapLayer = requireNativeComponent(
+const RCTMGLHeatmapLayer = requireNativeComponent(
   NATIVE_MODULE_NAME,
   HeatmapLayer,
   {

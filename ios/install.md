@@ -1,7 +1,7 @@
 # iOS Installation
 
 The following assumes, that you're using autolinking and installed
-`@trackasia/trackasia-react-native` via `npm` or `yarn`.
+`@track-asia/trackasia-react-native` via `npm` or `yarn`.
 
 Add the following to your `ios/Podfile`:
 
@@ -12,7 +12,7 @@ Add the following to your `ios/Podfile`:
   end
 ```
 
-Running `pod install` will add version `2.0.0` of the Trackasia SDK.
+Running `pod install` will add version `1.0.1` of the TrackAsia SDK.
 
 ```sh
 # Go to the ios directory
@@ -26,7 +26,7 @@ You are good to go!
 
 ## Note on iOS Simulator issues
 
-Trackasia GL Native has some issues on iOS Simulators in many
+TrackAsia GL Native has some issues on iOS Simulators in many
 environments. The map either does not render at all or appears garbled when panning and zooming.
 It is best to test on a real device if at all possible at this time
 until this is fixed upstream. iOS devs can open the workspace in Xcode and run from there.
@@ -34,7 +34,7 @@ until this is fixed upstream. iOS devs can open the workspace in Xcode and run f
 
 ## Installing a specific version
 
-The current default Trackasia version is `2.0.0`.
+The current default TrackAsia version is `1.0.1`.
 If you want to install a different version, you can override as follows in
 your `Podfile`:
 
@@ -43,7 +43,7 @@ $RNMBGL_Use_SPM = {
   url: "https://github.com/track-asia/trackasia-gl-native-distribution",
   requirement: {
     kind: "upToNextMajorVersion",
-    minimumVersion: "2.0.0"
+    minimumVersion: "1.0.1"
   },
   product_name: "Mapbox"
 }

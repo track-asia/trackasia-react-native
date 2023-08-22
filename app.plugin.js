@@ -1,1 +1,1 @@
-module.exports = require('./plugin/build/withTrackasia');
+module.exports = require('./plugin/build/withTrackAsia');

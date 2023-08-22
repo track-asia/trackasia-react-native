@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import {isEqual} from 'lodash';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import Page from '../common/Page';
@@ -205,17 +205,17 @@ class Fit extends React.Component {
 
     return (
       <Page>
-        <TrackasiaGL.MapView
-          styleURL={TrackasiaGL.StyleURL.Satellite}
+        <TrackAsiaGL.MapView
+          styleURL={TrackAsiaGL.StyleURL.Satellite}
           style={sheet.matchParent}>
-          <TrackasiaGL.Camera
+          <TrackAsiaGL.Camera
             ref={ref => (this.camera = ref)}
             {...this.cameraProps()}
           />
           <View style={{flex: 1, ...padding}}>
             <View style={{flex: 1, borderColor: 'white', borderWidth: 4}} />
           </View>
-        </TrackasiaGL.MapView>
+        </TrackAsiaGL.MapView>
 
         <ScrollView
           style={{

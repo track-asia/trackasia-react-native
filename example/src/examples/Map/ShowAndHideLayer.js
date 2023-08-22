@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import Page from '../common/Page';
 import Bubble from '../common/Bubble';
@@ -29,13 +29,13 @@ class ShowAndHideLayer extends React.Component {
     const visibility = this.state.show ? 'visible' : 'none';
     return (
       <Page>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           style={styles.mapView}>
-          <TrackasiaGL.Camera defaultSettings={defaultCamera} />
-          <TrackasiaGL.FillLayer id="countries-label" style={{visibility}} />
-        </TrackasiaGL.MapView>
+          <TrackAsiaGL.Camera defaultSettings={defaultCamera} />
+          <TrackAsiaGL.FillLayer id="countries-label" style={{visibility}} />
+        </TrackAsiaGL.MapView>
         <Bubble onPress={this.onPress}>
           <Text>
             {this.state.show ? 'Hide Country Labels' : 'Show Country Labels'}

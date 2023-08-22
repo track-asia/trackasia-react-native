@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import Page from '../common/Page';
 import Bubble from '../common/Bubble';
@@ -33,12 +33,12 @@ class SourceLayerVisibility extends React.Component {
   render() {
     return (
       <Page>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           style={styles.mapView}>
-          <TrackasiaGL.Camera defaultSettings={defaultCamera} />
-        </TrackasiaGL.MapView>
+          <TrackAsiaGL.Camera defaultSettings={defaultCamera} />
+        </TrackAsiaGL.MapView>
         <Bubble onPress={this.onPress}>
           <Text>{`${
             this.state.show ? 'Hide' : 'Show'

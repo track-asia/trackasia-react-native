@@ -12,7 +12,7 @@ import com.trackasia.android.location.modes.RenderMode;
 import com.trackasia.android.maps.TrackasiaMap;
 import com.trackasia.android.maps.Style;
 import com.mapbox.rctmgl.R;
-import com.mapbox.rctmgl.components.mapview.RCTMLNMapView;
+import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.location.LocationManager;
 
 import androidx.annotation.NonNull;
@@ -23,7 +23,7 @@ import androidx.annotation.NonNull;
  * And NativeUserLocation can ask for display of user's current location - independent of Camera's user tracking.
  */
 public class LocationComponentManager {
-    private RCTMLNMapView mMapView = null;
+    private RCTMGLMapView mMapView = null;
     private TrackasiaMap mMap = null;
 
     private LocationManager mLocationManager = null;
@@ -32,9 +32,9 @@ public class LocationComponentManager {
 
     private @RenderMode.Mode int mRenderMode = RenderMode.COMPASS;
 
-    public LocationComponentManager(RCTMLNMapView rctmglMapView, Context context) {
+    public LocationComponentManager(RCTMGLMapView rctmglMapView, Context context) {
         mMapView = rctmglMapView;
-        mMap = mMapView.getMapboxMap();
+        mMap = mMapView.getTrackasiaMap();
         mContext = context;
 
         mLocationManager = LocationManager.getInstance(context);

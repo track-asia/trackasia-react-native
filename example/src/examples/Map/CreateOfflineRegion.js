@@ -7,7 +7,7 @@ import {
   Dimensions,
   StyleSheet,
 } from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 import geoViewport from '@mapbox/geo-viewport';
 
 import sheet from '../../styles/sheet';
@@ -57,8 +57,8 @@ class CreateOfflineRegion extends React.Component {
 
   componentWillUnmount() {
     // avoid setState warnings if we back out before we finishing downloading
-    TrackasiaGL.offlineManager.deletePack(this.state.name);
-    TrackasiaGL.offlineManager.unsubscribe('test');
+    TrackAsiaGL.offlineManager.deletePack(this.state.name);
+    TrackAsiaGL.offlineManager.unsubscribe('test');
   }
 
   async onDidFinishLoadingStyle() {
@@ -72,7 +72,7 @@ class CreateOfflineRegion extends React.Component {
 
     const options = {
       name: this.state.name,
-      styleURL: TrackasiaGL.StyleURL.Street,
+      styleURL: TrackAsiaGL.StyleURL.Street,
       bounds: [
         [bounds[0], bounds[1]],
         [bounds[2], bounds[3]],
@@ -82,7 +82,7 @@ class CreateOfflineRegion extends React.Component {
     };
 
     // start download
-    TrackasiaGL.offlineManager.createPack(options, this.onDownloadProgress);
+    TrackAsiaGL.offlineManager.createPack(options, this.onDownloadProgress);
   }
 
   onDownloadProgress(offlineRegion, offlineRegionStatus) {
@@ -121,9 +121,9 @@ class CreateOfflineRegion extends React.Component {
 
   _getRegionDownloadState(downloadState) {
     switch (downloadState) {
-      case TrackasiaGL.OfflinePackDownloadState.Active:
+      case TrackAsiaGL.OfflinePackDownloadState.Active:
         return 'Active';
-      case TrackasiaGL.OfflinePackDownloadState.Complete:
+      case TrackAsiaGL.OfflinePackDownloadState.Complete:
         return 'Complete';
       default:
         return 'Inactive';
@@ -135,13 +135,13 @@ class CreateOfflineRegion extends React.Component {
 
     return (
       <Page>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           onDidFinishLoadingMap={this.onDidFinishLoadingStyle}
           style={sheet.matchParent}>
-          <TrackasiaGL.Camera zoomLevel={10} centerCoordinate={CENTER_COORD} />
-        </TrackasiaGL.MapView>
+          <TrackAsiaGL.Camera zoomLevel={10} centerCoordinate={CENTER_COORD} />
+        </TrackAsiaGL.MapView>
 
         {offlineRegionStatus !== null ? (
           <Bubble>

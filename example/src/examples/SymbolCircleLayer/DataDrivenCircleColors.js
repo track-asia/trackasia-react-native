@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import Page from '../common/Page';
@@ -35,25 +35,25 @@ const styles = {
 function DataDrivenCircleColors() {
   return (
     <Page {...this.props}>
-      <TrackasiaGL.MapView
-        styleURL={TrackasiaGL.StyleURL.Light}
+      <TrackAsiaGL.MapView
+        styleURL={TrackAsiaGL.StyleURL.Light}
         style={sheet.matchParent}>
-        <TrackasiaGL.Camera
+        <TrackAsiaGL.Camera
           zoomLevel={10}
           pitch={45}
           centerCoordinate={[-122.400021, 37.789085]}
         />
 
-        <TrackasiaGL.VectorSource
+        <TrackAsiaGL.VectorSource
           id="population"
           url={'mapbox://examples.8fgz4egr'}>
-          <TrackasiaGL.CircleLayer
+          <TrackAsiaGL.CircleLayer
             id="sf2010CircleFill"
             sourceLayerID="sf2010"
             style={styles.circles}
           />
-        </TrackasiaGL.VectorSource>
-      </TrackasiaGL.MapView>
+        </TrackAsiaGL.VectorSource>
+      </TrackAsiaGL.MapView>
     </Page>
   );
 }

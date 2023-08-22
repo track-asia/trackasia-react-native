@@ -3,7 +3,7 @@ import {makePoint, makeFeatureCollection} from '../../utils/geoUtils';
 
 import {NativeModules} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
 class SnapshotOptions {
   constructor(options = {}) {
@@ -13,7 +13,7 @@ class SnapshotOptions {
       );
     }
 
-    this.styleURL = options.styleURL || TrackasiaGL.StyleURL.Street;
+    this.styleURL = options.styleURL || TrackAsiaGL.StyleURL.Street;
     this.heading = options.heading || 0.0;
     this.pitch = options.pitch || 0.0;
     this.zoomLevel = options.zoomLevel || 16.0;

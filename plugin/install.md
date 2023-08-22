@@ -5,7 +5,7 @@ NOTE: This package cannot be used in the "Expo Go" app because [it requires cust
 First install the package with `yarn`, `npm`, or [`expo install`](https://docs.expo.io/workflow/expo-cli/#expo-install).
 
 ```sh
-expo install @trackasia/trackasia-react-native
+expo install @track-asia/trackasia-react-native
 ```
 
 After installing this npm package, add the [config plugin](https://docs.expo.io/guides/config-plugins/) to the [`plugins`](https://docs.expo.io/versions/latest/config/app/#plugins) array of your `app.json` or `app.config.js`:
@@ -13,7 +13,7 @@ After installing this npm package, add the [config plugin](https://docs.expo.io/
 ```json
 {
   "expo": {
-    "plugins": ["@trackasia/trackasia-react-native"]
+    "plugins": ["@track-asia/trackasia-react-native"]
   }
 }
 ```

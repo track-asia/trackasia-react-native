@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import exampleIcon from '../../assets/example.png';
@@ -84,12 +84,12 @@ class ShapeSourceIcon extends React.Component {
 
     return (
       <Page>
-        <TrackasiaGL.MapView style={sheet.matchParent}>
-          <TrackasiaGL.Camera
+        <TrackAsiaGL.MapView style={sheet.matchParent}>
+          <TrackAsiaGL.Camera
             zoomLevel={17}
             centerCoordinate={[-117.20611157485, 52.180961084261]}
           />
-          <TrackasiaGL.Images
+          <TrackAsiaGL.Images
             nativeAssetImages={['pin']}
             images={images}
             onImageMissing={imageKey =>
@@ -98,12 +98,12 @@ class ShapeSourceIcon extends React.Component {
               })
             }
           />
-          <TrackasiaGL.ShapeSource
+          <TrackAsiaGL.ShapeSource
             id="exampleShapeSource"
             shape={featureCollection}>
-            <TrackasiaGL.SymbolLayer id="exampleIconName" style={styles.icon} />
-          </TrackasiaGL.ShapeSource>
-        </TrackasiaGL.MapView>
+            <TrackAsiaGL.SymbolLayer id="exampleIconName" style={styles.icon} />
+          </TrackAsiaGL.ShapeSource>
+        </TrackAsiaGL.MapView>
       </Page>
     );
   }

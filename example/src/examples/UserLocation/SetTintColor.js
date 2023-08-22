@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import TabBarPage from '../common/TabBarPage';
@@ -20,20 +20,20 @@ class SetTintColor extends React.Component {
         {...this.props}
         options={OPTIONS}
         onOptionPress={this.onTintColorChange}>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           style={sheet.matchParent}
           tintColor={this.state.tintColor}>
-          <TrackasiaGL.Camera
+          <TrackAsiaGL.Camera
             followZoomLevel={16}
             followUserMode="compass"
             followUserLocation
           />
 
-          <TrackasiaGL.UserLocation
+          <TrackAsiaGL.UserLocation
             renderMode="native"
             androidRenderMode="compass"
           />
-        </TrackasiaGL.MapView>
+        </TrackAsiaGL.MapView>
       </TabBarPage>
     );
   }

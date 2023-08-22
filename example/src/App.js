@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 import {StyleSheet, Text, View, LogBox, SafeAreaView} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
 });
 
-TrackasiaGL.setAccessToken(null);
+TrackAsiaGL.setAccessToken(null);
 Icon.loadFont();
 
 class App extends React.Component {
@@ -36,7 +36,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     if (IS_ANDROID) {
-      const isGranted = await TrackasiaGL.requestAndroidLocationPermissions();
+      const isGranted = await TrackAsiaGL.requestAndroidLocationPermissions();
       this.setState({
         isAndroidPermissionGranted: isGranted,
         isFetchingAndroidPermission: false,

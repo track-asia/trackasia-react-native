@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Animated} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 const styles = {
   innerCircle: {
@@ -122,25 +122,25 @@ class PulseCircleLayer extends React.Component {
     ];
 
     return (
-      <TrackasiaGL.Animated.ShapeSource
+      <TrackAsiaGL.Animated.ShapeSource
         id="pulseCircleSource"
         shape={this.props.shape}>
-        <TrackasiaGL.Animated.CircleLayer
+        <TrackAsiaGL.Animated.CircleLayer
           id="pulseOuterCircle"
           style={outerCircleStyle}
           aboveLayerID={this.props.aboveLayerID}
         />
-        <TrackasiaGL.Animated.CircleLayer
+        <TrackAsiaGL.Animated.CircleLayer
           id="pulseInnerCircleCnt"
           style={innerCircleStyle}
           aboveLayerID="pulseOuterCircle"
         />
-        <TrackasiaGL.Animated.CircleLayer
+        <TrackAsiaGL.Animated.CircleLayer
           id="pulseInnerCircle"
           style={innerCirclePulseStyle}
           aboveLayerID="pulseInnerCircleCnt"
         />
-      </TrackasiaGL.Animated.ShapeSource>
+      </TrackAsiaGL.Animated.ShapeSource>
     );
   }
 }

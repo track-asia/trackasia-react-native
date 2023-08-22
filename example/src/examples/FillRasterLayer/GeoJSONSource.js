@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import gridPattern from '../../assets/grid_pattern.png';
@@ -20,29 +20,29 @@ const layerStyles = {
 function GeoJSONSource() {
   return (
     <Page>
-      <TrackasiaGL.MapView
+      <TrackAsiaGL.MapView
         ref={ref => (this.map = ref)}
         style={sheet.matchParent}
-        styleURL={TrackasiaGL.StyleURL.Dark}>
-        <TrackasiaGL.Camera
+        styleURL={TrackAsiaGL.StyleURL.Dark}>
+        <TrackAsiaGL.Camera
           zoomLevel={2}
           centerCoordinate={[-35.15165038, 40.6235728]}
         />
 
-        <TrackasiaGL.VectorSource>
-          <TrackasiaGL.BackgroundLayer
+        <TrackAsiaGL.VectorSource>
+          <TrackAsiaGL.BackgroundLayer
             id="background"
             style={layerStyles.background}
           />
-        </TrackasiaGL.VectorSource>
+        </TrackAsiaGL.VectorSource>
 
-        <TrackasiaGL.ShapeSource id="smileyFaceSource" shape={smileyFaceGeoJSON}>
-          <TrackasiaGL.FillLayer
+        <TrackAsiaGL.ShapeSource id="smileyFaceSource" shape={smileyFaceGeoJSON}>
+          <TrackAsiaGL.FillLayer
             id="smileyFaceFill"
             style={layerStyles.smileyFace}
           />
-        </TrackasiaGL.ShapeSource>
-      </TrackasiaGL.MapView>
+        </TrackAsiaGL.ShapeSource>
+      </TrackAsiaGL.MapView>
     </Page>
   );
 }

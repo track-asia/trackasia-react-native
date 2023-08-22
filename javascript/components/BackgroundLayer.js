@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNBackgroundLayer';
+export const NATIVE_MODULE_NAME = 'RCTMGLBackgroundLayer';
 
 class BackgroundLayer extends AbstractLayer {
   static propTypes = {
@@ -72,12 +72,12 @@ class BackgroundLayer extends AbstractLayer {
   };
 
   static defaultProps = {
-    sourceID: TrackasiaGL.StyleSource.DefaultSourceID,
+    sourceID: TrackAsiaGL.StyleSource.DefaultSourceID,
   };
 
   render() {
     return (
-      <RCTMLNBackgroundLayer
+      <RCTMGLBackgroundLayer
         testID="rctmglBackgroundLayer"
         ref="nativeLayer"
         {...this.baseProps}
@@ -86,7 +86,7 @@ class BackgroundLayer extends AbstractLayer {
   }
 }
 
-const RCTMLNBackgroundLayer = requireNativeComponent(
+const RCTMGLBackgroundLayer = requireNativeComponent(
   NATIVE_MODULE_NAME,
   BackgroundLayer,
   {

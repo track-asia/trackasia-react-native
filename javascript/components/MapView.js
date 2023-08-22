@@ -21,25 +21,25 @@ import {
 } from 'react-native';
 import {debounce} from 'debounce';
 
-const TrackasiaGL = NativeModules.MLNModule;
-if (TrackasiaGL == null) {
+const TrackAsiaGL = NativeModules.MGLModule;
+if (TrackAsiaGL == null) {
   console.error(
     'Native part of Mapbox React Native libraries were not registered properly, double check our native installation guides.',
   );
 }
 
-export const NATIVE_MODULE_NAME = 'RCTMLNMapView';
+export const NATIVE_MODULE_NAME = 'RCTMGLMapView';
 
-export const ANDROID_TEXTURE_NATIVE_MODULE_NAME = 'RCTMLNAndroidTextureMapView';
+export const ANDROID_TEXTURE_NATIVE_MODULE_NAME = 'RCTMGLAndroidTextureMapView';
 
 const styles = StyleSheet.create({
   matchParent: {flex: 1},
 });
 
-const defaultStyleURL = TrackasiaGL.StyleURL.Street;
+const defaultStyleURL = TrackAsiaGL.StyleURL.Street;
 
 /**
- * MapView backed by Trackasia GL Native
+ * MapView backed by TrackAsia GL Native
  */
 class MapView extends NativeBridgeComponent(React.Component) {
   static propTypes = {
@@ -59,7 +59,7 @@ class MapView extends NativeBridgeComponent(React.Component) {
     style: PropTypes.any,
 
     /**
-     * Style URL for map - notice, if non is set it _will_ default to `TrackasiaGL.StyleURL.Street`
+     * Style URL for map - notice, if non is set it _will_ default to `TrackAsiaGL.StyleURL.Street`
      */
     styleURL: PropTypes.string,
 
@@ -70,7 +70,7 @@ class MapView extends NativeBridgeComponent(React.Component) {
 
     /**
      * iOS: The preferred frame rate at which the map view is rendered.
-     * The default value for this property is MLNMapViewPreferredFramesPerSecondDefault,
+     * The default value for this property is MGLMapViewPreferredFramesPerSecondDefault,
      * which will adaptively set the preferred frame rate based on the capability of
      * the user’s device to maintain a smooth experience. This property can be set to arbitrary integer values.
      *
@@ -323,46 +323,46 @@ class MapView extends NativeBridgeComponent(React.Component) {
       const events = [];
 
       if (props.onRegionWillChange) {
-        events.push(TrackasiaGL.EventTypes.RegionWillChange);
+        events.push(TrackAsiaGL.EventTypes.RegionWillChange);
       }
       if (props.onRegionIsChanging) {
-        events.push(TrackasiaGL.EventTypes.RegionIsChanging);
+        events.push(TrackAsiaGL.EventTypes.RegionIsChanging);
       }
       if (props.onRegionDidChange) {
-        events.push(TrackasiaGL.EventTypes.RegionDidChange);
+        events.push(TrackAsiaGL.EventTypes.RegionDidChange);
       }
       if (props.onUserLocationUpdate) {
-        events.push(TrackasiaGL.EventTypes.UserLocationUpdated);
+        events.push(TrackAsiaGL.EventTypes.UserLocationUpdated);
       }
       if (props.onWillStartLoadingMap) {
-        events.push(TrackasiaGL.EventTypes.WillStartLoadingMap);
+        events.push(TrackAsiaGL.EventTypes.WillStartLoadingMap);
       }
       if (props.onDidFinishLoadingMap) {
-        events.push(TrackasiaGL.EventTypes.DidFinishLoadingMap);
+        events.push(TrackAsiaGL.EventTypes.DidFinishLoadingMap);
       }
       if (props.onDidFailLoadingMap) {
-        events.push(TrackasiaGL.EventTypes.DidFailLoadingMap);
+        events.push(TrackAsiaGL.EventTypes.DidFailLoadingMap);
       }
       if (props.onWillStartRenderingFrame) {
-        events.push(TrackasiaGL.EventTypes.WillStartRenderingFrame);
+        events.push(TrackAsiaGL.EventTypes.WillStartRenderingFrame);
       }
       if (props.onDidFinishRenderingFrame) {
-        events.push(TrackasiaGL.EventTypes.DidFinishRenderingFrame);
+        events.push(TrackAsiaGL.EventTypes.DidFinishRenderingFrame);
       }
       if (props.onDidFinishRenderingFrameFully) {
-        events.push(TrackasiaGL.EventTypes.DidFinishRenderingFrameFully);
+        events.push(TrackAsiaGL.EventTypes.DidFinishRenderingFrameFully);
       }
       if (props.onWillStartRenderingMap) {
-        events.push(TrackasiaGL.EventTypes.WillStartRenderingMap);
+        events.push(TrackAsiaGL.EventTypes.WillStartRenderingMap);
       }
       if (props.onDidFinishRenderingMap) {
-        events.push(TrackasiaGL.EventTypes.DidFinishRenderingMap);
+        events.push(TrackAsiaGL.EventTypes.DidFinishRenderingMap);
       }
       if (props.onDidFinishRenderingMapFully) {
-        events.push(TrackasiaGL.EventTypes.DidFinishRenderingMapFully);
+        events.push(TrackAsiaGL.EventTypes.DidFinishRenderingMapFully);
       }
       if (props.onDidFinishLoadingStyle) {
-        events.push(TrackasiaGL.EventTypes.DidFinishLoadingStyle);
+        events.push(TrackAsiaGL.EventTypes.DidFinishLoadingStyle);
       }
 
       this._runNativeCommand(
@@ -561,7 +561,7 @@ class MapView extends NativeBridgeComponent(React.Component) {
 
   _createStopConfig(config = {}) {
     const stopConfig = {
-      mode: isNumber(config.mode) ? config.mode : TrackasiaGL.CameraModes.Ease,
+      mode: isNumber(config.mode) ? config.mode : TrackAsiaGL.CameraModes.Ease,
       pitch: config.pitch,
       heading: config.heading,
       duration: config.duration || 2000,
@@ -620,54 +620,54 @@ class MapView extends NativeBridgeComponent(React.Component) {
     let propName = '';
 
     switch (type) {
-      case TrackasiaGL.EventTypes.RegionWillChange:
+      case TrackAsiaGL.EventTypes.RegionWillChange:
         if (regionWillChangeDebounceTime > 0) {
           this._onDebouncedRegionWillChange(payload);
         } else {
           propName = 'onRegionWillChange';
         }
         break;
-      case TrackasiaGL.EventTypes.RegionIsChanging:
+      case TrackAsiaGL.EventTypes.RegionIsChanging:
         propName = 'onRegionIsChanging';
         break;
-      case TrackasiaGL.EventTypes.RegionDidChange:
+      case TrackAsiaGL.EventTypes.RegionDidChange:
         if (regionDidChangeDebounceTime > 0) {
           this._onDebouncedRegionDidChange(payload);
         } else {
           propName = 'onRegionDidChange';
         }
         break;
-      case TrackasiaGL.EventTypes.UserLocationUpdated:
+      case TrackAsiaGL.EventTypes.UserLocationUpdated:
         propName = 'onUserLocationUpdate';
         break;
-      case TrackasiaGL.EventTypes.WillStartLoadingMap:
+      case TrackAsiaGL.EventTypes.WillStartLoadingMap:
         propName = 'onWillStartLoadingMap';
         break;
-      case TrackasiaGL.EventTypes.DidFinishLoadingMap:
+      case TrackAsiaGL.EventTypes.DidFinishLoadingMap:
         propName = 'onDidFinishLoadingMap';
         break;
-      case TrackasiaGL.EventTypes.DidFailLoadingMap:
+      case TrackAsiaGL.EventTypes.DidFailLoadingMap:
         propName = 'onDidFailLoadingMap';
         break;
-      case TrackasiaGL.EventTypes.WillStartRenderingFrame:
+      case TrackAsiaGL.EventTypes.WillStartRenderingFrame:
         propName = 'onWillStartRenderingFrame';
         break;
-      case TrackasiaGL.EventTypes.DidFinishRenderingFrame:
+      case TrackAsiaGL.EventTypes.DidFinishRenderingFrame:
         propName = 'onDidFinishRenderingFrame';
         break;
-      case TrackasiaGL.EventTypes.DidFinishRenderingFrameFully:
+      case TrackAsiaGL.EventTypes.DidFinishRenderingFrameFully:
         propName = 'onDidFinishRenderingFrameFully';
         break;
-      case TrackasiaGL.EventTypes.WillStartRenderingMap:
+      case TrackAsiaGL.EventTypes.WillStartRenderingMap:
         propName = 'onWillStartRenderingMap';
         break;
-      case TrackasiaGL.EventTypes.DidFinishRenderingMap:
+      case TrackAsiaGL.EventTypes.DidFinishRenderingMap:
         propName = 'onDidFinishRenderingMap';
         break;
-      case TrackasiaGL.EventTypes.DidFinishRenderingMapFully:
+      case TrackAsiaGL.EventTypes.DidFinishRenderingMapFully:
         propName = 'onDidFinishRenderingMapFully';
         break;
-      case TrackasiaGL.EventTypes.DidFinishLoadingStyle:
+      case TrackAsiaGL.EventTypes.DidFinishLoadingStyle:
         propName = 'onDidFinishLoadingStyle';
         break;
       default:
@@ -773,15 +773,15 @@ class MapView extends NativeBridgeComponent(React.Component) {
     let mapView = null;
     if (isAndroid() && !this.props.surfaceView && this.state.isReady) {
       mapView = (
-        <RCTMLNAndroidTextureMapView {...props} {...callbacks}>
+        <RCTMGLAndroidTextureMapView {...props} {...callbacks}>
           {this.props.children}
-        </RCTMLNAndroidTextureMapView>
+        </RCTMGLAndroidTextureMapView>
       );
     } else if (this.state.isReady) {
       mapView = (
-        <RCTMLNMapView {...props} {...callbacks}>
+        <RCTMGLMapView {...props} {...callbacks}>
           {this.props.children}
-        </RCTMLNMapView>
+        </RCTMGLMapView>
       );
     }
 
@@ -796,13 +796,13 @@ class MapView extends NativeBridgeComponent(React.Component) {
   }
 }
 
-const RCTMLNMapView = requireNativeComponent(NATIVE_MODULE_NAME, MapView, {
+const RCTMGLMapView = requireNativeComponent(NATIVE_MODULE_NAME, MapView, {
   nativeOnly: {onMapChange: true, onAndroidCallback: true},
 });
 
-let RCTMLNAndroidTextureMapView;
+let RCTMGLAndroidTextureMapView;
 if (isAndroid()) {
-  RCTMLNAndroidTextureMapView = requireNativeComponent(
+  RCTMGLAndroidTextureMapView = requireNativeComponent(
     ANDROID_TEXTURE_NATIVE_MODULE_NAME,
     MapView,
     {

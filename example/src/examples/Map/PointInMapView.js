@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import Page from '../common/Page';
 import Bubble from '../common/Bubble';
@@ -39,15 +39,15 @@ class PointInMapView extends React.Component {
   render() {
     return (
       <Page>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this._map = c)}
           onPress={this.onPress}
           style={styles.mapView}>
-          <TrackasiaGL.Camera
+          <TrackAsiaGL.Camera
             zoomLevel={9}
             centerCoordinate={[-73.970895, 40.723279]}
           />
-        </TrackasiaGL.MapView>
+        </TrackAsiaGL.MapView>
 
         <Bubble>{this.renderPointInView()}</Bubble>
       </Page>

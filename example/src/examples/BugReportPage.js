@@ -6,7 +6,7 @@ import {
   SymbolLayer,
   CircleLayer,
   Camera,
-} from '@trackasia/trackasia-react-native';
+} from '@track-asia/trackasia-react-native';
 
 import Page from './common/Page';
 

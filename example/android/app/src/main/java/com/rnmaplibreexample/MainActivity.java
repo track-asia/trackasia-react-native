@@ -1,4 +1,4 @@
-package com.rntrackasiaexample;
+package com.rnmaplibreexample;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;

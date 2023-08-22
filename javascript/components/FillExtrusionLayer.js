@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNFillExtrusionLayer';
+export const NATIVE_MODULE_NAME = 'RCTMGLFillExtrusionLayer';
 
 /**
  * FillExtrusionLayer is a style layer that renders one or more 3D extruded polygons on the map.
@@ -75,7 +75,7 @@ class FillExtrusionLayer extends AbstractLayer {
   };
 
   static defaultProps = {
-    sourceID: TrackasiaGL.StyleSource.DefaultSourceID,
+    sourceID: TrackAsiaGL.StyleSource.DefaultSourceID,
   };
 
   render() {
@@ -83,11 +83,11 @@ class FillExtrusionLayer extends AbstractLayer {
       ...this.baseProps,
       sourceLayerID: this.props.sourceLayerID,
     };
-    return <RCTMLNFillExtrusionLayer ref="nativeLayer" {...props} />;
+    return <RCTMGLFillExtrusionLayer ref="nativeLayer" {...props} />;
   }
 }
 
-const RCTMLNFillExtrusionLayer = requireNativeComponent(
+const RCTMGLFillExtrusionLayer = requireNativeComponent(
   NATIVE_MODULE_NAME,
   FillExtrusionLayer,
   {

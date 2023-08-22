@@ -14,9 +14,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNVectorSource';
+export const NATIVE_MODULE_NAME = 'RCTMGLVectorSource';
 
 /**
  * VectorSource is a map content source that supplies tiled vector data in Mapbox Vector Tile format to be shown on the map.
@@ -94,7 +94,7 @@ class VectorSource extends NativeBridgeComponent(AbstractSource) {
   };
 
   static defaultProps = {
-    id: TrackasiaGL.StyleSource.DefaultSourceID,
+    id: TrackAsiaGL.StyleSource.DefaultSourceID,
   };
 
   constructor(props) {
@@ -177,16 +177,16 @@ class VectorSource extends NativeBridgeComponent(AbstractSource) {
       onAndroidCallback: isAndroid() ? this._onAndroidCallback : undefined,
     };
     return (
-      <RCTMLNVectorSource ref="nativeSource" {...props}>
+      <RCTMGLVectorSource ref="nativeSource" {...props}>
         {cloneReactChildrenWithProps(this.props.children, {
           sourceID: this.props.id,
         })}
-      </RCTMLNVectorSource>
+      </RCTMGLVectorSource>
     );
   }
 }
 
-const RCTMLNVectorSource = requireNativeComponent(
+const RCTMGLVectorSource = requireNativeComponent(
   NATIVE_MODULE_NAME,
   VectorSource,
   {

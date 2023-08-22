@@ -1,6 +1,6 @@
 import React from 'react';
 import {Easing, Button} from 'react-native';
-import {Animated, MapView, Camera} from '@trackasia/trackasia-react-native';
+import {Animated, MapView, Camera} from '@track-asia/trackasia-react-native';
 import along from '@turf/along';
 import length from '@turf/length';
 import {point, lineString} from '@turf/helpers';

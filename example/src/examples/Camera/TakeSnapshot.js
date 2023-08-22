@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 import {
   View,
   Image,
@@ -38,14 +38,14 @@ class TakeSnapshot extends React.Component {
   async takeSnapshot() {
     const {width, height} = Dimensions.get('window');
 
-    const uri = await TrackasiaGL.snapshotManager.takeSnap({
+    const uri = await TrackAsiaGL.snapshotManager.takeSnap({
       centerCoordinate: [-74.12641, 40.797968],
       width,
       height,
       zoomLevel: 3,
       pitch: 30,
       heading: 20,
-      styleURL: TrackasiaGL.StyleURL.Dark,
+      styleURL: TrackAsiaGL.StyleURL.Dark,
       writeToDisk: true,
     });
 

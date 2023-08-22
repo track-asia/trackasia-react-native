@@ -32,13 +32,13 @@ either `yarn` or `npm` (pick one).
 
 ```shell
 # install with Yarn
-yarn add @trackasia/trackasia-react-native
+yarn add @track-asia/trackasia-react-native
 
 ```
 
 ```shell
 # install with NPM
-npm install @trackasia/trackasia-react-native --save
+npm install @track-asia/trackasia-react-native --save
 ```
 
 ### Review platform specific info
@@ -57,11 +57,11 @@ Here is an example minimal App.js
 ```js
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 // Will be null for most users (only Mapbox authenticates this way).
 // Required on Android. See Android installation notes.
-TrackasiaGL.setAccessToken(null);
+TrackAsiaGL.setAccessToken(null);
 
 const styles = StyleSheet.create({
   page: {
@@ -80,7 +80,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.page}>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           style={styles.map}
           logoEnabled={false}
           styleURL="https://tiles.track-asia.com/tiles/v3/style-streets.json?key=public"

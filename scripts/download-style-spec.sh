@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Downloading Trackasia Style Spec"
+echo "Downloading TrackAsia Style Spec"
 cd style-spec/
 
 FILENAME=v8.json

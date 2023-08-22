@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
-import com.mapbox.rctmgl.components.mapview.RCTMLNMapView;
+import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 import com.mapbox.rctmgl.events.constants.EventKeys;
 import com.mapbox.rctmgl.events.constants.EventTypes;
 
@@ -14,10 +14,10 @@ import java.util.UUID;
 
 public class LocationEvent implements IEvent {
     private UUID uuid;
-    private RCTMLNMapView mapView;
+    private RCTMGLMapView mapView;
     private Location location;
 
-    public LocationEvent(@NonNull Location location, RCTMLNMapView mapView) {
+    public LocationEvent(@NonNull Location location, RCTMGLMapView mapView) {
         this.mapView = mapView;
         this.location = location;
         this.uuid = UUID.randomUUID();

@@ -1,21 +1,21 @@
 ---
 
-[![Trackasia Logo](https://track-asia.com/img/trackasia-logo-big.svg)](https://track-asia.com)
+[![TrackAsia Logo](https://maplibre.org/img/trackasia-logo-big.svg)](https://maplibre.org)
 
 
-# Trackasia GL SDK for React Native
+# TrackAsia GL SDK for React Native
 
 _A React Native library for building maps with   
-the [Trackasia GL Native SDK for iOS & Android](https://github.com/track-asia/trackasia-gl-native)_.
+the [TrackAsia GL Native SDK for iOS & Android](https://github.com/track-asia/trackasia-gl-native)_.
 
 This project originated as a fork of [rnmapbox](https://github.com/rnmapbox/maps), a community-maintained
 React Native Library for building maps with the Mapbox iOS and Android mobile SDKs. The original product
-supported both Mapbox and Trackasia for some time, but as the Trackasia and Mapbox SDKs have
+supported both Mapbox and TrackAsia for some time, but as the TrackAsia and Mapbox SDKs have
 diverged, it has become necessary to separate the projects into specific wrappers by underlying renderer.
 
 ---
 
-[![npm version](https://badge.fury.io/js/%40trackasia%2Ftrackasia-react-native.svg)](https://badge.fury.io/js/%40trackasia%2Ftrackasia-react-native)  
+[![npm version](https://badge.fury.io/js/%40maplibre%2Ftrackasia-react-native.svg)](https://badge.fury.io/js/%40maplibre%2Ftrackasia-react-native)  
 [![Android Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml)  
 [![iOS Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml)  
 
@@ -72,7 +72,7 @@ diverged, it has become necessary to separate the projects into specific wrapper
 
 ### Misc
 
-- [TrackasiaGL](/docs/TrackasiaGL.md)
+- [TrackAsiaGL](/docs/TrackAsiaGL.md)
 - [CustomHttpHeaders](/docs/CustomHttpHeaders.md)
 - [Logger](/docs/Logger.md)
 

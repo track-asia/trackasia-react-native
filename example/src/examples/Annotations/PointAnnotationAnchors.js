@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 import {StyleSheet, Text, View} from 'react-native';
 
 import sheet from '../../styles/sheet';
@@ -73,10 +73,10 @@ const styles = StyleSheet.create({
 const PointAnnotationAnchors = props => {
   return (
     <Page {...props}>
-      <TrackasiaGL.MapView style={sheet.matchParent}>
-        <TrackasiaGL.Camera defaultSettings={defaultCamera} />
+      <TrackAsiaGL.MapView style={sheet.matchParent}>
+        <TrackAsiaGL.Camera defaultSettings={defaultCamera} />
         {corners.map((p, i) => (
-          <TrackasiaGL.PointAnnotation
+          <TrackAsiaGL.PointAnnotation
             key={`square-${i}`}
             id={`square-${i}`}
             coordinate={p.coordinate}
@@ -86,7 +86,7 @@ const PointAnnotationAnchors = props => {
                 x={p.anchor.x.toPrecision(2)}, y={p.anchor.y.toPrecision(2)}
               </Text>
             </View>
-          </TrackasiaGL.PointAnnotation>
+          </TrackAsiaGL.PointAnnotation>
         ))}
         {sides.map((p, i) => {
           let {x, y} = p.anchor;
@@ -97,7 +97,7 @@ const PointAnnotationAnchors = props => {
             y = 0;
           }
           return (
-            <TrackasiaGL.PointAnnotation
+            <TrackAsiaGL.PointAnnotation
               key={`triangle-${i}`}
               id={`triangle-${i}`}
               coordinate={p.coordinate}
@@ -121,10 +121,10 @@ const PointAnnotationAnchors = props => {
                   x={p.anchor.x.toPrecision(2)}, y={p.anchor.y.toPrecision(2)}
                 </Text>
               </View>
-            </TrackasiaGL.PointAnnotation>
+            </TrackAsiaGL.PointAnnotation>
           );
         })}
-      </TrackasiaGL.MapView>
+      </TrackAsiaGL.MapView>
     </Page>
   );
 };

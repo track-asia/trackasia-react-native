@@ -9,12 +9,12 @@ you have to have a line like this in your code before using the SDK.
 You can put this near the top of your `App.js` for convenience.
 
 ```javascript
-TrackasiaGL.setAccessToken(null);
+TrackAsiaGL.setAccessToken(null);
 ```
 
 ## Setting connection status
 
-TODO: check if this is still an issue with Trackasia Native on Android (issue #21).
+TODO: check if this is still an issue with TrackAsia Native on Android (issue #21).
 
 If you are hosting styles and sources on localhost, you might need to set
 the connection status manually for the SDK to be able to use them.
@@ -25,7 +25,7 @@ Manually sets the connectivity state of the app, bypassing any checks to the
 and `null` for the normal `ConnectivityManager` behavior.
 
 ```js
-import TrackasiaGL from "@trackasia/trackasia-react-native";
+import TrackAsiaGL from "@track-asia/trackasia-react-native";
 
-TrackasiaGL.setConnected(true);
+TrackAsiaGL.setConnected(true);
 ```

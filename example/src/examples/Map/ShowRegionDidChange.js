@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import {DEFAULT_CENTER_COORDINATE, SF_OFFICE_COORDINATE} from '../../utils';
@@ -52,7 +52,7 @@ class ShowRegionDidChange extends React.Component {
         cameraConfig: {
           triggerKey: Date.now(),
           centerCoordinate: optionData,
-          animationMode: TrackasiaGL.Camera.Mode.Flight,
+          animationMode: TrackAsiaGL.Camera.Mode.Flight,
           animationDuration: 2000,
         },
       });
@@ -130,14 +130,14 @@ class ShowRegionDidChange extends React.Component {
         {...this.props}
         options={this._tabOptions}
         onOptionPress={this.onOptionPress}>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={c => (this.map = c)}
           style={sheet.matchParent}
           onRegionWillChange={this.onRegionWillChange}
           onRegionIsChanging={this.onRegionIsChanging}
           onRegionDidChange={this.onRegionDidChange}>
-          <TrackasiaGL.Camera {...this.state.cameraConfig} />
-        </TrackasiaGL.MapView>
+          <TrackAsiaGL.Camera {...this.state.cameraConfig} />
+        </TrackAsiaGL.MapView>
         {this.renderRegionChange()}
       </TabBarPage>
     );

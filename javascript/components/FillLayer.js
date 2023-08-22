@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNFillLayer';
+export const NATIVE_MODULE_NAME = 'RCTMGLFillLayer';
 
 /**
  * FillLayer is a style layer that renders one or more filled (and optionally stroked) polygons on the map.
@@ -75,7 +75,7 @@ class FillLayer extends AbstractLayer {
   };
 
   static defaultProps = {
-    sourceID: TrackasiaGL.StyleSource.DefaultSourceID,
+    sourceID: TrackAsiaGL.StyleSource.DefaultSourceID,
   };
 
   render() {
@@ -83,11 +83,11 @@ class FillLayer extends AbstractLayer {
       ...this.baseProps,
       sourceLayerID: this.props.sourceLayerID,
     };
-    return <RCTMLNFillLayer ref="nativeLayer" {...props} />;
+    return <RCTMGLFillLayer ref="nativeLayer" {...props} />;
   }
 }
 
-const RCTMLNFillLayer = requireNativeComponent(NATIVE_MODULE_NAME, FillLayer, {
+const RCTMGLFillLayer = requireNativeComponent(NATIVE_MODULE_NAME, FillLayer, {
   nativeOnly: {reactStyle: true},
 });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {MapView, Camera} from '@trackasia/trackasia-react-native';
+import {MapView, Camera} from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import Page from '../common/Page';

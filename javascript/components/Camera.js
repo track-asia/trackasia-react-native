@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import {NativeModules, requireNativeComponent} from 'react-native';
 import React from 'react';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNCamera';
+export const NATIVE_MODULE_NAME = 'RCTMGLCamera';
 
 const SettingsPropTypes = {
   /**
@@ -155,7 +155,7 @@ class Camera extends React.Component {
     followUserLocation: PropTypes.bool,
 
     /**
-     * The mode used to track the user location on the map. One of; "normal", "compass", "course". Each mode string is also available as a member on the `TrackasiaGL.UserTrackingModes` object. `Follow` (normal), `FollowWithHeading` (compass), `FollowWithCourse` (course). NOTE: `followUserLocation` must be set to `true` for any of the modes to take effect. [Example](../example/src/examples/Camera/SetUserTrackingModes.js)
+     * The mode used to track the user location on the map. One of; "normal", "compass", "course". Each mode string is also available as a member on the `TrackAsiaGL.UserTrackingModes` object. `Follow` (normal), `FollowWithHeading` (compass), `FollowWithCourse` (course). NOTE: `followUserLocation` must be set to `true` for any of the modes to take effect. [Example](../example/src/examples/Camera/SetUserTrackingModes.js)
      */
     followUserMode: PropTypes.oneOf(['normal', 'compass', 'course']),
 
@@ -605,13 +605,13 @@ class Camera extends React.Component {
   _getNativeCameraMode(config) {
     switch (config.animationMode) {
       case Camera.Mode.Flight:
-        return TrackasiaGL.CameraModes.Flight;
+        return TrackAsiaGL.CameraModes.Flight;
       case Camera.Mode.Move:
-        return TrackasiaGL.CameraModes.None;
+        return TrackAsiaGL.CameraModes.None;
       case Camera.Mode.Linear:
-        return TrackasiaGL.CameraModes.Linear;
+        return TrackAsiaGL.CameraModes.Linear;
       default:
-        return TrackasiaGL.CameraModes.Ease;
+        return TrackAsiaGL.CameraModes.Ease;
     }
   }
 
@@ -631,7 +631,7 @@ class Camera extends React.Component {
     };
 
     return (
-      <RCTMLNCamera
+      <RCTMGLCamera
         testID="Camera"
         ref="camera"
         followUserLocation={this.props.followUserLocation}
@@ -650,7 +650,7 @@ class Camera extends React.Component {
   }
 }
 
-const RCTMLNCamera = requireNativeComponent(NATIVE_MODULE_NAME, Camera, {
+const RCTMGLCamera = requireNativeComponent(NATIVE_MODULE_NAME, Camera, {
   nativeOnly: {
     stop: true,
   },

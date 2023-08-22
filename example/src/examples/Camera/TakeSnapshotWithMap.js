@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, Image} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import colors from '../../styles/colors';
@@ -39,13 +39,13 @@ class TakeSnapshotWithMap extends React.Component {
     return (
       <Page>
         <View style={styles.mapContainer}>
-          <TrackasiaGL.MapView ref={ref => (this.map = ref)} style={styles.map}>
-            <TrackasiaGL.Camera
+          <TrackAsiaGL.MapView ref={ref => (this.map = ref)} style={styles.map}>
+            <TrackAsiaGL.Camera
               zoomLevel={8}
               pitch={45}
               centerCoordinate={[-122.400021, 37.789085]}
             />
-          </TrackasiaGL.MapView>
+          </TrackAsiaGL.MapView>
 
           <View style={styles.imageContainer}>
             {this.state.uri ? (

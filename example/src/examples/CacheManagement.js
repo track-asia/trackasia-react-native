@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL, {MapView, Camera} from '@trackasia/trackasia-react-native';
+import TrackAsiaGL, {MapView, Camera} from '@track-asia/trackasia-react-native';
 import {
   Alert,
   StyleSheet,
@@ -53,23 +53,23 @@ class CacheManagement extends React.Component {
   };
 
   invalidateAmbientCache = async () => {
-    await TrackasiaGL.offlineManager.invalidateAmbientCache();
+    await TrackAsiaGL.offlineManager.invalidateAmbientCache();
     Alert.alert('Ambient cache successfully invalidated');
   };
 
   resetDatabase = async () => {
-    await TrackasiaGL.offlineManager.resetDatabase();
+    await TrackAsiaGL.offlineManager.resetDatabase();
     Alert.alert('Database successfully reset');
   };
 
   clearAmbientCache = async () => {
-    await TrackasiaGL.offlineManager.clearAmbientCache();
+    await TrackAsiaGL.offlineManager.clearAmbientCache();
     Alert.alert('Ambient cache successfully cleared');
   };
 
   setMaximumAmbientCacheSize = async () => {
     const newMaxSize = parseInt(this.state.cacheSize, 10);
-    await TrackasiaGL.offlineManager.setMaximumAmbientCacheSize(newMaxSize);
+    await TrackAsiaGL.offlineManager.setMaximumAmbientCacheSize(newMaxSize);
     Alert.alert(`Max cache size successfully set to ${newMaxSize} bytes`);
   };
 

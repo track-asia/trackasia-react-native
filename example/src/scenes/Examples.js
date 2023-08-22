@@ -102,7 +102,7 @@ class ExampleGroup {
 }
 
 const Examples = new ExampleGroup(
-  'React Native TrackAsia GL',
+  'React Native Mapbox GL',
   [
     new ExampleItem('Bug Report Template', BugReportPage),
     new ExampleGroup('Map', [

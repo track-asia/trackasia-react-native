@@ -45,7 +45,7 @@ Hello! Thanks for contributing.  For the fastest response and resolution, please
 - Emulator/ Simulator: [yes/ no]
 - Development OS: [e.g. OSX 11.0.1, Win10]
 - trackasia-react-native Version [e.g. 7.0.9]
-- Trackasia GL version [e.g. 6.3.0]
+- TrackAsia GL version [e.g. 6.3.0]
 - React Native Version [e.g. 0.59]
 
 ### Additional context

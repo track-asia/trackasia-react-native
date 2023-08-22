@@ -8,18 +8,18 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 import com.trackasia.android.plugins.markerview.MarkerView;
 import com.trackasia.android.geometry.LatLng;
-import com.mapbox.rctmgl.components.annotation.RCTMLNPointAnnotation;
+import com.mapbox.rctmgl.components.annotation.RCTMGLPointAnnotation;
 import com.mapbox.rctmgl.events.constants.EventKeys;
 import com.mapbox.rctmgl.events.constants.EventTypes;
 import com.mapbox.rctmgl.utils.ConvertUtils;
 import com.mapbox.rctmgl.utils.GeoJSONUtils;
 
 public class PointAnnotationDragEvent extends MapClickEvent {
-    RCTMLNPointAnnotation mView;
+    RCTMGLPointAnnotation mView;
     private LatLng mTouchedLatLng;
     private PointF mScreenPoint;
 
-    public PointAnnotationDragEvent(RCTMLNPointAnnotation view, @NonNull LatLng latLng, @NonNull PointF screenPoint, String eventType) {
+    public PointAnnotationDragEvent(RCTMGLPointAnnotation view, @NonNull LatLng latLng, @NonNull PointF screenPoint, String eventType) {
         super(view, latLng, screenPoint, eventType);
         mView = view;
         mTouchedLatLng = latLng;

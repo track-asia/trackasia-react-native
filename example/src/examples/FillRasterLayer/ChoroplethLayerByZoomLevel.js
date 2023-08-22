@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import Page from '../common/Page';
@@ -65,19 +65,19 @@ const styles = {
 function ChoroplethLayerByZoomLevel() {
   return (
     <Page>
-      <TrackasiaGL.MapView
-        styleURL={TrackasiaGL.StyleURL.Light}
+      <TrackAsiaGL.MapView
+        styleURL={TrackAsiaGL.StyleURL.Light}
         style={sheet.matchParent}>
-        <TrackasiaGL.Camera
+        <TrackAsiaGL.Camera
           centerCoordinate={[-98, 38.88]}
           zoomLevel={3}
           minZoomLevel={3}
         />
 
-        <TrackasiaGL.VectorSource
+        <TrackAsiaGL.VectorSource
           id="population"
           url={'mapbox://mapbox.660ui7x6'}>
-          <TrackasiaGL.FillLayer
+          <TrackAsiaGL.FillLayer
             id="state-population"
             sourceLayerID="state_county_population_2014_cen"
             maxZoomLevel={4}
@@ -85,15 +85,15 @@ function ChoroplethLayerByZoomLevel() {
             style={styles.statePopulation}
           />
 
-          <TrackasiaGL.FillLayer
+          <TrackAsiaGL.FillLayer
             id="county-population"
             sourceLayerID="state_county_population_2014_cen"
             minZoomLevel={4}
             filter={['==', 'isCounty', true]}
             style={styles.countyPopulation}
           />
-        </TrackasiaGL.VectorSource>
-      </TrackasiaGL.MapView>
+        </TrackAsiaGL.VectorSource>
+      </TrackAsiaGL.MapView>
     </Page>
   );
 }

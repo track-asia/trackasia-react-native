@@ -1,7 +1,7 @@
 package com.mapbox.rctmgl.components.camera;
 
 import com.trackasia.android.maps.TrackasiaMap;
-import com.mapbox.rctmgl.components.mapview.RCTMLNMapView;
+import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -53,7 +53,7 @@ public class CameraUpdateQueue {
         mCompleteListener = listener;
     }
 
-    public void execute(RCTMLNMapView map) {
+    public void execute(RCTMGLMapView map) {
         if (mQueue.isEmpty()) {
             if (mCompleteListener != null) {
                 mCompleteListener.onCompleteAll();

@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 import {Text} from 'react-native';
 
 import sheet from '../../styles/sheet';
@@ -41,13 +41,13 @@ class CustomVectorSource extends React.PureComponent {
     const {featuresCount} = this.state;
     return (
       <Page>
-        <TrackasiaGL.MapView style={sheet.matchParent}>
-          <TrackasiaGL.Camera
+        <TrackAsiaGL.MapView style={sheet.matchParent}>
+          <TrackAsiaGL.Camera
             zoomLevel={2}
             centerCoordinate={[-101.051593, 41.370337]}
           />
 
-          <TrackasiaGL.VectorSource
+          <TrackAsiaGL.VectorSource
             id="customSourceExample"
             url={VECTOR_SOURCE_URL}
             ref={source => {
@@ -56,13 +56,13 @@ class CustomVectorSource extends React.PureComponent {
             onPress={e => {
               console.log(`VectorSource onPress: ${e.features}`, e.features);
             }}>
-            <TrackasiaGL.FillLayer
+            <TrackAsiaGL.FillLayer
               id="customSourceFill"
               sourceLayerID="react-native-example"
               style={styles.boxFill}
             />
-          </TrackasiaGL.VectorSource>
-        </TrackasiaGL.MapView>
+          </TrackAsiaGL.VectorSource>
+        </TrackAsiaGL.MapView>
         <Bubble onPress={this.queryFeatures}>
           <Text>Query features:</Text>
           {featuresCount && <Text>Count: {featuresCount}</Text>}

@@ -13,7 +13,7 @@ import com.mapbox.android.core.location.LocationEngineListener;
 import com.mapbox.android.core.location.LocationEnginePriority;
 */
 
-import com.mapbox.rctmgl.location.LocationEngineProvider;
+import com.trackasia.android.location.engine.LocationEngineProvider;
 import com.trackasia.android.location.engine.LocationEngineRequest;
 import com.trackasia.android.location.engine.LocationEngineResult;
 import com.trackasia.android.location.permissions.PermissionsManager;

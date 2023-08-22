@@ -14,14 +14,14 @@ None
 
 #### IOS
 
-To enable this on iOS you need to call `[[MLNCustomHeaders sharedInstance] initHeaders]` pretty early in the lifecycle of the application. This will swizzle the custom method.
+To enable this on iOS you need to call `[[MGLCustomHeaders sharedInstance] initHeaders]` pretty early in the lifecycle of the application. This will swizzle the custom method.
 Suggested location is `[AppDelegate application: didFinishLaunchingWithOptions:]`
 
 #### Working example (AppDelegate.m)
 
 ```obj-c
 // (1) Include the header file
-#import "MLNCustomHeaders.h"
+#import "MGLCustomHeaders.h"
 
 @implementation AppDelegate
 
@@ -32,9 +32,9 @@ Suggested location is `[AppDelegate application: didFinishLaunchingWithOptions:]
                                                    moduleName:@"SampleApp"
                                             initialProperties:nil];
   // (2) Init headers, add swizzle method
-  [[MLNCustomHeaders sharedInstance] initHeaders];
+  [[MGLCustomHeaders sharedInstance] initHeaders];
   // (3*) Optionally you can add some global headers here
-  [[MLNCustomHeaders sharedInstance] addHeader:@"IP" forHeaderName:@"X-For-Real"];
+  [[MGLCustomHeaders sharedInstance] addHeader:@"IP" forHeaderName:@"X-For-Real"];
 
   ...
   return YES;
@@ -54,13 +54,13 @@ You can add and remove headers at runtime.
 #### To add a header
 
 ```javascript
-    TrackasiaGL.addCustomHeader('Authorization', '{auth header}');
+    TrackAsiaGL.addCustomHeader('Authorization', '{auth header}');
 ```
 
 #### To remove a header
 
 ```javascript
-    TrackasiaGL.removeCustomHeader('Authorization');
+    TrackAsiaGL.removeCustomHeader('Authorization');
 ```
 
 #### Working example
@@ -68,15 +68,15 @@ You can add and remove headers at runtime.
 ```javascript
 export default class HelloWorldApp extends Component {
   componentDidMount () {
-    TrackasiaGL.addCustomHeader('Authorization', '{auth header}');
+    TrackAsiaGL.addCustomHeader('Authorization', '{auth header}');
   }
 
   render () {
-    TrackasiaGL.addCustomHeader('X-Some-Header', 'my-value');
+    TrackAsiaGL.addCustomHeader('X-Some-Header', 'my-value');
     return (
       <View style={styles.page}>
         <View style={styles.container}>
-          <TrackasiaGL.MapView
+          <TrackAsiaGL.MapView
             style={styles.map}
             styleURL={STYLE_URL}/>
         </View>

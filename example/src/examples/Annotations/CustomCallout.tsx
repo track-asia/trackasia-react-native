@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import TrackasiaGL, {SymbolLayerStyle} from '@trackasia/trackasia-react-native';
+import TrackAsiaGL, {SymbolLayerStyle} from '@track-asia/trackasia-react-native';
 import {Feature} from '@turf/helpers/dist/js';
 import {View, Text, ViewStyle, StyleProp, TextStyle} from 'react-native';
 
@@ -62,25 +62,25 @@ const CustomCallout: FC<CustomCalloutProps> = props => {
 
   return (
     <Page {...props}>
-      <TrackasiaGL.MapView style={sheet.matchParent}>
-        <TrackasiaGL.Camera defaultSettings={defaultCamera} />
-        <TrackasiaGL.ShapeSource
+      <TrackAsiaGL.MapView style={sheet.matchParent}>
+        <TrackAsiaGL.Camera defaultSettings={defaultCamera} />
+        <TrackAsiaGL.ShapeSource
           id="mapPinsSource"
           shape={featureCollection}
           onPress={onPinPress}>
-          <TrackasiaGL.SymbolLayer
+          <TrackAsiaGL.SymbolLayer
             id="mapPinsLayer"
             style={styles.mapPinLayer}
           />
-        </TrackasiaGL.ShapeSource>
+        </TrackAsiaGL.ShapeSource>
         {selectedFeature && (
-          <TrackasiaGL.MarkerView
+          <TrackAsiaGL.MarkerView
             id="selectedFeatureMarkerView"
             coordinate={selectedFeature.geometry.coordinates}>
             <CustomCalloutView message={selectedFeature?.properties?.message} />
-          </TrackasiaGL.MarkerView>
+          </TrackAsiaGL.MarkerView>
         )}
-      </TrackasiaGL.MapView>
+      </TrackAsiaGL.MapView>
     </Page>
   );
 };

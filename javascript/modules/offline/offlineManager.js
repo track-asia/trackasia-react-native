@@ -5,10 +5,10 @@ import OfflinePack from './OfflinePack';
 
 import {NativeModules, NativeEventEmitter} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
-const TrackasiaGLOfflineManager = NativeModules.MLNOfflineModule;
+const TrackAsiaGL = NativeModules.MGLModule;
+const TrackAsiaGLOfflineManager = NativeModules.MGLOfflineModule;
 export const OfflineModuleEventEmitter = new NativeEventEmitter(
-  TrackasiaGLOfflineManager,
+  TrackAsiaGLOfflineManager,
 );
 
 /**
@@ -39,7 +39,7 @@ class OfflineManager {
    * const progressListener = (offlineRegion, status) => console.log(offlineRegion, status);
    * const errorListener = (offlineRegion, err) => console.log(offlineRegion, err);
    *
-   * await TrackasiaGL.offlineManager.createPack({
+   * await TrackAsiaGL.offlineManager.createPack({
    *   name: 'offlinePack',
    *   styleURL: 'mapbox://...',
    *   minZoom: 14,
@@ -64,7 +64,7 @@ class OfflineManager {
     }
 
     this.subscribe(packOptions.name, progressListener, errorListener);
-    const nativeOfflinePack = await TrackasiaGLOfflineManager.createPack(
+    const nativeOfflinePack = await TrackAsiaGLOfflineManager.createPack(
       packOptions,
     );
     this._offlinePacks[packOptions.name] = new OfflinePack(nativeOfflinePack);
@@ -76,7 +76,7 @@ class OfflineManager {
    * This is more efficient than deleting the offline pack and downloading it again. If the data stored locally matches that on the server, new data will not be downloaded.
    *
    * @example
-   * await TrackasiaGL.offlineManager.invalidatePack('packName')
+   * await TrackAsiaGL.offlineManager.invalidatePack('packName')
    *
    * @param  {String}  name  Name of the offline pack.
    * @return {void}
@@ -90,7 +90,7 @@ class OfflineManager {
 
     const offlinePack = this._offlinePacks[name];
     if (offlinePack) {
-      await TrackasiaGLOfflineManager.invalidatePack(name);
+      await TrackAsiaGLOfflineManager.invalidatePack(name);
     }
   }
 
@@ -98,7 +98,7 @@ class OfflineManager {
    * Unregisters the given offline pack and allows resources that are no longer required by any remaining packs to be potentially freed.
    *
    * @example
-   * await TrackasiaGL.offlineManager.deletePack('packName')
+   * await TrackAsiaGL.offlineManager.deletePack('packName')
    *
    * @param  {String}  name  Name of the offline pack.
    * @return {void}
@@ -112,7 +112,7 @@ class OfflineManager {
 
     const offlinePack = this._offlinePacks[name];
     if (offlinePack) {
-      await TrackasiaGLOfflineManager.deletePack(name);
+      await TrackAsiaGLOfflineManager.deletePack(name);
       delete this._offlinePacks[name];
     }
   }
@@ -124,13 +124,13 @@ class OfflineManager {
    * It does not erase resources from the ambient cache or delete the database, which can be computationally expensive operations that may carry unintended side effects.
    *
    * @example
-   * await TrackasiaGL.offlineManager.invalidateAmbientCache();
+   * await TrackAsiaGL.offlineManager.invalidateAmbientCache();
    *
    * @return {void}
    */
   async invalidateAmbientCache() {
     await this._initialize();
-    await TrackasiaGLOfflineManager.invalidateAmbientCache();
+    await TrackAsiaGLOfflineManager.invalidateAmbientCache();
   }
 
   /**
@@ -138,13 +138,13 @@ class OfflineManager {
    * This method clears the cache and decreases the amount of space that map resources take up on the device.
    *
    * @example
-   * await TrackasiaGL.offlineManager.clearAmbientCache();
+   * await TrackAsiaGL.offlineManager.clearAmbientCache();
    *
    * @return {void}
    */
   async clearAmbientCache() {
     await this._initialize();
-    await TrackasiaGLOfflineManager.clearAmbientCache();
+    await TrackAsiaGLOfflineManager.clearAmbientCache();
   }
 
   /**
@@ -152,34 +152,34 @@ class OfflineManager {
    * This method may be computationally expensive because it will erase resources from the ambient cache if its size is decreased.
    *
    * @example
-   * await TrackasiaGL.offlineManager.setMaximumAmbientCacheSize(5000000);
+   * await TrackAsiaGL.offlineManager.setMaximumAmbientCacheSize(5000000);
    *
    * @param  {Number}  size  Size of ambient cache.
    * @return {void}
    */
   async setMaximumAmbientCacheSize(size) {
     await this._initialize();
-    await TrackasiaGLOfflineManager.setMaximumAmbientCacheSize(size);
+    await TrackAsiaGLOfflineManager.setMaximumAmbientCacheSize(size);
   }
 
   /**
    * Deletes the existing database, which includes both the ambient cache and offline packs, then reinitializes it.
    *
    * @example
-   * await TrackasiaGL.offlineManager.resetDatabase();
+   * await TrackAsiaGL.offlineManager.resetDatabase();
    *
    * @return {void}
    */
   async resetDatabase() {
     await this._initialize();
-    await TrackasiaGLOfflineManager.resetDatabase();
+    await TrackAsiaGLOfflineManager.resetDatabase();
   }
 
   /**
    * Retrieves all the current offline packs that are stored in the database.
    *
    * @example
-   * const offlinePacks = await TrackasiaGL.offlineManager.getPacks();
+   * const offlinePacks = await TrackAsiaGL.offlineManager.getPacks();
    *
    * @return {Array<OfflinePack>}
    */
@@ -194,7 +194,7 @@ class OfflineManager {
    * Retrieves an offline pack that is stored in the database by name.
    *
    * @example
-   * const offlinePack = await TrackasiaGL.offlineManager.getPack();
+   * const offlinePack = await TrackAsiaGL.offlineManager.getPack();
    *
    * @param  {String}  name  Name of the offline pack.
    * @return {OfflinePack}
@@ -208,14 +208,14 @@ class OfflineManager {
    * Sideloads offline db
    *
    * @example
-   * await TrackasiaGL.offlineManager.mergeOfflineRegions(path);
+   * await TrackAsiaGL.offlineManager.mergeOfflineRegions(path);
    *
    * @param {String} path Path to offline tile db on file system.
    * @return {void}
    */
   async mergeOfflineRegions(path) {
     await this._initialize();
-    return TrackasiaGLOfflineManager.mergeOfflineRegions(path);
+    return TrackAsiaGLOfflineManager.mergeOfflineRegions(path);
   }
 
   /**
@@ -223,13 +223,13 @@ class OfflineManager {
    * Consult the Terms of Service for your map tile host before changing this value.
    *
    * @example
-   * TrackasiaGL.offlineManager.setTileCountLimit(1000);
+   * TrackAsiaGL.offlineManager.setTileCountLimit(1000);
    *
    * @param {Number} limit Map tile limit count.
    * @return {void}
    */
   setTileCountLimit(limit) {
-    TrackasiaGLOfflineManager.setTileCountLimit(limit);
+    TrackAsiaGLOfflineManager.setTileCountLimit(limit);
   }
 
   /**
@@ -237,13 +237,13 @@ class OfflineManager {
    * The default is 500ms.
    *
    * @example
-   * TrackasiaGL.offlineManager.setProgressEventThrottle(500);
+   * TrackAsiaGL.offlineManager.setProgressEventThrottle(500);
    *
    * @param {Number} throttleValue event throttle value in ms.
    * @return {void}
    */
   setProgressEventThrottle(throttleValue) {
-    TrackasiaGLOfflineManager.setProgressEventThrottle(throttleValue);
+    TrackAsiaGLOfflineManager.setProgressEventThrottle(throttleValue);
   }
 
   /**
@@ -253,7 +253,7 @@ class OfflineManager {
    * @example
    * const progressListener = (offlinePack, status) => console.log(offlinePack, status)
    * const errorListener = (offlinePack, err) => console.log(offlinePack, err)
-   * TrackasiaGL.offlineManager.subscribe('packName', progressListener, errorListener)
+   * TrackAsiaGL.offlineManager.subscribe('packName', progressListener, errorListener)
    *
    * @param  {String} packName           Name of the offline pack.
    * @param  {Callback} progressListener Callback that listens for status events while downloading the offline resource.
@@ -265,7 +265,7 @@ class OfflineManager {
     if (isFunction(progressListener)) {
       if (totalProgressListeners === 0) {
         this.subscriptionProgress = OfflineModuleEventEmitter.addListener(
-          TrackasiaGL.OfflineCallbackName.Progress,
+          TrackAsiaGL.OfflineCallbackName.Progress,
           this._onProgress,
         );
       }
@@ -276,7 +276,7 @@ class OfflineManager {
     if (isFunction(errorListener)) {
       if (totalErrorListeners === 0) {
         this.subscriptionError = OfflineModuleEventEmitter.addListener(
-          TrackasiaGL.OfflineCallbackName.Error,
+          TrackAsiaGL.OfflineCallbackName.Error,
           this._onError,
         );
       }
@@ -288,7 +288,7 @@ class OfflineManager {
     if (isAndroid() && this._offlinePacks[packName]) {
       try {
         // manually set a listener, since listeners are only set on create flow
-        await TrackasiaGLOfflineManager.setPackObserver(packName);
+        await TrackAsiaGLOfflineManager.setPackObserver(packName);
       } catch (e) {
         console.log('Unable to set pack observer', e);
       }
@@ -300,7 +300,7 @@ class OfflineManager {
    * It's a good idea to call this on componentWillUnmount.
    *
    * @example
-   * TrackasiaGL.offlineManager.unsubscribe('packName')
+   * TrackAsiaGL.offlineManager.unsubscribe('packName')
    *
    * @param  {String} packName Name of the offline pack.
    * @return {void}
@@ -329,7 +329,7 @@ class OfflineManager {
       return true;
     }
 
-    const nativeOfflinePacks = await TrackasiaGLOfflineManager.getPacks();
+    const nativeOfflinePacks = await TrackAsiaGLOfflineManager.getPacks();
 
     for (const nativeOfflinePack of nativeOfflinePacks) {
       const offlinePack = new OfflinePack(nativeOfflinePack);
@@ -351,7 +351,7 @@ class OfflineManager {
     this._progressListeners[name](pack, e.payload);
 
     // cleanup listeners now that they are no longer needed
-    if (state === TrackasiaGL.OfflinePackDownloadState.Complete) {
+    if (state === TrackAsiaGL.OfflinePackDownloadState.Complete) {
       this.unsubscribe(name);
     }
   }

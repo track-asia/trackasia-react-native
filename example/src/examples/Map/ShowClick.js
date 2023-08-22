@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import {DEFAULT_CENTER_COORDINATE} from '../../utils';
@@ -61,9 +61,9 @@ class ShowClick extends React.Component {
   render() {
     return (
       <Page>
-        <TrackasiaGL.MapView style={sheet.matchParent} onPress={this.onPress}>
-          <TrackasiaGL.Camera centerCoordinate={DEFAULT_CENTER_COORDINATE} />
-        </TrackasiaGL.MapView>
+        <TrackAsiaGL.MapView style={sheet.matchParent} onPress={this.onPress}>
+          <TrackAsiaGL.Camera centerCoordinate={DEFAULT_CENTER_COORDINATE} />
+        </TrackAsiaGL.MapView>
         {this.renderLastClicked()}
       </Page>
     );

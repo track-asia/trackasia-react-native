@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import TabBarPage from '../common/TabBarPage';
@@ -24,11 +24,11 @@ class SetPitch extends React.Component {
   }
 
   componentDidMount() {
-    TrackasiaGL.locationManager.start();
+    TrackAsiaGL.locationManager.start();
   }
 
   componentWillUnmount() {
-    TrackasiaGL.locationManager.stop();
+    TrackAsiaGL.locationManager.stop();
   }
 
   onUpdatePitch(index, pitch) {
@@ -41,10 +41,10 @@ class SetPitch extends React.Component {
         {...this.props}
         options={this._pitchOptions}
         onOptionPress={this.onUpdatePitch}>
-        <TrackasiaGL.MapView style={sheet.matchParent}>
-          <TrackasiaGL.Camera {...this.state} followUserLocation />
-          <TrackasiaGL.UserLocation />
-        </TrackasiaGL.MapView>
+        <TrackAsiaGL.MapView style={sheet.matchParent}>
+          <TrackAsiaGL.Camera {...this.state} followUserLocation />
+          <TrackAsiaGL.UserLocation />
+        </TrackAsiaGL.MapView>
       </TabBarPage>
     );
   }

@@ -28,7 +28,7 @@ def $RNMBGL.post_install(installer)
     url: "https://github.com/track-asia/trackasia-gl-native-distribution",
     requirement: {
       kind: "exactVersion",
-      version: "2.0.0"
+      version: "1.0.1"
     },
     product_name: "Mapbox"
   }
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   s.name		= "trackasia-react-native"
   s.summary		= "React Native Component for Trackasia Native"
   s.version		= package['version']
-  s.authors		= { "Ian Wagner" => "ian.wagner@stadiamaps.com" }  # TODO: Trackasia email?
+  s.authors		= { "Ian Wagner" => "ian.wagner@stadiamaps.com" }  # TODO: TrackAsia email?
   s.homepage    	= "https://github.com/track-asia/trackasia-react-native"
   s.source      	= { :git => "https://github.com/track-asia/trackasia-react-native.git" }
   s.license     	= "MIT"
@@ -74,6 +74,6 @@ Pod::Spec.new do |s|
   s.dependency 'React'
 
   s.subspec 'DynamicLibrary' do |sp|
-    sp.source_files	= "ios/RCTMLN/**/*.{h,m}"
+    sp.source_files	= "ios/RCTMGL/**/*.{h,m}"
   end
 end

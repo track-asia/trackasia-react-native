@@ -12,8 +12,8 @@ prepare_react_native_project!
 $RNMBGL_SPM_Spec = {
   url: "https://github.com/track-asia/trackasia-gl-native-distribution",
   requirement: {
-    kind: "upToNextMajorVersion",
-    minimumVersion: "2.0.0"
+    kind: "brand",
+    minimumVersion: "1.0.1"
   },
   product_name: "Mapbox"
 }

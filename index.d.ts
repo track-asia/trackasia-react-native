@@ -1,4 +1,4 @@
-declare module 'trackasia__trackasia-react-native';
+declare module 'maplibre__trackasia-react-native';
 
 import {
   Component,
@@ -88,7 +88,7 @@ type NamedStyles<T> = {
   | BackgroundLayerStyle;
 };
 
-export type TrackasiaGLEvent<
+export type TrackAsiaGLEvent<
   T extends string,
   P = GeoJSON.Feature,
   V = Element
@@ -106,7 +106,7 @@ export type OnPressEvent = {
   }
 };
 
-declare namespace TrackasiaGL {
+declare namespace TrackAsiaGL {
   function removeCustomHeader(headerName: string): void;
   function addCustomHeader(headerName: string, headerValue: string): void;
   function setAccessToken(accessToken: string | null): void;
@@ -226,7 +226,7 @@ declare namespace TrackasiaGL {
      * The heading (measured in degrees) relative to true north.
      * Heading is used to describe the direction the device is pointing to (the value of the compass).
      * Note that on Android this is incorrectly reporting the course value as mentioned in issue https://github.com/rnmapbox/maps/issues/1213.
-     * This is more likely to get fixed in Trackasia upstream if someone makes them aware of the issue.
+     * This is more likely to get fixed in TrackAsia upstream if someone makes them aware of the issue.
      */
     heading?: number;
 
@@ -418,7 +418,6 @@ declare namespace TrackasiaGL {
 
   // TODO: Figure out if these are even supported anymore
   enum StyleURL {
-    TRACKASIA = 'https://tiles.track-asia.com/tiles/v1/style-streets.json?key=public',
     Street = 'mapbox://styles/mapbox/streets-v11',
     Dark = 'mapbox://styles/mapbox/dark-v10',
     Light = 'mapbox://styles/mapbox/light-v10',
@@ -427,7 +426,6 @@ declare namespace TrackasiaGL {
     SatelliteStreet = 'mapbox://styles/mapbox/satellite-streets-v11',
     TrafficDay = 'mapbox://styles/mapbox/navigation-preview-day-v4',
     TrafficNight = 'mapbox://styles/mapbox/navigation-preview-night-v4',
-    
   }
 }
 
@@ -454,7 +452,7 @@ export interface RegionPayload {
 
 export interface MapViewProps extends ViewProps {
   animated?: boolean;
-  userTrackingMode?: TrackasiaGL.UserTrackingModes;
+  userTrackingMode?: TrackAsiaGL.UserTrackingModes;
   userLocationVerticalAlignment?: number;
   contentInset?: Array<number>;
   style?: StyleProp<ViewStyle>;
@@ -489,7 +487,7 @@ export interface MapViewProps extends ViewProps {
   onRegionDidChange?: (
     feature: GeoJSON.Feature<GeoJSON.Point, RegionPayload>,
   ) => void;
-  onUserLocationUpdate?: (feature: TrackasiaGL.Location) => void;
+  onUserLocationUpdate?: (feature: TrackAsiaGL.Location) => void;
   onWillStartLoadingMap?: () => void;
   onDidFinishLoadingMap?: () => void;
   onDidFailLoadingMap?: () => void;
@@ -519,7 +517,7 @@ export interface CameraProps extends CameraSettings, ViewProps {
   triggerKey?: any;
   alignment?: number[];
   onUserTrackingModeChange?: (
-    event: TrackasiaGLEvent<
+    event: TrackAsiaGLEvent<
       'usertrackingmodechange',
       {
         followUserLocation: boolean;
@@ -557,7 +555,7 @@ export interface UserLocationProps {
   children?: ReactNode;
   minDisplacement?: number;
   onPress?: () => void;
-  onUpdate?: (location: TrackasiaGL.Location) => void;
+  onUpdate?: (location: TrackAsiaGL.Location) => void;
   renderMode?: 'normal' | 'native';
   showsUserHeadingIndicator?: boolean,
   visible?: boolean;
@@ -953,4 +951,4 @@ export class Logger {
   public static setLogLevel: (level: LogLevel) => void;
 }
 
-export default TrackasiaGL;
+export default TrackAsiaGL;

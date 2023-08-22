@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 import {Overlay, ListItem, FAB, Icon} from 'react-native-elements';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 import moment from 'moment';
 
 import sheet from '../../styles/sheet';
@@ -102,16 +102,16 @@ class EarthQuakes extends React.Component {
           )}
         </Overlay>
         <Page {...this.props}>
-          <TrackasiaGL.MapView
+          <TrackAsiaGL.MapView
             style={sheet.matchParent}
-            styleURL={TrackasiaGL.StyleURL.Dark}>
-            <TrackasiaGL.Camera
+            styleURL={TrackAsiaGL.StyleURL.Dark}>
+            <TrackAsiaGL.Camera
               zoomLevel={6}
               pitch={45}
               centerCoordinate={SF_OFFICE_COORDINATE}
             />
 
-            <TrackasiaGL.ShapeSource
+            <TrackAsiaGL.ShapeSource
               id="earthquakes"
               onPress={async shape => {
                 const cluster = shape.features[0];
@@ -128,25 +128,25 @@ class EarthQuakes extends React.Component {
               clusterRadius={50}
               clusterMaxZoom={14}
               url="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson">
-              <TrackasiaGL.SymbolLayer
+              <TrackAsiaGL.SymbolLayer
                 id="pointCount"
                 style={layerStyles.clusterCount}
               />
 
-              <TrackasiaGL.CircleLayer
+              <TrackAsiaGL.CircleLayer
                 id="clusteredPoints"
                 belowLayerID="pointCount"
                 filter={['has', 'point_count']}
                 style={layerStyles.clusteredPoints}
               />
 
-              <TrackasiaGL.CircleLayer
+              <TrackAsiaGL.CircleLayer
                 id="singlePoint"
                 filter={['!', ['has', 'point_count']]}
                 style={layerStyles.singlePoint}
               />
-            </TrackasiaGL.ShapeSource>
-          </TrackasiaGL.MapView>
+            </TrackAsiaGL.ShapeSource>
+          </TrackAsiaGL.MapView>
         </Page>
       </>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import TabBarPage from '../common/TabBarPage';
@@ -25,7 +25,7 @@ class SetHeading extends React.Component {
   }
 
   componentDidMount() {
-    TrackasiaGL.locationManager.start();
+    TrackAsiaGL.locationManager.start();
   }
 
   componentDidUpdate() {
@@ -35,7 +35,7 @@ class SetHeading extends React.Component {
   }
 
   componentWillUnmount() {
-    TrackasiaGL.locationManager.stop();
+    TrackAsiaGL.locationManager.stop();
   }
 
   onHeadingChange(index, heading) {
@@ -48,12 +48,12 @@ class SetHeading extends React.Component {
         {...this.props}
         options={this._bearingOptions}
         onOptionPress={this.onHeadingChange}>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           ref={ref => (this.map = ref)}
           style={sheet.matchParent}>
-          <TrackasiaGL.Camera {...this.state} />
-          <TrackasiaGL.UserLocation />
-        </TrackasiaGL.MapView>
+          <TrackAsiaGL.Camera {...this.state} />
+          <TrackAsiaGL.UserLocation />
+        </TrackAsiaGL.MapView>
       </TabBarPage>
     );
   }

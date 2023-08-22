@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 import {NativeModules, requireNativeComponent} from 'react-native';
 import React from 'react';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNRasterSource';
+export const NATIVE_MODULE_NAME = 'RCTMGLRasterSource';
 
 const isTileTemplateUrl = url =>
   url &&
@@ -72,7 +72,7 @@ class RasterSource extends AbstractSource {
   };
 
   static defaultProps = {
-    id: TrackasiaGL.StyleSource.DefaultSourceID,
+    id: TrackAsiaGL.StyleSource.DefaultSourceID,
   };
 
   constructor(props) {
@@ -107,16 +107,16 @@ class RasterSource extends AbstractSource {
       attribution: this.props.attribution,
     };
     return (
-      <RCTMLNRasterSource ref="nativeSource" {...props}>
+      <RCTMGLRasterSource ref="nativeSource" {...props}>
         {cloneReactChildrenWithProps(this.props.children, {
           sourceID: this.props.id,
         })}
-      </RCTMLNRasterSource>
+      </RCTMGLRasterSource>
     );
   }
 }
 
-const RCTMLNRasterSource = requireNativeComponent(
+const RCTMGLRasterSource = requireNativeComponent(
   NATIVE_MODULE_NAME,
   RasterSource,
 );

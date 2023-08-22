@@ -1,6 +1,6 @@
 import React, {FC, useEffect} from 'react';
 import {Alert} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import Page from '../common/Page';
@@ -10,10 +10,10 @@ const style = JSON.stringify(require('../../assets/map-styleURL-style.json'));
 
 const ShowMap: FC<any> = props => {
   useEffect(() => {
-    TrackasiaGL.locationManager.start();
+    TrackAsiaGL.locationManager.start();
 
     return (): void => {
-      TrackasiaGL.locationManager.stop();
+      TrackAsiaGL.locationManager.stop();
     };
   }, []);
 
@@ -23,11 +23,11 @@ const ShowMap: FC<any> = props => {
 
   return (
     <Page {...props}>
-      <TrackasiaGL.MapView styleURL={style} style={sheet.matchParent}>
-        <TrackasiaGL.Camera followZoomLevel={3} followUserLocation />
+      <TrackAsiaGL.MapView styleURL={style} style={sheet.matchParent}>
+        <TrackAsiaGL.Camera followZoomLevel={3} followUserLocation />
 
-        <TrackasiaGL.UserLocation onPress={onUserMarkerPress} />
-      </TrackasiaGL.MapView>
+        <TrackAsiaGL.UserLocation onPress={onUserMarkerPress} />
+      </TrackAsiaGL.MapView>
     </Page>
   );
 };

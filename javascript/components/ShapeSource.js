@@ -15,9 +15,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNShapeSource';
+export const NATIVE_MODULE_NAME = 'RCTMGLShapeSource';
 
 /**
  * ShapeSource is a map content source that supplies vector shapes to be shown on the map.
@@ -120,7 +120,7 @@ class ShapeSource extends NativeBridgeComponent(AbstractSource) {
   };
 
   static defaultProps = {
-    id: TrackasiaGL.StyleSource.DefaultSourceID,
+    id: TrackAsiaGL.StyleSource.DefaultSourceID,
   };
 
   constructor(props) {
@@ -334,16 +334,16 @@ class ShapeSource extends NativeBridgeComponent(AbstractSource) {
     };
 
     return (
-      <RCTMLNShapeSource {...props}>
+      <RCTMGLShapeSource {...props}>
         {cloneReactChildrenWithProps(this.props.children, {
           sourceID: this.props.id,
         })}
-      </RCTMLNShapeSource>
+      </RCTMGLShapeSource>
     );
   }
 }
 
-const RCTMLNShapeSource = requireNativeComponent(
+const RCTMGLShapeSource = requireNativeComponent(
   NATIVE_MODULE_NAME,
   ShapeSource,
   {

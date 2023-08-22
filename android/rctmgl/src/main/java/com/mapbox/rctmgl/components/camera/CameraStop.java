@@ -16,7 +16,7 @@ import com.trackasia.android.maps.TrackasiaMap;
 import com.mapbox.rctmgl.components.camera.constants.CameraMode;
 import com.mapbox.rctmgl.utils.GeoJSONUtils;
 
-import com.mapbox.rctmgl.components.mapview.RCTMLNMapView;
+import com.mapbox.rctmgl.components.mapview.RCTMGLMapView;
 
 /**
  * Created by nickitaliano on 9/5/17.
@@ -80,8 +80,8 @@ public class CameraStop {
         mMode = mode;
     }
 
-    public CameraUpdateItem toCameraUpdate(RCTMLNMapView mapView) {
-        TrackasiaMap map = mapView.getMapboxMap();
+    public CameraUpdateItem toCameraUpdate(RCTMGLMapView mapView) {
+        TrackasiaMap map = mapView.getTrackasiaMap();
         CameraPosition currentCamera = map.getCameraPosition();
         CameraPosition.Builder builder = new CameraPosition.Builder(currentCamera);
 
@@ -212,7 +212,7 @@ public class CameraStop {
         return stop;
     }
 
-    private static int[] clippedPadding(int[] padding, RCTMLNMapView mapView) {
+    private static int[] clippedPadding(int[] padding, RCTMGLMapView mapView) {
         int mapHeight = mapView.getHeight();
         int mapWidth = mapView.getWidth();
 

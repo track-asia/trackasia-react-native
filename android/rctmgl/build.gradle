@@ -32,8 +32,8 @@ dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
-    // Trackasia SDK
-    implementation "io.github.track-asia:android-sdk:1.0.5"
+    // TrackAsia SDK
+ implementation "io.github.track-asia:android-sdk:1.0.8"
     implementation "io.github.track-asia:android-sdk-turf:1.0.0"
 
     // Dependencies

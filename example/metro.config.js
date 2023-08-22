@@ -15,7 +15,7 @@ const exclusionList = require('metro-config/src/defaults/exclusionList');
 const glob = require('glob-to-regexp');
 
 const extraNodeModules = {
-  '@trackasia/trackasia-react-native': path.resolve(__dirname + '/../maps'),
+  '@track-asia/trackasia-react-native': path.resolve(__dirname + '/../maps'),
 };
 
 function getBlacklist() {

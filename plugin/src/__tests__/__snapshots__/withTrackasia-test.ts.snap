@@ -14,9 +14,9 @@ target 'HelloWorld' do
 
 # @generated begin post_installer - expo prebuild (DO NOT MODIFY) sync-4092f82b887b5b9edb84642c2a56984d69b9a403
   post_install do |installer|
-# @generated begin @trackasia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
+# @generated begin @track-asia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
     $RNMBGL.post_install(installer)
-# @generated end @trackasia/trackasia-react-native-post_installer
+# @generated end @track-asia/trackasia-react-native-post_installer
   end
 # @generated end post_installer
   use_react_native!(:path => config["reactNativePath"])
@@ -47,9 +47,9 @@ target 'HelloWorld' do
 
 # @generated begin post_installer - expo prebuild (DO NOT MODIFY) sync-4092f82b887b5b9edb84642c2a56984d69b9a403
   post_install do |installer|
-# @generated begin @trackasia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
+# @generated begin @track-asia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
     $RNMBGL.post_install(installer)
-# @generated end @trackasia/trackasia-react-native-post_installer
+# @generated end @track-asia/trackasia-react-native-post_installer
   end
 # @generated end post_installer
   use_react_native!(:path => config["reactNativePath"])
@@ -97,9 +97,9 @@ target 'HelloWorld' do
   use_flipper!()
 
   post_install do |installer|
-# @generated begin @trackasia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
+# @generated begin @track-asia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
     $RNMBGL.post_install(installer)
-# @generated end @trackasia/trackasia-react-native-post_installer
+# @generated end @track-asia/trackasia-react-native-post_installer
     react_native_post_install(installer)
   end
 end
@@ -125,9 +125,9 @@ target 'HelloWorld' do
   # if !ENV['CI']
   #   use_flipper!('Flipper' => '0.75.1', 'Flipper-Folly' => '2.5.3', 'Flipper-RSocket' => '1.3.1')
   #   post_install do |installer|
-# @generated begin @trackasia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
+# @generated begin @track-asia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
     $RNMBGL.post_install(installer)
-# @generated end @trackasia/trackasia-react-native-post_installer
+# @generated end @track-asia/trackasia-react-native-post_installer
   #     flipper_post_install(installer)
   #   end
   # end
@@ -171,9 +171,9 @@ end
 # @generated end pre_installer
 # @generated begin post_installer - expo prebuild (DO NOT MODIFY) sync-4092f82b887b5b9edb84642c2a56984d69b9a403
   post_install do |installer|
-# @generated begin @trackasia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
+# @generated begin @track-asia/trackasia-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
     $RNMBGL.post_install(installer)
-# @generated end @trackasia/trackasia-react-native-post_installer
+# @generated end @track-asia/trackasia-react-native-post_installer
   end
 # @generated end post_installer
   use_react_native!(:path => config["reactNativePath"])

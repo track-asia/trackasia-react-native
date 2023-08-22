@@ -34,10 +34,10 @@ import Logger from './utils/Logger';
 
 import {NativeModules, PermissionsAndroid} from 'react-native';
 
-const TrackasiaGL = {...NativeModules.MLNModule};
+const TrackAsiaGL = {...NativeModules.MGLModule};
 
 // static methods
-TrackasiaGL.requestAndroidLocationPermissions = async function () {
+TrackAsiaGL.requestAndroidLocationPermissions = async function () {
   if (isAndroid()) {
     const res = await PermissionsAndroid.requestMultiple([
       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
@@ -61,56 +61,56 @@ TrackasiaGL.requestAndroidLocationPermissions = async function () {
   throw new Error('You should only call this method on Android!');
 };
 
-TrackasiaGL.UserTrackingModes = Camera.UserTrackingModes;
+TrackAsiaGL.UserTrackingModes = Camera.UserTrackingModes;
 
 // components
-TrackasiaGL.MapView = MapView;
-TrackasiaGL.Light = Light;
-TrackasiaGL.PointAnnotation = PointAnnotation;
-TrackasiaGL.Callout = Callout;
-TrackasiaGL.UserLocation = UserLocation;
-TrackasiaGL.Camera = Camera;
-TrackasiaGL.Style = Style;
+TrackAsiaGL.MapView = MapView;
+TrackAsiaGL.Light = Light;
+TrackAsiaGL.PointAnnotation = PointAnnotation;
+TrackAsiaGL.Callout = Callout;
+TrackAsiaGL.UserLocation = UserLocation;
+TrackAsiaGL.Camera = Camera;
+TrackAsiaGL.Style = Style;
 
 // annotations
-TrackasiaGL.Annotation = Annotation;
-TrackasiaGL.MarkerView = MarkerView;
+TrackAsiaGL.Annotation = Annotation;
+TrackAsiaGL.MarkerView = MarkerView;
 
 // sources
-TrackasiaGL.VectorSource = VectorSource;
-TrackasiaGL.ShapeSource = ShapeSource;
-TrackasiaGL.RasterSource = RasterSource;
-TrackasiaGL.ImageSource = ImageSource;
-TrackasiaGL.Images = Images;
+TrackAsiaGL.VectorSource = VectorSource;
+TrackAsiaGL.ShapeSource = ShapeSource;
+TrackAsiaGL.RasterSource = RasterSource;
+TrackAsiaGL.ImageSource = ImageSource;
+TrackAsiaGL.Images = Images;
 
 // layers
-TrackasiaGL.FillLayer = FillLayer;
-TrackasiaGL.FillExtrusionLayer = FillExtrusionLayer;
-TrackasiaGL.HeatmapLayer = HeatmapLayer;
-TrackasiaGL.LineLayer = LineLayer;
-TrackasiaGL.CircleLayer = CircleLayer;
-TrackasiaGL.SymbolLayer = SymbolLayer;
-TrackasiaGL.RasterLayer = RasterLayer;
-TrackasiaGL.BackgroundLayer = BackgroundLayer;
+TrackAsiaGL.FillLayer = FillLayer;
+TrackAsiaGL.FillExtrusionLayer = FillExtrusionLayer;
+TrackAsiaGL.HeatmapLayer = HeatmapLayer;
+TrackAsiaGL.LineLayer = LineLayer;
+TrackAsiaGL.CircleLayer = CircleLayer;
+TrackAsiaGL.SymbolLayer = SymbolLayer;
+TrackAsiaGL.RasterLayer = RasterLayer;
+TrackAsiaGL.BackgroundLayer = BackgroundLayer;
 
 // modules
-TrackasiaGL.locationManager = locationManager;
-TrackasiaGL.offlineManager = offlineManager;
-TrackasiaGL.snapshotManager = snapshotManager;
+TrackAsiaGL.locationManager = locationManager;
+TrackAsiaGL.offlineManager = offlineManager;
+TrackAsiaGL.snapshotManager = snapshotManager;
 
 // animated
-TrackasiaGL.Animated = Animated;
+TrackAsiaGL.Animated = Animated;
 
 // utils
-TrackasiaGL.AnimatedPoint = AnimatedMapPoint;
-TrackasiaGL.AnimatedCoordinatesArray = AnimatedCoordinatesArray;
-TrackasiaGL.AnimatedExtractCoordinateFromArray =
+TrackAsiaGL.AnimatedPoint = AnimatedMapPoint;
+TrackAsiaGL.AnimatedCoordinatesArray = AnimatedCoordinatesArray;
+TrackAsiaGL.AnimatedExtractCoordinateFromArray =
   AnimatedExtractCoordinateFromArray;
-TrackasiaGL.AnimatedRouteCoordinatesArray = AnimatedRouteCoordinatesArray;
-TrackasiaGL.AnimatedShape = AnimatedShape;
-TrackasiaGL.Logger = Logger;
+TrackAsiaGL.AnimatedRouteCoordinatesArray = AnimatedRouteCoordinatesArray;
+TrackAsiaGL.AnimatedShape = AnimatedShape;
+TrackAsiaGL.Logger = Logger;
 
-const {LineJoin} = TrackasiaGL;
+const {LineJoin} = TrackAsiaGL;
 
 export {
   MapView,
@@ -146,4 +146,4 @@ export {
   Style,
 };
 
-export default TrackasiaGL;
+export default TrackAsiaGL;

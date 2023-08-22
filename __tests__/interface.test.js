@@ -1,9 +1,9 @@
-import TrackasiaGL from '../javascript';
+import TrackAsiaGL from '../javascript';
 
 // TODO: Figure out why this test even exists. It appears to just test that a mock has certain properties, which seems stupid.
 describe('Public Interface', () => {
   it('should contain all expected components and utils', () => {
-    const actualKeys = Object.keys(TrackasiaGL);
+    const actualKeys = Object.keys(TrackAsiaGL);
     const expectedKeys = [
       // components
       'MapView',

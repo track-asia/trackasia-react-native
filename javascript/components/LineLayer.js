@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NativeModules, requireNativeComponent} from 'react-native';
 
-const TrackasiaGL = NativeModules.MLNModule;
+const TrackAsiaGL = NativeModules.MGLModule;
 
-export const NATIVE_MODULE_NAME = 'RCTMLNLineLayer';
+export const NATIVE_MODULE_NAME = 'RCTMGLLineLayer';
 
 /**
  * LineLayer is a style layer that renders one or more stroked polylines on the map.
@@ -75,7 +75,7 @@ class LineLayer extends AbstractLayer {
   };
 
   static defaultProps = {
-    sourceID: TrackasiaGL.StyleSource.DefaultSourceID,
+    sourceID: TrackAsiaGL.StyleSource.DefaultSourceID,
   };
 
   render() {
@@ -83,11 +83,11 @@ class LineLayer extends AbstractLayer {
       ...this.baseProps,
       sourceLayerID: this.props.sourceLayerID,
     };
-    return <RCTMLNLineLayer ref="nativeLayer" {...props} />;
+    return <RCTMGLLineLayer ref="nativeLayer" {...props} />;
   }
 }
 
-const RCTMLNLineLayer = requireNativeComponent(NATIVE_MODULE_NAME, LineLayer, {
+const RCTMGLLineLayer = requireNativeComponent(NATIVE_MODULE_NAME, LineLayer, {
   nativeOnly: {reactStyle: true},
 });
 

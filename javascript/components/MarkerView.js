@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Platform, requireNativeComponent} from 'react-native';
 
-export const NATIVE_MODULE_NAME = 'RCTMLNMarkerView';
+export const NATIVE_MODULE_NAME = 'RCTMGLMarkerView';
 
 /**
  * MarkerView allows you to place a interactive react native marker to the map.
@@ -74,12 +74,12 @@ class MarkerView extends React.PureComponent {
     };
 
     return (
-      <RCTMLNMarkerView {...props}>{this.props.children}</RCTMLNMarkerView>
+      <RCTMGLMarkerView {...props}>{this.props.children}</RCTMGLMarkerView>
     );
   }
 }
 
-const RCTMLNMarkerView =
+const RCTMGLMarkerView =
   Platform.OS === 'android'
     ? requireNativeComponent(NATIVE_MODULE_NAME, MarkerView, {})
     : undefined;

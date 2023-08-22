@@ -1,6 +1,6 @@
 import React from 'react';
 import {Alert} from 'react-native';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import TabBarPage from '../common/TabBarPage';
@@ -47,16 +47,16 @@ class FlyTo extends React.Component {
         {...this.props}
         options={this._flyToOptions}
         onOptionPress={this.onFlyToPress}>
-        <TrackasiaGL.MapView style={sheet.matchParent}>
-          <TrackasiaGL.Camera
+        <TrackAsiaGL.MapView style={sheet.matchParent}>
+          <TrackAsiaGL.Camera
             zoomLevel={6}
             animationMode={'flyTo'}
             animationDuration={6000}
             centerCoordinate={this.state.location}
           />
 
-          <TrackasiaGL.UserLocation />
-        </TrackasiaGL.MapView>
+          <TrackAsiaGL.UserLocation />
+        </TrackAsiaGL.MapView>
       </TabBarPage>
     );
   }

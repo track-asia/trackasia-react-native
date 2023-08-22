@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackasiaGL from '@trackasia/trackasia-react-native';
+import TrackAsiaGL from '@track-asia/trackasia-react-native';
 
 import sheet from '../../styles/sheet';
 import TabBarPage from '../common/TabBarPage';
@@ -42,12 +42,12 @@ class SetUserLocationVerticalAlignment extends React.Component {
         {...this.props}
         options={this._alignmentOptions}
         onOptionPress={this.onAlignmentChange}>
-        <TrackasiaGL.MapView
+        <TrackAsiaGL.MapView
           contentInset={this.state.currentAlignmentMode}
           style={sheet.matchParent}>
-          <TrackasiaGL.Camera followUserLocation />
-          <TrackasiaGL.UserLocation />
-        </TrackasiaGL.MapView>
+          <TrackAsiaGL.Camera followUserLocation />
+          <TrackAsiaGL.UserLocation />
+        </TrackAsiaGL.MapView>
       </TabBarPage>
     );
   }
