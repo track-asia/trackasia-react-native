@@ -30,7 +30,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@babel/core", "npm:7.20.5"],\
             ["@babel/eslint-parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.19.1"],\
-            ["@babel/plugin-proposal-class-properties", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.16.7"],\
+            ["@babel/plugin-proposal-class-properties", "virtual:5d0562e59a5fc3955a18b4fb47a52b34b2d1380eb9ce514d5a4486cb0947fa2363551dd870ca961892ede243d5bb116c7e63f5f4f6993cbec424aca535f76a84#npm:7.18.6"],\
             ["@babel/runtime", "npm:7.17.2"],\
             ["@expo/config-plugins", "npm:4.1.5"],\
             ["@mapbox/geo-viewport", "npm:0.5.0"],\
@@ -1158,13 +1158,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@babel/plugin-proposal-class-properties", [\
-        ["npm:7.16.7", {\
-          "packageLocation": "./.yarn/cache/@babel-plugin-proposal-class-properties-npm-7.16.7-a687cd42c3-3977e841e1.zip/node_modules/@babel/plugin-proposal-class-properties/",\
-          "packageDependencies": [\
-            ["@babel/plugin-proposal-class-properties", "npm:7.16.7"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
         ["npm:7.18.6", {\
           "packageLocation": "./.yarn/cache/@babel-plugin-proposal-class-properties-npm-7.18.6-5f5c2d730f-49a78a2773.zip/node_modules/@babel/plugin-proposal-class-properties/",\
           "packageDependencies": [\
@@ -1208,21 +1201,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-proposal-class-properties", "virtual:6ad7d6b4d2e6b427bd9dd49d025d31c6088e7b30f15e49be49019ab20c28b264f1caa95d454c0163b559cc945456fe3b99f4c2e3809f081f7f83105cb38db042#npm:7.18.6"],\
             ["@babel/core", null],\
             ["@babel/helper-create-class-features-plugin", "virtual:46e33a3c5588cdd8ad2e622fa4ce81d0790ef80532c42e84305f60de5ac329c95579b3eac98f300c9d1be038b75a790e1d0c9217962e4c38dbf8ac30ce82bb54#npm:7.20.5"],\
-            ["@babel/helper-plugin-utils", "npm:7.20.2"],\
-            ["@types/babel__core", null]\
-          ],\
-          "packagePeers": [\
-            "@babel/core",\
-            "@types/babel__core"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.16.7", {\
-          "packageLocation": "./.yarn/__virtual__/@babel-plugin-proposal-class-properties-virtual-0016a0d9ee/0/cache/@babel-plugin-proposal-class-properties-npm-7.16.7-a687cd42c3-3977e841e1.zip/node_modules/@babel/plugin-proposal-class-properties/",\
-          "packageDependencies": [\
-            ["@babel/plugin-proposal-class-properties", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.16.7"],\
-            ["@babel/core", "npm:7.20.5"],\
-            ["@babel/helper-create-class-features-plugin", "virtual:3c000e88e9489ebcab3b17f42969eb5681e661d8457691f32838caefe60daaf6d500f5ae8d477bd88d9818f0842699fc7ad0bbb125be35d14ba948e55b166979#npm:7.20.5"],\
             ["@babel/helper-plugin-utils", "npm:7.20.2"],\
             ["@types/babel__core", null]\
           ],\
@@ -6605,7 +6583,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@track-asia/trackasia-react-native", "workspace:."],\
             ["@babel/core", "npm:7.20.5"],\
             ["@babel/eslint-parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.19.1"],\
-            ["@babel/plugin-proposal-class-properties", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.16.7"],\
+            ["@babel/plugin-proposal-class-properties", "virtual:5d0562e59a5fc3955a18b4fb47a52b34b2d1380eb9ce514d5a4486cb0947fa2363551dd870ca961892ede243d5bb116c7e63f5f4f6993cbec424aca535f76a84#npm:7.18.6"],\
             ["@babel/runtime", "npm:7.17.2"],\
             ["@expo/config-plugins", "npm:4.1.5"],\
             ["@mapbox/geo-viewport", "npm:0.5.0"],\
