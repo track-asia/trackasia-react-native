@@ -50,7 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
             ["babel-jest", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:29.6.0"],\
             ["debounce", "npm:1.2.1"],\
-            ["deprecated-react-native-prop-types", "npm:4.1.0"],\
+            ["deprecated-react-native-prop-types", "npm:4.2.1"],\
             ["documentation", "npm:14.0.1"],\
             ["ejs", "npm:3.1.8"],\
             ["ejs-lint", "npm:1.2.2"],\
@@ -6625,7 +6625,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
             ["babel-jest", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:29.6.0"],\
             ["debounce", "npm:1.2.1"],\
-            ["deprecated-react-native-prop-types", "npm:4.1.0"],\
+            ["deprecated-react-native-prop-types", "npm:4.2.1"],\
             ["documentation", "npm:14.0.1"],\
             ["ejs", "npm:3.1.8"],\
             ["ejs-lint", "npm:1.2.2"],\
@@ -9885,6 +9885,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/deprecated-react-native-prop-types-npm-4.1.0-8b56dde60b-bba96622e1.zip/node_modules/deprecated-react-native-prop-types/",\
           "packageDependencies": [\
             ["deprecated-react-native-prop-types", "npm:4.1.0"],\
+            ["@react-native/normalize-colors", "npm:0.73.0"],\
+            ["invariant", "npm:2.2.4"],\
+            ["prop-types", "npm:15.8.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.2.1", {\
+          "packageLocation": "./.yarn/cache/deprecated-react-native-prop-types-npm-4.2.1-79c5fb1473-fcbe632e4e.zip/node_modules/deprecated-react-native-prop-types/",\
+          "packageDependencies": [\
+            ["deprecated-react-native-prop-types", "npm:4.2.1"],\
             ["@react-native/normalize-colors", "npm:0.73.0"],\
             ["invariant", "npm:2.2.4"],\
             ["prop-types", "npm:15.8.1"]\
