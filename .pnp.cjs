@@ -45,7 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/length", "npm:6.5.0"],\
             ["@turf/nearest-point-on-line", "npm:6.5.0"],\
             ["@types/geojson", "npm:7946.0.10"],\
-            ["@types/node", "npm:18.11.18"],\
+            ["@types/node", "npm:20.8.0"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
             ["@typescript-eslint/parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
             ["babel-jest", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:29.6.0"],\
@@ -6620,7 +6620,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/length", "npm:6.5.0"],\
             ["@turf/nearest-point-on-line", "npm:6.5.0"],\
             ["@types/geojson", "npm:7946.0.10"],\
-            ["@types/node", "npm:18.11.18"],\
+            ["@types/node", "npm:20.8.0"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
             ["@typescript-eslint/parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
             ["babel-jest", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:29.6.0"],\
@@ -7020,10 +7020,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:18.11.18", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.11.18-d61e8a4a20-03f17f9480.zip/node_modules/@types/node/",\
+        ["npm:20.8.0", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.8.0-81ffdc4953-ebad6342d5.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.11.18"]\
+            ["@types/node", "npm:20.8.0"]\
           ],\
           "linkType": "HARD"\
         }]\
