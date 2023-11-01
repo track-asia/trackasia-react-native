@@ -2961,6 +2961,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native/normalize-colors@npm:^0.73.0":
+  version: 0.73.2
+  resolution: "@react-native/normalize-colors@npm:0.73.2"
+  checksum: ddf9384ad41adc4f3c8eb61ddd27113130c8060bd2f4255bee284a52aa7ddcff8a5e751f569dd416c45f8b9d4062392fa7219b221f2f7f0b229d02b8d2a5b974
+  languageName: node
+  linkType: hard
+
 "@react-native/virtualized-lists@npm:^0.72.6":
   version: 0.72.6
   resolution: "@react-native/virtualized-lists@npm:0.72.6"
@@ -3107,7 +3114,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.8.0
     babel-jest: ^29.6.0
     debounce: ^1.2.0
-    deprecated-react-native-prop-types: ^4.1.0
+    deprecated-react-native-prop-types: ^5.0.0
     documentation: ^14.0.0
     ejs: ^3.1.3
     ejs-lint: ^1.1.0
@@ -5495,7 +5502,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deprecated-react-native-prop-types@npm:4.1.0, deprecated-react-native-prop-types@npm:^4.1.0":
+"deprecated-react-native-prop-types@npm:4.1.0":
   version: 4.1.0
   resolution: "deprecated-react-native-prop-types@npm:4.1.0"
   dependencies:
@@ -5503,6 +5510,17 @@ __metadata:
     invariant: "*"
     prop-types: "*"
   checksum: bba96622e196f650e782963598a2868a9c89b32e88fba1555fe1308d324eb387ab2a1f16235162b7bccc1900e8f43b7f8eae4f149a37f10cdf52e071990a7c9a
+  languageName: node
+  linkType: hard
+
+"deprecated-react-native-prop-types@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "deprecated-react-native-prop-types@npm:5.0.0"
+  dependencies:
+    "@react-native/normalize-colors": ^0.73.0
+    invariant: ^2.2.4
+    prop-types: ^15.8.1
+  checksum: ccbd4214733a178ef51934c4e0149f5c3ab60aa318d68500b6d6b4b59be9d6c25b844f808ed7095d82e1bbef6fc4bc49e0dea14d55d3ebd1ff383011ac2a1576
   languageName: node
   linkType: hard
 
