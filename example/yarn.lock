@@ -2674,7 +2674,7 @@ __metadata:
     react-native-safe-area-context: ^4.6.4
     react-native-screens: ^3.22.1
     react-native-svg: ^12.1.0
-    react-native-vector-icons: 9.0.0
+    react-native-vector-icons: 10.0.1
     typescript: ^4.4.3
   languageName: unknown
   linkType: soft
@@ -5709,13 +5709,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash._reinterpolate@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "lodash._reinterpolate@npm:3.0.0"
-  checksum: 06d2d5f33169604fa5e9f27b6067ed9fb85d51a84202a656901e5ffb63b426781a601508466f039c720af111b0c685d12f1a5c14ff8df5d5f27e491e562784b2
-  languageName: node
-  linkType: hard
-
 "lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
@@ -5723,57 +5716,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.frompairs@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "lodash.frompairs@npm:4.0.1"
-  checksum: 8ff2d857f0764325dba5825ef8776cfc6992a504d75d668889bdd617c62fc3f179f1590042e127c98ed14d3fb14b71e66697b0fe8b10f73879c3a46e2d1c23d3
-  languageName: node
-  linkType: hard
-
 "lodash.isequal@npm:^4.5.0":
   version: 4.5.0
   resolution: "lodash.isequal@npm:4.5.0"
   checksum: da27515dc5230eb1140ba65ff8de3613649620e8656b19a6270afe4866b7bd461d9ba2ac8a48dcc57f7adac4ee80e1de9f965d89d4d81a0ad52bb3eec2609644
-  languageName: node
-  linkType: hard
-
-"lodash.isstring@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "lodash.isstring@npm:4.0.1"
-  checksum: eaac87ae9636848af08021083d796e2eea3d02e80082ab8a9955309569cb3a463ce97fd281d7dc119e402b2e7d8c54a23914b15d2fc7fff56461511dc8937ba0
-  languageName: node
-  linkType: hard
-
-"lodash.omit@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "lodash.omit@npm:4.5.0"
-  checksum: 434645e49fe84ab315719bd5a9a3a585a0f624aa4160bc09157dd041a414bcc287c15840365c1379476a3f3eda41fbe838976c3f7bdecbbf4c5478e86c471a30
-  languageName: node
-  linkType: hard
-
-"lodash.pick@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "lodash.pick@npm:4.4.0"
-  checksum: 2c36cab7da6b999a20bd3373b40e31a3ef81fa264f34a6979c852c5bc8ac039379686b27380f0cb8e3781610844fafec6949c6fbbebc059c98f8fa8570e3675f
-  languageName: node
-  linkType: hard
-
-"lodash.template@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "lodash.template@npm:4.5.0"
-  dependencies:
-    lodash._reinterpolate: ^3.0.0
-    lodash.templatesettings: ^4.0.0
-  checksum: ca64e5f07b6646c9d3dbc0fe3aaa995cb227c4918abd1cef7a9024cd9c924f2fa389a0ec4296aa6634667e029bc81d4bbdb8efbfde11df76d66085e6c529b450
-  languageName: node
-  linkType: hard
-
-"lodash.templatesettings@npm:^4.0.0":
-  version: 4.2.0
-  resolution: "lodash.templatesettings@npm:4.2.0"
-  dependencies:
-    lodash._reinterpolate: ^3.0.0
-  checksum: 863e025478b092997e11a04e9d9e735875eeff1ffcd6c61742aa8272e3c2cddc89ce795eb9726c4e74cef5991f722897ff37df7738a125895f23fc7d12a7bb59
   languageName: node
   linkType: hard
 
@@ -7280,22 +7226,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-vector-icons@npm:9.0.0":
-  version: 9.0.0
-  resolution: "react-native-vector-icons@npm:9.0.0"
+"react-native-vector-icons@npm:10.0.1":
+  version: 10.0.1
+  resolution: "react-native-vector-icons@npm:10.0.1"
   dependencies:
-    lodash.frompairs: ^4.0.1
-    lodash.isequal: ^4.5.0
-    lodash.isstring: ^4.0.1
-    lodash.omit: ^4.5.0
-    lodash.pick: ^4.4.0
-    lodash.template: ^4.5.0
     prop-types: ^15.7.2
     yargs: ^16.1.1
   bin:
+    fa-upgrade.sh: bin/fa-upgrade.sh
     fa5-upgrade: bin/fa5-upgrade.sh
+    fa6-upgrade: bin/fa6-upgrade.sh
     generate-icon: bin/generate-icon.js
-  checksum: d269154dbd374618aa2e5a0052cd8697036829f70fd72d1f4b934c3d9b609a60f0afdd6e687a0d7d6d3123ebc88ff7cdba93c8a736e511a89bcd44574e84742f
+  checksum: def1a601f9ee5fcc66d319665808ecc3c0f23c6a2d744693f842ce70efcb642f774a6f04e3dadbfc86ef02ee4596c141ac70dea53e3847c2c71efec04d3e6d2d
   languageName: node
   linkType: hard
 
