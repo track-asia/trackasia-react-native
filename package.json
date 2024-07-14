@@ -1,7 +1,7 @@
 {
   "name": "@track-asia/trackasia-react-native",
   "description": "A TrackAsia GL Native plugin for creating maps in React Native",
-  "version": "9.1.0",
+  "version": "1.0.2",
   "publishConfig": {
     "access": "public"
   },

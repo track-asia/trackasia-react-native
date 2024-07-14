@@ -27,7 +27,7 @@ import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeArray;
 import com.facebook.react.bridge.WritableNativeMap;
-import com.mapbox.android.gestures.MoveGestureDetector;
+// import com.mapbox.android.gestures.MoveGestureDetector;
 import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.FeatureCollection;
 import com.trackasia.android.camera.CameraPosition;
@@ -487,22 +487,22 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Tracka
             }
         });
 
-        mMap.addOnMoveListener(new TrackasiaMap.OnMoveListener() {
-            @Override
-            public void onMoveBegin(MoveGestureDetector detector) {
-                mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
-                handleMapChangedEvent(EventTypes.REGION_WILL_CHANGE);
-            }
+        // mMap.addOnMoveListener(new TrackasiaMap.OnMoveListener() {
+        //     @Override
+        //     public void onMoveBegin(MoveGestureDetector detector) {
+        //         mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
+        //         handleMapChangedEvent(EventTypes.REGION_WILL_CHANGE);
+        //     }
 
-            @Override
-            public void onMove(MoveGestureDetector detector) {
-                mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
-                handleMapChangedEvent(EventTypes.REGION_IS_CHANGING);
-            }
+        //     @Override
+        //     public void onMove(MoveGestureDetector detector) {
+        //         mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
+        //         handleMapChangedEvent(EventTypes.REGION_IS_CHANGING);
+        //     }
 
-            @Override
-            public void onMoveEnd(MoveGestureDetector detector) {}
-        });
+        //     @Override
+        //     public void onMoveEnd(MoveGestureDetector detector) {}
+        // });
     }
 
     public void reflow() {
@@ -1093,9 +1093,9 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Tracka
 
         if (mScrollEnabled != null && uiSettings.isScrollGesturesEnabled() != mScrollEnabled) {
             uiSettings.setScrollGesturesEnabled(mScrollEnabled);
-            if (!mScrollEnabled) {
-                mMap.getGesturesManager().getMoveGestureDetector().interrupt();
-            }
+            // if (!mScrollEnabled) {
+            //     mMap.getGesturesManager().getMoveGestureDetector().interrupt();
+            // }
         }
 
         if (mPitchEnabled != null && uiSettings.isTiltGesturesEnabled() != mPitchEnabled) {
@@ -1104,9 +1104,9 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Tracka
 
         if (mRotateEnabled != null && uiSettings.isRotateGesturesEnabled() != mRotateEnabled) {
             uiSettings.setRotateGesturesEnabled(mRotateEnabled);
-            if (!mRotateEnabled) {
-                mMap.getGesturesManager().getRotateGestureDetector().interrupt();
-            }
+            // if (!mRotateEnabled) {
+            //     mMap.getGesturesManager().getRotateGestureDetector().interrupt();
+            // }
         }
 
         if (mAttributionEnabled != null && uiSettings.isAttributionEnabled() != mAttributionEnabled) {
@@ -1205,9 +1205,9 @@ public class RCTMGLMapView extends MapView implements OnMapReadyCallback, Tracka
 
         if (mZoomEnabled != null && uiSettings.isZoomGesturesEnabled() != mZoomEnabled) {
             uiSettings.setZoomGesturesEnabled(mZoomEnabled);
-            if (!mZoomEnabled) {
-                mMap.getGesturesManager().getStandardScaleGestureDetector().interrupt();
-            }
+            // if (!mZoomEnabled) {
+            //     mMap.getGesturesManager().getStandardScaleGestureDetector().interrupt();
+            // }
         }
     }
 
