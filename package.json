@@ -85,7 +85,7 @@
     "lint-staged": "^12.1.2",
     "metro-react-native-babel-preset": "^0.76.7",
     "node-dir": "0.1.17",
-    "prettier": "^2.0.4",
+    "prettier": "^3.3.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-docgen": "rnmapbox/react-docgen#rnmapbox-dist",
