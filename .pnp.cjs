@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debounce", "npm:1.2.1"],\
             ["deprecated-react-native-prop-types", "npm:4.1.0"],\
             ["documentation", "npm:14.0.1"],\
-            ["ejs", "npm:3.1.8"],\
+            ["ejs", "npm:3.1.10"],\
             ["ejs-lint", "npm:1.2.2"],\
             ["eslint", "npm:8.30.0"],\
             ["eslint-config-prettier", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:8.5.0"],\
@@ -6627,7 +6627,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debounce", "npm:1.2.1"],\
             ["deprecated-react-native-prop-types", "npm:4.1.0"],\
             ["documentation", "npm:14.0.1"],\
-            ["ejs", "npm:3.1.8"],\
+            ["ejs", "npm:3.1.10"],\
             ["ejs-lint", "npm:1.2.2"],\
             ["eslint", "npm:8.30.0"],\
             ["eslint-config-prettier", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:8.5.0"],\
@@ -10049,18 +10049,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["ejs", [\
-        ["npm:3.1.7", {\
-          "packageLocation": "./.yarn/cache/ejs-npm-3.1.7-ac170c215c-fe40764af3.zip/node_modules/ejs/",\
+        ["npm:3.1.10", {\
+          "packageLocation": "./.yarn/cache/ejs-npm-3.1.10-4e8cf4bdc1-ce90637e9c.zip/node_modules/ejs/",\
           "packageDependencies": [\
-            ["ejs", "npm:3.1.7"],\
+            ["ejs", "npm:3.1.10"],\
             ["jake", "npm:10.8.5"]\
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:3.1.8", {\
-          "packageLocation": "./.yarn/cache/ejs-npm-3.1.8-30583753fc-1d40d198ad.zip/node_modules/ejs/",\
+        ["npm:3.1.7", {\
+          "packageLocation": "./.yarn/cache/ejs-npm-3.1.7-ac170c215c-fe40764af3.zip/node_modules/ejs/",\
           "packageDependencies": [\
-            ["ejs", "npm:3.1.8"],\
+            ["ejs", "npm:3.1.7"],\
             ["jake", "npm:10.8.5"]\
           ],\
           "linkType": "HARD"\
