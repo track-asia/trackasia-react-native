@@ -32,7 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/eslint-parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.19.1"],\
             ["@babel/plugin-proposal-class-properties", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.16.7"],\
             ["@babel/runtime", "npm:7.17.2"],\
-            ["@expo/config-plugins", "npm:4.1.5"],\
+            ["@expo/config-plugins", "npm:8.0.8"],\
             ["@mapbox/geo-viewport", "npm:0.5.0"],\
             ["@react-native-community/eslint-config", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:3.2.0"],\
             ["@react-native-community/eslint-plugin", "npm:1.3.0"],\
@@ -5371,28 +5371,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@expo/config-plugins", [\
-        ["npm:4.1.5", {\
-          "packageLocation": "./.yarn/cache/@expo-config-plugins-npm-4.1.5-d198842c05-f631217251.zip/node_modules/@expo/config-plugins/",\
-          "packageDependencies": [\
-            ["@expo/config-plugins", "npm:4.1.5"],\
-            ["@expo/config-types", "npm:45.0.0"],\
-            ["@expo/json-file", "npm:8.2.36"],\
-            ["@expo/plist", "npm:0.0.18"],\
-            ["@expo/sdk-runtime-versions", "npm:1.0.0"],\
-            ["@react-native/normalize-color", "npm:2.1.0"],\
-            ["chalk", "npm:4.1.2"],\
-            ["debug", "virtual:dc0e9498d700f80ca3b0d172d2c879b3b5c09eb83d3efd647256b1daa54c605273cda90b8697936295a53fe89b5505efe928551dbf95d9b7e6c2bba5a81cb59c#npm:4.3.4"],\
-            ["find-up", "npm:5.0.0"],\
-            ["getenv", "npm:1.0.0"],\
-            ["glob", "npm:7.1.6"],\
-            ["resolve-from", "npm:5.0.0"],\
-            ["semver", "npm:7.3.8"],\
-            ["slash", "npm:3.0.0"],\
-            ["xcode", "npm:3.0.1"],\
-            ["xml2js", "npm:0.4.23"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:5.0.4", {\
           "packageLocation": "./.yarn/cache/@expo-config-plugins-npm-5.0.4-93b85148ee-9fc5e19a92.zip/node_modules/@expo/config-plugins/",\
           "packageDependencies": [\
@@ -5414,20 +5392,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["xml2js", "npm:0.4.23"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:8.0.8", {\
+          "packageLocation": "./.yarn/cache/@expo-config-plugins-npm-8.0.8-d23f974a85-2b46a636b7.zip/node_modules/@expo/config-plugins/",\
+          "packageDependencies": [\
+            ["@expo/config-plugins", "npm:8.0.8"],\
+            ["@expo/config-types", "npm:51.0.2"],\
+            ["@expo/json-file", "npm:8.3.3"],\
+            ["@expo/plist", "npm:0.1.3"],\
+            ["@expo/sdk-runtime-versions", "npm:1.0.0"],\
+            ["chalk", "npm:4.1.2"],\
+            ["debug", "virtual:dc0e9498d700f80ca3b0d172d2c879b3b5c09eb83d3efd647256b1daa54c605273cda90b8697936295a53fe89b5505efe928551dbf95d9b7e6c2bba5a81cb59c#npm:4.3.4"],\
+            ["find-up", "npm:5.0.0"],\
+            ["getenv", "npm:1.0.0"],\
+            ["glob", "npm:7.1.6"],\
+            ["resolve-from", "npm:5.0.0"],\
+            ["semver", "npm:7.6.3"],\
+            ["slash", "npm:3.0.0"],\
+            ["slugify", "npm:1.6.6"],\
+            ["xcode", "npm:3.0.1"],\
+            ["xml2js", "npm:0.6.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@expo/config-types", [\
-        ["npm:45.0.0", {\
-          "packageLocation": "./.yarn/cache/@expo-config-types-npm-45.0.0-076be5d066-9b48665406.zip/node_modules/@expo/config-types/",\
-          "packageDependencies": [\
-            ["@expo/config-types", "npm:45.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:47.0.0", {\
           "packageLocation": "./.yarn/cache/@expo-config-types-npm-47.0.0-3504d78d76-bb26456bed.zip/node_modules/@expo/config-types/",\
           "packageDependencies": [\
             ["@expo/config-types", "npm:47.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:51.0.2", {\
+          "packageLocation": "./.yarn/cache/@expo-config-types-npm-51.0.2-8e447c6ef8-33b4397df1.zip/node_modules/@expo/config-types/",\
+          "packageDependencies": [\
+            ["@expo/config-types", "npm:51.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5439,6 +5439,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@expo/json-file", "npm:8.2.36"],\
             ["@babel/code-frame", "npm:7.10.4"],\
             ["json5", "npm:1.0.1"],\
+            ["write-file-atomic", "npm:2.4.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:8.3.3", {\
+          "packageLocation": "./.yarn/cache/@expo-json-file-npm-8.3.3-1582a2894c-49fcb3581a.zip/node_modules/@expo/json-file/",\
+          "packageDependencies": [\
+            ["@expo/json-file", "npm:8.3.3"],\
+            ["@babel/code-frame", "npm:7.10.4"],\
+            ["json5", "npm:2.2.3"],\
             ["write-file-atomic", "npm:2.4.3"]\
           ],\
           "linkType": "HARD"\
@@ -5460,6 +5470,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@expo/plist", "npm:0.0.18"],\
             ["@xmldom/xmldom", "npm:0.7.9"],\
+            ["base64-js", "npm:1.5.1"],\
+            ["xmlbuilder", "npm:14.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.1.3", {\
+          "packageLocation": "./.yarn/cache/@expo-plist-npm-0.1.3-3ab0184758-8abe78bed4.zip/node_modules/@expo/plist/",\
+          "packageDependencies": [\
+            ["@expo/plist", "npm:0.1.3"],\
+            ["@xmldom/xmldom", "npm:0.7.13"],\
             ["base64-js", "npm:1.5.1"],\
             ["xmlbuilder", "npm:14.0.0"]\
           ],\
@@ -6607,7 +6627,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/eslint-parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.19.1"],\
             ["@babel/plugin-proposal-class-properties", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:7.16.7"],\
             ["@babel/runtime", "npm:7.17.2"],\
-            ["@expo/config-plugins", "npm:4.1.5"],\
+            ["@expo/config-plugins", "npm:8.0.8"],\
             ["@mapbox/geo-viewport", "npm:0.5.0"],\
             ["@react-native-community/eslint-config", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:3.2.0"],\
             ["@react-native-community/eslint-plugin", "npm:1.3.0"],\
@@ -7637,6 +7657,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@xmldom/xmldom", [\
+        ["npm:0.7.13", {\
+          "packageLocation": "./.yarn/cache/@xmldom-xmldom-npm-0.7.13-652e4dab05-b405407853.zip/node_modules/@xmldom/xmldom/",\
+          "packageDependencies": [\
+            ["@xmldom/xmldom", "npm:0.7.13"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:0.7.9", {\
           "packageLocation": "./.yarn/cache/@xmldom-xmldom-npm-0.7.9-89b068f3c8-66e37b7800.zip/node_modules/@xmldom/xmldom/",\
           "packageDependencies": [\
@@ -17954,6 +17981,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lru-cache", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:7.6.3", {\
+          "packageLocation": "./.yarn/cache/semver-npm-7.6.3-57e82c14d5-4110ec5d01.zip/node_modules/semver/",\
+          "packageDependencies": [\
+            ["semver", "npm:7.6.3"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["semver-compare", [\
@@ -18206,6 +18240,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/slugify-npm-1.6.5-6db25d7016-a955a1b600.zip/node_modules/slugify/",\
           "packageDependencies": [\
             ["slugify", "npm:1.6.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.6.6", {\
+          "packageLocation": "./.yarn/cache/slugify-npm-1.6.6-7ce458677d-04773c2d3b.zip/node_modules/slugify/",\
+          "packageDependencies": [\
+            ["slugify", "npm:1.6.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -19963,6 +20004,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/xml2js-npm-0.4.23-93a8b2e10b-ca0cf2dfbf.zip/node_modules/xml2js/",\
           "packageDependencies": [\
             ["xml2js", "npm:0.4.23"],\
+            ["sax", "npm:1.2.4"],\
+            ["xmlbuilder", "npm:11.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.6.0", {\
+          "packageLocation": "./.yarn/cache/xml2js-npm-0.6.0-78de489f80-437f353fd6.zip/node_modules/xml2js/",\
+          "packageDependencies": [\
+            ["xml2js", "npm:0.6.0"],\
             ["sax", "npm:1.2.4"],\
             ["xmlbuilder", "npm:11.0.1"]\
           ],\
