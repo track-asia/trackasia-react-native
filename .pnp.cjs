@@ -44,7 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/helpers", "npm:6.5.0"],\
             ["@turf/length", "npm:6.5.0"],\
             ["@turf/nearest-point-on-line", "npm:6.5.0"],\
-            ["@types/geojson", "npm:7946.0.10"],\
+            ["@types/geojson", "npm:7946.0.14"],\
             ["@types/node", "npm:18.11.18"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
             ["@typescript-eslint/parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
@@ -6619,7 +6619,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/helpers", "npm:6.5.0"],\
             ["@turf/length", "npm:6.5.0"],\
             ["@turf/nearest-point-on-line", "npm:6.5.0"],\
-            ["@types/geojson", "npm:7946.0.10"],\
+            ["@types/geojson", "npm:7946.0.14"],\
             ["@types/node", "npm:18.11.18"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
             ["@typescript-eslint/parser", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:5.46.1"],\
@@ -6883,10 +6883,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/geojson", [\
-        ["npm:7946.0.10", {\
-          "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.10-deca8d1263-12c407c2dc.zip/node_modules/@types/geojson/",\
+        ["npm:7946.0.14", {\
+          "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.14-cb659a9fdf-ae511bee64.zip/node_modules/@types/geojson/",\
           "packageDependencies": [\
-            ["@types/geojson", "npm:7946.0.10"]\
+            ["@types/geojson", "npm:7946.0.14"]\
           ],\
           "linkType": "HARD"\
         }],\
