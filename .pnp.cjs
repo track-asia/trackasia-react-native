@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-native/metro-config", "npm:0.72.7"],\
             ["@sinonjs/fake-timers", "npm:8.1.0"],\
             ["@testing-library/react-native", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:8.0.0"],\
-            ["@turf/along", "npm:6.5.0"],\
+            ["@turf/along", "npm:7.1.0"],\
             ["@turf/distance", "npm:6.5.0"],\
             ["@turf/helpers", "npm:6.5.0"],\
             ["@turf/length", "npm:6.5.0"],\
@@ -6614,7 +6614,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-native/metro-config", "npm:0.72.7"],\
             ["@sinonjs/fake-timers", "npm:8.1.0"],\
             ["@testing-library/react-native", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:8.0.0"],\
-            ["@turf/along", "npm:6.5.0"],\
+            ["@turf/along", "npm:7.1.0"],\
             ["@turf/distance", "npm:6.5.0"],\
             ["@turf/helpers", "npm:6.5.0"],\
             ["@turf/length", "npm:6.5.0"],\
@@ -6669,15 +6669,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@turf/along", [\
-        ["npm:6.5.0", {\
-          "packageLocation": "./.yarn/cache/@turf-along-npm-6.5.0-fa255041a4-ea0b4d03d6.zip/node_modules/@turf/along/",\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/@turf-along-npm-7.1.0-65a113f82a-9fc2e53bc3.zip/node_modules/@turf/along/",\
           "packageDependencies": [\
-            ["@turf/along", "npm:6.5.0"],\
-            ["@turf/bearing", "npm:6.5.0"],\
-            ["@turf/destination", "npm:6.5.0"],\
-            ["@turf/distance", "npm:6.5.0"],\
-            ["@turf/helpers", "npm:6.5.0"],\
-            ["@turf/invariant", "npm:6.5.0"]\
+            ["@turf/along", "npm:7.1.0"],\
+            ["@turf/bearing", "npm:7.1.0"],\
+            ["@turf/destination", "npm:7.1.0"],\
+            ["@turf/distance", "npm:7.1.0"],\
+            ["@turf/helpers", "npm:7.1.0"],\
+            ["@turf/invariant", "npm:7.1.0"],\
+            ["@types/geojson", "npm:7946.0.14"],\
+            ["tslib", "npm:2.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6702,6 +6704,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/invariant", "npm:6.5.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/@turf-bearing-npm-7.1.0-420446c36c-124bab9b2b.zip/node_modules/@turf/bearing/",\
+          "packageDependencies": [\
+            ["@turf/bearing", "npm:7.1.0"],\
+            ["@turf/helpers", "npm:7.1.0"],\
+            ["@turf/invariant", "npm:7.1.0"],\
+            ["@types/geojson", "npm:7946.0.14"],\
+            ["tslib", "npm:2.7.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@turf/destination", [\
@@ -6711,6 +6724,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/destination", "npm:6.5.0"],\
             ["@turf/helpers", "npm:6.5.0"],\
             ["@turf/invariant", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/@turf-destination-npm-7.1.0-233bb19bb0-90b4f6d4f9.zip/node_modules/@turf/destination/",\
+          "packageDependencies": [\
+            ["@turf/destination", "npm:7.1.0"],\
+            ["@turf/helpers", "npm:7.1.0"],\
+            ["@turf/invariant", "npm:7.1.0"],\
+            ["@types/geojson", "npm:7946.0.14"],\
+            ["tslib", "npm:2.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6724,6 +6748,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@turf/invariant", "npm:6.5.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/@turf-distance-npm-7.1.0-05efeb87d0-2dc64d5a02.zip/node_modules/@turf/distance/",\
+          "packageDependencies": [\
+            ["@turf/distance", "npm:7.1.0"],\
+            ["@turf/helpers", "npm:7.1.0"],\
+            ["@turf/invariant", "npm:7.1.0"],\
+            ["@types/geojson", "npm:7946.0.14"],\
+            ["tslib", "npm:2.7.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@turf/helpers", [\
@@ -6731,6 +6766,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@turf-helpers-npm-6.5.0-a40ad42565-d57f746351.zip/node_modules/@turf/helpers/",\
           "packageDependencies": [\
             ["@turf/helpers", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/@turf-helpers-npm-7.1.0-af6aafcdcc-5be9ac514a.zip/node_modules/@turf/helpers/",\
+          "packageDependencies": [\
+            ["@turf/helpers", "npm:7.1.0"],\
+            ["@types/geojson", "npm:7946.0.14"],\
+            ["tslib", "npm:2.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6741,6 +6785,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@turf/invariant", "npm:6.5.0"],\
             ["@turf/helpers", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/@turf-invariant-npm-7.1.0-dddb977f71-3f25c2c205.zip/node_modules/@turf/invariant/",\
+          "packageDependencies": [\
+            ["@turf/invariant", "npm:7.1.0"],\
+            ["@turf/helpers", "npm:7.1.0"],\
+            ["@types/geojson", "npm:7946.0.14"],\
+            ["tslib", "npm:2.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6887,6 +6941,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.10-deca8d1263-12c407c2dc.zip/node_modules/@types/geojson/",\
           "packageDependencies": [\
             ["@types/geojson", "npm:7946.0.10"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7946.0.14", {\
+          "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.14-cb659a9fdf-ae511bee64.zip/node_modules/@types/geojson/",\
+          "packageDependencies": [\
+            ["@types/geojson", "npm:7946.0.14"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -19104,6 +19165,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.4.1-36f0ed04db-19480d6e03.zip/node_modules/tslib/",\
           "packageDependencies": [\
             ["tslib", "npm:2.4.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.7.0", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.7.0-21668f5c21-1606d5c89f.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
