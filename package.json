@@ -44,7 +44,7 @@
     "@turf/along": "6.5.0",
     "@turf/distance": "6.5.0",
     "@turf/helpers": "6.5.0",
-    "@turf/length": "6.5.0",
+    "@turf/length": "7.1.0",
     "@turf/nearest-point-on-line": "6.5.0",
     "@types/geojson": "^7946.0.7",
     "@types/node": "^18.11.18",
