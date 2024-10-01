@@ -3003,21 +3003,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinonjs/commons@npm:^1.7.0":
-  version: 1.8.6
-  resolution: "@sinonjs/commons@npm:1.8.6"
-  dependencies:
-    type-detect: 4.0.8
-  checksum: 7d3f8c1e85f30cd4e83594fc19b7a657f14d49eb8d95a30095631ce15e906c869e0eff96c5b93dffea7490c00418b07f54582ba49c6560feb2a8c34c0b16832d
-  languageName: node
-  linkType: hard
-
 "@sinonjs/commons@npm:^3.0.0":
   version: 3.0.0
   resolution: "@sinonjs/commons@npm:3.0.0"
   dependencies:
     type-detect: 4.0.8
   checksum: b4b5b73d4df4560fb8c0c7b38c7ad4aeabedd362f3373859d804c988c725889cde33550e4bcc7cd316a30f5152a2d1d43db71b6d0c38f5feef71fd8d016763f8
+  languageName: node
+  linkType: hard
+
+"@sinonjs/commons@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@sinonjs/commons@npm:3.0.1"
+  dependencies:
+    type-detect: 4.0.8
+  checksum: a7c3e7cc612352f4004873747d9d8b2d4d90b13a6d483f685598c945a70e734e255f1ca5dc49702515533c403b32725defff148177453b3f3915bcb60e9d4601
   languageName: node
   linkType: hard
 
@@ -3030,12 +3030,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinonjs/fake-timers@npm:^8.0.1":
-  version: 8.1.0
-  resolution: "@sinonjs/fake-timers@npm:8.1.0"
+"@sinonjs/fake-timers@npm:^13.0.2":
+  version: 13.0.2
+  resolution: "@sinonjs/fake-timers@npm:13.0.2"
   dependencies:
-    "@sinonjs/commons": ^1.7.0
-  checksum: 09b5a158ce013a6c37613258bad79ca4efeb99b1f59c41c73cca36cac00b258aefcf46eeea970fccf06b989414d86fe9f54c1102272c0c3bdd51a313cea80949
+    "@sinonjs/commons": ^3.0.1
+  checksum: f0170da0d5a18dbc88b0cc15dffbb0abec201997eeaf8ab9f47be197731e6363a2ccc4c7dd19629fe6dd6c194bb2f9801ac5b6918e601127701cb7172c2602f8
   languageName: node
   linkType: hard
 
@@ -3094,7 +3094,7 @@ __metadata:
     "@react-native-community/eslint-config": ^3.0.1
     "@react-native-community/eslint-plugin": ^1.3.0
     "@react-native/metro-config": ^0.72.7
-    "@sinonjs/fake-timers": ^8.0.1
+    "@sinonjs/fake-timers": ^13.0.2
     "@testing-library/react-native": ^8.0.0
     "@turf/along": 6.5.0
     "@turf/distance": 6.5.0

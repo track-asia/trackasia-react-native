@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-native-community/eslint-config", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:3.2.0"],\
             ["@react-native-community/eslint-plugin", "npm:1.3.0"],\
             ["@react-native/metro-config", "npm:0.72.7"],\
-            ["@sinonjs/fake-timers", "npm:8.1.0"],\
+            ["@sinonjs/fake-timers", "npm:13.0.2"],\
             ["@testing-library/react-native", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:8.0.0"],\
             ["@turf/along", "npm:6.5.0"],\
             ["@turf/distance", "npm:6.5.0"],\
@@ -6494,18 +6494,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@sinonjs/commons", [\
-        ["npm:1.8.6", {\
-          "packageLocation": "./.yarn/cache/@sinonjs-commons-npm-1.8.6-e3593ed6d6-7d3f8c1e85.zip/node_modules/@sinonjs/commons/",\
-          "packageDependencies": [\
-            ["@sinonjs/commons", "npm:1.8.6"],\
-            ["type-detect", "npm:4.0.8"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.0.0", {\
           "packageLocation": "./.yarn/cache/@sinonjs-commons-npm-3.0.0-fa72ff71a1-b4b5b73d4d.zip/node_modules/@sinonjs/commons/",\
           "packageDependencies": [\
             ["@sinonjs/commons", "npm:3.0.0"],\
+            ["type-detect", "npm:4.0.8"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.0.1", {\
+          "packageLocation": "./.yarn/cache/@sinonjs-commons-npm-3.0.1-bffb9f5a53-a7c3e7cc61.zip/node_modules/@sinonjs/commons/",\
+          "packageDependencies": [\
+            ["@sinonjs/commons", "npm:3.0.1"],\
             ["type-detect", "npm:4.0.8"]\
           ],\
           "linkType": "HARD"\
@@ -6520,11 +6520,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:8.1.0", {\
-          "packageLocation": "./.yarn/cache/@sinonjs-fake-timers-npm-8.1.0-95c51c96db-09b5a158ce.zip/node_modules/@sinonjs/fake-timers/",\
+        ["npm:13.0.2", {\
+          "packageLocation": "./.yarn/cache/@sinonjs-fake-timers-npm-13.0.2-6d212b1963-f0170da0d5.zip/node_modules/@sinonjs/fake-timers/",\
           "packageDependencies": [\
-            ["@sinonjs/fake-timers", "npm:8.1.0"],\
-            ["@sinonjs/commons", "npm:1.8.6"]\
+            ["@sinonjs/fake-timers", "npm:13.0.2"],\
+            ["@sinonjs/commons", "npm:3.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6612,7 +6612,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-native-community/eslint-config", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:3.2.0"],\
             ["@react-native-community/eslint-plugin", "npm:1.3.0"],\
             ["@react-native/metro-config", "npm:0.72.7"],\
-            ["@sinonjs/fake-timers", "npm:8.1.0"],\
+            ["@sinonjs/fake-timers", "npm:13.0.2"],\
             ["@testing-library/react-native", "virtual:9c34f8ea8dc06d75f6e4ce3e84d939edcfb9c1db6f2c086f6ab9530fba5216fce3f19931e990b24eabbfbac495df08d04766c5cc35ad180f2f7ea9af3360bb9b#npm:8.0.0"],\
             ["@turf/along", "npm:6.5.0"],\
             ["@turf/distance", "npm:6.5.0"],\
