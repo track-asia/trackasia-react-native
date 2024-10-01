@@ -2657,7 +2657,7 @@ __metadata:
     "@types/react": ^18.2.14
     "@types/react-native": ^0.72.2
     babel-plugin-module-resolver: ^4.1.0
-    debounce: ^1.2.0
+    debounce: ^2.1.1
     detox: ^19.1.0
     fbjs: ^3.0.0
     glob-to-regexp: ^0.4.0
@@ -3779,10 +3779,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debounce@npm:^1.2.0":
-  version: 1.2.1
-  resolution: "debounce@npm:1.2.1"
-  checksum: 682a89506d9e54fb109526f4da255c5546102fbb8e3ae75eef3b04effaf5d4853756aee97475cd4650641869794e44f410eeb20ace2b18ea592287ab2038519e
+"debounce@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "debounce@npm:2.1.1"
+  checksum: 3cf6211ff894894234899494fe9f141795cd22f48f2359a5eb555523b7fc4316954b1bd39cd215127d2b3828953e5a419347a93af66eca2fd5ca148ebd01388e
   languageName: node
   linkType: hard
 
