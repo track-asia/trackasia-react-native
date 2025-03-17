@@ -2,9 +2,19 @@ require 'json'
 
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
-$RNMBGL = Object.new
+# Global Variable Defaults
+$MLRN_SPM_SPEC ||= {
+  url: "https://github.com/track-asia/trackasia-gl-native-distribution",
+  requirement: {
+    kind: "branch",
+    version: "2.0.3"
+  },
+  product_name: "TrackAsia"
+}
 
-def $RNMBGL._add_spm_to_target(project, target, url, requirement, product_name)
+$MLRN = Object.new
+
+def $MLRN._add_spm_to_target(project, target, url, requirement, product_name)
   pkg_class = Xcodeproj::Project::Object::XCRemoteSwiftPackageReference
   ref_class = Xcodeproj::Project::Object::XCSwiftPackageProductDependency
   pkg = project.root_object.package_references.find { |p| p.class == pkg_class && p.repositoryURL == url }
@@ -23,19 +33,9 @@ def $RNMBGL._add_spm_to_target(project, target, url, requirement, product_name)
   end
 end
 
-def $RNMBGL.post_install(installer)
-  spm_spec = {
-    url: "https://github.com/track-asia/trackasia-gl-native-distribution",
-    requirement: {
-      kind: "exactVersion",
-      version: "1.0.1"
-    },
-    product_name: "Mapbox"
-  }
+def $MLRN.post_install(installer)
+  spm_spec = $MLRN_SPM_SPEC
 
-  if $RNMBGL_SPM_Spec.is_a?(Hash)
-    spm_spec = $RNMBGL_SPM_Spec
-  end
   project = installer.pods_project
   self._add_spm_to_target(
     project,
@@ -61,19 +61,19 @@ def $RNMBGL.post_install(installer)
 end
 
 Pod::Spec.new do |s|
-  s.name		= "trackasia-react-native"
-  s.summary		= "React Native Component for Trackasia Native"
-  s.version		= package['version']
-  s.authors		= { "Ian Wagner" => "ian.wagner@stadiamaps.com" }  # TODO: TrackAsia email?
-  s.homepage    	= "https://github.com/track-asia/trackasia-react-native"
-  s.source      	= { :git => "https://github.com/track-asia/trackasia-react-native.git" }
-  s.license     	= "MIT"
-  s.platform    	= :ios, "8.0"
+  s.name      = "trackasia-react-native"
+  s.summary	  = "React Native library for creating maps with TrackAsia Native"
+  s.version	  = package['version']
+  s.authors   = { "TrackAsia" => "" }
+  s.homepage  = "https://github.com/track-asia/trackasia-react-native"
+  s.source    = { :git => "https://github.com/track-asia/trackasia-react-native.git" }
+  s.license   = "MIT"
+  s.platform  = :ios, "8.0"
 
   s.dependency 'React-Core'
   s.dependency 'React'
 
   s.subspec 'DynamicLibrary' do |sp|
-    sp.source_files	= "ios/RCTMGL/**/*.{h,m}"
+    sp.source_files	= "ios/MLRN/**/*.{h,m}"
   end
 end

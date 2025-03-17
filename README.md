@@ -1,86 +1,39 @@
----
+[![TrackAsia Logo](https://track-asia.com/img/trackasia-logo-big.svg)](https://track-asia.com)
 
-[![TrackAsia Logo](https://trackasia.org/img/trackasia-logo-big.svg)](https://trackasia.org)
+# TrackAsia React Native
 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](/LICENSE.md)
+[![Version](https://img.shields.io/npm/v/@track-asia/trackasia-react-native)](https://www.npmjs.com/package/@track-asia/trackasia-react-native)
+[![Actions](https://img.shields.io/github/actions/workflow/status/track-asia/trackasia-react-native/release.yml?label=Actions&branch=main)](https://github.com/track-asia/trackasia-react-native/actions/workflows/release.yml?query=branch:main)
 
-# TrackAsia GL SDK for React Native
-
-_A React Native library for building maps with   
-the [TrackAsia GL Native SDK for iOS & Android](https://github.com/track-asia/trackasia-gl-native)_.
+_React Native library for creating maps
+with [TrackAsia Native for Android & iOS](https://github.com/track-asia/trackasia-gl-native)._
 
 This project originated as a fork of [rnmapbox](https://github.com/rnmapbox/maps), a community-maintained
-React Native Library for building maps with the Mapbox iOS and Android mobile SDKs. The original product
+React Native library for building maps with the Mapbox iOS and Android mobile SDKs. The original product
 supported both Mapbox and TrackAsia for some time, but as the TrackAsia and Mapbox SDKs have
 diverged, it has become necessary to separate the projects into specific wrappers by underlying renderer.
 
----
-
-[![npm version](https://badge.fury.io/js/%40trackasia%2Ftrackasia-react-native.svg)](https://badge.fury.io/js/%40trackasia%2Ftrackasia-react-native)  
-[![Android Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/android-actions.yml)  
-[![iOS Build](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml/badge.svg)](https://github.com/track-asia/trackasia-react-native/actions/workflows/ios-actions.yml)  
-
----
-
-<br>
-
-<img src="./assets/indoor_building_map_android.png"
-     alt="Indoor Building Map Android"
-     height="300"
-      />
-<img src="./assets/indoor_building_map_ios.png"
-     alt="Indoor Building Map iOS"
-     height="300"
-      />
+<p align="center">
+    <img src="/docs/static/screenshots/index/device-android.png"
+         alt="Indoor Building Map Android"
+         height="320"
+          />
+    <img src="/docs/static/screenshots/index/device-ios.png"
+         alt="Indoor Building Map iOS"
+         height="320"
+          />
+</p>
 
 ## Documentation
 
-[Getting Started (start here)](/docs/GettingStarted.md)
+https://track-asia.com/trackasia-react-native/
 
-### Components
+## Contributing & Development
 
-- [MapView](/docs/MapView.md)
-- [Light](/docs/Light.md)
-- [StyleSheet](/docs/StyleSheet.md)
-- [PointAnnotation](/docs/PointAnnotation.md)
-- [MarkerView](/docs/MarkerView.md)
-- [Callout](/docs/Callout.md)
-- [Camera](docs/Camera.md)
-- [UserLocation](docs/UserLocation.md)
-- [Images](docs/Images.md)
-
-### Sources
-
-- [VectorSource](/docs/VectorSource.md)
-- [ShapeSource](/docs/ShapeSource.md)
-- [RasterSource](/docs/RasterSource.md)
-
-### Layers
-
-- [BackgroundLayer](/docs/BackgroundLayer.md)
-- [CircleLayer](/docs/CircleLayer.md)
-- [FillExtrusionLayer](/docs/FillExtrusionLayer.md)
-- [FillLayer](/docs/FillLayer.md)
-- [LineLayer](/docs/LineLayer.md)
-- [RasterLayer](/docs/RasterLayer.md)
-- [SymbolLayer](/docs/SymbolLayer.md)
-- [HeatmapLayer](/docs/HeatmapLayer.md)
-
-### Offline
-
-- [OfflineManager](/docs/OfflineManager.md)
-- [SnapshotManager](/docs/snapshotManager.md)
-
-### Misc
-
-- [TrackAsiaGL](/docs/TrackAsiaGL.md)
-- [CustomHttpHeaders](/docs/CustomHttpHeaders.md)
-- [Logger](/docs/Logger.md)
-
-## Contributing / local development
-
-Read the [CONTRIBUTING.md](CONTRIBUTING.md) guide in order to get familiar with how we do things around here and
-set up your local dev environment.
+Read the [CONTRIBUTING](/CONTRIBUTING.md) guide in order to get familiar with how we do things around here and
+set up your local development environment.
 
 ## Community
 
-Join the #trackasia-native Slack channel at OSMUS: get an invite at https://slack.openstreetmap.us/
+Join the [`#trackasia-react-native`](https://osmus.slack.com/archives/C065DB4T2UB) or [`#trackasia`](https://osmus.slack.com/archives/C01G3D28DAB) [on the Open Street Map Slack](https://slack.openstreetmap.us/).

@@ -1,0 +1,20 @@
+appId: com.trackasia.reactnative.example
+---
+- launchApp
+- tapOn: "Map[,]? ›"
+- tapOn: "Show Map[,]? ›"
+- assertVisible: "Show Map"
+
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - tapOn: "Attribution icon. Activate to show attribution dialog."
+      - assertVisible: "TrackAsia Android"
+
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - tapOn: "About this map"
+      - assertVisible: "TrackAsia Native iOS"
