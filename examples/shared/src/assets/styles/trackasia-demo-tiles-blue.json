@@ -1,0 +1,28 @@
+{
+  "name": "TrackAsia",
+  "version": 8,
+  "sources": {
+    "trackasia": {
+      "url": "https://maps.track-asia.com/styles/v1/streets.json?key=public_key",
+      "type": "vector"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#ffffff"
+      }
+    },
+    {
+      "id": "countries-fill",
+      "type": "fill",
+      "source": "trackasia",
+      "source-layer": "countries",
+      "paint": {
+        "fill-color": "#285daa"
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+name: Review
+
+on:
+  workflow_call:
+  # Release calls this Workflow
+  pull_request:
+    branches:
+      - main
+      - beta
+      - alpha
+  merge_group:
+    types:
+      - checks_requested
+
+jobs:
+  lint-tsc:
+    name: Lint TSC
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Lint with TSC
+        run: yarn lint:tsc
+
+  lint-eslint:
+    name: Lint ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Lint with ESLint
+        run: yarn lint:eslint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Test with Jest
+        run: yarn test
+
+  codegen:
+    name: Codegen
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Codegen
+        run: yarn codegen
+
+  build-library:
+    name: Build Library
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build Library
+        run: yarn prepack
+
+  review-android:
+    name: Android
+    uses: ./.github/workflows/review-android.yml
+
+  review-ios:
+    name: iOS
+    uses: ./.github/workflows/review-ios.yml

@@ -1,3 +1,2 @@
-index.d.ts
-scripts/
-/plugin/build
+lib
+build

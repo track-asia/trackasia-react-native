@@ -1,1 +1,1 @@
-module.exports = require('./plugin/build/withTrackAsia');
+module.exports = require("./lib/commonjs/plugin/withTrackAsia");
