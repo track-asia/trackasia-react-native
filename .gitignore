@@ -87,3 +87,5 @@ lib/
 
 # Maestro
 report.xml
+
+./history/
