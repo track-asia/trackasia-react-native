@@ -1,8 +1,8 @@
 import snapshotDiff from "snapshot-diff";
 
+import * as podfileFixtures from "./__fixtures__/Podfile";
 import type { TrackAsiaPluginProps } from "../../../plugin/TrackAsiaPluginProps";
 import { applyPodfileGlobalVariables } from "../../../plugin/ios";
-import * as podfileFixtures from "./__fixtures__/Podfile";
 
 expect.addSnapshotSerializer(snapshotDiff.getSnapshotDiffSerializer());
 

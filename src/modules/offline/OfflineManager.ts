@@ -1,15 +1,15 @@
 import {
-  NativeEventEmitter,
   NativeModules,
+  NativeEventEmitter,
   type EventSubscription,
 } from "react-native";
 
-import { isAndroid, isFunction, isUndefined } from "../../utils";
 import {
   OfflineCreatePackOptions,
   type OfflineCreatePackInputOptions,
 } from "./OfflineCreatePackOptions";
 import { OfflinePack, type OfflinePackStatus } from "./OfflinePack";
+import { isUndefined, isFunction, isAndroid } from "../../utils";
 
 const MLRNModule = NativeModules.MLRNModule;
 const MLRNOfflineModule = NativeModules.MLRNOfflineModule;

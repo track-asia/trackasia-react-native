@@ -1,17 +1,68 @@
-## [2.0.0](https://github.com/track-asia/trackasia-react-native/compare/v10.1.3...v10.1.4) (2025-03-12)
+## [10.1.6](https://github.com/track-asia/trackasia-react-native/compare/v10.1.5...v10.1.6) (2025-06-06)
 
 
+### Bug Fixes
+
+* ShapeSource features method on iOS ([#856](https://github.com/track-asia/trackasia-react-native/issues/856)) ([b3f6a07](https://github.com/track-asia/trackasia-react-native/commit/b3f6a07ba004c2a7106001ef271ab2d34a39e0cf))
+
+## [10.1.5](https://github.com/track-asia/trackasia-react-native/compare/v10.1.4...v10.1.5) (2025-06-01)
+
+
+### Bug Fixes
+
+* export Expression and OnPressEvent types ([#833](https://github.com/track-asia/trackasia-react-native/issues/833)) ([4c1cfb5](https://github.com/track-asia/trackasia-react-native/commit/4c1cfb585007a3ecda7a457d0754109a06ad4e4d))
+* remove expo plugin withExcludedSimulatorArchitectures ([#839](https://github.com/track-asia/trackasia-react-native/issues/839)) ([35d5ad0](https://github.com/track-asia/trackasia-react-native/commit/35d5ad0f0dab3bd5be116b04e9a7452bc88fb614))
+
+## [10.1.4](https://github.com/track-asia/trackasia-react-native/compare/v10.1.3...v10.1.4) (2025-03-12)
+
+
+### Bug Fixes
+
+* switching followUserLocation on iOS ([#718](https://github.com/track-asia/trackasia-react-native/issues/718)) ([697aa1b](https://github.com/track-asia/trackasia-react-native/commit/697aa1b2c2778c35525330111c9d8a2bf5315a05))
+
+## [10.1.3](https://github.com/track-asia/trackasia-react-native/compare/v10.1.2...v10.1.3) (2025-03-10)
+
+
+### Bug Fixes
+
+* fitBounds on iOS across 180th meridian ([#709](https://github.com/track-asia/trackasia-react-native/issues/709)) ([46645e1](https://github.com/track-asia/trackasia-react-native/commit/46645e17000461cb4960fb6611b72099172a4aa3))
+
+## [10.1.2](https://github.com/track-asia/trackasia-react-native/compare/v10.1.1...v10.1.2) (2025-03-10)
+
+
+### Bug Fixes
+
+* AnimatedRouteCoordinatesArray regression ([#697](https://github.com/track-asia/trackasia-react-native/issues/697)) ([717c189](https://github.com/track-asia/trackasia-react-native/commit/717c1894f44141b868fabe1aaf4607fa25e9946d))
+* ShapeSource ref for reanimated ([#708](https://github.com/track-asia/trackasia-react-native/issues/708)) ([c392dcd](https://github.com/track-asia/trackasia-react-native/commit/c392dcdf632110b1dcff051826179563a5ec27a2))
+
+## [10.1.1](https://github.com/track-asia/trackasia-react-native/compare/v10.1.0...v10.1.1) (2025-03-10)
+
+
+### Bug Fixes
+
+* render UserLocation when heading is 0 ([#694](https://github.com/track-asia/trackasia-react-native/issues/694)) ([5c39c3a](https://github.com/track-asia/trackasia-react-native/commit/5c39c3a7b9db0ffccc9b72323e0f82824e59fb68))
+
+# [10.1.0](https://github.com/track-asia/trackasia-react-native/compare/v10.0.1...v10.1.0) (2025-02-25)
+
+
+### Bug Fixes
+
+* usage of PMTiles on iOS 17 through VectorSource with NSString ([#625](https://github.com/track-asia/trackasia-react-native/issues/625)) ([f9d0823](https://github.com/track-asia/trackasia-react-native/commit/f9d0823b3e4063dc89a35502d321d5d84bb37dc1))
 
 
 ### Features
 
 * allow configuration of Android SDK variant ([#622](https://github.com/track-asia/trackasia-react-native/issues/622)) ([6bc5fec](https://github.com/track-asia/trackasia-react-native/commit/6bc5fec6b7c0bf63cd48bd5aa8d3f877dc2e70d2))
-* upgrade TrackAsia Native Android (1.0.2) & iOS (2.0.3) ([#650](https://github.com/track-asia/trackasia-react-native/issues/650)) ([0053ee7](https://github.com/track-asia/trackasia-react-native/commit/0053ee779d77240d599a819dd1bc640092eb52c6))
+* upgrade TrackAsia Native Android (11.8.1) & iOS (2.0.3) ([#650](https://github.com/track-asia/trackasia-react-native/issues/650)) ([0053ee7](https://github.com/track-asia/trackasia-react-native/commit/0053ee779d77240d599a819dd1bc640092eb52c6))
+
+## [10.0.1](https://github.com/track-asia/trackasia-react-native/compare/v10.0.0...v10.0.1) (2025-01-21)
 
 
 ### Bug Fixes
 
 * plugin remove obsolete `gradle.properties` ([#621](https://github.com/track-asia/trackasia-react-native/issues/621)) ([31bf300](https://github.com/track-asia/trackasia-react-native/commit/31bf300fe2997ba7bd33c9f66c1eca0328c94f51))
+
+# [10.0.0](https://github.com/track-asia/trackasia-react-native/compare/v9.1.0...v10.0.0) (2025-01-14)
 
 For upgrading review the [v10 migration guide](https://track-asia.com/trackasia-react-native/docs/setup/migrations/v10).
 

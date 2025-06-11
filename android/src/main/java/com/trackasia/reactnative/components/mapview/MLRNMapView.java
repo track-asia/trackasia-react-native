@@ -26,15 +26,9 @@ import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeArray;
 import com.facebook.react.bridge.WritableNativeMap;
-<<<<<<< HEAD:android/rctmgl/src/main/java/com/mapbox/rctmgl/components/mapview/RCTMGLMapView.java
-// import com.mapbox.android.gestures.MoveGestureDetector;
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.FeatureCollection;
-=======
 import com.trackasia.android.gestures.MoveGestureDetector;
 import com.trackasia.geojson.Feature;
 import com.trackasia.geojson.FeatureCollection;
->>>>>>> d67b1a6727e26bc5e1114d5c3c4e8fbe2b9a1fa0:android/src/main/java/com/trackasia/reactnative/components/mapview/MLRNMapView.java
 import com.trackasia.android.camera.CameraPosition;
 import com.trackasia.android.camera.CameraUpdate;
 import com.trackasia.android.geometry.LatLng;
@@ -486,38 +480,23 @@ public class MLRNMapView extends MapView implements OnMapReadyCallback, TrackAsi
             }
         });
 
-<<<<<<< HEAD:android/rctmgl/src/main/java/com/mapbox/rctmgl/components/mapview/RCTMGLMapView.java
-        // mMap.addOnMoveListener(new TrackasiaMap.OnMoveListener() {
-        //     @Override
-        //     public void onMoveBegin(MoveGestureDetector detector) {
-        //         mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
-        //         handleMapChangedEvent(EventTypes.REGION_WILL_CHANGE);
-        //     }
-=======
         mMap.addOnMoveListener(new TrackAsiaMap.OnMoveListener() {
             @Override
             public void onMoveBegin(MoveGestureDetector detector) {
                 mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
                 handleMapChangedEvent(EventTypes.REGION_WILL_CHANGE);
             }
->>>>>>> d67b1a6727e26bc5e1114d5c3c4e8fbe2b9a1fa0:android/src/main/java/com/trackasia/reactnative/components/mapview/MLRNMapView.java
 
-        //     @Override
-        //     public void onMove(MoveGestureDetector detector) {
-        //         mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
-        //         handleMapChangedEvent(EventTypes.REGION_IS_CHANGING);
-        //     }
+            @Override
+            public void onMove(MoveGestureDetector detector) {
+                mCameraChangeTracker.setReason(CameraChangeTracker.USER_GESTURE);
+                handleMapChangedEvent(EventTypes.REGION_IS_CHANGING);
+            }
 
-<<<<<<< HEAD:android/rctmgl/src/main/java/com/mapbox/rctmgl/components/mapview/RCTMGLMapView.java
-        //     @Override
-        //     public void onMoveEnd(MoveGestureDetector detector) {}
-        // });
-=======
             @Override
             public void onMoveEnd(MoveGestureDetector detector) {
             }
         });
->>>>>>> d67b1a6727e26bc5e1114d5c3c4e8fbe2b9a1fa0:android/src/main/java/com/trackasia/reactnative/components/mapview/MLRNMapView.java
     }
 
     public void reflow() {
@@ -1108,9 +1087,9 @@ public class MLRNMapView extends MapView implements OnMapReadyCallback, TrackAsi
 
         if (mScrollEnabled != null && uiSettings.isScrollGesturesEnabled() != mScrollEnabled) {
             uiSettings.setScrollGesturesEnabled(mScrollEnabled);
-            // if (!mScrollEnabled) {
-            //     mMap.getGesturesManager().getMoveGestureDetector().interrupt();
-            // }
+            if (!mScrollEnabled) {
+                mMap.getGesturesManager().getMoveGestureDetector().interrupt();
+            }
         }
 
         if (mPitchEnabled != null && uiSettings.isTiltGesturesEnabled() != mPitchEnabled) {
@@ -1119,9 +1098,9 @@ public class MLRNMapView extends MapView implements OnMapReadyCallback, TrackAsi
 
         if (mRotateEnabled != null && uiSettings.isRotateGesturesEnabled() != mRotateEnabled) {
             uiSettings.setRotateGesturesEnabled(mRotateEnabled);
-            // if (!mRotateEnabled) {
-            //     mMap.getGesturesManager().getRotateGestureDetector().interrupt();
-            // }
+            if (!mRotateEnabled) {
+                mMap.getGesturesManager().getRotateGestureDetector().interrupt();
+            }
         }
 
         if (mAttributionEnabled != null && uiSettings.isAttributionEnabled() != mAttributionEnabled) {
@@ -1214,9 +1193,9 @@ public class MLRNMapView extends MapView implements OnMapReadyCallback, TrackAsi
 
         if (mZoomEnabled != null && uiSettings.isZoomGesturesEnabled() != mZoomEnabled) {
             uiSettings.setZoomGesturesEnabled(mZoomEnabled);
-            // if (!mZoomEnabled) {
-            //     mMap.getGesturesManager().getStandardScaleGestureDetector().interrupt();
-            // }
+            if (!mZoomEnabled) {
+                mMap.getGesturesManager().getStandardScaleGestureDetector().interrupt();
+            }
         }
     }
 

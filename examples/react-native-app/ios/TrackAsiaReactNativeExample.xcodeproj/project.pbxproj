@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C80B921A6F3F58F76C31292 /* libPods-TrackAsiaReactNativeExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TrackAsiaReactNativeExample.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		51C227682D6F3D550077870A /* TrackAsia in Frameworks */ = {isa = PBXBuildFile; productRef = 16EA96B4C3306C54329D6832 /* TrackAsia */; };
+		3DC550E73536F8E91B62ADF2 /* libPods-TrackAsiaReactNativeExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8604D10B2A800D89D64CAD /* libPods-TrackAsiaReactNativeExample.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		990253C12DF82BB00002BF22 /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 990253C02DF82BB00002BF22 /* MapboxNavigation */; };
 		A0062AFBABAAC219026F55E2 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -24,10 +24,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TrackAsiaReactNativeExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TrackAsiaReactNativeExample/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = TrackAsiaReactNativeExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-TrackAsiaReactNativeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackAsiaReactNativeExample.debug.xcconfig"; path = "Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-TrackAsiaReactNativeExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackAsiaReactNativeExample.release.xcconfig"; path = "Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample.release.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-TrackAsiaReactNativeExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrackAsiaReactNativeExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40417BF9C50659F3301EA645 /* Pods-TrackAsiaReactNativeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackAsiaReactNativeExample.debug.xcconfig"; path = "Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample.debug.xcconfig"; sourceTree = "<group>"; };
+		5C8604D10B2A800D89D64CAD /* libPods-TrackAsiaReactNativeExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrackAsiaReactNativeExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TrackAsiaReactNativeExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		967F0FE4D439ECCA531EB713 /* Pods-TrackAsiaReactNativeExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackAsiaReactNativeExample.release.xcconfig"; path = "Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -36,8 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51C227682D6F3D550077870A /* TrackAsia in Frameworks */,
-				0C80B921A6F3F58F76C31292 /* libPods-TrackAsiaReactNativeExample.a in Frameworks */,
+				3DC550E73536F8E91B62ADF2 /* libPods-TrackAsiaReactNativeExample.a in Frameworks */,
+				990253C12DF82BB00002BF22 /* MapboxNavigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-TrackAsiaReactNativeExample.a */,
+				5C8604D10B2A800D89D64CAD /* libPods-TrackAsiaReactNativeExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,8 +99,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-TrackAsiaReactNativeExample.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-TrackAsiaReactNativeExample.release.xcconfig */,
+				40417BF9C50659F3301EA645 /* Pods-TrackAsiaReactNativeExample.debug.xcconfig */,
+				967F0FE4D439ECCA531EB713 /* Pods-TrackAsiaReactNativeExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -112,13 +112,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TrackAsiaReactNativeExample" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				9DE9694FA1D9C35C81FFD9EF /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				21C201FD87BBE30DDFEFBAE5 /* [CP] Embed Pods Frameworks */,
+				72A2F24908226B4BFDE660D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,7 +126,7 @@
 			);
 			name = TrackAsiaReactNativeExample;
 			packageProductDependencies = (
-				16EA96B4C3306C54329D6832 /* TrackAsia */,
+				6BF60EF1C8AC537E810BE680 /* TrackAsia */,
 			);
 			productName = TrackAsiaReactNativeExample;
 			productReference = 13B07F961A680F5B00A75B9A /* TrackAsiaReactNativeExample.app */;
@@ -155,7 +155,8 @@
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			packageReferences = (
-				91F9AE9FB8AF03F9FF8836CE /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */,
+				990253BF2DF82BB00002BF22 /* XCRemoteSwiftPackageReference "trackasia-navigation-ios" */,
+				163C9C5D08373357BB9D0767 /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */,
 			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
@@ -196,7 +197,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		21C201FD87BBE30DDFEFBAE5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,7 +214,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		72A2F24908226B4BFDE660D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DE9694FA1D9C35C81FFD9EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,23 +253,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrackAsiaReactNativeExample/Pods-TrackAsiaReactNativeExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -269,7 +270,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-TrackAsiaReactNativeExample.debug.xcconfig */;
+			baseConfigurationReference = 40417BF9C50659F3301EA645 /* Pods-TrackAsiaReactNativeExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -298,7 +299,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-TrackAsiaReactNativeExample.release.xcconfig */;
+			baseConfigurationReference = 967F0FE4D439ECCA531EB713 /* Pods-TrackAsiaReactNativeExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -499,17 +500,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		91F9AE9FB8AF03F9FF8836CE /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */ = {
+		163C9C5D08373357BB9D0767 /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/track-asia/trackasia-gl-native-distribution";
+			requirement = {
+				kind = branch;
+				version = 2.0.3;
+			};
+		};
+		990253BF2DF82BB00002BF22 /* XCRemoteSwiftPackageReference "trackasia-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/track-asia/trackasia-navigation-ios";
+			requirement = {
+				branch = 2.0.3;
+				kind = branch;
+			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		16EA96B4C3306C54329D6832 /* TrackAsia */ = {
+		6BF60EF1C8AC537E810BE680 /* TrackAsia */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 91F9AE9FB8AF03F9FF8836CE /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */;
+			package = 163C9C5D08373357BB9D0767 /* XCRemoteSwiftPackageReference "trackasia-gl-native-distribution" */;
 			productName = TrackAsia;
+		};
+		990253C02DF82BB00002BF22 /* MapboxNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 990253BF2DF82BB00002BF22 /* XCRemoteSwiftPackageReference "trackasia-navigation-ios" */;
+			productName = MapboxNavigation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -94,7 +94,7 @@ describe("OfflineManager", () => {
   describe("Events", () => {
     it("should subscribe to native events", async () => {
       const spy = jest.spyOn(OfflineModuleEventEmitter, "addListener");
-      const noop = () => { };
+      const noop = () => {};
       await OfflineManager.createPack(packOptions, noop, noop);
       expect(spy).toHaveBeenCalledTimes(2);
       spy.mockClear();
@@ -136,7 +136,7 @@ describe("OfflineManager", () => {
     });
 
     it("should unsubscribe from native events", async () => {
-      const noop = () => { };
+      const noop = () => {};
 
       await OfflineManager.createPack(packOptions, noop, noop);
       OfflineManager.unsubscribe(packOptions.name);
@@ -193,7 +193,7 @@ describe("OfflineManager", () => {
       );
 
       const name = `test-${Date.now()}`;
-      const noop = () => { };
+      const noop = () => {};
       const options = { ...packOptions, name };
       await OfflineManager.createPack(options);
       await OfflineManager.subscribe(name, noop, noop);
@@ -209,7 +209,7 @@ describe("OfflineManager", () => {
       );
 
       const name = `test-${Date.now()}`;
-      const noop = () => { };
+      const noop = () => {};
       const options = { ...packOptions, name };
       await OfflineManager.createPack(options, noop, noop);
 
@@ -228,7 +228,7 @@ describe("OfflineManager", () => {
       );
 
       const name = `test-${Date.now()}`;
-      const noop = () => { };
+      const noop = () => {};
       const options = { ...packOptions, name };
       await OfflineManager.createPack(options);
       await OfflineManager.subscribe(name, noop, noop);

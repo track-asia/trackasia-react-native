@@ -88,4 +88,4 @@ lib/
 # Maestro
 report.xml
 
-./history/
+.history

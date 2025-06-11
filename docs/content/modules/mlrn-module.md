@@ -35,7 +35,7 @@ want to bypass any checks to the `ConnectivityManager`. Set to `true` for connec
 and `null` for the `ConnectivityManager` to determine.
 
 If hosting styles/sources on `localhost`, it's necessary to bypass `ConnectivityManager` when the device is
-offline ([trackasia/trackasia-react-native#21](https://github.com/track-asia/trackasia-react-native/issues/21#issuecomment-2558602006), [mapbox/mapbox-gl-native#12819](https://github.com/mapbox/mapbox-gl-native/issues/12819)):
+offline ([track-asia/trackasia-react-native#21](https://github.com/track-asia/trackasia-react-native/issues/21#issuecomment-2558602006), [mapbox/mapbox-gl-native#12819](https://github.com/mapbox/mapbox-gl-native/issues/12819)):
 
 ```ts
 setConnected(true);

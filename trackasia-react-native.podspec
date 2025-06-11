@@ -3,11 +3,12 @@ require 'json'
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 # Global Variable Defaults
+$MLRN_NATIVE_VERSION ||= "2.0.3"
 $MLRN_SPM_SPEC ||= {
   url: "https://github.com/track-asia/trackasia-gl-native-distribution",
   requirement: {
     kind: "branch",
-    version: "2.0.3"
+    version: $MLRN_NATIVE_VERSION
   },
   product_name: "TrackAsia"
 }

@@ -2,8 +2,8 @@ import { point } from "@turf/helpers";
 import { type ReactElement, useMemo } from "react";
 import { Platform, requireNativeComponent, type ViewProps } from "react-native";
 
-import { toJSONString } from "../utils";
 import { PointAnnotation } from "./PointAnnotation";
+import { toJSONString } from "../utils";
 
 export const NATIVE_MODULE_NAME = "MLRNMarkerView";
 

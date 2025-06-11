@@ -67,10 +67,6 @@ export {
 } from "./modules/snapshot/SnapshotManager";
 export type { SnapshotInputOptions } from "./modules/snapshot/SnapshotOptions";
 
-export type { TrackAsiaRNEvent } from "./types/TrackAsiaRNEvent";
-
-export { Animated } from "./utils/animated/Animated";
-export { Logger, type LogLevel } from "./utils/Logger";
 export type {
   FillLayerStyle,
   LineLayerStyle,
@@ -82,6 +78,13 @@ export type {
   HillshadeLayerStyle,
   BackgroundLayerStyle,
   LightLayerStyle,
+  Expression,
 } from "./types/TrackAsiaRNStyles";
+
+export type { TrackAsiaRNEvent } from "./types/TrackAsiaRNEvent";
+export type { OnPressEvent } from "./types/OnPressEvent";
+
+export { Animated } from "./utils/animated/Animated";
+export { Logger, type LogLevel } from "./utils/Logger";
 
 export type { TrackAsiaPluginProps } from "./plugin/TrackAsiaPluginProps";
