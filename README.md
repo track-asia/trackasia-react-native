@@ -1,4 +1,4 @@
-[![TrackAsia Logo](https://track-asia.com/img/trackasia-logo-big.svg)](https://track-asia.com)
+[![TrackAsia Logo](https://track-asia.com/assets-v2/images/logo-white.png)](https://track-asia.com)
 
 # TrackAsia React Native
 
