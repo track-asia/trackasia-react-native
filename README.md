@@ -34,7 +34,7 @@ diverged, it has become necessary to separate the projects into specific wrapper
 
 ## Documentation
 
-https://track-asia.com/trackasia-react-native/
+https://docs.track-asia.com/vi/
 
 ## Contributing & Development
 
