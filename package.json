@@ -147,7 +147,7 @@
     "@expo/config-plugins": "^10.0.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@sinonjs/fake-timers": "^14.0.0",
+    "@sinonjs/fake-timers": "^15.0.0",
     "@testing-library/react-native": "^13.0.1",
     "@trackasia/trackasia-gl-style-spec": "2.1.0",
     "@types/ejs": "^3.1.5",
