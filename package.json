@@ -12,8 +12,7 @@
     "ios",
     "android",
     "trackasia",
-    "react-native",
-    "mapbox"
+    "react-native"
   ],
   "license": "MIT",
   "homepage": "https://github.com/track-asia/trackasia-react-native#readme",
