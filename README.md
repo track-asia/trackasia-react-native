@@ -32,9 +32,22 @@ diverged, it has become necessary to separate the projects into specific wrapper
           />
 </p>
 
+## Quickstart Installation
+
+```bash
+# Using npm
+npm install @track-asia/trackasia-react-native @react-native-community/geolocation
+
+# Using yarn
+yarn add @track-asia/trackasia-react-native @react-native-community/geolocation
+```
+
+For iOS SPM configuration and complete examples, see the [TrackAsia React Native Document & Samples Repository](https://github.com/track-asia/trackasia-reactnative-document).
+
 ## Documentation
 
-https://docs.track-asia.com/vi/
+- Official Docs: https://docs.track-asia.com/vi/
+- Integration Guide & Demo Apps: https://github.com/track-asia/trackasia-reactnative-document
 
 ## Contributing & Development
 
